@@ -4,7 +4,7 @@
 
 <script setup>
 import SlideshowBase from '@/components/SlideshowBase.vue'
-
+  
 const images = [
   { src: 'image/About_heading.jpg', alt: 'Cambodia Girls' },
   { src: 'image/About_heading.jpg', alt: 'Community Support' },
