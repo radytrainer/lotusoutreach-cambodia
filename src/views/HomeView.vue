@@ -20,7 +20,7 @@ const images = [
 ]
 
 const sharedContent = {
-  title: "Empowering <span class='text-pink-400'>Cambodia's</span> Girls",
+  title: "Empowering <span class='text-pink-400'>Cambodian</span> Girls",
   description: 'In rural Cambodia, education transforms lives. When you empower a Cambodian girl, you transform an entire community.',
   buttons: [
     { text: 'Support Cambodia', link: '/donate', primary: true },
@@ -38,28 +38,28 @@ const homeButtons = [
 const focusCards = [
   {
     id: 1,
-    title: "Education in Cambodia",
+    title: " Educations",
     image: "/public/image/Home/Program_card01.png",
     summary: "Supporting Cambodian girls through scholarships, school supplies, and educational programs in rural provinces.",
     content: "Our education programs in Cambodia focus on keeping girls in school through comprehensive support including scholarships, uniforms, school supplies, and nutritional assistance..."
   },
   {
     id: 2,
-    title: "Healthcare Access",
+    title: "Cares",
     image: "/public/image/Home/Program_card02.png",
     summary: "Providing essential healthcare services and clean water access to remote Cambodian villages.",
     content: "In Cambodia's remote areas, we provide mobile health clinics, maternal health services, and health education programs..."
   },
   {
     id: 3,
-    title: "Anti-Trafficking Protection",
+    title: "Training",
     image: "/public/image/Home/Program_card03.png",
     summary: "Protecting vulnerable Cambodian women and children from trafficking and exploitation.",
     content: "Cambodia faces unique challenges with human trafficking, particularly affecting young women and children..."
   },
   {
     id: 4,
-    title: "Rural Development",
+    title: "Giving Back",
     image: "/public/image/Home/Program_card04.png",
     summary: "Building sustainable infrastructure and economic opportunities in Cambodia's rural communities.",
     content: "Our community development programs in Cambodia focus on building essential infrastructure like water wells, improving agricultural practices..."
