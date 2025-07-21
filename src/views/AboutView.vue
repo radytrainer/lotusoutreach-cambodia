@@ -43,7 +43,6 @@
           <h2 class="text-4xl font-extrabold text-blue-700 mb-10">
             Our Mission, Vision & Values
           </h2>
-
           <div v-for="(item, index) in principles" :key="index" class="mb-8 flex items-start gap-4">
             <div class="w-10 h-10 flex items-center justify-center rounded-full">
               <i :class="`${item.icon} text-blue-600 text-xl`"></i>
@@ -56,11 +55,59 @@
             </div>
           </div>
         </div>
-
         <!-- Image -->
         <div>
           <img src="/public/image/About/value.jpg" alt="Girls with bicycles supported by Lotus Outreach"
             class="rounded-2xl shadow-2xl w-[105%] h-auto max-h-[550px] object-cover mx-auto" />
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="bg-gray-50 py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl text-blue-700 md:text-6xl font-extrabold text-center mb-20">
+          Our Inspired Team
+        </h2>
+        <div class="flex flex-wrap justify-center gap-12 max-w-8xl mx-auto">
+          <div v-for="(member, index) in teamMembers" :key="index" @click="toggleFlip(index)"
+            class="relative group cursor-pointer transition-all duration-500 hover:-translate-y-2 perspective">
+            <div class="w-72 h-80 relative">
+              <div class="w-full h-full transition-transform duration-700 transform-style preserve-3d"
+                :class="{ 'rotate-y-180': flippedStates[index] }">
+                <!-- Front Side (unchanged) -->
+                <div
+                  class="absolute inset-0 bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-start backface-hidden">
+                  <div class="relative w-52 h-52 mb-4">
+                    <div class="absolute inset-0 rounded-full bg-beige-100"></div>
+                    <img :src="member.image" :alt="member.name"
+                      class="relative z-10 w-full h-full object-cover rounded-full border-4 border-white shadow-md" />
+                  </div>
+                  <div class="absolute bottom-20 left-0 right-0 z-20">
+                    <div class="relative">
+                      <div
+                        class="bg-blue-400 text-white px-1 py-1 transform -skew-y-12 shadow-lg text-center w-60 mx-auto">
+                        <h3 class="font-bold text-lg uppercase">{{ member.name }}</h3>
+                      </div>
+                      <div
+                        class="bg-blue-500 text-white px-0 py-1 transform -skew-y-12 shadow-lg text-center w-60 ml-auto -mt-3">
+                        <p class="text-sm font-medium">{{ member.position }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Back Side (only this part updated) -->
+                <div
+                  class="absolute inset-0 bg-white text-blue-800 rounded-xl shadow-lg p-6 backface-hidden rotate-y-180 flex flex-col justify-center items-center text-center">
+                  <h3 class="text-xl font-bold mb-2">{{ member.name }}</h3>
+                  <p class="text-sm font-semibold mb-2">{{ member.position }}</p>
+                  <p class="text-sm px-2">
+                    {{ member.details || 'More info about this team member goes here.' }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -69,6 +116,7 @@
 
 <script setup>
 import SlideshowBase from '@/components/SlideshowBase.vue'
+import { ref, onMounted } from 'vue';
 
 const slides = [
   { src: 'image/About/About_heading03.jpg', alt: 'About page' },
@@ -109,8 +157,97 @@ const principles = [
   }
 ]
 
+const teamMembers = [
+  {
+    name: "Glenn Fawcett",
+    position: "Executive Director",
+    image:
+      "https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9668-1024x768.jpg",
+  },
+  {
+    name: " Raksmey Var",
+    position: "Country Representative, Cambodia",
+    image:
+      "https://lotusoutreachaustralia.org.au/wp-content/uploads/2015/07/Raksmey-for-web-site-.jpg",
+  },
+  {
+    name: "Pisey Chea",
+    position: "LOCAM Project Officer",
+    image:
+      "https://lotusoutreachaustralia.org.au/wp-content/uploads/2018/06/Untitled-design-2.jpg",
+  },
+  {
+    name: "Borika",
+    position: "Accountant, Cambodia",
+    image: "https://lotusoutreach.org/wp-content/uploads/2022/08/borika.jpeg",
+  },
+]
+
+const flippedStates = ref([])
+
+onMounted(() => {
+  flippedStates.value = teamMembers.map(() => false)
+})
+
+const toggleFlip = (index) => {
+  flippedStates.value[index] = !flippedStates.value[index]
+}
 
 const startYear = 2008
 const currentYear = new Date().getFullYear()
 const yearsOfExperience = currentYear - startYear
 </script>
+
+<style scoped>
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.glow-effect {
+  text-shadow: 0 0 20px rgba(29, 78, 216, 0.5);
+}
+
+.bg-beige-100 {
+  background-color: #f5e8c7;
+}
+
+@media (max-width: 768px) {
+  .flex-wrap {
+    justify-content: center;
+  }
+
+  .w-72 {
+    width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .w-72 {
+    width: 260px;
+  }
+
+  .h-96 {
+    height: 340px;
+  }
+
+  .w-52 {
+    width: 200px;
+  }
+
+  .h-52 {
+    height: 200px;
+  }
+}
+</style>
