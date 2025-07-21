@@ -2,15 +2,16 @@
   <SlideshowBase :slides="images" :content="sharedContent" />
   <Program :focusCards="focusCards"/>
   <OurAproach :approaches="approaches" :activeApproach="activeApproach" @update:activeApproach="activeApproach = $event" />
-
+  <QuoteSection />
 
 </template>
 
 <script setup>
 import { ref} from "vue";
 import SlideshowBase from '@/components/SlideshowBase.vue'
-import Program from '@/components/home/program.vue';
+import Program from "@/components/home/program.vue";
 import OurAproach from '@/components/home/OurAproach.vue';
+import QuoteSection from "@/components/home/QuoteSection.vue";
 
 const images = [
   { src: '/public/image/Home/Home_hero01.jpg', alt: 'Cambodia Girls' },

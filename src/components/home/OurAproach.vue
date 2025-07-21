@@ -16,7 +16,7 @@
             <!-- Image -->
             <div class="order-2 lg:order-1">
               <img
-                src="https://images.globalgiving.org/pfil/3885/pict_original.jpg?w=460&h=306&auto=compress,enhance&fit=crop&crop=faces,center&format=auto&dpr=2"
+                src="/public/image/Home/Quote.png"
                 alt="Cambodian women and children"
                 class="w-full h-96 object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
               />
