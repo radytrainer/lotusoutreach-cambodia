@@ -2,7 +2,7 @@
     <!-- Call to Action -->
     <section class="relative h-[60vh] bg-cover bg-center flex items-center overflow-hidden">
       <!-- Background image with overlay -->
-      <img src="http://localhost:5173/src/img/contact.png" alt="Cambodian girls in a classroom"
+      <img src="/public/image/contact/contactMission.png" alt="Cambodian girls in a classroom"
         class="absolute inset-0 w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-400/40"></div>
       <div class="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
