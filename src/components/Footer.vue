@@ -207,7 +207,7 @@
           </h4>
           <div class="flex flex-wrap gap-3 mb-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/LotusOutreachCambodia/"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 rounded-full bg-gray-700 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110 group"
@@ -223,7 +223,7 @@
               </svg>
             </a>
             <a
-              href="https://youtube.com"
+              href="http://www.youtube.com/@LOCambodia"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 rounded-full bg-gray-700 hover:bg-red-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110 group"
