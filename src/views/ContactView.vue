@@ -7,9 +7,11 @@
       </div>
     </section>
     <Location/>
+    <MissionContact/>
 </template>
 <script setup>
 import FormContact from '@/components/contact/FormContact.vue';
 import Header from '../components/contact/Header.vue';
 import Location from '@/components/contact/Location.vue';
+import MissionContact from '@/components/contact/MissionContact.vue';
 </script>
