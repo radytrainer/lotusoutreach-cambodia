@@ -5,13 +5,13 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Logo and Description -->
-        <div class="space-y-4">
+        <div class="space-y-3">
           <div class="flex items-center space-x-3">
             <div class="flex items-center space-x-3">
               <img
-                src="../assets/logo.jpg"
+                src="../assets/Logo.png"
                 alt="Lotus Outreach Logo"
-                class="w-12 h-12 object-contain"
+                class="w-16 h-16 object-contain"
               />
             </div>
             <div>
@@ -19,6 +19,7 @@
                 Lotus Outreach Cambodia
               </h4>
             </div>
+            
           </div>
           <p class="text-sm text-gray-600 leading-relaxed">
             Transforming lives in rural Cambodia through education, healthcare,
@@ -28,8 +29,8 @@
         </div>
 
         <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-semibold mb-4 text-blue-600">Quick Links</h4>
+        <div >
+          <h4 class="text-lg font-semibold mb-3 text-blue-600">Quick Links</h4>
           <ul class="space-y-3">
             <li>
               <a
@@ -121,7 +122,7 @@
 
         <!-- Programs -->
         <div>
-          <h4 class="text-lg font-semibold mb-4 text-blue-600">Our Programs</h4>
+          <h4 class="text-lg font-semibold mb-3 text-blue-600">Our Programs</h4>
           <ul class="space-y-3">
             <li>
               <a
@@ -201,7 +202,7 @@
 
         <!-- Connect With Us -->
         <div>
-          <h4 class="text-lg font-semibold mb-4 text-blue-600">
+          <h4 class="text-lg font-semibold mb-3 text-blue-600">
             Connect With Us
           </h4>
           <div class="flex flex-wrap gap-3 mb-4">
