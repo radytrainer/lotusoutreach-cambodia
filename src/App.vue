@@ -1,19 +1,8 @@
 <template>
-  <div >
-    <Navbar />
-
-    
-    <Footer/>
-    
-   
-  </div> 
-
+  <router-view />
+  <Footer/>
 </template>
 
 <script setup>
-import Navbar from './components/Navbar.vue';
-import Footer from './components/Footer.vue';
-
-
-import { RouterView } from 'vue-router';
+import Footer from "@/components/Footer.vue";
 </script>
