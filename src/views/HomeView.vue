@@ -1,32 +1,25 @@
 <template>
   <div>
-    <!-- Slideshow -->
-    <Slideshow />
-    
-    <!-- Content Section -->
-    <section class="mt-8 p-6 max-w-7xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-6">Welcome to Lotus Outreach Cambodia</h2>
-      <p class="text-lg text-center mb-4">
-        We are dedicated to empowering underprivileged girls in Cambodia by providing education opportunities from primary school to university.
-      </p>
-
-      <div class="text-center mt-6">
-        <router-link 
-          to="/about" 
-          class="bg-pink-600 text-white py-3 px-6 rounded-md hover:bg-pink-700 transition"
-        >
-          Learn More About Us
-        </router-link>
-      </div>
-    </section>
+    <SlideshowBase
+      :images="homeImages"
+      :title="'Empowering <span style=\'color: #ff69b4;\'>Cambodia\'s</span> Girls'"
+      description="In rural Cambodia, education transforms lives. When you empower a Cambodian girl, you transform an entire community."
+      :buttons="homeButtons"
+      align="left"
+    />
   </div>
 </template>
 
 <script setup>
-import Slideshow from '@/components/Slideshow.vue';
+import SlideshowBase from '@/components/SlideshowBase.vue';
+
+const homeImages = [
+  'https://lotusoutreach.org/wp-content/uploads/2019/08/header.jpg',
+  'https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9585-2.jpg',
+];
+
+const homeButtons = [
+  { text: 'Support Cambodia', link: '/donate', style: 'bg-pink-600 hover:bg-pink-700 text-white' },
+  { text: 'Learn About Our Work', link: '/program', style: 'bg-white hover:bg-gray-200 text-pink-600' },
+];
 </script>
-
-<style scoped>
-/* Add any custom styles for the home page */
-</style>
-
