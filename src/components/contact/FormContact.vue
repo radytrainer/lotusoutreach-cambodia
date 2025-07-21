@@ -85,10 +85,12 @@
         </p>
       </form>
     </div>
+    <ContactInfo/>
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
+import ContactInfo from "./ContactInfo.vue";
 
 // Form state
 const form = ref({
