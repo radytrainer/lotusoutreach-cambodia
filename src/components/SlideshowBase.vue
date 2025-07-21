@@ -12,7 +12,7 @@
 
     <!-- Content (Shared or Slide-Specific) -->
     <div class="relative z-10 h-full flex items-center">
-      <div class="container mx-auto px-6 lg:px-8">
+      <div class="container mx-auto px-6 lg:px-24">
         <div :class="[
           'max-w-3xl',
           align === 'center' ? 'text-center mx-auto' : '',

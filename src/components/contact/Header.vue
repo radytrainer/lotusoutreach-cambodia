@@ -1,7 +1,17 @@
 <template>
-  <div class="relative h-screen bg-cover bg-center text-white" :style="{ backgroundImage: `url(${contactImages[0]})` }">
+  <div class="relative text-white">
+    <!-- Background Image -->
+    <img
+      src="/public/image/Contact/contactHeader.png"
+      alt="Cambodia program 1"
+      class="w-full h-[28rem] object-cover md:h-[36rem] lg:h-[36rem] xl:h-[36rem] 2xl:h-[40rem]"
+    />
+
+    <!-- Overlay -->
     <div class="absolute inset-0 bg-black/50"></div>
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+
+    <!-- Content on Top -->
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact with Us</h1>
       <p class="text-lg md:text-xl mb-6 max-w-2xl">
         Reach out to join our mission of empowering Cambodian girls and transforming rural communities.
@@ -15,9 +25,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const contactImages = [
-  "http://localhost:5173/src/img/cam3.png"
-];
-</script>
