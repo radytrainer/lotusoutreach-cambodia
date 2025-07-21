@@ -39,7 +39,7 @@
           <button
             class="px-10 py-4 bg-white text-pink-600 font-bold rounded-full hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105 shadow-lg"
           >
-            Support Cambodia Today
+            Support Us Today
           </button>
         </div>
       </div>
