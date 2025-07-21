@@ -1,6 +1,6 @@
 <template>
   <!-- Responsive Contact Info Card -->
-  <div class="container mx-auto px-4 py-10">
+  
     <div class="bg-blue-500 text-white p-6 md:p-12 rounded-xl shadow-md">
       <div class="h-full flex flex-col justify-center">
         <!-- Header -->
@@ -61,5 +61,4 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
