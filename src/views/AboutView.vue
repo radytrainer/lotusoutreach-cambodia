@@ -1,21 +1,32 @@
 <template>
   <div class="min-h-screen bg-white">
-    <SlideshowBase :images="aboutImages" title="See Our About"
-      description="Learn about our solutions in education, training, and care that empower vulnerable communities."
-      :buttons="aboutButtons" />
+    <!-- SlideshowBase used like Home: slides + shared content -->
+    <SlideshowBase :slides="slides" :content="sharedContent" />
+
+    <!-- About page content -->
     <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start">
         <div class="relative mr-0 md:mr-8 mb-12 md:mb-0">
           <!-- Filled Circle Image -->
           <div class="w-[450px] aspect-square rounded-full border-[12px] border-blue-500 overflow-hidden mx-auto">
-            <img src="/image/History.jpg" alt="Lotus Outreach profile image" class="w-full h-full object-cover object-center" />
+            <img
+              src="/image/History.jpg"
+              alt="Lotus Outreach profile image"
+              class="w-full h-full object-cover object-center"
+            />
           </div>
-          <div class="absolute -top-4 -left-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg text-center">
+
+          <div
+            class="absolute -top-4 -left-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg text-center"
+          >
             <p class="text-2xl font-bold">{{ yearsOfExperience }}</p>
             <p class="text-sm">Years of</p>
             <p class="text-sm">Experience</p>
           </div>
-          <div class="absolute -bottom-12 -left-4 bg-blue-700 text-white p-4 rounded-lg shadow-lg w-64 text-sm">
+
+          <div
+            class="absolute -bottom-12 -left-4 bg-blue-700 text-white p-4 rounded-lg shadow-lg w-64 text-sm"
+          >
             <p>
               We continue to provide education scholarships, skills training,
               counseling, and safe environments for vulnerable women and
@@ -30,8 +41,12 @@
             | Donate For Girls Around The World!
           </h2>
 
-          <p v-for="(paragraph, index) in historyContent" :key="index" class="text-gray-700 mb-4" v-html="paragraph">
-          </p>
+          <p
+            v-for="(paragraph, index) in historyContent"
+            :key="index"
+            class="text-gray-700 mb-4"
+            v-html="paragraph"
+          ></p>
         </div>
       </div>
     </section>
@@ -39,30 +54,30 @@
 </template>
 
 <script setup>
-import SlideshowBase from '@/components/SlideshowBase.vue';
+import SlideshowBase from '@/components/SlideshowBase.vue'
 
-// Auto-calculate "Years of Experience"
-const startYear = 2008;
-const currentYear = new Date().getFullYear();
-const yearsOfExperience = currentYear - startYear;
+const slides = [
+  { src: 'image/About_heading.jpg', alt: 'Cambodia Girls' },
+  { src: 'image/About_heading.jpg', alt: 'Community Support' },
+  { src: 'image/About_heading.jpg', alt: 'Helping Hands' }
+]
 
-const aboutImages = [
-  'image/About_heading03.jpg',
-  'image/About_heading02.jpg',
-  'image/About_heading.jpg'
-];
+const sharedContent = {
+  title: "See Our <span class='text-pink-400'>About</span>",
+  description:
+    'Learn about our solutions in education, training, and care that empower vulnerable communities.',
+  buttons: [
+    { text: 'Learn more', link: '/program', primary: true },
+  ]
+}
 
-const aboutButtons = [
-  {
-    text: 'LEARN MORE',
-    link: '/program',
-    style: 'bg-pink-600 hover:bg-pink-700 text-white',
-  },
-];
+const startYear = 2008
+const currentYear = new Date().getFullYear()
+const yearsOfExperience = currentYear - startYear
 
 const historyContent = [
   'Lotus Outreach Cambodia was established as part of the global Lotus Outreach mission to serve vulnerable communities. Since the early 2000s, it has worked in Cambodia to provide access to education, protect girls from trafficking, and offer scholarships, skills training, and community support programs.',
   'Through core programs like GATE and CATALYST, Lotus Outreach Cambodia has empowered hundreds of girls from rural and low-income families to complete high school and pursue higher education or vocational training.',
-  '<strong class="text-blue-600">Best Addition:</strong> Today, Lotus Outreach Cambodia empowers women and girls through education, skills training, and community programs—breaking the cycle of poverty and creating lasting change.',
-];
+  '<strong class="text-blue-600">Best Addition:</strong> Today, Lotus Outreach Cambodia empowers women and girls through education, skills training, and community programs—breaking the cycle of poverty and creating lasting change.'
+]
 </script>
