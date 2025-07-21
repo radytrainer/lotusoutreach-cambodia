@@ -1,15 +1,27 @@
 <template>
   <SlideshowBase :slides="images" :content="sharedContent" />
+  <Program :focusCards="focusCards"/>
 </template>
 
 <script setup>
 import SlideshowBase from '@/components/SlideshowBase.vue'
+import Program from '@/components/home/program.vue';
+import program from '@/components/home/program.vue';
 
-const homeImages = [
-  '/public/image/Home/Home_hero01.jpg',
-  '/public/image/Home/Home_hero02.jpg',
-  '/public/image/Home/Home_hero03.jpg',
-];
+const images = [
+  { src: '/public/image/Home/Home_hero01.jpg', alt: 'Cambodia Girls' },
+  { src: '/public/image/Home/Home_hero02.jpg', alt: 'Community Support' },
+  { src: '/public/image/Home/Home_hero03.jpg', alt: 'Helping Hands' }
+]
+
+const sharedContent = {
+  title: "Empowering <span class='text-pink-400'>Cambodia's</span> Girls",
+  description: 'In rural Cambodia, education transforms lives. When you empower a Cambodian girl, you transform an entire community.',
+  buttons: [
+    { text: 'Support Cambodia', link: '/donate', primary: true },
+    { text: 'Learn About Our Work', link: '/cambodia', primary: false }
+  ]
+}
 
 const homeButtons = [
   { text: 'Support Cambodia', link: '/donate', style: 'bg-pink-600 hover:bg-pink-700 text-white' },
