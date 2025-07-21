@@ -4,6 +4,7 @@ import DefaultLayout from '../layouts/DefaultLayout.vue';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
 import ContactView from '@/views/ContactView.vue';
+import DonateView from '@/views/DonateView.vue';
 
 const routes = [
   {
@@ -13,6 +14,7 @@ const routes = [
       { path: '', name: 'Home', component: Home },
       { path: 'about', name: 'About', component: About },
       {path: 'contact', name: 'Contact', component: ContactView },
+      {path: 'donate', name: 'Donate', component: DonateView},
     ],
   },
 ];
