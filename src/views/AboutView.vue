@@ -57,15 +57,14 @@
 import SlideshowBase from '@/components/SlideshowBase.vue'
 
 const slides = [
-  { src: 'image/About_heading.jpg', alt: 'Cambodia Girls' },
-  { src: 'image/About_heading.jpg', alt: 'Community Support' },
-  { src: 'image/About_heading.jpg', alt: 'Helping Hands' }
+  { src: 'image/About_heading03.jpg', alt: 'About page' },
+  { src: 'image/About_heading02.jpg', alt: 'About page' },
+  { src: 'image/About_heading.jpg', alt: 'About page' }
 ]
 
 const sharedContent = {
   title: "See Our <span class='text-pink-400'>About</span>",
-  description:
-    'Learn about our solutions in education, training, and care that empower vulnerable communities.',
+    description: 'Learn about our solutions in education, training, and care that empower vulnerable communities.',
   buttons: [
     { text: 'Learn more', link: '/program', primary: true },
   ]
