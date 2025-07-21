@@ -2,7 +2,7 @@
     <!-- Header Section -->
     <header class="relative w-full flex-shrink-0 overflow-hidden">
       <img
-        src="http://localhost:5173/src/img/cam1.png"
+        src="/public/image/Donate/donate.png"
         alt="Cambodia program 1"
         class="w-full h-[28rem] object-cover md:h-[36rem] lg:h-[36rem] xl:h-[36rem] 2xl:h-[40rem]"
       />
