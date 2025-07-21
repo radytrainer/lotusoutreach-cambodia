@@ -30,7 +30,7 @@
               <div>
                 <label
                   for="amount"
-                  class="block text-gray-700 text-sm font-medium mb-2 flex items-center"
+                  class="block text-gray-700 text-sm font-medium mb-2 items-center"
                 >
                   <svg
                     class="h-5 w-5 mr-2 text-pink-600"
@@ -105,7 +105,7 @@
               <div>
                 <label
                   for="anonymous"
-                  class="block text-gray-700 text-sm font-medium mb-2 flex items-center"
+                  class="block text-gray-700 text-sm font-medium mb-2 items-center"
                 >
                   <svg
                     class="h-5 w-5 mr-2 text-pink-600"
@@ -134,7 +134,7 @@
               </div>
               <div>
                 <label
-                  class="block text-gray-700 text-sm font-medium mb-2 flex items-center"
+                  class="block text-gray-700 text-sm font-medium mb-2 items-center"
                 >
                   <svg
                     class="h-5 w-5 mr-2 text-pink-600"
@@ -373,7 +373,7 @@
               <div>
                 <label
                   for="comment"
-                  class="block text-gray-700 text-sm font-medium mb-2 flex items-center"
+                  class="block text-gray-700 text-sm font-medium mb-2 items-center"
                 >
                   <svg
                     class="h-5 w-5 mr-2 text-pink-600"
