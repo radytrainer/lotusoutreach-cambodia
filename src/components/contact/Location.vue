@@ -14,16 +14,18 @@
       <div class="max-w-[1400px] mx-auto px-8">
         <div class="relative rounded-2xl overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.517886122109!2d104.9118240748056!3d11.542229288643267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513f173e4c05%3A0xf41319be476316e6!2sLotus%20Outreach%20Cambodia%20(LOCAM)!5e0!3m2!1sen!2skh!4v1721538960000!5m2!1sen!2skh"
-            class="w-full h-[450px] border-0 rounded-2xl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226.51392107693917!2d104.91587309596197!3d11.532194451248834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095108d46a13af%3A0xcac8cfe6b53b3d5c!2sLotus%20Outreach%20Cambodia%20(LOCAM)!5e1!3m2!1sen!2skh!4v1753083277123!5m2!1sen!2skh"
+            class="w-full h-[450px] border-0"
+            style="border: 0"
             allowfullscreen
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Lotus Outreach Cambodia Location"
-            aria-label="Lotus Outreach Cambodia map location"
+            title="Phnom Penh, Cambodia Location"
           ></iframe>
 
-          <div class="absolute top-0 left-0 p-4 sm:p-6 bg-white/90 rounded-br-2xl max-w-[80%] sm:max-w-xs">
+          <div
+            class="absolute top-0 left-0 p-4 sm:p-6 bg-white/90 rounded-br-2xl max-w-[80%] sm:max-w-xs"
+          >
             <h3 class="text-xl font-bold text-blue-600">
               Lotus Outreach Cambodia
             </h3>
