@@ -9,14 +9,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-pink-50 text-center p-4 text-sm text-gray-600 w-full">
-      © 2025 Lotus Outreach Cambodia
-    </footer>
+    <Footer />
+
+    
   </div>
 </template>
 
 <script setup>
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 </script>
 
 <style scoped>

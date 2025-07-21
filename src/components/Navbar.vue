@@ -13,10 +13,10 @@
 
       <!-- Desktop Navigation -->
       <ul class="hidden md:flex space-x-6 text-gray-800 font-medium">
-        <li><RouterLink to="/" :class="{ 'text-pink-600': isActive('/') }" class="hover:text-pink-600 transition-colors">Why Girl?</RouterLink></li>
+        <li><RouterLink to="/" :class="{ 'text-pink-600': isActive('/') }" class="hover:text-pink-600 transition-colors">Home</RouterLink></li>
         <li><RouterLink to="/about" :class="{ 'text-pink-600': isActive('/about') }" class="hover:text-pink-600 transition-colors">About Us</RouterLink></li>
         <li><RouterLink to="/program" :class="{ 'text-pink-600': isActive('/program') }" class="hover:text-pink-600 transition-colors">Program</RouterLink></li>
-        <li><RouterLink to="/newstory" :class="{ 'text-pink-600': isActive('/newstory') }" class="hover:text-pink-600 transition-colors">Activity</RouterLink></li>
+        <li><RouterLink to="/newstory" :class="{ 'text-pink-600': isActive('/newstory') }" class="hover:text-pink-600 transition-colors">News & Stories</RouterLink></li>
         <li><RouterLink to="/donate" :class="{ 'text-pink-600': isActive('/donate') }" class="hover:text-pink-600 transition-colors">Donate</RouterLink></li>
         <li><RouterLink to="/contact" :class="{ 'text-pink-600': isActive('/contact') }" class="hover:text-pink-600 transition-colors">Contact</RouterLink></li>
       </ul>
