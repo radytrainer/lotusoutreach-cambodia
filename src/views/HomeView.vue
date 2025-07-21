@@ -1,12 +1,16 @@
 <template>
   <SlideshowBase :slides="images" :content="sharedContent" />
   <Program :focusCards="focusCards"/>
+  <OurAproach :approaches="approaches" :activeApproach="activeApproach" @update:activeApproach="activeApproach = $event" />
+
+
 </template>
 
 <script setup>
+import { ref} from "vue";
 import SlideshowBase from '@/components/SlideshowBase.vue'
 import Program from '@/components/home/program.vue';
-import program from '@/components/home/program.vue';
+import OurAproach from '@/components/home/OurAproach.vue';
 
 const images = [
   { src: '/public/image/Home/Home_hero01.jpg', alt: 'Cambodia Girls' },
@@ -60,4 +64,42 @@ const focusCards = [
     content: "Our community development programs in Cambodia focus on building essential infrastructure like water wells, improving agricultural practices..."
   }
 ]
+
+// Approach tabs state
+const activeApproach = ref("culturally-sensitive");
+
+const approaches = ref([
+  {
+    key: "culturally-sensitive",
+    title: "Culturally Sensitive",
+    content: [
+      "Our programs in Cambodia are designed with deep respect for Khmer culture, Buddhist traditions, and local customs. We work closely with village elders, monks, and community leaders to ensure our initiatives align with cultural values while promoting positive change.",
+      "Understanding the importance of family honor and community harmony in Cambodian society, we approach sensitive topics like girls' education and women's empowerment with cultural sensitivity and patience, building trust over time.",
+    ],
+  },
+  {
+    key: "locally-led",
+    title: "Locally Led",
+    content: [
+      "Our Cambodia operations are led by Cambodian staff who understand the language, culture, and specific challenges facing rural communities. This local leadership ensures our programs are relevant, effective, and sustainable.",
+      "We prioritize hiring and training Cambodian team members, creating local employment while building capacity within communities. Our approach empowers Cambodians to lead their own development initiatives.",
+    ],
+  },
+  {
+    key: "community-based",
+    title: "Community Based",
+    content: [
+      "Every program begins with extensive community consultation. We work with village committees, women's groups, and local leaders to identify priorities and design solutions that reflect community needs and values.",
+      "Our community-based approach ensures that programs are owned and sustained by the communities themselves, creating lasting change that continues long after our direct involvement ends.",
+    ],
+  },
+  {
+    key: "holistic",
+    title: "Holistic Approach",
+    content: [
+      "We recognize that challenges in rural Cambodia are interconnected. Poverty, lack of education, health issues, and limited economic opportunities all affect each other. Our programs address multiple issues simultaneously for maximum impact.",
+      "By combining education support with health services, clean water access, and economic opportunities, we create comprehensive solutions that address root causes of poverty and inequality in Cambodian communities.",
+    ],
+  },
+]);
 </script>
