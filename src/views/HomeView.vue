@@ -23,8 +23,8 @@ const sharedContent = {
   title: "Empowering <span class='text-pink-400'>Cambodian</span> Girls",
   description: 'In rural Cambodia, education transforms lives. When you empower a Cambodian girl, you transform an entire community.',
   buttons: [
-    { text: 'Support Cambodia', link: '/donate', primary: true },
-    { text: 'Learn About Our Work', link: '/cambodia', primary: false }
+    { text: 'Support Us', link: '/donate', primary: true },
+    { text: 'Learn About Our Work', link: '/about', primary: false }
   ]
 }
 
