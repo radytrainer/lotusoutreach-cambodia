@@ -4,7 +4,7 @@
       <!-- Background Image -->
       <div class="absolute inset-0">
         <img
-          src="https://images.globalgiving.org/pfil/10626/pict_original.jpg?w=460&h=306&auto=compress,enhance&fit=crop&crop=faces,center&format=auto&dpr=2"
+          src="/public/image/Home/Quote.png"
           alt="Cambodia background"
           class="w-full h-full object-cover"
         />
