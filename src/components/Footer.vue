@@ -29,96 +29,59 @@
         </div>
 
         <!-- Quick Links -->
-        <div >
-          <h4 class="text-lg font-semibold mb-3 text-blue-600">Quick Links</h4>
-          <ul class="space-y-3">
-            <li>
-              <a
-                href="#"
-                class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
-              >
-                <svg
-                  class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
-              >
-                <svg
-                  class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-                About Us
-              </a>
-            </li>
+<div>
+  <h4 class="text-lg font-semibold mb-3 text-blue-600">Quick Links</h4>
+  <ul class="space-y-3">
+    <li>
+      <router-link
+        to="/"
+        class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
+      >
+        <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        Home
+      </router-link>
+    </li>
 
-            <li>
-              <a
-                href="#"
-                class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
-              >
-                <svg
-                  class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-                News & Stories
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
-              >
-                <svg
-                  class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-                Support Us
-              </a>
-            </li>
-          </ul>
-        </div>
+    <li>
+      <router-link
+        to="/about"
+        class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
+      >
+        <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        About Us
+      </router-link>
+    </li>
+
+    <li>
+      <router-link
+        to="/newstory"
+        class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
+      >
+        <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        News & Stories
+      </router-link>
+    </li>
+
+    <li>
+      <router-link
+        to="/donate"
+        class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
+      >
+        <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        Support Us
+      </router-link>
+    </li>
+  </ul>
+</div>
+
 
         <!-- Programs -->
         <div>
