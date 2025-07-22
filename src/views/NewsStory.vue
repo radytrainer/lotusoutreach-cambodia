@@ -1,27 +1,28 @@
 <template>
     <div class="bg-white">
         <HeroBanner />
+        
         <ActivityDetail
-        v-if="currentView === 'detail' && selectedActivity"
-        :activity="selectedActivity"
-        :related="relatedActivities"
-        :formatDate="formatDate"
-        :getCategoryBadgeClass="getCategoryBadgeClass"
-        :getCategoryLabel="getCategoryLabel"
-        :calculateReadTime="calculateReadTime"
-        @back="backToListing"
-        @view-detail="viewActivityDetail"
+            v-if="currentView === 'detail' && selectedActivity"
+            :activity="selectedActivity"
+            :related="relatedActivities"
+            :formatDate="formatDate"
+            :getCategoryBadgeClass="getCategoryBadgeClass"
+            :getCategoryLabel="getCategoryLabel"
+            :calculateReadTime="calculateReadTime"
+            @back="backToListing"
+            @view-detail="viewActivityDetail"
         />
         
         <div v-else class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <ActivityFilter
-            :searchQuery="searchQuery"
-            :categories="categories"
-            :activeCategories="activeCategories"
-            :getCategoryButtonClass="getCategoryButtonClass"
-            @update:searchQuery="val => searchQuery = val"
-            @toggle-category="toggleCategory"
-            @search="handleSearch"
+                :searchQuery="searchQuery"
+                :categories="categories"
+                :activeCategories="activeCategories"
+                :getCategoryButtonClass="getCategoryButtonClass"
+                @update:searchQuery="val => searchQuery = val"
+                @toggle-category="toggleCategory"
+                @search="handleSearch"
             />
 
             <div v-if="filteredActivities.length === 0" class="text-center py-12">
@@ -30,13 +31,13 @@
 
             <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <CardActivity
-                v-for="(activity, index) in filteredActivities.slice(0, visibleItems)"
-                :key="index"
-                :activity="activity"
-                :getCategoryBadgeClass="getCategoryBadgeClass"
-                :getCategoryLabel="getCategoryLabel"
-                :formatDate="formatDate"
-                @view-detail="viewActivityDetail"
+                    v-for="(activity, index) in filteredActivities.slice(0, visibleItems)"
+                    :key="index"
+                    :activity="activity"
+                    :getCategoryBadgeClass="getCategoryBadgeClass"
+                    :getCategoryLabel="getCategoryLabel"
+                    :formatDate="formatDate"
+                    @view-detail="viewActivityDetail"
                 />
             </div>
 
@@ -58,7 +59,7 @@ import { ref, computed } from "vue";
 import ActivityFilter from '@/components/News/ActivityFilter.vue';
 
 // View state management
-const currentView = ref("listing"); // 'listing' or 'detail'
+const currentView = ref("listing"); 
 const selectedActivity = ref(null);
 
 // Reactive variables

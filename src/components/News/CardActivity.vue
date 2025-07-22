@@ -1,8 +1,6 @@
 <template>
     <!-- Card Activity -->
-  <article
-    class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col"
-  >
+  <article class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
     <div class="h-48 overflow-hidden">
       <img
         :src="activity.image || '/placeholder.svg'"
