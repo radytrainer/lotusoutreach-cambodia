@@ -69,8 +69,7 @@ const programs = [
   {
     id: 1,
     title: "Education in Cambodia",
-    image:
-      "https://lotusoutreachaustralia.org.au/wp-content/uploads/2015/07/banner-photo-outside-house.jpg",
+    image: "/public/image/Home/Program_card01.png",
     summary: `Lotus Outreach Cambodia supports girls in rural areas by providing scholarships, school supplies, uniforms, and nutritious meals. These efforts help remove financial barriers so girls can continue their education and build brighter futures.`,
     contents: [
       {
@@ -84,7 +83,7 @@ const programs = [
   {
     id: 2,
     title: "Healthcare Access",
-    image: "https://www.globalgiving.org/pfil/69718/pict_large.jpg",
+    image: "/public/image/Home/Program_card02.png",
     summary: `We bring essential healthcare services to remote communities, including mobile clinics and health education. Clean water projects improve health and reduce waterborne diseases, helping families live healthier lives.`,
     contents: [
       {
@@ -99,7 +98,7 @@ const programs = [
   {
     id: 3,
     title: "Anti-Trafficking Protection",
-    image: "https://www.globalgiving.org/pfil/5863/ph_5863_18888.jpg",
+    image: "/public/image/Home/Program_card03.png",
     summary: `Our anti-trafficking programs focus on community education, economic empowerment, and support for survivors. We work with local partners to provide skills training and safe opportunities that reduce vulnerability to trafficking.`,
     contents: [
       {
@@ -115,8 +114,7 @@ const programs = [
   {
     id: 4,
     title: "Rural Development",
-    image:
-      "https://lotusoutreach.org/wp-content/uploads/2019/01/26435170859_e94f24584d_o-1-e1547985152808.jpg",
+    image: "/public/image/Home/Program_card04.png" ,
     summary: `We partner with communities to build vital infrastructure like clean water wells and support sustainable agriculture. Our programs create jobs and improve livelihoods, helping families thrive in rural Cambodia.`,
     contents: [
       {
