@@ -47,6 +47,8 @@
                 </button>
             </div>
         </div>
+        <!-- Success Stories -->
+         <SuccessStory />
     </div>
 </template>
 
@@ -57,6 +59,7 @@ import ActivityDetail from '@/components/News/ActivityDetail.vue';
 
 import { ref, computed } from "vue";
 import ActivityFilter from '@/components/News/ActivityFilter.vue';
+import SuccessStory from '@/components/News/SuccessStory.vue';
 
 // View state management
 const currentView = ref("listing"); 
@@ -276,6 +279,8 @@ const getCategoryLabel = (category) => {
 </script>
 
 <style scoped>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /* Custom styles */
 .line-clamp-3 {
   display: -webkit-box;
