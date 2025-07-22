@@ -2,39 +2,7 @@
   <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white font-sans">
     <!-- Main Page -->
     <div v-if="currentView === 'home'">
-      <!-- Full Screen Slideshow -->
-      <section class="relative h-screen w-full overflow-hidden">
-        <!-- Slides Container -->
-        <div class="relative h-full w-full">
-          <div v-for="(slide, index) in slides" :key="index" v-show="currentSlide === index"
-            class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-            :class="{ 'opacity-100': currentSlide === index, 'opacity-0': currentSlide !== index }">
-            <img :src="slide.image" :alt="slide.alt" class="w-full h-full object-cover" />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-center justify-center">
-              <div class="text-center px-6 text-white max-w-4xl animate-slide-up">
-                <div class="mb-6">
-                  <h1 class="text-4xl md:text-6xl font-poppins font-extrabold text-pink-500 mb-3">Lotus Outreach</h1>
-                  <div class="w-24 h-1 bg-pink-500 mx-auto rounded"></div>
-                </div>
-                <h2
-                  class="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold mb-4 tracking-tight uppercase">
-                  <span class="text-gray-100">{{ slide.titlePart1 }}</span>
-                  <span class="text-pink-500">{{ slide.titlePart2 }}</span>
-                </h2>
-                <p class="text-base sm:text-lg md:text-xl font-light text-gray-200 mb-8">{{ slide.description }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-10">
-          <button v-for="(slide, index) in slides" :key="index" @click="goToSlide(index)"
-            class="w-2 h-2 rounded-full transition-all duration-300"
-            :class="currentSlide === index ? 'bg-pink-500 w-6' : 'bg-white/40 hover:bg-white/60'"
-            :aria-label="`Go to slide ${index + 1}`"></button>
-        </div>
-      </section>
-
+     
       <!-- Programs Section -->
       <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-7xl">
