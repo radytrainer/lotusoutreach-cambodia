@@ -114,7 +114,7 @@ const programs = [
   {
     id: 4,
     title: "Rural Development",
-    image: "/public/image/Home/Program_card04.png",
+    image: "/public/image/Home/Program_card04.png" ,
     summary: `We partner with communities to build vital infrastructure like clean water wells and support sustainable agriculture. Our programs create jobs and improve livelihoods, helping families thrive in rural Cambodia.`,
     contents: [
       {
