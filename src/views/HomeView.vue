@@ -9,7 +9,7 @@
 <script setup>
 import { ref} from "vue";
 import SlideshowBase from '@/components/SlideshowBase.vue'
-import Program from "@/components/home/Program.vue";
+import Program from "@/components/home/program.vue";
 import OurAproach from '@/components/home/OurAproach.vue';
 import QuoteSection from "@/components/home/QuoteSection.vue";
 

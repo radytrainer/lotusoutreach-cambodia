@@ -33,7 +33,7 @@
           <blockquote
             class="text-2xl lg:text-3xl font-medium text-white leading-relaxed mb-8"
           >
-            "Education for Cambodia's girls is the foundation for the country's
+            "Education for Cambodian girls is the foundation for the country's
             sustainable development and economic growth."
           </blockquote>
           <button
