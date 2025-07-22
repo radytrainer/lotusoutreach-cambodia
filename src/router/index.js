@@ -6,6 +6,7 @@ import About from '../views/AboutView.vue';
 import ContactView from '@/views/ContactView.vue';
 import Education from '@/components/Education.vue';
 import DonateView from '@/views/DonateView.vue';
+import NewsStory from '@/views/NewsStory.vue';
 
 const routes = [
   {
@@ -19,6 +20,7 @@ const routes = [
 
       { path: 'education/:id', name: 'Education', component: Education },
       {path: 'donate', name: 'Donate', component: DonateView},
+      {path: 'newstory', name: 'News', component: NewsStory},
     ],
   },
 ];
