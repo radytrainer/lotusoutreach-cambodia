@@ -37,9 +37,9 @@
 
         <div class="flex items-center">
           <div
-            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-200/20 flex items-center justify-center mr-3 sm:mr-4"
+            class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-200/20 flex items-center justify-center mr-4 sm:mr-6"
           >
-            <i class="fas fa-seedling text-lg sm:text-xl text-green-500"></i>
+            <i class="fas fa-seedling text-xl sm:text-2xl text-green-500"></i>
           </div>
           <div>
             <h1
@@ -58,7 +58,7 @@
     </div>
 
     <!-- Content Sections -->
-    <div
+   <div
       v-for="(section, index) in program.contents"
       :key="index"
       class="px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 max-w-7xl mx-auto"
@@ -73,7 +73,7 @@
 
           <!-- First Content Block -->
           <div
-            class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center md:items-start"
+            class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center md:items-center"
           >
             <div class="w-full md:w-1/2">
               <img
@@ -82,7 +82,7 @@
                 class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-md"
               />
             </div>
-            <div class="w-full md:w-1/2">
+            <div class="w-full md:w-1/2 h-full flex items-center">
               <p
                 class="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed"
               >
@@ -91,9 +91,9 @@
             </div>
           </div>
 
-          <!-- Second Content Block (Reversed on larger screens) -->
+          <!-- Second Content Block (Reversed) -->
           <div
-            class="flex flex-col md:flex-row-reverse gap-4 sm:gap-6 items-center md:items-start"
+            class="flex flex-col md:flex-row-reverse gap-4 sm:gap-6 items-center md:items-center"
           >
             <div class="w-full md:w-1/2">
               <img
@@ -102,7 +102,7 @@
                 class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-md"
               />
             </div>
-            <div class="w-full md:w-1/2">
+            <div class="w-full md:w-1/2 h-full flex items-center">
               <p
                 class="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed whitespace-pre-line"
               >
@@ -113,6 +113,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
