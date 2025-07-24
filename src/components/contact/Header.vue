@@ -17,7 +17,7 @@
         Reach out to join our mission of empowering Cambodian girls and transforming rural communities.
       </p>
       <router-link
-        to="/contact"
+        to="donate"
         class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg text-lg transition-colors duration-200"
       >
         Donation
