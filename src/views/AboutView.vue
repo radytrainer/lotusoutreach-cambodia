@@ -9,16 +9,18 @@
 </template>
 
 <script setup>
+import { ref, onMounted, nextTick } from 'vue'
+import axios from 'axios'
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 import SlideshowBase from '@/components/SlideshowBase.vue'
 import HistorySection from '@/components/about/HistorySection.vue'
 import MissionVisionSection from '@/components/about/MissionVisionSection.vue'
 import TeamSection from '@/components/about/TeamSection.vue'
 import PartnerSection from '@/components/about/PartnerSection.vue'
 
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
-import AOS from "aos"
-import "aos/dist/aos.css"
-
+// Slideshow content
 const slides = [
   { src: 'image/About/About_heading03.jpg', alt: 'About page' },
   { src: 'image/About/About_heading02.jpg', alt: 'About page' },
@@ -31,103 +33,46 @@ const sharedContent = {
   buttons: [{ text: 'Learn more', link: '/program', primary: true }]
 }
 
-const historyContent = [
-  'Lotus Outreach Cambodia was established as part of the global Lotus Outreach mission to serve vulnerable communities. Since the early 2000s, it has worked in Cambodia to provide access to education, protect girls from trafficking, and offer scholarships, skills training, and community support programs.',
-  'Through core programs like Training, Care, Education and Giving Back, Lotus Outreach Cambodia has empowered hundreds of girls from rural and low-income families to complete high school and pursue higher education or vocational training.',
-  '<strong class="text-blue-600">Best Addition:</strong> Today, Lotus Outreach Cambodia empowers women and girls through education, skills training, and community programs—breaking the cycle of poverty and creating lasting change.'
-]
-
-const principles = [
-  {
-    icon: 'fas fa-bullseye',
-    title: 'Our Mission',
-    text: 'To empower vulnerable women and children in Cambodia through education, training, and care helping them break the cycle of poverty and live with dignity, opportunity, and hope.'
-  },
-  {
-    icon: 'fas fa-eye',
-    title: 'Our Vision',
-    text: 'A world where every girl and child, no matter their background, has access to quality education, protection, and the tools to shape their own future.'
-  },
-  {
-    icon: 'fas fa-gem',
-    title: 'Our Values',
-    text: 'We believe in dignity, equity, and opportunity for all. With compassion, integrity, and resilience, we uplift the vulnerable and build brighter futures one life at a time.'
-  }
-]
-
-const teamMembers = [
-  {
-    name: "Glenn Fawcett",
-    position: "Executive Director",
-    image: "https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9668-1024x768.jpg",
-  },
-  {
-    name: "Raksmey Var",
-    position: "Country Representative, Cambodia",
-    image: "https://lotusoutreachaustralia.org.au/wp-content/uploads/2015/07/Raksmey-for-web-site-.jpg",
-  },
-  {
-    name: "Pisey Chea",
-    position: "LOCAM Project Officer",
-    image: "https://lotusoutreachaustralia.org.au/wp-content/uploads/2018/06/Untitled-design-2.jpg",
-  },
-  {
-    name: "Borika",
-    position: "Accountant, Cambodia",
-    image: "https://lotusoutreach.org/wp-content/uploads/2022/08/borika.jpeg",
-  },
-]
-
-
-const originalPartnerLogos = [
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_2n4ixhk90E0WEDNpghs_skGLtJZuMNCGfqyiBtnwoKRjd8DRZxCgLlmGYCwm9fuGAg&usqp=CAU",
-    url: "https://www.passerellesnumeriques.org/what-we-do/cambodia/",
-    info: "Passerelles Numériques",
-  },
-  {
-    img: "http://cwcc.org.kh/wp-content/uploads/2024/07/cropped-logo-4.png",
-    url: "http://cwcc.org.kh/",
-    info: "CWCC",
-  },
-  {
-    img: "https://bettercarenetwork.org/sites/default/files/styles/max_325x325/public/2022-07/cocd_cambodia_logo.jpeg?itok=M_TusQPl",
-    url: "https://cocd-cambodia.org/",
-    info: "COCD Cambodia",
-  },
-  {
-    img: "https://kapekh.org/files/Logos/004_Small.png",
-    url: "https://www.kapekh.org/",
-    info: "KAPE Cambodia",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-PHDrMqX-Qnh5xX45XjwvCk6Z_96G_Y2bw&s",
-    url: "https://www.khemaracambodia.org/",
-    info: "Khemara Cambodia",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkp_i6a7QoF16LhEl4pyBL1-TVeMvnXSjHpA&s",
-    url: "https://www.ccc-cambodia.org/en/ngodb/ngo-information/914",
-    info: "Santi Sena Organization",
-  }
-];
-
-const partnerLogos = ref([...originalPartnerLogos, ...originalPartnerLogos, ...originalPartnerLogos, ...originalPartnerLogos])
+// Reactive state
+const historyContent = ref([])
+const principles = ref([])
+const teamMembers = ref([])
+const partnerLogos = ref([])
 const marqueeWidth = ref("0px")
 const marqueeDuration = ref(30)
+
+const startYear = 2008
+const currentYear = new Date().getFullYear()
+const yearsOfExperience = currentYear - startYear
 
 const calculateMarqueeWidth = () => {
   const singleLogoItemWidth = 160 + 24
   marqueeWidth.value = `${partnerLogos.value.length * singleLogoItemWidth}px`
 }
 
-const startYear = 2008
-const currentYear = new Date().getFullYear()
-const yearsOfExperience = currentYear - startYear
+// 🔁 Fetch data using Axios
+const fetchAboutData = async () => {
+  try {
+    const response = await axios.get('/data.json') // from public/
+    const data = response.data
+    historyContent.value = data.historyContent
+    principles.value = data.principles
+    teamMembers.value = data.teamMembers
+    partnerLogos.value = [
+      ...data.originalPartnerLogos,
+      ...data.originalPartnerLogos,
+      ...data.originalPartnerLogos,
+      ...data.originalPartnerLogos
+    ]
+    nextTick(() => calculateMarqueeWidth())
+  } catch (error) {
+    console.error('Failed to fetch aboutData.json:', error)
+  }
+}
 
 onMounted(() => {
-  nextTick(() => calculateMarqueeWidth())
+  fetchAboutData()
   AOS.init({ duration: 1000, once: true })
 })
-
 </script>
+
