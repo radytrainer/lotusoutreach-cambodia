@@ -1,7 +1,7 @@
 <template>
   <!-- Our Approach -->
     <section class="py-20">
-      <div class="container mx-auto px-6">
+      <div class="order-2 lg:order-1 relative min-h-[24rem]">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
             <h2 class="text-4xl font-bold text-gray-900 mb-4">
@@ -12,14 +12,17 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <!-- Image -->
-            <div class="order-2 lg:order-1">
-              <img
-                src="/public/image/Home/Quote.png"
-                alt="Cambodian women and children"
-                class="w-full h-96 object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
-              />
+            <div class="order-2 lg:order-1 relative h-96">
+              <transition name="fade" mode="out-in">
+                <img
+                  :key="getActiveImage()"
+                  :src="getActiveImage()"
+                  alt="Cambodian women and children"
+                  class="w-full h-full object-cover absolute inset-0 rounded-2xl shadow-xl transition-shadow duration-300"
+                />
+              </transition>
             </div>
 
             <!-- Content -->
@@ -79,10 +82,25 @@ const emit = defineEmits(["update:activeApproach"])
 function setActiveApproach(key) {
   emit('update:activeApproach', key)
 }
+const getActiveImage = () => {
+  const current = props.approaches.find((a) => a.key === props.activeApproach)
+  return current?.image || '/public/placholder.png';
+}
+
 </script>
 
 <style scoped>
 .prose p {
   margin-bottom: 1rem;
 }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
 </style>
