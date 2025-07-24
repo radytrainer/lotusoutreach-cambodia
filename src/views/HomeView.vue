@@ -1,70 +1,91 @@
 <template>
-  <SlideshowBase :slides="images" :content="sharedContent" />
-  <Program :focusCards="focusCards"/>
-  <OurAproach :approaches="approaches" :activeApproach="activeApproach" @update:activeApproach="activeApproach = $event" />
-  <QuoteSection />
-
+  <div class="min-h-screen">
+    <SlideshowBase
+      :slides="images"
+      :content="sharedContent"
+      class="w-full max-w-full mx-auto px-2 sm:px-4"
+    />
+    <Program
+      :focusCards="focusCards"
+      class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8"
+    />
+    <OurAproach
+      :approaches="approaches"
+      :activeApproach="activeApproach"
+      @update:activeApproach="activeApproach = $event"
+      class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8"
+    />
+    <QuoteSection class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8" />
+  </div>
 </template>
 
 <script setup>
-import { ref} from "vue";
-import SlideshowBase from '@/components/SlideshowBase.vue'
+import { ref } from "vue";
+import SlideshowBase from "@/components/SlideshowBase.vue";
 import Program from "@/components/home/program.vue";
-import OurAproach from '@/components/home/OurAproach.vue';
+import OurAproach from "@/components/home/OurAproach.vue";
 import QuoteSection from "@/components/home/QuoteSection.vue";
 
 const images = [
-  { src: '/public/image/Home/Home_hero01.jpg', alt: 'Cambodia Girls' },
-  { src: '/public/image/Home/Home_hero02.jpg', alt: 'Community Support' },
-  { src: '/public/image/Home/Home_hero03.jpg', alt: 'Helping Hands' }
-]
+  { src: "/public/image/Home/Home_hero01.jpg", alt: "Cambodia Girls" },
+  { src: "/public/image/Home/Home_hero02.jpg", alt: "Community Support" },
+  { src: "/public/image/Home/Home_hero03.jpg", alt: "Helping Hands" },
+];
 
 const sharedContent = {
   title: "Empowering <span class='text-pink-400'>Cambodian</span> Girls",
-  description: 'In rural Cambodia, education transforms lives. When you empower a Cambodian girl, you transform an entire community.',
+  description:
+    "In rural Cambodia, education transforms lives. When you empower a Cambodian girl, you transform an entire community.",
   buttons: [
-    { text: 'Support Us', link: '/donate', primary: true },
-    { text: 'Learn About Our Work', link: '/about', primary: false }
-  ]
-}
+    { text: "Support Us", link: "/donate", primary: true },
+    { text: "Learn About Our Work", link: "/about", primary: false },
+  ],
+};
 
 const homeButtons = [
-  { text: 'Support Cambodia', link: '/donate', style: 'bg-pink-600 hover:bg-pink-700 text-white' },
-  { text: 'Learn About Our Work', link: '/program', style: 'bg-white hover:bg-gray-200 text-pink-600' },
+  { text: "Support Cambodia", link: "/donate", style: "bg-pink-600 hover:bg-pink-700 text-white" },
+  { text: "Learn About Our Work", link: "/program", style: "bg-white hover:bg-gray-200 text-pink-600" },
 ];
 
-
-// / Full program list (same as in the list view)
+// Full program list (same as in the list view)
 const focusCards = [
   {
     id: 1,
     title: " Educations",
     image: "/public/image/Home/Program_card01.png",
-    summary: "Supporting Cambodian girls through scholarships, school supplies, and educational programs in rural provinces.",
-    content: "Our education programs in Cambodia focus on keeping girls in school through comprehensive support including scholarships, uniforms, school supplies, and nutritional assistance..."
+    summary:
+      "Supporting Cambodian girls through scholarships, school supplies, and educational programs in rural provinces.",
+    content:
+      "Our education programs in Cambodia focus on keeping girls in school through comprehensive support including scholarships, uniforms, school supplies, and nutritional assistance...",
   },
   {
     id: 2,
     title: "Cares",
     image: "/public/image/Home/Program_card02.png",
-    summary: "Providing essential healthcare services and clean water access to remote Cambodian villages.",
-    content: "In Cambodia's remote areas, we provide mobile health clinics, maternal health services, and health education programs..."
+    summary:
+      "Providing essential healthcare services and clean water access to remote Cambodian villages.",
+    content:
+      "In Cambodia's remote areas, we provide mobile health clinics, maternal health services, and health education programs...",
   },
   {
     id: 3,
     title: "Training",
     image: "/public/image/Home/Program_card03.png",
-    summary: "Protecting vulnerable Cambodian women and children from trafficking and exploitation.",
-    content: "Cambodia faces unique challenges with human trafficking, particularly affecting young women and children..."
+    summary:
+      "Protecting vulnerable Cambodian women and children from trafficking and exploitation.",
+    content:
+      "Cambodia faces unique challenges with human trafficking, particularly affecting young women and children...",
   },
   {
     id: 4,
     title: "Giving Back",
     image: "/public/image/Home/Program_card04.png",
-    summary: "Building sustainable infrastructure and economic opportunities in Cambodia's rural communities.",
-    content: "Our community development programs in Cambodia focus on building essential infrastructure like water wells, improving agricultural practices..."
-  }
-]
+    summary:
+      "Building sustainable infrastructure and economic opportunities in Cambodia's rural communities.",
+    content:
+      "Our community development programs in Cambodia focus on building essential infrastructure like water wells, improving agricultural practices...",
+  },
+];
 
 // Approach tabs state
 const activeApproach = ref("culturally-sensitive");

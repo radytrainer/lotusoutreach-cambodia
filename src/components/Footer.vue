@@ -55,6 +55,17 @@
         About Us
       </router-link>
     </li>
+    <li>
+      <router-link
+        to="/program"
+        class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
+      >
+        <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        Program
+      </router-link>
+    </li>
 
     <li>
       <router-link
@@ -67,7 +78,17 @@
         News & Stories
       </router-link>
     </li>
-
+    <li>
+      <router-link
+        to="/contact"
+        class="text-gray-600 hover:text-pink-600 transition-colors duration-300 flex items-center group"
+      >
+        <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        Contact Us 
+      </router-link>
+    </li>
     <li>
       <router-link
         to="/donate"
