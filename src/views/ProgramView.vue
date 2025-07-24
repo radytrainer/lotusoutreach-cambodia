@@ -230,7 +230,7 @@ const communityPrograms = ref([
       'Legal advocacy and court accompaniment',
       'Family mediation and community reintegration support',
     ],
-    stats: [
+    stats: [  
       { number: '450+', label: 'Women Supported' },
       { number: '78%', label: 'Successful Reintegration' },
       { number: '24/7', label: 'Crisis Support Available' },

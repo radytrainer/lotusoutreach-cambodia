@@ -53,7 +53,7 @@ const calculateMarqueeWidth = () => {
 // 🔁 Fetch data using Axios
 const fetchAboutData = async () => {
   try {
-    const response = await axios.get('/data.json') // from public/
+    const response = await axios.get('/data.json')
     const data = response.data
     historyContent.value = data.historyContent
     principles.value = data.principles

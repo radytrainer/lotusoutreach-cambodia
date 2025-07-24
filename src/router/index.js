@@ -1,4 +1,3 @@
-
 import { createRouter, createWebHistory } from 'vue-router';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import Home from '../views/HomeView.vue';
@@ -8,6 +7,7 @@ import Education from '@/components/Education.vue';
 import DonateView from '@/views/DonateView.vue';
 import ProgramView from '@/views/ProgramView.vue';
 import NewsStory from '@/views/NewsStory.vue';
+import programDetail from '@/components/Program/ProgramDetail.vue';
 
 const routes = [
   {
@@ -16,13 +16,18 @@ const routes = [
     children: [
       { path: '', name: 'Home', component: Home },
       { path: 'about', name: 'About', component: About },
-      {path: 'contact', name: 'Contact', component: ContactView },
-
-
+      { path: 'contact', name: 'Contact', component: ContactView },
       { path: 'education/:id', name: 'Education', component: Education },
-      {path: 'donate', name: 'Donate', component: DonateView},
-      {path: 'program', name: 'Program', component: ProgramView},
-      {path: 'newstory', name: 'News', component: NewsStory},
+      { path: 'donate', name: 'Donate', component: DonateView },
+      {
+        path: 'program',
+        name: 'Program',
+        component: ProgramView,
+        children: [
+          { path: ':title', name: 'ProgramDetail', component: programDetail, props: true },
+        ],
+      },
+      { path: 'newstory', name: 'News', component: NewsStory },
     ],
   },
 ];
@@ -30,8 +35,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   scrollBehavior(to, from, savedPosition) {
-    // Scroll to the top of the page on route change
-    return { top: 0 }
+    return { top: 0 };
   },
   routes,
 });
