@@ -1,22 +1,23 @@
 <template>
   <div v-if="program" class="min-h-screen">
+    <!-- Hero Section -->
     <div
-      class="relative h-screen bg-cover object-contain bg-no-repeat text-white"
+      class="relative h-[60vh] sm:h-[70vh] md:h-screen bg-cover bg-center bg-no-repeat text-white"
       :style="{ backgroundImage: `url(${program.image})` }"
     >
       <div
-        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
       ></div>
 
       <div
-        class="container mx-auto px-4 max-w-7xl relative z-10 h-full flex flex-col justify-end pb-20"
+        class="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10 h-full flex flex-col justify-end pb-6 sm:pb-10 md:pb-20"
       >
         <button
           @click="goBack"
-          class="group flex items-center gap-2 bg-white/20 px-5 py-2 rounded-full text-white border border-white/30 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shadow-lg backdrop-blur-sm mb-8 ml-20 w-fit"
+          class="group flex items-center gap-2 bg-white/20 px-4 py-2 sm:px-5 sm:py-3 rounded-full text-white border border-white/30 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shadow-lg backdrop-blur-sm mb-6 sm:mb-8 w-fit"
         >
           <svg
-            class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300"
+            class="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-x-1 transition-transform duration-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -29,64 +30,82 @@
               d="M10 19l-7-7m0 0l7-7m-7 7h18"
             ></path>
           </svg>
-          <span class="font-semibold tracking-wide">Back to MyGirl</span>
+          <span class="font-semibold tracking-wide text-sm sm:text-base"
+            >Back to MyGirl</span
+          >
         </button>
 
         <div class="flex items-center">
           <div
-            class="w-16 h-16 rounded-full bg-blue-200/20 flex items-center justify-center mr-6"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-200/20 flex items-center justify-center mr-3 sm:mr-4"
           >
-            <i class="fas fa-seedling text-2xl text-green-500"></i>
+            <i class="fas fa-seedling text-lg sm:text-xl text-green-500"></i>
           </div>
           <div>
-            <h1 class="text-3xl md:text-5xl font-poppins font-semibold mb-2">
+            <h1
+              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-semibold mb-2"
+            >
               {{ program.title }}
             </h1>
-            <p class="text-base md:text-lg text-white/90 max-w-2xl">
+            <p
+              class="text-sm sm:text-base md:text-lg text-white/90 max-w-full sm:max-w-xl md:max-w-2xl"
+            >
               {{ program.summary }}
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Content Sections -->
     <div
       v-for="(section, index) in program.contents"
       :key="index"
-      class="px-4 md:px-8 py-10 max-w-7xl mx-auto"
+      class="px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 max-w-7xl mx-auto"
     >
       <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-        <div class="p-6 space-y-8">
-          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+        <div class="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8">
+          <h2
+            class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2"
+          >
             {{ section.title }}
           </h2>
 
-          <!-- Vertically aligned center -->
-          <div class="flex flex-col md:flex-row gap-6 items-center">
+          <!-- First Content Block -->
+          <div
+            class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center md:items-start"
+          >
             <div class="w-full md:w-1/2">
               <img
-                :src="program.image"
+                :src="program.childImg1"
                 :alt="section.title"
-                class="w-full h-96 object-cover rounded-xl shadow-md"
+                class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-md"
               />
             </div>
             <div class="w-full md:w-1/2">
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+              <p
+                class="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed"
+              >
                 {{ firstParagraph(section.content) }}
               </p>
             </div>
           </div>
 
-          <!-- Vertically aligned center (row reversed) -->
-          <div class="flex flex-col gap-6 items-center md:flex-row-reverse">
+          <!-- Second Content Block (Reversed on larger screens) -->
+          <div
+            class="flex flex-col md:flex-row-reverse gap-4 sm:gap-6 items-center md:items-start"
+          >
             <div class="w-full md:w-1/2">
               <img
-                :src="program.image"
+                :src="program.childImg2"
                 :alt="section.title"
-                class="w-full h-96 object-cover rounded-xl shadow-md"
+                class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-md"
               />
             </div>
             <div class="w-full md:w-1/2">
-              <p class="text-base md:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+              <p
+                class="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed whitespace-pre-line"
+              >
                 {{ remainingParagraph(section.content) }}
               </p>
             </div>
@@ -94,7 +113,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -102,35 +120,29 @@
 import { useRoute, useRouter } from "vue-router";
 import { ref } from "vue";
 
-// If you were using a specific icon component like `ArrowLeftIcon`
-// you would import it here, for example:
-// import { ArrowLeftIcon } from '@heroicons/vue/20/solid'
-
-
 const route = useRoute();
 const router = useRouter();
 
 const firstParagraph = (content) => {
-  const paragraphs = content.split('\n').filter(p => p.trim() !== '')
-  const half = Math.ceil(paragraphs.length / 2)
-  return paragraphs.slice(0, half).join('\n')
-}
+  const paragraphs = content.split("\n").filter((p) => p.trim() !== "");
+  const half = Math.ceil(paragraphs.length / 2);
+  return paragraphs.slice(0, half).join("\n");
+};
 
 const remainingParagraph = (content) => {
-  const paragraphs = content.split('\n').filter(p => p.trim() !== '')
-  const half = Math.ceil(paragraphs.length / 2)
-  return paragraphs.slice(half).join('\n')
-}
+  const paragraphs = content.split("\n").filter((p) => p.trim() !== "");
+  const half = Math.ceil(paragraphs.length / 2);
+  return paragraphs.slice(half).join("\n");
+};
 
+const goBack = () => router.push("/");
 
-// ✅ Use either of these:
-// const goBack = () => router.back() // ← Back to previous page
-const goBack = () => router.push("/"); // ← Back to specific route
-// Sample program data
 const programs = [
   {
     id: 1,
     title: "Educations",
+    childImg1: "/public/image/Home/childE01.png",
+    childImg2: "/public/image/Home/childE02.png",
     image: "/public/image/Home/Program_card01.png",
     summary: `Lotus Outreach Cambodia supports girls in rural areas by providing scholarships, school supplies, uniforms, and nutritious meals. These efforts help remove financial barriers so girls can continue their education and build brighter futures.`,
     contents: [
@@ -145,6 +157,8 @@ const programs = [
   {
     id: 2,
     title: "Cares",
+    childImg1: "/public/image/Home/care01.png",
+    childImg2: "/public/image/Home/care02.png",
     image: "/public/image/Home/Program_card02.png",
     summary: `We bring essential healthcare services to remote communities, including mobile clinics and health education. Clean water projects improve health and reduce waterborne diseases, helping families live healthier lives.`,
     contents: [
@@ -155,11 +169,12 @@ const programs = [
     We also prioritize health education, empowering communities with essential knowledge on hygiene, nutrition, reproductive health, disease prevention, and proper sanitation practices. These community workshops are especially impactful for women and children, equipping them to make informed decisions that lead to healthier lifestyles.`,
       },
     ],
-
   },
   {
     id: 3,
     title: "Training",
+    childImg1: "/public/image/Home/training01.png",
+    childImg2: "/public/image/Home/training02.png",
     image: "/public/image/Home/Program_card03.png",
     summary: `Our anti-trafficking programs focus on community education, economic empowerment, and support for survivors. We work with local partners to provide skills training and safe opportunities that reduce vulnerability to trafficking.`,
     contents: [
@@ -176,6 +191,8 @@ const programs = [
   {
     id: 4,
     title: "Givin Back",
+    childImg1: "/public/image/Home/giving01.png",
+    childImg2: "/public/image/Home/giving02.png",
     image: "/public/image/Home/Program_card04.png",
     summary: `We partner with communities to build vital infrastructure like clean water wells and support sustainable agriculture. Our programs create jobs and improve livelihoods, helping families thrive in rural Cambodia.`,
     contents: [
@@ -190,7 +207,6 @@ const programs = [
   },
 ];
 
-// Get the ID from the route, convert to number
 const programId = parseInt(route.params.id);
 const program = ref(programs.find((p) => p.id === programId));
 </script>
