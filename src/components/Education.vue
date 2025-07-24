@@ -1,6 +1,5 @@
 <template>
   <div v-if="program" class="min-h-screen">
-    <!-- Full-screen background header with overlay -->
     <div
       class="relative h-screen bg-cover object-contain bg-no-repeat text-white"
       :style="{ backgroundImage: `url(${program.image})` }"
@@ -14,11 +13,22 @@
       >
         <button
           @click="goBack"
-          class="group items-center gap-2 bg-white/20 px-5 py-2 rounded-full text-white border border-white/30 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shadow-lg backdrop-blur-sm mb-8 ml-20 w-fit"
+          class="group flex items-center gap-2 bg-white/20 px-5 py-2 rounded-full text-white border border-white/30 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shadow-lg backdrop-blur-sm mb-8 ml-20 w-fit"
         >
-          <ArrowLeftIcon
+          <svg
             class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300"
-          />
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
+          </svg>
           <span class="font-semibold tracking-wide">Back to MyGirl</span>
         </button>
 
@@ -26,7 +36,7 @@
           <div
             class="w-16 h-16 rounded-full bg-blue-200/20 flex items-center justify-center mr-6"
           >
-            <i class="fas fa-seedling text-2xl text-white"></i>
+            <i class="fas fa-seedling text-2xl text-green-500"></i>
           </div>
           <div>
             <h1 class="text-3xl md:text-5xl font-poppins font-semibold mb-2">
@@ -39,18 +49,52 @@
         </div>
       </div>
     </div>
-  </div>
-  <div
-    v-for="(section, index) in program.contents"
-    :key="index"
-    class="px-4 md:px-8 py-10 max-w-4xl mx-auto text-gray-700"
-  >
-    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-      {{ section.title }}
-    </h2>
-    <p class="text-base md:text-lg leading-relaxed whitespace-pre-line">
-      {{ section.content }}
-    </p>
+    <div
+      v-for="(section, index) in program.contents"
+      :key="index"
+      class="px-4 md:px-8 py-10 max-w-7xl mx-auto"
+    >
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="p-6 space-y-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            {{ section.title }}
+          </h2>
+
+          <!-- Vertically aligned center -->
+          <div class="flex flex-col md:flex-row gap-6 items-center">
+            <div class="w-full md:w-1/2">
+              <img
+                :src="program.image"
+                :alt="section.title"
+                class="w-full h-96 object-cover rounded-xl shadow-md"
+              />
+            </div>
+            <div class="w-full md:w-1/2">
+              <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                {{ firstParagraph(section.content) }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Vertically aligned center (row reversed) -->
+          <div class="flex flex-col gap-6 items-center md:flex-row-reverse">
+            <div class="w-full md:w-1/2">
+              <img
+                :src="program.image"
+                :alt="section.title"
+                class="w-full h-96 object-cover rounded-xl shadow-md"
+              />
+            </div>
+            <div class="w-full md:w-1/2">
+              <p class="text-base md:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                {{ remainingParagraph(section.content) }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -58,8 +102,26 @@
 import { useRoute, useRouter } from "vue-router";
 import { ref } from "vue";
 
+// If you were using a specific icon component like `ArrowLeftIcon`
+// you would import it here, for example:
+// import { ArrowLeftIcon } from '@heroicons/vue/20/solid'
+
+
 const route = useRoute();
 const router = useRouter();
+
+const firstParagraph = (content) => {
+  const paragraphs = content.split('\n').filter(p => p.trim() !== '')
+  const half = Math.ceil(paragraphs.length / 2)
+  return paragraphs.slice(0, half).join('\n')
+}
+
+const remainingParagraph = (content) => {
+  const paragraphs = content.split('\n').filter(p => p.trim() !== '')
+  const half = Math.ceil(paragraphs.length / 2)
+  return paragraphs.slice(half).join('\n')
+}
+
 
 // ✅ Use either of these:
 // const goBack = () => router.back() // ← Back to previous page
@@ -68,7 +130,7 @@ const goBack = () => router.push("/"); // ← Back to specific route
 const programs = [
   {
     id: 1,
-    title: "Education in Cambodia",
+    title: "Educations",
     image: "/public/image/Home/Program_card01.png",
     summary: `Lotus Outreach Cambodia supports girls in rural areas by providing scholarships, school supplies, uniforms, and nutritious meals. These efforts help remove financial barriers so girls can continue their education and build brighter futures.`,
     contents: [
@@ -82,7 +144,7 @@ const programs = [
   },
   {
     id: 2,
-    title: "Healthcare Access",
+    title: "Cares",
     image: "/public/image/Home/Program_card02.png",
     summary: `We bring essential healthcare services to remote communities, including mobile clinics and health education. Clean water projects improve health and reduce waterborne diseases, helping families live healthier lives.`,
     contents: [
@@ -97,12 +159,12 @@ const programs = [
   },
   {
     id: 3,
-    title: "Anti-Trafficking Protection",
+    title: "Training",
     image: "/public/image/Home/Program_card03.png",
     summary: `Our anti-trafficking programs focus on community education, economic empowerment, and support for survivors. We work with local partners to provide skills training and safe opportunities that reduce vulnerability to trafficking.`,
     contents: [
       {
-        title: "Anti-Trafficking Protection",
+        title: "Training",
         content: `Lotus Outreach Cambodia is dedicated to protecting vulnerable populations—especially women and children—from the dangers of human trafficking. Our Anti-Trafficking Protection programs take a comprehensive, community-centered approach that addresses both the causes and consequences of exploitation.
     We begin by focusing on community education and awareness, working directly with at-risk communities to raise understanding of trafficking risks, common tactics used by traffickers, and the importance of safe migration. Through workshops, school outreach, and informational campaigns, we help families make informed decisions and recognize early warning signs.
     To combat the economic pressures that often lead to exploitation, we provide economic empowerment programs such as vocational training, job placement assistance, and income-generating opportunities. These programs enable women and girls—who are especially vulnerable—to become financially independent, reducing their susceptibility to false promises of work or migration.
@@ -113,12 +175,12 @@ const programs = [
   },
   {
     id: 4,
-    title: "Rural Development",
+    title: "Givin Back",
     image: "/public/image/Home/Program_card04.png",
     summary: `We partner with communities to build vital infrastructure like clean water wells and support sustainable agriculture. Our programs create jobs and improve livelihoods, helping families thrive in rural Cambodia.`,
     contents: [
       {
-        title: "Rural Development",
+        title: "Givin Back",
         content: `One of our primary efforts is ensuring access to clean and safe water. We help communities construct clean water wells, install water filtration systems, and build sanitation facilities. These projects not only reduce the incidence of waterborne diseases but also free up time—especially for women and girls—who would otherwise spend hours collecting water from distant or unsafe sources.
     We also invest in sustainable agriculture training, providing families with tools, seeds, and techniques that increase crop yields while preserving the environment. By promoting organic farming, composting, and water-efficient irrigation, we empower farmers to secure reliable food sources and improve household income.
     In addition to agriculture, we facilitate livelihood development opportunities through vocational training, small business support, and access to microfinance. These programs help rural families diversify their incomes, reduce poverty, and build financial resilience.
