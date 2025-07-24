@@ -49,19 +49,19 @@ const stories = ref([
   {
     name: 'Raksmey Var',
     program: 'Country Representative, Cambodia',
-    avatar: 'https://lotusoutreachaustralia.org.au/wp-content/uploads/2015/07/Raksmey-for-web-site-.jpg',
+    avatar: '/public/image/News/RaksmeyVar.png',
     quote: 'The CATALYST program gave me the confidence and skills to become a leader in my community. Now I help other young women pursue their dreams.',
   },
   {
     name: 'Pisey Chea',
     program: 'LOCAM Project Officer',
-    avatar: 'https://lotusoutreachaustralia.org.au/wp-content/uploads/2018/06/Untitled-design-2.jpg',
+    avatar: '/public/image/News/PiseyChea.png',
     quote: 'Having a bicycle changed everything for me. I could attend school regularly and now I am studying to become a teacher.',
   },
   {
     name: 'Borika',
     program: 'Accountant, Cambodia',
-    avatar: 'https://lotusoutreach.org/wp-content/uploads/2022/08/borika.jpeg',
+    avatar: '/public/image/News/Borika.png',
     quote: 'The scholarship and rice support meant my family could afford to keep me in school. Education opened doors I never imagined possible.',
   },
 ]);
