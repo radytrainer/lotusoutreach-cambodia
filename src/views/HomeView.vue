@@ -15,7 +15,7 @@
       @update:activeApproach="activeApproach = $event"
       class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8"
     />
-    <QuoteSection class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8" />
+    <QuoteSection class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8"/>
   </div>
 </template>
 
