@@ -2,7 +2,7 @@
   "educationPrograms": [
     {
       "title": "Lotus Pedals",
-      "image": "https://lotusoutreach.org/wp-content/uploads/2023/02/IMG_7191.jpg",
+      "image": "/image/Program/pro1.jpg",
       "icon": "fas fa-bicycle",
       "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
       "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
@@ -32,13 +32,13 @@
         }
       ],
       "gallery": [
-        "https://lotusoutreach.org/wp-content/uploads/2023/02/IMG_7191.jpg",
-        "https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9377-1024x768.jpg"
+        "/image/Program/pro1.jpg",
+        "/image/Program/Future.jpg"
       ]
     },
     {
       "title": "GATE",
-      "image": "https://lotusoutreach.org/wp-content/uploads/2020/02/Alumni-Gathering-Group-Photo-2.jpg",
+      "image": "/image/Program/gate.jpg",
       "icon": "fas fa-book-open",
       "description": "Providing education scholarships and rice support for at-risk girls and their families living in dire poverty.",
       "fullDescription": "The GATE (Girls Access to Education) program provides comprehensive support to at-risk girls from families living in extreme poverty. Understanding that hunger and financial hardship are major barriers to education, GATE combines educational scholarships with essential rice support for families. This holistic approach ensures that girls can focus on their studies while their families have basic food security.",
@@ -70,7 +70,7 @@
     },
     {
       "title": "CATALYST",
-      "image": "https://buddhistglobalrelief.org/wp-content/uploads/2023/07/Lotus-CATALYST.jpg",
+      "image": "/image/Program/catalyst.jpg",
       "icon": "fas fa-user-graduate",
       "description": "Providing university scholarships, mentoring, and leadership training for at-risk female youth in Cambodia.",
       "fullDescription": "CATALYST is our flagship leadership development program that transforms promising young women into confident leaders and change-makers in their communities. Through comprehensive university scholarships, intensive mentoring, and specialized leadership training, CATALYST participants develop the skills, knowledge, and networks needed to break cycles of poverty and become advocates for positive change in Cambodia.",
@@ -102,7 +102,7 @@
     },
     {
       "title": "PNC/V",
-      "image": "https://www.passerellesnumeriques.org/wp-content/uploads/2024/06/Country-banner1.png",
+      "image": "/image/Program/pnc.png",
       "icon": "fas fa-laptop-code",
       "description": "Providing high-quality IT education in a holistic residential environment for at-risk female youth in Cambodia and Vietnam.",
       "fullDescription": "The Passerelles Numériques Cambodia/Vietnam program offers intensive, industry-relevant IT education to disadvantaged young women in a supportive residential setting. This comprehensive program combines technical training with personal development, preparing graduates for successful careers in the rapidly growing technology sector while fostering personal growth and leadership skills.",
@@ -136,7 +136,7 @@
   "communityPrograms": [
     {
       "title": "Getting Well",
-      "image": "https://lotusoutreach.org/wp-content/uploads/2023/02/IMG_2945-1024x768.jpg",
+      "image": "/image/Program/getting-well.jpg",
       "icon": "fas fa-water",
       "description": "Constructing water wells to serve entire villages in drought-prone regions of rural Cambodia.",
       "fullDescription": "The Getting Well program addresses the critical water shortage crisis in rural Cambodia by constructing deep-water wells that provide clean, reliable water access to entire villages. These wells are strategically placed to serve the maximum number of families while considering factors such as water table depth, community needs, and long-term sustainability. Each well project includes community training on maintenance and water management.",
@@ -168,7 +168,7 @@
     },
     {
       "title": "Water In Schools (WINS)",
-      "image": "https://lotusoutreach.org/wp-content/uploads/2018/12/people_at_public_water_pump.jpg",
+      "image": "/image/Program/water-in-school.jpg",
       "icon": "fas fa-tint",
       "description": "Installing water filtration systems in schools to provide clean drinking water and improve wellbeing for children in rural Cambodia.",
       "fullDescription": "The Water In Schools (WINS) program ensures that students have access to clean, safe drinking water throughout their school day. By installing advanced water filtration systems in rural schools, we eliminate waterborne diseases, improve student health and attendance, and create better learning environments. The program also includes hygiene education to maximize health benefits.",
@@ -200,7 +200,7 @@
     },
     {
       "title": "Rice 4 Education (R4E)",
-      "image": "https://lotusoutreach.org/wp-content/uploads/2019/02/16596368001_a6e8e5f163_o-1024x685.jpg",
+      "image": "/image/Program/r4e.jpg",
       "icon": "fas fa-utensils",
       "description": "Providing rice support to villagers to help them support their daughters' education in rural Cambodia.",
       "fullDescription": "Rice 4 Education recognizes that food security is fundamental to educational access. Many families in rural Cambodia face the difficult choice between sending their children to work or to school. By providing monthly rice distributions to families who commit to keeping their daughters in school, R4E removes this barrier and ensures that education remains a priority even during times of economic hardship.",
@@ -232,7 +232,7 @@
     },
     {
       "title": "CTC",
-      "image": "https://lotusoutreach.org/wp-content/uploads/2018/12/loi-new.png",
+      "image": "/image/Program/ctc.png",
       "icon": "fas fa-hands-helping",
       "description": "Providing trauma therapy and assistance to survivors of trafficking and sexual and domestic violence in a women's shelter in rural Cambodia.",
       "fullDescription": "The Counseling and Training Center (CTC) provides comprehensive support services to women and girls who have survived trafficking, sexual violence, and domestic abuse. Located in a safe, residential facility, CTC offers trauma-informed therapy, life skills training, and reintegration support to help survivors heal and rebuild their lives with dignity and independence.",
