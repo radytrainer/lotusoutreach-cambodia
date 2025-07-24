@@ -72,10 +72,9 @@ const selectedProgram = ref(null);
 // Handle showing program details with scroll to top
 const handleShowDetail = (program) => {
   selectedProgram.value = program;
-  nextTick(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  window.scrollTo(0, 0);
 };
+
 
 // Handle going back to program list
 const handleGoBack = () => {
