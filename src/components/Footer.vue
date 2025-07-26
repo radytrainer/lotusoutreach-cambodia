@@ -291,11 +291,3 @@
     </div>
   </footer>
 </template>
-
-<script setup>
-// Footer component for Cambodia charity website
-</script>
-
-<style scoped>
-/* Additional custom styles if needed */
-</style>
