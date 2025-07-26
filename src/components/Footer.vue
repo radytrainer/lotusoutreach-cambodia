@@ -286,23 +286,6 @@
             Follow us for updates on our community impact and stories from
             Cambodia.
           </p>
-
-          <!-- Newsletter Signup -->
-          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-            <h5 class="font-semibold text-gray-800 mb-2">Stay Updated</h5>
-            <div class="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-              />
-              <button
-                class="px-4 py-1 bg-pink-600 text-white text-sm font-medium rounded-r-md hover:bg-pink-700 transition-colors"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
