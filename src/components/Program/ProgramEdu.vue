@@ -11,11 +11,11 @@
           Empowering Cambodian women through transformative education and professional development initiatives
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div v-for="(program, index) in educationPrograms" :key="index"
           class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100">
-          <div class="h-48 overflow-hidden relative">
-            <img :src="program.image" :alt="program.title"
+          <div class="relative h-48 overflow-hidden">
+            <img :src="program.image" :alt="program.alt"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               @error="handleImageError" />
             <div class="absolute top-3 left-3">
@@ -28,11 +28,15 @@
             <h3 class="text-base font-poppins font-medium text-gray-900 mb-2">{{ program.title }}</h3>
             <p class="text-xs text-gray-600 leading-relaxed mb-3">{{ program.description }}</p>
             <button
-              @click="$emit('show-detail', program, 'education')"
+              @click="$emit('show-detail', program)"
               class="text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200 text-sm"
-              :aria-label="`Learn more about ${program.title}`">
+              :aria-label="`Learn more about ${program.title}`"
+              :aria-describedby="`desc-${index}`">
               Learn More <i class="fas fa-arrow-right ml-1"></i>
             </button>
+            <p :id="`desc-${index}`" class="sr-only">
+              {{ program.fullDescription || program.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -41,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 defineProps({
   educationPrograms: {
@@ -51,17 +55,22 @@ defineProps({
       typeof program.title === 'string' &&
       typeof program.image === 'string' &&
       typeof program.icon === 'string' &&
-      typeof program.description === 'string'
+      typeof program.description === 'string' &&
+      typeof program.alt === 'string' &&
+      (typeof program.fullDescription === 'string' || program.fullDescription === undefined) &&
+      (Array.isArray(program.features) || program.features === undefined) &&
+      (Array.isArray(program.stats) || program.stats === undefined) &&
+      (Array.isArray(program.gallery) || program.gallery === undefined)
     )
   }
-})
+});
 
-defineEmits(['show-detail'])
+defineEmits(['show-detail']);
 
 // Fallback for broken images
 const handleImageError = (event) => {
-  event.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found'
-}
+  event.target.src = 'https://lotusoutreach.org/wp-content/uploads/2023/02/placeholder.jpg';
+};
 </script>
 
 <style scoped>
@@ -70,5 +79,16 @@ const handleImageError = (event) => {
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 </style>

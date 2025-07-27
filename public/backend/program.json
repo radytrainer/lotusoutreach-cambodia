@@ -1,0 +1,360 @@
+{
+    "slides": [
+        {
+            "src": "/image/Program/Education.png",
+            "alt": "Girls riding bicycles in rural Cambodia",
+            "title": "<h1 class=\"text-4xl md:text-7xl font-poppins font-extrabold text-pink-500\">Lotus Outreach</h1><span class=\"text-pink-500\">Education</span> Power",
+            "description": "Empowering girls through education and care programs"
+        },
+        {
+            "src": "/image/Program/Three-girl.jpg",
+            "alt": "Young women in an education program",
+            "title": "<h1 class=\"text-4xl md:text-7xl font-poppins font-extrabold text-pink-500\">Lotus Outreach</h1><span class=\"text-pink-500\">Learning</span> Pathways",
+            "description": "Building pathways to education for young women"
+        },
+        {
+            "src": "/image/Program/Leader.jpg",
+            "alt": "Leadership training session in Cambodia",
+            "title": "<h1 class=\"text-4xl md:text-7xl font-poppins font-extrabold text-pink-500\">Lotus Outreach</h1><span class=\"text-pink-500\">Leadership</span> Growth",
+            "description": "Leadership training and mentorship for young women"
+        },
+        {
+            "src": "/image/Program/Future.jpg",
+            "alt": "Future female leaders in Cambodia",
+            "title": "<h1 class=\"text-4xl md:text-7xl font-poppins font-extrabold text-pink-500\">Lotus Outreach</h1><span class=\"text-pink-500\">Future</span> Leaders",
+            "description": "Inspiring the next generation of female leaders"
+        }
+    ],
+    "educationPrograms": [
+        {
+            "title": "Lotus Pedals",
+            "image": "/image/Program/pro1.jpg",
+            "icon": "fas fa-bicycle",
+            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ],
+            "gallery": [
+                "/image/Program/pro1.jpg",
+                "/image/Program/Future.jpg"
+            ]
+        },
+        {
+            "title": "GATE",
+            "image": "/image/Program/gate.jpg",
+            "icon": "fas fa-book-open",
+            "description": "Providing education scholarships and rice support for at-risk girls and their families living in dire poverty.",
+            "fullDescription": "The GATE (Girls Access to Education) program provides comprehensive support to at-risk girls from families living in extreme poverty. Understanding that hunger and financial hardship are major barriers to education, GATE combines educational scholarships with essential rice support for families. This holistic approach ensures that girls can focus on their studies while their families have basic food security.",
+            "features": [
+                "Full educational scholarships covering tuition and supplies",
+                "Monthly rice distributions to families",
+                "Academic mentoring and tutoring support",
+                "Life skills training and counseling",
+                "Career guidance and job placement assistance"
+            ],
+            "stats": [
+                {
+                    "number": "1,200+",
+                    "label": "Girls Supported"
+                },
+                {
+                    "number": "92%",
+                    "label": "Graduation Rate"
+                },
+                {
+                    "number": "78%",
+                    "label": "Continue to Higher Education"
+                },
+                {
+                    "number": "300+",
+                    "label": "Families Supported"
+                }
+            ]
+        },
+        {
+            "title": "CATALYST",
+            "image": "/image/Program/catalyst.jpg",
+            "icon": "fas fa-user-graduate",
+            "description": "Providing university scholarships, mentoring, and leadership training for at-risk female youth in Cambodia.",
+            "fullDescription": "CATALYST is our flagship leadership development program that transforms promising young women into confident leaders and change-makers in their communities. Through comprehensive university scholarships, intensive mentoring, and specialized leadership training, CATALYST participants develop the skills, knowledge, and networks needed to break cycles of poverty and become advocates for positive change in Cambodia.",
+            "features": [
+                "Full university scholarships including living expenses",
+                "One-on-one mentoring with successful professionals",
+                "Leadership workshops and public speaking training",
+                "Internship opportunities with partner organizations",
+                "Alumni network and ongoing career support"
+            ],
+            "stats": [
+                {
+                    "number": "450+",
+                    "label": "University Graduates"
+                },
+                {
+                    "number": "88%",
+                    "label": "Employment Rate"
+                },
+                {
+                    "number": "65%",
+                    "label": "Leadership Positions"
+                },
+                {
+                    "number": "25+",
+                    "label": "Partner Universities"
+                }
+            ]
+        },
+        {
+            "title": "PNC/V",
+            "image": "/image/Program/pnc.png",
+            "icon": "fas fa-laptop-code",
+            "description": "Providing high-quality IT education in a holistic residential environment for at-risk female youth in Cambodia and Vietnam.",
+            "fullDescription": "The Passerelles Numériques Cambodia/Vietnam program offers intensive, industry-relevant IT education to disadvantaged young women in a supportive residential setting. This comprehensive program combines technical training with personal development, preparing graduates for successful careers in the rapidly growing technology sector while fostering personal growth and leadership skills.",
+            "features": [
+                "Comprehensive IT curriculum covering programming, web development, and digital marketing",
+                "Residential program providing safe, supportive living environment",
+                "Industry partnerships for internships and job placement",
+                "English language training and soft skills development",
+                "Ongoing alumni support and career advancement opportunities"
+            ],
+            "stats": [
+                {
+                    "number": "800+",
+                    "label": "IT Graduates"
+                },
+                {
+                    "number": "94%",
+                    "label": "Job Placement Rate"
+                },
+                {
+                    "number": "$450",
+                    "label": "Average Starting Salary"
+                },
+                {
+                    "number": "50+",
+                    "label": "Partner Companies"
+                }
+            ]
+        }
+    ],
+    "communityPrograms": [
+        {
+            "title": "Getting Well",
+            "image": "/image/Program/getting-well.jpg",
+            "icon": "fas fa-water",
+            "description": "Constructing water wells to serve entire villages in drought-prone regions of rural Cambodia.",
+            "fullDescription": "The Getting Well program addresses the critical water shortage crisis in rural Cambodia by constructing deep-water wells that provide clean, reliable water access to entire villages. These wells are strategically placed to serve the maximum number of families while considering factors such as water table depth, community needs, and long-term sustainability. Each well project includes community training on maintenance and water management.",
+            "features": [
+                "Deep-water well construction using modern drilling techniques",
+                "Solar-powered pumping systems for sustainable operation",
+                "Community water management training",
+                "Regular maintenance and quality testing programs",
+                "Emergency repair services and spare parts provision"
+            ],
+            "stats": [
+                {
+                    "number": "180+",
+                    "label": "Wells Constructed"
+                },
+                {
+                    "number": "45,000+",
+                    "label": "People Served"
+                },
+                {
+                    "number": "120+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "98%",
+                    "label": "Wells Still Operational"
+                }
+            ]
+        },
+        {
+            "title": "Water In Schools (WINS)",
+            "image": "/image/Program/water-in-school.jpg",
+            "icon": "fas fa-tint",
+            "description": "Installing water filtration systems in schools to provide clean drinking water and improve wellbeing for children in rural Cambodia.",
+            "fullDescription": "The Water In Schools (WINS) program ensures that students have access to clean, safe drinking water throughout their school day. By installing advanced water filtration systems in rural schools, we eliminate waterborne diseases, improve student health and attendance, and create better learning environments. The program also includes hygiene education to maximize health benefits.",
+            "features": [
+                "Advanced multi-stage water filtration systems",
+                "Regular filter replacement and system maintenance",
+                "Hygiene education programs for students and teachers",
+                "Water quality testing and monitoring",
+                "Community involvement in system oversight"
+            ],
+            "stats": [
+                {
+                    "number": "85+",
+                    "label": "Schools Equipped"
+                },
+                {
+                    "number": "12,000+",
+                    "label": "Students Served"
+                },
+                {
+                    "number": "40%",
+                    "label": "Reduction in Sick Days"
+                },
+                {
+                    "number": "15%",
+                    "label": "Attendance Increase"
+                }
+            ]
+        },
+        {
+            "title": "Rice 4 Education (R4E)",
+            "image": "/image/Program/r4e.jpg",
+            "icon": "fas fa-utensils",
+            "description": "Providing rice support to villagers to help them support their daughters' education in rural Cambodia.",
+            "fullDescription": "Rice 4 Education recognizes that food security is fundamental to educational access. Many families in rural Cambodia face the difficult choice between sending their children to work or to school. By providing monthly rice distributions to families who commit to keeping their daughters in school, R4E removes this barrier and ensures that education remains a priority even during times of economic hardship.",
+            "features": [
+                "Monthly rice distributions to participating families",
+                "School attendance monitoring and reporting",
+                "Family education on nutrition and child development",
+                "Community engagement and awareness programs",
+                "Graduation ceremonies and recognition events"
+            ],
+            "stats": [
+                {
+                    "number": "2,800+",
+                    "label": "Families Supported"
+                },
+                {
+                    "number": "3,500+",
+                    "label": "Girls Kept in School"
+                },
+                {
+                    "number": "420",
+                    "label": "Tons of Rice Distributed"
+                },
+                {
+                    "number": "89%",
+                    "label": "School Completion Rate"
+                }
+            ]
+        },
+        {
+            "title": "CTC",
+            "image": "/image/Program/ctc.png",
+            "icon": "fas fa-hands-helping",
+            "description": "Providing trauma therapy and assistance to survivors of trafficking and sexual and domestic violence in a women's shelter in rural Cambodia.",
+            "fullDescription": "The Counseling and Training Center (CTC) provides comprehensive support services to women and girls who have survived trafficking, sexual violence, and domestic abuse. Located in a safe, residential facility, CTC offers trauma-informed therapy, life skills training, and reintegration support to help survivors heal and rebuild their lives with dignity and independence.",
+            "features": [
+                "Professional trauma counseling and therapy services",
+                "Safe residential accommodation and 24/7 support",
+                "Vocational training and job placement assistance",
+                "Legal advocacy and court accompaniment",
+                "Family mediation and community reintegration support"
+            ],
+            "stats": [
+                {
+                    "number": "450+",
+                    "label": "Women Supported"
+                },
+                {
+                    "number": "78%",
+                    "label": "Successful Reintegration"
+                },
+                {
+                    "number": "24/7",
+                    "label": "Crisis Support Available"
+                },
+                {
+                    "number": "12",
+                    "label": "Months Average Stay"
+                }
+            ]
+        }
+    ],
+    "trainingPrograms": [
+        {
+            "title": "Lotus Pedals",
+            "image": "/image/Program/train1.jpg",
+            "icon": "fas fa-person-chalkboard",
+            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        }
+    ],
+    "givingPrograms": [
+        {
+            "title": "Lotus Pedals",
+            "image": "/image/Program/giving1.jpg",
+            "icon": "fas fa-hand-holding-heart",
+            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        }
+    ]
+}
