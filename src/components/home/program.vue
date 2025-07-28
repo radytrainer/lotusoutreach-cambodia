@@ -2,7 +2,7 @@
   <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
     <div class="container mx-auto px-6">
       <!-- Header -->
-      <div class="text-center mb-20">
+      <div class="text-center mb-20 mt-10">
         <h2 class="text-5xl font-bold text-gray-900 mb-6 tracking-tight">Our Programs</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Culturally-sensitive programs designed for Cambodian communities
