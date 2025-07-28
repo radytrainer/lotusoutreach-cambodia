@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white py-16" id="partners">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-10">Our Value Partners</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-10">Our Networks</h2>
       <div class="relative overflow-hidden">
         <div class="flex whitespace-nowrap animate-marquee"
           :style="{ '--marquee-width': marqueeWidth, '--marquee-duration': marqueeDuration + 's' }"
