@@ -98,6 +98,11 @@
             "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkp_i6a7QoF16LhEl4pyBL1-TVeMvnXSjHpA&s",
             "url": "https://www.ccc-cambodia.org/en/ngodb/ngo-information/914",
             "info": "Santi Sena Organization"
+        },
+        {
+            "img": "/image/About/Bayon.png",
+            "url": "https://www.ecoledubayon.org/en/who-are-we/bayon-education-development",
+            "info": "Bayon Education Development"
         }
     ]
 }
