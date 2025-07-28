@@ -35,7 +35,7 @@ const sharedContent = ref({});
 const focusCards = ref([]);
 const approaches = ref([]);
 
-// Fetch data from the backend Home.JSON file
+// Fetch data from the backend home.JSON file
 const fetchHomeData = async () => {
   try {
     const response = await axios.get("/backend/home.json");
