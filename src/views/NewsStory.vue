@@ -1,7 +1,9 @@
 <template>
     <div class="bg-white">
+        <!-- Hero Banner -->
         <HeroBanner />
         
+        <!-- Activity Listing -->
         <ActivityDetail
             v-if="currentView === 'detail' && selectedActivity"
             :activity="selectedActivity"
@@ -14,7 +16,9 @@
             @view-detail="viewActivityDetail"
         />
         
+        <!-- Filter activity -->
         <div v-else class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <!-- Filter -->
             <ActivityFilter
                 :searchQuery="searchQuery"
                 :categories="categories"
@@ -29,6 +33,7 @@
                 <!-- ... No Results ... -->
             </div>
 
+            <!-- Card Activity -->
             <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <CardActivity
                     v-for="(activity, index) in filteredActivities.slice(0, visibleItems)"
@@ -53,13 +58,17 @@
 </template>
 
 <script setup>
+// Vue built-in imports
+import { ref, computed, onMounted } from "vue";
+import axios from "axios";
+
+// Component imports
 import HeroBanner from '@/components/News/HeroBanner.vue';
 import CardActivity from '@/components/News/CardActivity.vue';
 import ActivityDetail from '@/components/News/ActivityDetail.vue';
-
-import { ref, computed } from "vue";
 import ActivityFilter from '@/components/News/ActivityFilter.vue';
 import SuccessStory from '@/components/News/SuccessStory.vue';
+
 
 // View state management
 const currentView = ref("listing"); 
@@ -69,102 +78,36 @@ const selectedActivity = ref(null);
 const visibleItems = ref(6);
 const searchQuery = ref("");
 const activeCategories = ref([]);
+const activities = ref([]);
+const categories = ref([]);
 
-const categories = [
-  { value: "education", label: "Girls' Education" },
-  { value: "health", label: "Health & Nutrition" },
-  { value: "protection", label: "Anti-Trafficking & Child Protection" },
-  { value: "livelihoods", label: "Sustainable Livelihoods" },
-];
+// Fetch from JSON newsStory.json file
+const fetchData = async () => {
+  try {
+    const response = await axios.get('/backend/newsStory.json');
+    activities.value = response.data.activities;
+    categories.value = response.data.categories;
+  } catch (error) {
+    console.error("Failed to load data from home.json", error);
+  }
+};
 
-const activities = [
-  {
-    title: "Girls' Education Program Transforms Lives in Kampong Speu",
-    content:
-      "Our comprehensive program in Kampong Speu provides scholarships, school supplies, and mentorship to over 500 girls, ensuring they complete their primary and secondary education. We also run literacy classes for adult women, empowering entire families through learning. This initiative aims to break the cycle of poverty by providing access to quality education, which is often out of reach for families in remote areas. We work closely with local communities to identify needs and ensure our programs are culturally sensitive and effective. The long-term impact includes increased literacy rates, improved economic opportunities for women, and a more educated future generation.",
-    date: "2024-07-10",
-    author: "Education Team",
-    category: "education",
-    image: "https://csaf.org.kh/wp-content/uploads/2023/12/5-1024x683.jpg",
-    location: "Kampong Speu, Cambodia",
-  },
-  {
-    title: "Vital Health Services for Mothers and Children in Takeo",
-    content:
-      "In Takeo province, our mobile health clinics offer essential pre-natal care, safe delivery support, and post-natal check-ups. We also provide nutrition education and vaccinations for infants, significantly improving health outcomes in remote communities. Our teams travel to underserved areas, bringing critical medical services directly to those who need them most. This program addresses high rates of maternal and infant mortality by providing preventative care and health education, empowering mothers with the knowledge and resources to ensure their children's healthy development. We also train local health volunteers to sustain these efforts.",
-    date: "2024-06-25",
-    author: "Health Outreach Team",
-    category: "health",
-    image:" https://www.globalgiving.org/pfil/3885/Bikes_distribution_to_PNC_students_Large.jpg",
-    location: "Takeo, Cambodia",
-  },
-  {
-    title: "Combating Human Trafficking and Providing Safe Havens",
-    content:
-      "Based in Phnom Penh, this program focuses on preventing human trafficking through community awareness campaigns and providing immediate safe shelter, counseling, and legal aid to survivors, helping them rebuild their lives with dignity. We work tirelessly to identify and rescue victims, offering them a path to recovery and reintegration into society. Our approach includes working with law enforcement, community leaders, and families to create a strong protective network. Education on the dangers of trafficking is a key component, empowering vulnerable individuals to recognize and avoid exploitative situations.",
-    date: "2024-06-18",
-    author: "Protection Program",
-    category: "protection",
-    image: "https://www.globalgiving.org/pfil/3885/ph_3885_218251.jpg",
-    location: "Phnom Penh, Cambodia",
-  },
-  {
-    title: "Empowering Women Through Vocational Skills in Battambang",
-    content:
-      "Our center in Battambang offers vocational training in tailoring, weaving, and hospitality to vulnerable women, equipping them with marketable skills to secure employment and achieve financial independence for themselves and their families. This program is crucial for women who have limited educational opportunities, providing them with practical skills that lead directly to income generation. Beyond technical training, we also offer business literacy and life skills workshops, fostering confidence and self-reliance. Many graduates have successfully started their own small businesses or found stable employment, transforming their economic outlook.",
-    date: "2024-06-05",
-    author: "Livelihoods Team",
-    category: "livelihoods",
-    image: "https://www.globalgiving.org/pfil/3885/6989625829_7142fa33a8_z_Large.jpg",
-    location: "Battambang, Cambodia",
-  },
-  {
-    title: "Access to Clean Water Transforms Lives in Siem Reap",
-    content:
-      "This project in Siem Reap focuses on installing new water wells and implementing sanitation systems in rural villages. We also conduct hygiene education workshops to ensure long-term health benefits and sustainable community practices. Access to clean water is fundamental for health and development, reducing waterborne diseases and freeing up time for women and children who traditionally spend hours fetching water. Our approach involves community participation in the planning and maintenance of water infrastructure, ensuring sustainability and local ownership. This leads to healthier families and more time for education and productive activities.",
-    date: "2024-05-28",
-    author: "Community Development",
-    category: "livelihoods",
-    image: "https://b2616979.smushcdn.com/2616979/wp-content/uploads/Cambodia.10-2024.LisaHarbertson-253-scaled.jpg?lossy=2&strip=1&webp=1",
-    location: "Siem Reap, Cambodia",
-  },
-  {
-    title: "Creating Safe Environments for Children in Kandal",
-    content:
-      "In Kandal province, we establish and maintain safe playgrounds and community centers, providing children with secure spaces for learning and play. The program also includes workshops on child rights and protection for parents and local leaders. These safe spaces are vital for children's physical and emotional development, especially in areas where safe play is limited. We aim to foster a protective environment where children can thrive, free from harm and exploitation. Community engagement is key, as we empower parents and local authorities to become advocates for child protection and well-being.",
-    date: "2024-05-15",
-    author: "Child Protection Unit",
-    category: "protection",
-    image: "https://www.globalgiving.org/pfil/5863/ph_5863_18889.jpg",
-    location: "Kandal, Cambodia",
-  },
-  {
-    title: "Supporting Higher Education for Promising Students - Nationwide",
-    content:
-      "Our nationwide scholarship program identifies and supports talented students from disadvantaged backgrounds to pursue higher education. We cover tuition fees, living expenses, and provide mentorship, enabling them to become future leaders in Cambodia. This program is designed to bridge the gap for students who have the academic potential but lack the financial means to attend university. By investing in higher education, we are cultivating a new generation of professionals, innovators, and community leaders who will contribute to Cambodia's development. Our alumni network provides ongoing support and networking opportunities.",
-    date: "2024-05-01",
-    author: "Scholarship Committee",
-    category: "education",
-    image: "https://www.globalgiving.org/pfil/3885/ph_3885_218247.jpg",
-    location: "Nationwide, Cambodia",
-  },
-];
-
-// Computed properties
+onMounted(fetchData);
+//======= Computed =======//
+// Computed filter activities
 const filteredActivities = computed(() => {
   const query = searchQuery.value.toLowerCase().trim();
   const hasSearchQuery = query !== "";
   const hasActiveCategories = activeCategories.value.length > 0;
 
-  return activities
+  return activities.value
     .filter((activity) => {
       const matchesCategory =
-        !hasActiveCategories ||
-        activeCategories.value.includes(activity.category);
+        !hasActiveCategories || activeCategories.value.includes(activity.category);
       let matchesSearch = false;
 
       if (hasSearchQuery) {
-        const matchedCategory = categories.find((cat) =>
+        const matchedCategory = categories.value.find((cat) =>
           cat.label.toLowerCase().includes(query)
         );
         if (matchedCategory) {
@@ -174,48 +117,52 @@ const filteredActivities = computed(() => {
             activity.title.toLowerCase().includes(query) ||
             activity.content.toLowerCase().includes(query) ||
             activity.author.toLowerCase().includes(query) ||
-            (activity.location &&
-              activity.location.toLowerCase().includes(query));
+            (activity.location && activity.location.toLowerCase().includes(query));
         }
       } else {
         matchesSearch = true;
       }
+
       return matchesCategory && matchesSearch;
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 });
 
+// Computed related activities
 const relatedActivities = computed(() => {
   if (!selectedActivity.value) return [];
-  return activities
+  return activities.value
     .filter(
       (activity) =>
         activity.title !== selectedActivity.value.title &&
-        (activity.category === selectedActivity.value.category ||
-          Math.random() > 0.5) // Randomly show some from other categories
+        (activity.category === selectedActivity.value.category || Math.random() > 0.5)
     )
     .slice(0, 2);
 });
 
-// Methods
+//======= Method =======//
+// View activity detail
 const viewActivityDetail = (activity) => {
   selectedActivity.value = activity;
   currentView.value = "detail";
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+// Back to activity listing
 const backToListing = () => {
   currentView.value = "listing";
   selectedActivity.value = null;
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+// Calculate read time
 const calculateReadTime = (content) => {
   const wordsPerMinute = 200;
   const wordCount = content.split(/\s+/).length;
   return Math.ceil(wordCount / wordsPerMinute);
 };
 
+// Get category button class based on active state
 const getCategoryButtonClass = (category) => {
   const isActive = activeCategories.value.includes(category);
   return {
@@ -227,6 +174,7 @@ const getCategoryButtonClass = (category) => {
   };
 };
 
+// Get category badge class for activity cards
 const getCategoryBadgeClass = (category) => {
   return {
     "bg-blue-100 text-blue-800": category === "education",
@@ -236,14 +184,17 @@ const getCategoryBadgeClass = (category) => {
   };
 };
 
+// Load more activities
 const loadMore = () => {
   visibleItems.value += 3;
 };
 
+// Handle search functionality
 const handleSearch = () => {
   visibleItems.value = 6;
 };
 
+// Toggle category filter
 const toggleCategory = (category) => {
   const index = activeCategories.value.indexOf(category);
   if (index === -1) {
@@ -254,17 +205,20 @@ const toggleCategory = (category) => {
   visibleItems.value = 6;
 };
 
+// Reset filters
 const resetFilters = () => {
   searchQuery.value = "";
   activeCategories.value = [];
   visibleItems.value = 6;
 };
 
+// Format date for display
 const formatDate = (dateString) => {
   const options = { year: "numeric", month: "long", day: "numeric" };
   return new Date(dateString).toLocaleDateString("en-US", options);
 };
 
+// Get category label for display
 const getCategoryLabel = (category) => {
   const labels = {
     education: "Girls' Education",
@@ -274,9 +228,8 @@ const getCategoryLabel = (category) => {
   };
   return labels[category] || "Activity";
 };
-
-
 </script>
+
 
 <style scoped>
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
