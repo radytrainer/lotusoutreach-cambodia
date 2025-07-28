@@ -81,7 +81,7 @@ const activeCategories = ref([]);
 const activities = ref([]);
 const categories = ref([]);
 
-// Fetch from JSON newsStory.json file
+// Fetch from newsStory.json file
 const fetchData = async () => {
   try {
     const response = await axios.get('/backend/newsStory.json');
