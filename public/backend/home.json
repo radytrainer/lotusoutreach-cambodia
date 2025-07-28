@@ -1,0 +1,83 @@
+{
+  "images": [
+    { "src": "/image/Home/Home_hero01.jpg", "alt": "Cambodia Girls" },
+    { "src": "/image/Home/Home_hero02.jpg", "alt": "Community Support" },
+    { "src": "/image/Home/Home_hero03.jpg", "alt": "Helping Hands" }
+  ],
+  "sharedContent": {
+    "title": "Empowering <span class='text-pink-400'>Cambodian</span> Girls",
+    "description": "In rural Cambodia, education transforms lives. When you empower a Cambodian girl, you transform an entire community.",
+    "buttons": [
+      { "text": "Support Us", "link": "/donate", "primary": true },
+      { "text": "Learn About Our Work", "link": "/about", "primary": false }
+    ]
+  },
+  "focusCards": [
+    {
+      "id": 1,
+      "title": " Educations",
+      "image": "/image/Home/Program_card01.png",
+      "summary": "At Lotus Outreach Cambodia, we empower young women through our CATALYST program-a university scholarship and leadership initiative that supports graduates in pursuing higher education. Beyond financial support, CATALYST nurtures leadership skills, civic engagement, and career readiness, preparing scholars to become change makers in their communities and beyond.",
+      "content": "Our education programs in Cambodia focus on keeping girls in school through comprehensive support including scholarships, uniforms, school supplies, and nutritional assistance..."
+    },
+    {
+      "id": 2,
+      "title": "Cares",
+      "image": "/image/Home/Program_card02.png",
+      "summary": "Our Rice for Education program offers vital food support to the families of scholarship recipients, helping to alleviate economic pressures that can lead to school dropouts. Additionally, our Lotus Pedals initiative provides bicycles to girls who live far from school, ensuring safe and reliable transportation to help them attend classes consistently.",
+      "content": "In Cambodia's remote areas, we provide mobile health clinics, maternal health services, and health education programs..."
+    },
+    {
+      "id": 3,
+      "title": "Training",
+      "image": "/image/Home/Program_card03.png",
+      "summary": "We provide essential life skills and personal development training to equip our scholars for success in their academic and professional journeys. Through workshops and mentorship, participants gain soft skills, digital literacy, leadership abilities, and job readiness, helping them build confidence and thrive in today’s competitive world.",
+      "content": "Cambodia faces unique challenges with human trafficking, particularly affecting young women and children..."
+    },
+    {
+      "id": 4,
+      "title": "Giving Back",
+      "image": "/image/Home/Program_card04.png",
+      "summary": "Since 2018, we have fostered a culture of social responsibility through our Paying Forward initiative. Our beneficiaries actively engage in community service and charitable activities, such as organizing food drives, tutoring, and environmental clean-ups. This empowers them to give back to their communities while developing leadership and empathy.",
+      "content": "Our community development programs in Cambodia focus on building essential infrastructure like water wells, improving agricultural practices..."
+    }
+  ],
+  "approaches": [
+    {
+      "key": "culturally-sensitive",
+      "title": "Culturally Sensitive",
+      "image": "/image/Home/Our_approach.png",
+      "content": [
+        "Our programs in Cambodia are designed with deep respect for Khmer culture, Buddhist traditions, and local customs. We work closely with village elders, monks, and community leaders to ensure our initiatives align with cultural values while promoting positive change.",
+        "Understanding the importance of family honor and community harmony in Cambodian society, we approach sensitive topics like girls' education and women's empowerment with cultural sensitivity and patience, building trust over time."
+      ]
+    },
+    {
+      "key": "locally-led",
+      "title": "Locally Led",
+      "image": "/image/Home/Our_approach02.png",
+      "content": [
+        "Our Cambodia operations are led by Cambodian staff who understand the language, culture, and specific challenges facing rural communities. This local leadership ensures our programs are relevant, effective, and sustainable.",
+        "We prioritize hiring and training Cambodian team members, creating local employment while building capacity within communities. Our approach empowers Cambodians to lead their own development initiatives."
+      ]
+    },
+    {
+      "key": "community-based",
+      "title": "Community Based",
+      "image": "/image/Home/Our_approach03.png",
+      "content": [
+        "Every program begins with extensive community consultation. We work with village committees, women's groups, and local leaders to identify priorities and design solutions that reflect community needs and values.",
+        "Our community-based approach ensures that programs are owned and sustained by the communities themselves, creating lasting change that continues long after our direct involvement ends."
+      ]
+    },
+    {
+      "key": "holistic",
+      "title": "Holistic Approach",
+      "image": "/image/Home/Our_approach04.png",
+      "content": [
+        "We recognize that challenges in rural Cambodia are interconnected. Poverty, lack of education, health issues, and limited economic opportunities all affect each other. Our programs address multiple issues simultaneously for maximum impact.",
+        "By combining education support with health services, clean water access, and economic opportunities, we create comprehensive solutions that address root causes of poverty and inequality in Cambodian communities."
+      ]
+    }
+  ]
+}
