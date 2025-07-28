@@ -101,9 +101,6 @@ const props = defineProps({ teamMembers: Array });
 const flippedStates = ref([]);
 const expandedStates = ref([])
 
-// const toggleFlip = (index) => {
-//   flippedStates.value[index] = !flippedStates.value[index]
-// }
  const toggleExpand = (index) => {
   expandedStates.value[index] = !expandedStates.value[index]
 }
