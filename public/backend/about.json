@@ -49,23 +49,28 @@
     "teamMembers": [
         {
             "name": "Glenn Fawcett",
-            "position": "Executive Director",
-            "image": "https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9668-1024x768.jpg"
+            "position": "Deputy Director",
+            "image": "https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9668-1024x768.jpg",
+            "details": "Glenn has completed post-graduate studies in Poverty Reduction in Policy and Practice at the London University School of Oriental and African Studies (SOAS). An Australian native, he began his journey with Lotus Outreach as a volunteer in New Delhi in 1995. After serving as Director of Operations since 1997, Glenn was appointed Executive Director of Lotus Outreach International in 2017.\nWith over 25 years of living and traveling extensively throughout South and Southeast Asia, Glenn is deeply connected to the villages and communities where Lotus Outreach works. He is driven by a strong sense of social justice and is committed to developing social development approaches that have large-scale, replicable impact.\nIn Cambodia, Glenn serves as Deputy Director of Lotus Outreach Cambodia, working closely with the local team to strengthen and expand programs that empower women and children through education and development."
+            
         },
         {
-            "name": "Raksmey Var",
-            "position": "Country Representative, Cambodia",
-            "image": "https://lotusoutreachaustralia.org.au/wp-content/uploads/2015/07/Raksmey-for-web-site-.jpg"
+            "name": "Raksmey Va",
+            "position": "Executive Director ",
+            "image": "https://lotusoutreachaustralia.org.au/wp-content/uploads/2015/07/Raksmey-for-web-site-.jpg",
+            "details": "Raksmey holds a Master’s Degree in Gender and Development Studies from the Asian Institute of Technology in Thailand. She has been with Lotus Outreach since October 2007 and currently serves as the Executive Director of Lotus Outreach Cambodia. In this leadership role, she oversees all strategic and operational aspects of the organization’s work in Cambodia. She is passionate about inspiring and empowering children and young Cambodian women to realize their full potential and dreams through education and opportunity."
         },
         {
             "name": "Pisey Chea",
-            "position": "LOCAM Project Officer",
-            "image": "https://lotusoutreachaustralia.org.au/wp-content/uploads/2018/06/Untitled-design-2.jpg"
+            "position": "Senior Project Officer",
+            "image": "https://lotusoutreachaustralia.org.au/wp-content/uploads/2018/06/Untitled-design-2.jpg",
+            "details": "Pisey earned her BA in Biochemistry in 2016. After two years working with youth, she joined Lotus Outreach Cambodia as a CATALYST Project Officer in March 2017. In her role, Pisey actively networks across sectors to identify free and subsidized training, internship, and employment opportunities for our beneficiaries. She is passionate about mentoring young women, supporting them to overcome challenges in both education and life."
         },
         {
-            "name": "Borika",
-            "position": "Accountant, Cambodia",
-            "image": "https://lotusoutreach.org/wp-content/uploads/2022/08/borika.jpeg"
+            "name": "Sreymao Chhan ",
+            "position": "Finance and Administration Officer",
+            "image": "https://lotusoutreach.org/wp-content/uploads/2022/08/borika.jpeg",
+            "details": "Sreymao holds a Bachelor’s Degree in Accounting and Finance from Human Resource University (HRU), completed in 2011. Since joining Lotus Outreach Cambodia in June 2023, she has been responsible for managing all accounting and administrative tasks to ensure smooth and efficient operations."
         }
     ],
     "originalPartnerLogos": [
