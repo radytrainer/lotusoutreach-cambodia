@@ -21,8 +21,6 @@ import TeamSection from '@/components/about/TeamSection.vue';
 import PartnerSection from '@/components/about/PartnerSection.vue';
 
 
-
-
 const historyContent = ref([]);
 const principles = ref([]);
 const teamMembers = ref([]);
