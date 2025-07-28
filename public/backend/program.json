@@ -30,7 +30,7 @@
             "title": "Lotus Pedals",
             "image": "/image/Program/pro1.jpg",
             "icon": "fas fa-bicycle",
-            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "description": "Provides bicycles to girls who live far from school, helping them attend classes regularly and safely.",
             "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
@@ -63,11 +63,11 @@
             ]
         },
         {
-            "title": "GATE",
-            "image": "/image/Program/gate.jpg",
+            "title": "Rice for Education",
+            "image": "/image/Program/Rice-for-education.jpg",
             "icon": "fas fa-book-open",
-            "description": "Providing education scholarships and rice support for at-risk girls and their families living in dire poverty.",
-            "fullDescription": "The GATE (Girls Access to Education) program provides comprehensive support to at-risk girls from families living in extreme poverty. Understanding that hunger and financial hardship are major barriers to education, GATE combines educational scholarships with essential rice support for families. This holistic approach ensures that girls can focus on their studies while their families have basic food security.",
+            "description": "Supplies monthly rice and food support to families of scholarship girls, helping reduce school dropouts due to household economic pressures.",
+            "fullDescription": "Lotus Outreach Cambodia's \"Rice for Education\" (R4E) program is a vital initiative aimed at reducing school dropout rates among girls from economically disadvantaged families. By providing monthly rice and food support, the program alleviates household food insecurity, allowing families to prioritize their daughters' education without the added pressure of daily survival.",
             "features": [
                 "Full educational scholarships covering tuition and supplies",
                 "Monthly rice distributions to families",
@@ -98,7 +98,7 @@
             "title": "CATALYST",
             "image": "/image/Program/catalyst.jpg",
             "icon": "fas fa-user-graduate",
-            "description": "Providing university scholarships, mentoring, and leadership training for at-risk female youth in Cambodia.",
+            "description": " (CAmbodian TertiAry Education And Leadership YouTh) a university scholarship and leadership development program for GATE graduates.",
             "fullDescription": "CATALYST is our flagship leadership development program that transforms promising young women into confident leaders and change-makers in their communities. Through comprehensive university scholarships, intensive mentoring, and specialized leadership training, CATALYST participants develop the skills, knowledge, and networks needed to break cycles of poverty and become advocates for positive change in Cambodia.",
             "features": [
                 "Full university scholarships including living expenses",
