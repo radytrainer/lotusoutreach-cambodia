@@ -20,7 +20,7 @@
           <router-link to="/donate"
             class="inline-block px-8 py-4 bg-pink-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             aria-label="Support our mission in Cambodia">
-            Support Cambodia
+            Support Us
           </router-link>
         </div>
       </div>
