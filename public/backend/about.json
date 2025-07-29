@@ -48,6 +48,7 @@
     ],
     "teamMembers": [
         {
+            "id": 1,
             "name": "Glenn Fawcett",
             "position": "Deputy Director",
             "image": "https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9668-1024x768.jpg",
@@ -55,18 +56,21 @@
             
         },
         {
+            "id": 2,
             "name": "Raksmey Va",
             "position": "Executive Director ",
-            "image": "https://lotusoutreachaustralia.org.au/wp-content/uploads/2015/07/Raksmey-for-web-site-.jpg",
+            "image": "/image/Team/Reaksmey.jpg",
             "details": "Raksmey holds a Master’s Degree in Gender and Development Studies from the Asian Institute of Technology in Thailand. She has been with Lotus Outreach since October 2007 and currently serves as the Executive Director of Lotus Outreach Cambodia. In this leadership role, she oversees all strategic and operational aspects of the organization’s work in Cambodia. She is passionate about inspiring and empowering children and young Cambodian women to realize their full potential and dreams through education and opportunity."
         },
         {
+            "id": 3,
             "name": "Pisey Chea",
             "position": "Senior Project Officer",
-            "image": "https://lotusoutreachaustralia.org.au/wp-content/uploads/2018/06/Untitled-design-2.jpg",
+            "image": "/image/Team/Pisey.jpg",
             "details": "Pisey earned her BA in Biochemistry in 2016. After two years working with youth, she joined Lotus Outreach Cambodia as a CATALYST Project Officer in March 2017. In her role, Pisey actively networks across sectors to identify free and subsidized training, internship, and employment opportunities for our beneficiaries. She is passionate about mentoring young women, supporting them to overcome challenges in both education and life."
         },
         {
+            "id": 4,
             "name": "Sreymao Chhan ",
             "position": "Finance and Administration Officer",
             "image": "https://lotusoutreach.org/wp-content/uploads/2022/08/borika.jpeg",

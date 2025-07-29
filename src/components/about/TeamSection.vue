@@ -1,15 +1,13 @@
 <template>
-  <section id="team" class="bg-gray-50 py-30">
+  <section id="team" class="bg-gray-50 py-20">
     <div class="container mx-auto px-4 p-9">
-      <h2
-        class="text-4xl text-blue-700 md:text-6xl font-extrabold text-center mb-20"
-      >
+      <h2 class="text-4xl text-blue-700 md:text-6xl font-extrabold text-center mb-20">
         Our Inspired Team
       </h2>
       <div class="flex flex-wrap justify-center gap-12 max-w-8xl mx-auto">
         <div
           v-for="(member, index) in teamMembers"
-          :key="index"
+          :key="member.id"
           @click="toggleFlip(index)"
           class="relative group cursor-pointer transition-all duration-500 hover:-translate-y-2 perspective"
         >
@@ -24,9 +22,7 @@
               >
                 <!-- Profile image with circle background -->
                 <div class="relative w-40 h-40 mb-16">
-                  <div
-                    class="absolute inset-0 bg-orange-100 rounded-full"
-                  ></div>
+                  <div class="absolute inset-0 bg-orange-100 rounded-full"></div>
                   <img
                     :src="member.image"
                     :alt="member.name"
@@ -40,9 +36,7 @@
                     <div
                       class="bg-blue-400 text-white px-1 py-1 transform -skew-y-12 shadow-lg text-center w-60 mx-auto"
                     >
-                      <h3 class="font-bold text-lg uppercase">
-                        {{ member.name }}
-                      </h3>
+                      <h3 class="font-bold text-lg uppercase">{{ member.name }}</h3>
                     </div>
                     <div
                       class="bg-blue-500 text-white px-0 py-1 transform -skew-y-12 shadow-lg text-center w-60 ml-auto -mt-3"
@@ -52,11 +46,10 @@
                   </div>
                 </div>
 
-                
                 <!-- Testimonial Text -->
                 <div
                   class="px-4 text-gray-800 text-sm leading-relaxed text-center"
-                  style="white-space: pre-line;"
+                  style="white-space: pre-line"
                 >
                   <div class="flex justify-center mb-2">
                     <svg
@@ -72,17 +65,16 @@
 
                   <p>
                     <span v-if="!expandedStates[index]">
-                      {{ member.details.slice(0, 100)
-                      }}<span v-if="member.details.length > 100">.. </span>
+                      {{ member.details.slice(0, 100) }}<span v-if="member.details.length > 100">..</span>
                     </span>
                     <span v-else>{{ member.details }}</span>
 
                     <span
                       v-if="member.details.length > 100"
                       class="text-blue-600 font-medium cursor-pointer ml-1"
-                      @click.stop="toggleExpand(index)"
+                      @click.stop="goToDetail(member.id)"
                     >
-                      {{ expandedStates[index] ? "Show less" : "Read more" }}
+                      Read more
                     </span>
                   </p>
                 </div>
@@ -97,26 +89,36 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 
-const props = defineProps({ teamMembers: Array });
+const props = defineProps({
+  teamMembers: {
+    type: Array,
+    required: true,
+  },
+});
 
 const flippedStates = ref([]);
 const expandedStates = ref([]);
 
-// Initialize states on mount
+const router = useRouter();
+
 onMounted(() => {
   flippedStates.value = props.teamMembers.map(() => false);
   expandedStates.value = props.teamMembers.map(() => false);
 });
 
-// Toggle card flip state
 const toggleFlip = (index) => {
   flippedStates.value[index] = !flippedStates.value[index];
 };
 
-// Toggle expand/collapse for "Read more"
-const toggleExpand = (index) => {
-  expandedStates.value[index] = !expandedStates.value[index];
+const goToDetail = (id) => {
+  console.log("Navigating to DetailTeam with id:", id);
+  if (!id) {
+    console.error("Missing id for detail navigation");
+    return;
+  }
+  router.push({ name: "DetailTeam", params: { id } });
 };
 </script>
 
