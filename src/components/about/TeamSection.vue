@@ -56,6 +56,7 @@
                 <!-- Testimonial Text -->
                 <div
                   class="px-4 text-gray-800 text-sm leading-relaxed text-center"
+                  style="white-space: pre-line;"
                 >
                   <div class="flex justify-center mb-2">
                     <svg
@@ -98,15 +99,25 @@
 import { ref, onMounted } from "vue";
 
 const props = defineProps({ teamMembers: Array });
-const flippedStates = ref([]);
-const expandedStates = ref([])
 
- const toggleExpand = (index) => {
-  expandedStates.value[index] = !expandedStates.value[index]
-}
+const flippedStates = ref([]);
+const expandedStates = ref([]);
+
+// Initialize states on mount
 onMounted(() => {
   flippedStates.value = props.teamMembers.map(() => false);
+  expandedStates.value = props.teamMembers.map(() => false);
 });
+
+// Toggle card flip state
+const toggleFlip = (index) => {
+  flippedStates.value[index] = !flippedStates.value[index];
+};
+
+// Toggle expand/collapse for "Read more"
+const toggleExpand = (index) => {
+  expandedStates.value[index] = !expandedStates.value[index];
+};
 </script>
 
 <style scoped>

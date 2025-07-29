@@ -31,7 +31,6 @@
         <!-- Timeline -->
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h3 class="text-2xl font-bold text-blue-500 mb-2">Cambodia</h3>
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">LOCAM through the years</h2>
                 <p class="text-gray-600 max-w-4xl mx-auto">
                     Lotus Outreach Cambodia is part of the global Lotus Outreach network, dedicated to improving the

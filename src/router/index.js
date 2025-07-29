@@ -8,6 +8,7 @@ import DonateView from '@/views/DonateView.vue';
 import ProgramView from '@/views/ProgramView.vue';
 import NewsStory from '@/views/NewsStory.vue';
 import programDetail from '@/components/Program/ProgramDetail.vue';
+import DetailPartner from '@/components/about/DetailPartner.vue';
 
 const routes = [
   {
@@ -15,7 +16,12 @@ const routes = [
     component: DefaultLayout,
     children: [
       { path: '', name: 'Home', component: Home },
-      { path: 'about', name: 'About', component: About },
+      { path: 'about', name: 'About', component: About,
+        children: [
+          { path: '/partner/:id', name: 'DetailPartner', component: DetailPartner, props: true }
+        ]
+      },
+
       { path: 'contact', name: 'Contact', component: ContactView },
       { path: 'education/:id', name: 'Education', component: Education },
       { path: 'donate', name: 'Donate', component: DonateView },
