@@ -14,10 +14,10 @@
     <!-- Centered Content -->
     <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
       <!-- Heading -->
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold drop-shadow-xl leading-tight mb-4">
-        <span class="text-white">Contact With Us</span>
+      <h1 class="text-4xl sm:text-4xl lg:text-6xl font-bold text-white mb-1 sm:mb-6 leading-snug sm:leading-tight">
+     Contact With Us
         
-      </h1>
+    </h1>
 
 
       <!-- Subheading -->
