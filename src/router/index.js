@@ -12,6 +12,8 @@ import ProgramEdu from '@/components/Program/ProgramEdu.vue';
 import ProgramCare from '@/components/Program/ProgramCare.vue';
 import ProgramTraining from '@/components/Program/ProgramTraining.vue';
 import ProgramGiving from '@/components/Program/ProgramGiving.vue';
+import SuccessStory from '@/components/News/SuccessStory.vue';
+import StoryDetailPage from '@/components/News/StoryDetailPage.vue';
 
 const routes = [
   {
@@ -36,6 +38,8 @@ const routes = [
         ],
       },
       { path: 'newstory', name: 'News', component: NewsStory },
+      { path: 'success-story', name: 'SuccessStory', component: SuccessStory },
+      { path: 'success-story/:id', name: 'StoryDetail', component: StoryDetailPage, props: true },
     ],
   },
 ];

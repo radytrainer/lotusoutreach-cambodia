@@ -1,41 +1,51 @@
 <template>
-  <section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100 font-poppins">
+  <section class="py-16 bg-white font-poppins">
+    <div class="text-center mb-24">
+      <h1 class="text-3xl md:text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        Success <span class="text-blue-600">Stories </span>
+      </h1>
+      <p class="text-gray-700 text-lg md:text-ms max-w-1xl mx-auto leading-relaxed">
+        Hear from the women whose lives have been
+        <span class="font-semibold text-blue-700">transformed</span>
+      </p>
+    </div>
     <div class="container mx-auto px-4 max-w-7xl">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">
-          Success <span class="text-blue-600">Stories </span>
-        </h2>
-        <div class="w-24 h-1.5 bg-blue-500 rounded-full mx-auto mb-6"></div>
-        <p class="text-gray-700 text-lg md:text-ms max-w-1xl mx-auto leading-relaxed">
-          Hear from the women whose lives have been
-          <span class="font-semibold text-blue-700">transformed</span>
-        </p>
-      </div>
+      <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+        <div class="relative w-full lg:w-1/2 flex justify-center items-center p-4">
+          <div
+            class="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full bg-orange-200 flex items-center justify-center overflow-hidden shadow-lg">
+            <img :src="currentStory.avatar" :alt="currentStory.name" class="w-full h-full object-cover object-center" />
+          </div>
+          <div class="absolute bottom-24 left-1/2 -translate-x-1/2 w-[calc(100%+60px)] z-10">
+            <div class="relative flex flex-col items-center">
+              <!-- Top bar: NAME -->
+              <div
+                class="bg-blue-400 text-white px-8 py-4 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[300px] md:max-w-[400px] z-200">
+                <h3 class="font-bold text-4xl uppercase tracking-wide">
+                  {{ currentStory.name }}
+                </h3>
+              </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          v-for="(success, index) in stories"
-          :key="index"
-          class="bg-white rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform  flex flex-col"
-        >
-          <div class="flex items-center mb-6">
-            <img
-              :src="success.avatar"
-              :alt="success.name"
-              class="w-16 h-16 rounded-full object-cover mr-5 border-2 border-blue-400 shadow-md"
-            />
-            <div>
-              <h4 class="font-bold text-xl text-gray-900 leading-tight">
-                {{ success.name }}
-              </h4>
-              <p class="text-blue-600 text-xs font-semibold mt-1">
-                {{ success.program }}
-              </p>
+              <!-- Bottom bar: PROGRAM -->
+              <div
+                class="absolute top-12 left-52 bg-blue-500 text-white px-4 py-2 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[250px] md:max-w-[350px] z-100">
+                <p class="text-sm font-medium">{{ currentStory.program }}</p>
+              </div>
             </div>
           </div>
-          <p class="text-gray-700 text-base leading-relaxed italic flex-grow">
-            "<span class="font-medium text-sm"> {{ success.quote }} </span>"
-          </p>
+        </div>
+        <div class="w-full lg:w-1/2 flex flex-col justify-center lg:pl-12">
+          <div class="mb-6 mt-8">
+            <span class="text-blue-400 text-6xl font-extrabold leading-none block mb-4">“</span>
+            <p class="text-gray-700 text-lg md:text-xl leading-relaxed">
+              {{ currentStory.quote.paragraph1 }}
+              <span class="text-blue-600 font-semibold">{{
+                currentStory.quote.highlight1
+              }}</span>.
+            </p>
+            <router-link :to="{ name: 'StoryDetail', params: { id: currentStoryIndex } }"
+              class="mt-4 inline-block text-blue-600 hover:underline">Learn More</router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -43,28 +53,30 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
+const currentStoryIndex = ref(0);
 const stories = ref([
   {
-    name: 'Raksmey Var',
-    program: 'Country Representative, Cambodia',
-    avatar: '/public/image/News/RaksmeyVar.png',
-    quote: 'The CATALYST program gave me the confidence and skills to become a leader in my community. Now I help other young women pursue their dreams.',
-  },
-  {
-    name: 'Pisey Chea',
-    program: 'LOCAM Project Officer',
-    avatar: '/public/image/News/PiseyChea.png',
-    quote: 'Having a bicycle changed everything for me. I could attend school regularly and now I am studying to become a teacher.',
-  },
-  {
-    name: 'Borika',
-    program: 'Accountant, Cambodia',
-    avatar: '/public/image/News/Borika.png',
-    quote: 'The scholarship and rice support meant my family could afford to keep me in school. Education opened doors I never imagined possible.',
+    name: 'Sat Marany',
+    program: 'PHYSICS GRADUATE, ROYAL UNIVERSITY OF PHNOM PENH',
+    avatar: '/image/News/02.jpg',
+    quote: {
+      paragraph1:
+        'Sat Marany, a 22-year-old from Banteay Meanchey Province, overcame significant challenges, including her parents working abroad since Grade 7. A recipient of the CATALYST Scholarship, she graduated with distinction from the Royal University of Phnom Penh in 2024, earning a Physics degree with a ',
+      highlight1: 'perfect GPA of 4.00 in her final year',
+      paragraph2:
+        'Currently, Marany works part-time at ISF International School and offers private tutoring, earning approximately $600 per month. She also volunteers at her university\'s Optoelectronics & Advanced Materials Laboratory and participated in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024 in Thailand, broadening her scientific knowledge and network.',
+      paragraph3:
+        'Deeply committed to education and community service, Marany mentors younger students, supports her younger brother\'s education, and contributes to her family\'s living expenses. Her long-term goal is to reunite her family in Cambodia and pursue a master’s degree in physics abroad.',
+      paragraph4:
+        'She extends heartfelt gratitude to the donors for enabling underprivileged Cambodian girls to access higher education and transform their lives, and special thanks to Lotus Outreach Cambodia staff, especially Ms. Raksmey and Ms. Pisey, for their unwavering support and guidance, empowering her and many others to ',
+      highlight2: 'persevere and thrive',
+    },
   },
 ]);
+
+const currentStory = computed(() => stories.value[currentStoryIndex.value]);
 </script>
 
 <style scoped>

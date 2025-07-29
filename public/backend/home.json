@@ -1,7 +1,7 @@
 {
   "images": [
     { "src": "/image/Home/Home_hero01.jpg", "alt": "Cambodia Girls" },
-    { "src": "/image/Home/Home_hero02.jpg", "alt": "Community Support" },
+    { "src": "/image/Home/04.jpg", "alt": "Community Support" },
     { "src": "/image/Home/Home_hero03.jpg", "alt": "Helping Hands" }
   ],
   "sharedContent": {
