@@ -13,7 +13,7 @@
 
       <!-- Map and Card -->
       <div class="max-w-7xl mx-auto px-4">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-blue-100">
+        <div class="relative rounded-3xl overflow-hidden shadow-ml border border-blue-100">
           <!-- Google Maps Embed -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31217.32961776853!2d104.9069159!3d11.5362522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095108d46a13af%3A0xcac8cfe6b53b3d5c!2sLotus%20Outreach%20Cambodia%20(LOCAM)!5e0!3m2!1sen!2skh!4v1753693300000!5m2!1sen!2skh"
