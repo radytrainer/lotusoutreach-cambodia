@@ -91,7 +91,7 @@
             </div>
           </div>
 
-          <!-- Second Content Block (Reversed) -->
+          <!-- Second Content Block (Reversed)  -->
           <div
             class="flex flex-col md:flex-row-reverse gap-4 sm:gap-6 items-center md:items-center"
           >

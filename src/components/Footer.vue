@@ -289,5 +289,32 @@
         </div>
       </div>
     </div>
+
+    <!-- Improved Animated HR -->
+    <hr
+      class="my-4  from-pink-500 via-red-500 to-yellow-500
+             relative overflow-hidden shadow-lg"
+      style="background-size: 200% 100%; animation: gradient-slide 4s linear infinite;"
+    />
+
+  
+  <div class="text-center text-sm text-gray-600 mb-2">
+  <h4 class="text-gray-400 m-0 inline-block">
+    @Develop by students PNC generation 2025
+  </h4>
+  
+  </div>
+
   </footer>
 </template>
+
+<style scoped>
+@keyframes gradient-slide {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+</style>

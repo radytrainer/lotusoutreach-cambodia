@@ -10,6 +10,10 @@ import NewsStory from '@/views/NewsStory.vue';
 import programDetail from '@/components/Program/ProgramDetail.vue';
 import DetailTeam from '@/components/about/DetailTeam.vue';
 import TeamSection from '@/components/about/TeamSection.vue';
+import ProgramEdu from '@/components/Program/ProgramEdu.vue';
+import ProgramCare from '@/components/Program/ProgramCare.vue';
+import ProgramTraining from '@/components/Program/ProgramTraining.vue';
+import ProgramGiving from '@/components/Program/ProgramGiving.vue';
 
 const routes = [
   {
@@ -24,6 +28,10 @@ const routes = [
       { path: 'contact', name: 'Contact', component: ContactView },
       { path: 'education/:id', name: 'Education', component: Education },
       { path: 'donate', name: 'Donate', component: DonateView },
+      { path: 'education', name: 'education', component: ProgramEdu },
+      { path: 'care', name: 'care', component: ProgramCare },
+      { path: 'training', name: 'training', component: ProgramTraining },
+      { path: 'givingBack', name: 'givingBack', component: ProgramGiving },
       {
         path: 'program',
         name: 'Program',

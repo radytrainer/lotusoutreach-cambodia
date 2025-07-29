@@ -1,26 +1,37 @@
 <template>
-  <div class="relative text-white">
+  <div class="relative w-full text-white">
     <!-- Background Image -->
     <img
       src="/public/image/Contact/contactHeader.png"
-      alt="Cambodia program 1"
-      class="w-full h-[28rem] object-cover md:h-[36rem] lg:h-[36rem] xl:h-[36rem] 2xl:h-[40rem]"
+      alt="Contact Us - Cambodia"
+      class="w-full h-[28rem] md:h-[36rem] lg:h-[40rem] 2xl:h-[44rem] object-cover object-center"
+      loading="eager"
     />
 
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/50"></div>
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/30 backdrop-brightness-75 flex items-center justify-center"></div>
 
-    <!-- Content on Top -->
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact with Us</h1>
-      <p class="text-lg md:text-xl mb-6 max-w-2xl">
-        Reach out to join our mission of empowering Cambodian girls and transforming rural communities.
+    <!-- Centered Content -->
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
+      <!-- Heading -->
+      <h1 class="text-4xl sm:text-4xl lg:text-6xl font-bold text-white mb-1 sm:mb-6 leading-snug sm:leading-tight">
+     Contact With Us
+        
+    </h1>
+
+
+      <!-- Subheading -->
+      <p class="text-lg sm:text-xl md:text-2xl max-w-3xl text-gray-200 font-medium drop-shadow-md mb-8">
+        Reach out and join our mission to empower Cambodian girls and uplift rural communities through education and opportunity.
       </p>
+
+      <!-- Donate Button -->
       <router-link
-        to="donate"
-        class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg text-lg transition-colors duration-200"
+        to="/donate"
+        class="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-xl transition duration-300 ease-in-out transform hover:scale-105"
       >
-        Donation
+      
+        Donate Now
       </router-link>
     </div>
   </div>

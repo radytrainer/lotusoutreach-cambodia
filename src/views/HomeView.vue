@@ -10,11 +10,11 @@
     <!-- Care Program Section -->
     <Program
       :focusCards="focusCards"
-      class="w-full max-w-full mx-auto  px-2 sm:px-4 py-6 sm:py-8"
+      class="w-full max-w-full mx-auto px-2 sm:px-4 py-4 sm:py-8"
     />
     
     <!-- Quote section-->
-    <QuoteSection class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8 mt-20"/>
+    <QuoteSection class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8 mb-24"/>
   </div>
 </template>
 

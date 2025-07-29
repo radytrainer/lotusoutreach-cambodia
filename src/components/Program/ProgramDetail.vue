@@ -38,6 +38,22 @@
                 </div>
               </div>
             </div>
+            <div v-if="selectedProgram && (selectedProgram.image1 || selectedProgram.image2)" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <img
+                     v-if="selectedProgram.image1"
+                      :src="selectedProgram.image1"
+                      :alt="`${selectedProgram.title} Image 1`"
+                      class="w-full h-64 object-cover rounded-xl shadow-lg transition-all duration-300 transform"
+                    />
+                  <img
+                      v-if="selectedProgram.image2"
+                      :src="selectedProgram.image2"
+                      :alt="`${selectedProgram.title} Image 2`"
+                      class="w-full h-64 object-cover rounded-xl shadow-lg transition-all duration-300 transform"
+                    />
+              </div>
+            </div>
             <div v-if="selectedProgram.gallery">
               <h3 class="text-xl font-poppins font-semibold text-gray-900 mb-4">Gallery</h3>
               <div class="grid grid-cols-2 md:grid-cols-3 gap-4">

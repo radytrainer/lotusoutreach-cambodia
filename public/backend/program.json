@@ -30,7 +30,7 @@
             "title": "Lotus Pedals",
             "image": "/image/Program/pro1.jpg",
             "icon": "fas fa-bicycle",
-            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "description": "Provides bicycles to girls who live far from school, helping them attend classes regularly and safely.",
             "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
@@ -63,11 +63,11 @@
             ]
         },
         {
-            "title": "GATE",
-            "image": "/image/Program/gate.jpg",
+            "title": "Rice for Education",
+            "image": "/image/Program/Rice-for-education.jpg",
             "icon": "fas fa-book-open",
-            "description": "Providing education scholarships and rice support for at-risk girls and their families living in dire poverty.",
-            "fullDescription": "The GATE (Girls Access to Education) program provides comprehensive support to at-risk girls from families living in extreme poverty. Understanding that hunger and financial hardship are major barriers to education, GATE combines educational scholarships with essential rice support for families. This holistic approach ensures that girls can focus on their studies while their families have basic food security.",
+            "description": "Supplies monthly rice and food support to families of scholarship girls, helping reduce school dropouts due to household economic pressures.",
+            "fullDescription": "Lotus Outreach Cambodia's \"Rice for Education\" (R4E) program is a vital initiative aimed at reducing school dropout rates among girls from economically disadvantaged families. By providing monthly rice and food support, the program alleviates household food insecurity, allowing families to prioritize their daughters' education without the added pressure of daily survival.",
             "features": [
                 "Full educational scholarships covering tuition and supplies",
                 "Monthly rice distributions to families",
@@ -98,7 +98,7 @@
             "title": "CATALYST",
             "image": "/image/Program/catalyst.jpg",
             "icon": "fas fa-user-graduate",
-            "description": "Providing university scholarships, mentoring, and leadership training for at-risk female youth in Cambodia.",
+            "description": " (CAmbodian TertiAry Education And Leadership YouTh) a university scholarship and leadership development program for GATE graduates.",
             "fullDescription": "CATALYST is our flagship leadership development program that transforms promising young women into confident leaders and change-makers in their communities. Through comprehensive university scholarships, intensive mentoring, and specialized leadership training, CATALYST participants develop the skills, knowledge, and networks needed to break cycles of poverty and become advocates for positive change in Cambodia.",
             "features": [
                 "Full university scholarships including living expenses",
@@ -324,37 +324,39 @@
         }
     ],
     "givingPrograms": [
+    {
+      "title": "Supporting 100 Children in Prey Nup",
+      "image": "/image/Program/giving1.jpg",
+      "icon": "fas fa-gift",
+      "description": "A charity event organized by CATALYST students and alumni to support 100 underserved children in Prey Nup District with school materials and hygiene supplies.",
+      "fullDescription": "On March 16, 2025, Lotus Outreach Cambodia, in collaboration with Let Us Create Futures and local authorities, successfully hosted its 6th Giving Back Event in Prey Nup District, Preah Sihanouk Province. This annual initiative, driven by the leadership of CATALYST students and alumni, is dedicated to fostering a culture of community service among young women. The event aimed to uplift children in need through the distribution of essential school materials, food, and hygiene products. It also empowered students to develop leadership, teamwork, and advocacy skills while creating a joyful and educational experience for the children.",
+      "features": [
+        "Supported 100 children with school bags, notebooks, pens, pencils, erasers, rulers, whiteboards, milk, snacks, bottled water, and soap",
+        "Donated food supplies (noodles, canned fish, sauces, tea, sugar) and 100,000 riels to Prey Nup Pagoda monks",
+        "Contributed storybooks and second-hand clothes to Let Us Create Futures",
+        "Conducted hygiene education and fun learning activities for children",
+        "Raised a total of $1,256.96 for the event through generous donor support"
+      ],
+      "image1": "/image/Program/giving2.jpg",
+      "image2": "/image/Program/giving3.jpg",
+      "stats": [
         {
-            "title": "Lotus Pedals",
-            "image": "/image/Program/giving1.jpg",
-            "icon": "fas fa-hand-holding-heart",
-            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
-            "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
-            "features": [
-                "High-quality, durable bicycles designed for rural terrain",
-                "Safety training and helmet provision",
-                "Maintenance workshops for recipients",
-                "Community engagement to ensure program sustainability",
-                "Follow-up support to track educational outcomes"
-            ],
-            "stats": [
-                {
-                    "number": "2,500+",
-                    "label": "Bicycles Distributed"
-                },
-                {
-                    "number": "85%",
-                    "label": "School Attendance Increase"
-                },
-                {
-                    "number": "150+",
-                    "label": "Villages Reached"
-                },
-                {
-                    "number": "95%",
-                    "label": "Program Satisfaction"
-                }
-            ]
+          "number": "$973.40",
+          "label": "Used for Educational & Hygiene Materials"
+        },
+        {
+          "number": "$319.56",
+          "label": "Carried Forward for Future Events"
+        },
+        {
+          "number": "100",
+          "label": "Children Benefited"
+        },
+        {
+          "number": "100,000 riels",
+          "label": "Cash Donated to Monks"
         }
-    ]
+      ]
+    }
+  ]
 }
