@@ -8,7 +8,6 @@
         <div
           v-for="(member, index) in teamMembers"
           :key="member.id"
-          @click="toggleFlip(index)"
           class="relative group cursor-pointer transition-all duration-500 hover:-translate-y-2 perspective"
         >
           <div class="w-72 relative">
@@ -22,11 +21,11 @@
               >
                 <!-- Profile image with circle background -->
                 <div class="relative w-40 h-40 mb-16">
-                  <div class="absolute inset-0 bg-orange-100 rounded-full"></div>
+                  <div class="absolute inset-0 bg-blue-500 rounded-full"></div>
                   <img
                     :src="member.image"
                     :alt="member.name"
-                    class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md"
+                    class="relative w-full h-full object-cover rounded-full border-4 border-blue shadow-md"
                   />
                 </div>
 
@@ -108,9 +107,7 @@ onMounted(() => {
   expandedStates.value = props.teamMembers.map(() => false);
 });
 
-const toggleFlip = (index) => {
-  flippedStates.value[index] = !flippedStates.value[index];
-};
+
 
 const goToDetail = (id) => {
   console.log("Navigating to DetailTeam with id:", id);
