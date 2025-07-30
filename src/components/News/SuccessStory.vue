@@ -11,25 +11,25 @@
     </div>
     <div class="container mx-auto px-4 max-w-7xl">
       <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-        <div class="relative w-full lg:w-1/2 flex justify-center items-center p-4">
+        <div class="relative w-full max-w-[600px] mx-auto flex justify-center items-center p-2 sm:p-4 lg:p-6">
           <div
-            class="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full bg-orange-200 flex items-center justify-center overflow-hidden shadow-lg">
+            class="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full bg-orange-200 flex items-center justify-center overflow-hidden shadow-lg">
             <img :src="currentStory.avatar" :alt="currentStory.name" class="w-full h-full object-cover object-center" />
           </div>
-          <div class="absolute bottom-24 left-1/2 -translate-x-1/2 w-[calc(100%+60px)] z-10">
+          <div class="absolute bottom-16 sm:bottom-20 md:bottom-24 left-1/2 -translate-x-1/2 w-[calc(100%-20px)] sm:w-[calc(100%-40px)] lg:w-[calc(100%+60px)] z-10">
             <div class="relative flex flex-col items-center">
               <!-- Top bar: NAME -->
               <div
-                class="bg-blue-400 text-white px-8 py-4 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[300px] md:max-w-[400px] z-200">
-                <h3 class="font-bold text-4xl uppercase tracking-wide">
+                class="bg-blue-400 text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[400px] z-200">
+                <h3 class="font-bold text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide">
                   {{ currentStory.name }}
                 </h3>
               </div>
 
               <!-- Bottom bar: PROGRAM -->
               <div
-                class="absolute top-12 left-52 bg-blue-500 text-white px-4 py-2 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[250px] md:max-w-[350px] z-100">
-                <p class="text-sm font-medium">{{ currentStory.program }}</p>
+                class="absolute top-8 sm:top-10 md:top-12 left-36 sm:left-44 md:left-48 lg:left-52 bg-blue-500 text-white px-3 sm:px-4 lg:px-4 py-1 sm:py-2 lg:py-2 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[150px] sm:max-w-[200px] md:max-w-[250px] lg:max-w-[350px] z-100">
+                <p class="text-xs sm:text-sm md:text-sm font-medium">{{ currentStory.program }}</p>
               </div>
             </div>
           </div>
