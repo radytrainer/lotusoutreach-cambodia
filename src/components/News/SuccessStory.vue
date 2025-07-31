@@ -97,7 +97,7 @@ const stories = ref([
   {
     name: 'Sall Kannika',
     program: 'COMPUTER SCIENCE, ASIA EURO UNIVERSITY',
-    avatar: '/image/News/01.jpg',
+    avatar: '/image/News/kanitha02.jpg',
     quote: {
       paragraph1:
         'Sall Kannika, a first-year Computer Science student at Asia Euro University, participated in the Design Thinking Hackathon organized by Hub Phnom Penh. Selected as one of 20 finalists from Phnom Penh and Battambang, she engaged in a five-day program that included intensive training in leadership, self-discovery, and real-world problem-solving, culminating in a ',
@@ -109,6 +109,23 @@ const stories = ref([
       paragraph4:
         'She expresses deep gratitude to Hub Phnom Penh for fully sponsoring the program, including transportation, meals, and accommodation, and to her mentors for guiding her journey. This experience has empowered her to pursue her vision of creating impactful solutions and inspiring others to ',
       highlight2: 'drive change through innovation',
+    },
+  },
+  {
+    name: 'Kimheng',
+    program: 'AGRONOMY, ROYAL UNIVERSITY OF AGRICULTURE',
+    avatar:  '/image/News/kimheng01.jpg',
+    quote: {
+      paragraph1:
+        'Kimheng, a 29-year-old from Takeo Province, Cambodia, overcame immense challenges as the youngest of eight children in a struggling household. After her father’s passing, she became the primary caregiver for her ailing mother. With support from Lotus Outreach Cambodia’s CATALYST Program and Buddhist Global Relief, she graduated in 2020 with a Bachelor’s degree in Agronomy, specializing in ',
+      highlight1: 'Laboratory Management',
+      paragraph2:
+        'Kimheng now manages a laboratory of 30 staff, overseeing operations, documentation, research, and translation, earning $650 monthly—a significant income in rural Cambodia. Her leadership role, traditionally male-dominated, was secured through her education, fluency in Chinese, and mentorship, despite initial resistance due to her age and gender.',
+      paragraph3:
+        'Her income has transformed her family’s life: funding her mother’s $10,000 eye surgery, building a $15,000 house, supporting her brother’s education in public administration, and covering medical costs for another sibling in Thailand. Kimheng’s leadership skills, honed through CATALYST, have made her a confident manager and community role model.',
+      paragraph4:
+        'Kimheng aspires to pursue a Master’s in seed breeding and tissue culture, possibly in China or Taiwan, to advance her expertise in agricultural biotechnology. She aims to become a bridge for international agricultural collaboration, translating research to benefit Cambodia. She expresses deep gratitude to Lotus Outreach and Buddhist Global Relief for empowering her to transform her life and family.',
+      highlight2: 'break gender barriers and uplift her community',
     },
   },
 ]);
