@@ -7,6 +7,15 @@
   ],
   "activities": [
     {
+      "title": "Lotus Outreach Cambodia Celebrates the Graduation of 38 CATALYST Students",
+      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates...",
+      "date": "2024-09-22",
+      "author": "Lotus Outreach Cambodia",
+      "category": "education",
+      "image": "/image/News/1.jpg",
+      "location": "Nationwide, Cambodia"
+    },
+    {
       "title": "Girls' Education Program Transforms Lives in Kampong Speu",
       "content": "Our comprehensive program in Kampong Speu provides scholarships...",
       "date": "2024-07-10",
@@ -68,6 +77,42 @@
       "category": "education",
       "image": "https://www.globalgiving.org/pfil/3885/ph_3885_218247.jpg",
       "location": "Nationwide, Cambodia"
+    },
+    {
+      "title": "CATALYST Monthly Gathering -Students Connect & Reflect",
+      "content": "On July 20, 2025, CATALYST students from various universities gathered to share life experiences, discuss job opportunities, and reflect on the challenges and accomplishments in their academic journey. The meeting created a strong sense of support and encouragement among junior and senior students alike.",
+      "date": "2025-07-20",
+      "author": "CATALYST Team",
+      "category": "education",
+      "image": "/image/News/14.jpg",
+      "location": "Phnom Penh, Cambodia"
+    },
+    {
+      "title": "GATE Project Monitoring Visit with Lotus Outreach Australia",
+      "content": "From June 30 to July 4, 2025, Ms. Charlie, President of Lotus Outreach Australia, visited the GATE Phnom Penh project to meet students, conduct home visits, and collaborate with CWCC and local high schools. The visit celebrated the students’ achievements and encouraged continued academic efforts.",
+      "date": "2025-07-04",
+      "author": "GATE Program",
+      "category": "education",
+      "image": "/image/News/15.jpg",
+      "location": "Phnom Penh, Cambodia"
+    },
+    {
+      "title": "Digital Platform & CV Writing Workshop for First-Year Students",
+      "content": "On June 22, 2025, intern Kim Sodalin led a sharing session with first-year students on using digital platforms, writing professional CVs and cover letters, and preparing for future job applications. The session aimed to equip students with essential tools for their career journey.",
+      "date": "2025-06-22",
+      "author": "Intern Support Team",
+      "category": "livelihoods",
+      "image": "/image/News/16.jpg",
+      "location": "Phnom Penh, Cambodia"
+    },
+    {
+      "title": "Understanding Women's Health - Workshop for First-Year Students",
+      "content": "On June 1, 2025, Lotus Outreach Cambodia held a women's health workshop led by former CATALYST student Pen Sreynich. Topics included menstrual health, hygiene, reproductive issues, and seeking medical care. The workshop empowered young women to take charge of their physical health.",
+      "date": "2025-06-01",
+      "author": "Health Education Team",
+      "category": "health",
+      "image": "/image/News/17.jpg",
+      "location": "Phnom Penh, Cambodia"
     }
   ]
 }
