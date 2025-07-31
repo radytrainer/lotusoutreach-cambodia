@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20 bg-white" id="mission-vision-values">
+    <section class="pb-20 bg-white" id="mission-vision-values">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <!-- Text Content -->
             <div>

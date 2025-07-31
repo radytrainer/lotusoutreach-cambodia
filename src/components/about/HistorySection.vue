@@ -104,7 +104,7 @@
                                     class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4 shadow-md">
                                     <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
                                 </div>
-                                <div class="text-2xl font-bold text-gray-900 mb-2">{{ event.year }}</div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2 mt-8">{{ event.year }}</div>
                                 <p class="text-gray-700 leading-relaxed text-sm max-w-xs text-center">
                                     <span v-if="event.highlight" class="text-blue-500 font-semibold">
                                         {{ event.highlight }}
