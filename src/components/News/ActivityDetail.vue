@@ -35,10 +35,7 @@
 
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
           <h2 class="text-2xl font-semibold text-gray-900 mt-8">Event Overview</h2>
-          <p v-if="activity.content">
-            {{ activity.content.split('.').filter(sentence => sentence.trim().length > 0)[0] + '.' || activity.content }}
-          </p>
-
+          <p >{{ activity.content }}</p>
           <h2 class="text-2xl font-semibold text-gray-900 mt-8">Key Highlights</h2>
           <div class="space-y-6">
             <div v-if="activity.content && activity.content.includes('Mr. Glenn Fawcett')">
