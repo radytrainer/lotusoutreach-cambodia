@@ -1,14 +1,14 @@
 {
   "categories": [
     { "value": "education", "label": "Girls' Education" },
-    { "value": "health", "label": "Health & Nutrition" },
-    { "value": "protection", "label": "Anti-Trafficking & Child Protection" },
-    { "value": "livelihoods", "label": "Sustainable Livelihoods" }
+    { "value": "health", "label": "Care" },
+    { "value": "protection", "label": "Giving Back" },
+    { "value": "livelihoods", "label": "Training" }
   ],
   "activities": [
     {
       "title": "Lotus Outreach Cambodia Celebrates the Graduation of 38 CATALYST Students",
-      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates. These students are part of the 226 young women who have completed their higher education journey through the CATALYST Project since its launch in 2012. The ceremony was attended by 130 participants, including parents, guardians, graduates, and Lotus Outreach Cambodia staff. Mr. Glenn Fawcett, Executive Director of Lotus Outreach International, congratulated the students and shared an inspiring message: 'With affiliates in seven countries and strong partnerships with local NGOs in India, Cambodia, Vietnam, Guatemala, Brazil, and the United States, we are a global community that believes empowerment is at the heart of sustainable change. Educating a woman has a profound multiplying effect—not just for her, but for her family and community for generations to come. Women are powerful change agents and essential to Cambodia’s development as future leaders and role models.' He encouraged graduates to begin giving back in small ways now and thanked partners Cambodian Women’s Crisis Centre (CWCC) and Cambodian Organization for Children and Development (COCD) for their support. Ms. Sdeoung Lisa and Ms. Sat Marany, student representatives, reflected on their journey: 'Lotus Outreach Cambodia has become like a second family to us. They offered us unconditional love and support, expecting only that we study hard, develop skills, and secure jobs to improve our lives and serve society. Beyond academic support, we received soft skills training and were encouraged to give back by helping children in rural provinces—an experience that filled us with pride and purpose.' Hoeun Ya, elder sister of graduate Hoeun Lina, shared: 'After our parents passed away, our family struggled greatly. I asked Lina to quit school in 9th grade to help out, but she refused. She continued and was fortunate to receive a scholarship from Lotus Outreach Cambodia starting in Grade 11. This support has been the most valuable gift for our family—no one before Lina had the chance to reach university. She is now a role model for our nieces and nephews.' Ms. Va VannakSerey Raksmey, Executive Director of Lotus Outreach Cambodia, led the graduates in expressing gratitude to their parents and guardians. The event concluded with Mr. Glenn Fawcett, Ms. Va VannakSerey Raksmey, and Ms. Chea Pisey presenting letters of commendation to the 38 graduates, followed by a celebratory photo session.",
+      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates...",
       "date": "2024-09-22",
       "author": "Lotus Outreach Cambodia",
       "category": "education",
@@ -16,67 +16,40 @@
       "location": "Nationwide, Cambodia"
     },
     {
-      "title": "Girls' Education Program Transforms Lives in Kampong Speu",
-      "content": "Our comprehensive program in Kampong Speu provides scholarships...",
-      "date": "2024-07-10",
-      "author": "Education Team",
+      "title": "CATALYST Monthly Gathering -Students Connect & Reflect",
+      "content": "On July 20, 2025, CATALYST students from various universities gathered to share life experiences, discuss job opportunities, and reflect on the challenges and accomplishments in their academic journey. The meeting created a strong sense of support and encouragement among junior and senior students alike.",
+      "date": "2025-07-20",
+      "author": "CATALYST Team",
       "category": "education",
-      "image": "https://csaf.org.kh/wp-content/uploads/2023/12/5-1024x683.jpg",
-      "location": "Kampong Speu, Cambodia"
-    },
-    {
-      "title": "Vital Health Services for Mothers and Children in Takeo",
-      "content": "In Takeo province, our mobile health clinics offer essential...",
-      "date": "2024-06-25",
-      "author": "Health Outreach Team",
-      "category": "health",
-      "image": "https://www.globalgiving.org/pfil/3885/Bikes_distribution_to_PNC_students_Large.jpg",
-      "location": "Takeo, Cambodia"
-    },
-    {
-      "title": "Combating Human Trafficking and Providing Safe Havens",
-      "content": "Based in Phnom Penh, this program focuses on preventing human trafficking...",
-      "date": "2024-06-18",
-      "author": "Protection Program",
-      "category": "protection",
-      "image": "https://www.globalgiving.org/pfil/3885/ph_3885_218251.jpg",
+      "image": "/image/News/14.jpg",
       "location": "Phnom Penh, Cambodia"
     },
     {
-      "title": "Empowering Women Through Vocational Skills in Battambang",
-      "content": "Our center in Battambang offers vocational training...",
-      "date": "2024-06-05",
-      "author": "Livelihoods Team",
-      "category": "livelihoods",
-      "image": "https://www.globalgiving.org/pfil/3885/6989625829_7142fa33a8_z_Large.jpg",
-      "location": "Battambang, Cambodia"
-    },
-    {
-      "title": "Access to Clean Water Transforms Lives in Siem Reap",
-      "content": "This project in Siem Reap focuses on installing new water wells...",
-      "date": "2024-05-28",
-      "author": "Community Development",
-      "category": "livelihoods",
-      "image": "https://b2616979.smushcdn.com/2616979/wp-content/uploads/Cambodia.10-2024.LisaHarbertson-253-scaled.jpg?lossy=2&strip=1&webp=1",
-      "location": "Siem Reap, Cambodia"
-    },
-    {
-      "title": "Creating Safe Environments for Children in Kandal",
-      "content": "In Kandal province, we establish and maintain safe playgrounds...",
-      "date": "2024-05-15",
-      "author": "Child Protection Unit",
-      "category": "protection",
-      "image": "https://www.globalgiving.org/pfil/5863/ph_5863_18889.jpg",
-      "location": "Kandal, Cambodia"
-    },
-    {
-      "title": "Supporting Higher Education for Promising Students - Nationwide",
-      "content": "Our nationwide scholarship program identifies and supports talented students...",
-      "date": "2024-05-01",
-      "author": "Scholarship Committee",
+      "title": "GATE Project Monitoring Visit with Lotus Outreach Australia",
+      "content": "From June 30 to July 4, 2025, Ms. Charlie, President of Lotus Outreach Australia, visited the GATE Phnom Penh project to meet students, conduct home visits, and collaborate with CWCC and local high schools. The visit celebrated the students’ achievements and encouraged continued academic efforts.",
+      "date": "2025-07-04",
+      "author": "GATE Program",
       "category": "education",
-      "image": "https://www.globalgiving.org/pfil/3885/ph_3885_218247.jpg",
-      "location": "Nationwide, Cambodia"
+      "image": "/image/News/15.jpg",
+      "location": "Phnom Penh, Cambodia"
+    },
+    {
+      "title": "Digital Platform & CV Writing Workshop for First-Year Students",
+      "content": "On June 22, 2025, intern Kim Sodalin led a sharing session with first-year students on using digital platforms, writing professional CVs and cover letters, and preparing for future job applications. The session aimed to equip students with essential tools for their career journey.",
+      "date": "2025-06-22",
+      "author": "Intern Support Team",
+      "category": "livelihoods",
+      "image": "/image/News/16.jpg",
+      "location": "Phnom Penh, Cambodia"
+    },
+    {
+      "title": "Understanding Women's Health - Workshop for First-Year Students",
+      "content": "On June 1, 2025, Lotus Outreach Cambodia held a women's health workshop led by former CATALYST student Pen Sreynich. Topics included menstrual health, hygiene, reproductive issues, and seeking medical care. The workshop empowered young women to take charge of their physical health.",
+      "date": "2025-06-01",
+      "author": "Care",
+      "category": "health",
+      "image": "/image/News/17.jpg",
+      "location": "Phnom Penh, Cambodia"
     }
   ]
 }
