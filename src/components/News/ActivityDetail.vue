@@ -1,71 +1,91 @@
 <template>
-    <!-- Activity Detail -->
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <button @click="$emit('back')" class="flex items-center space-x-2 text-gray-600 hover:text-gray-800 mb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-50 min-h-screen">
+    <button @click="$emit('back')" class="flex items-center space-x-2 text-indigo-600 hover:text-indigo-800 mb-8 transition-colors duration-200">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
-      <span>Back to Activities</span>
+      <span class="font-medium">Back to Activities</span>
     </button>
 
-    <article class="bg-white rounded-xl shadow-sm overflow-hidden">
-      <div class="aspect-video overflow-hidden">
-        <img :src="activity.image || '/placeholder.svg'" :alt="activity.title" class="w-full h-full object-cover" />
+    <article class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+      <div class="aspect-video overflow-hidden bg-gray-200">
+        <img :src="activity.image || '/placeholder.svg'" :alt="activity.title" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" />
       </div>
       <div class="p-8">
-        <div class="mb-6">
-          <div class="flex items-center justify-between mb-4">
-            <span
-              class="px-3 py-1 text-sm font-medium rounded-full"
-              :class="getCategoryBadgeClass(activity.category)"
-            >
+        <div class="mb-8">
+          <div class="flex items-center justify-between mb-6">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-indigo-100 text-indigo-800">
               {{ getCategoryLabel(activity.category) }}
             </span>
-            <span class="text-sm text-gray-500">{{ formatDate(activity.date) }}</span>
+            <span class="text-sm font-medium text-gray-600">{{ formatDate(activity.date) }}</span>
           </div>
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             {{ activity.title }}
           </h1>
-          <div class="flex items-center space-x-4 text-sm text-gray-500 mb-6">
-            <span>By {{ activity.author }}</span>
+          <div class="flex items-center space-x-6 text-sm text-gray-500 mb-8">
+            <span class="font-medium">By {{ activity.author }}</span>
             <span>•</span>
             <span>{{ calculateReadTime(activity.content) }} min read</span>
-            <span v-if="activity.location">•</span>
-            <span v-if="activity.location">📍 {{ activity.location }}</span>
+            <span v-if="activity.location" class="flex items-center">
+              <span>•</span>
+              <span class="ml-1 flex items-center">📍 {{ activity.location }}</span>
+            </span>
           </div>
         </div>
 
-        <div class="prose prose-lg max-w-none text-gray-700 whitespace-pre-line">
-          {{ activity.content }}
-        </div>
-
-        <div class="mt-8 p-6 bg-pink-50 rounded-lg text-center">
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Support Our Mission</h3>
-          <p class="text-gray-600 mb-4">
-            Help us continue empowering communities through education, health, and sustainable development in Cambodia.
+        <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+          <h2 class="text-2xl font-semibold text-gray-900 mt-8">Event Overview</h2>
+          <p v-if="activity.content">
+            {{ activity.content.split('.').filter(sentence => sentence.trim().length > 0)[0] + '.' || activity.content }}
           </p>
-          <button class="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700">
-            Get Involved Today
-          </button>
+
+          <h2 class="text-2xl font-semibold text-gray-900 mt-8">Key Highlights</h2>
+          <div class="space-y-6">
+            <div v-if="activity.content && activity.content.includes('Mr. Glenn Fawcett')">
+              <h3 class="text-xl font-medium text-gray-800">Message from Leadership</h3>
+              <p class="text-gray-600">Mr. Glenn Fawcett, Executive Director of Lotus Outreach International, congratulated the graduates and shared: "{{ getLeadershipMessage(activity.content) }}"</p>
+              <p class="text-gray-600">He encouraged graduates to give back in small ways and thanked partners Cambodian Women’s Crisis Centre (CWCC) and Cambodian Organization for Children and Development (COCD) for their support.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4" v-if="activity.content && activity.content.includes('Ms. Sdeoung Lisa')">
+              <div class="w-full md:w-1/2">
+                <h3 class="text-xl font-medium text-gray-800">Student Reflections</h3>
+                <p class="text-gray-600">Ms. Sdeoung Lisa and Ms. Sat Marany, student representatives, said: "{{ getStudentReflections(activity.content) }}"</p>
+                <div v-if="activity.content && activity.content.includes('Hoeun Ya')">
+                  <h3 class="text-xl font-medium text-gray-800">Personal Story</h3>
+                  <p class="text-gray-600">Hoeun Ya, elder sister of graduate Hoeun Lina, shared: "{{ getPersonalStory(activity.content) }}"</p>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2">
+                <img src="/image/News/2.jpg" alt="Student Reflection" class="w-full h-68 object-cover rounded-lg shadow-md">
+              </div>
+            </div>
+            <div v-if="activity.content && activity.content.includes('Ms. Va VannakSerey Raksmey')">
+              <h3 class="text-xl font-medium text-gray-800">Gratitude and Conclusion</h3>
+              <p class="text-gray-600">{{ getConclusion(activity.content) }}</p>
+            </div>
+          </div>
+
+          <div class="mt-12 p-6 bg-indigo-50 rounded-xl text-center border border-indigo-100">
+            <h3 class="text-xl font-bold text-indigo-900 mb-3">Support Our Mission</h3>
+            <p class="text-gray-600 mb-5">Help us continue empowering communities through education, health, and sustainable development in Cambodia.</p>
+            <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200 font-medium">
+              Get Involved Today
+            </button>
+          </div>
         </div>
       </div>
     </article>
 
     <div v-if="related.length > 0" class="mt-12">
       <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Activities</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <article
-          v-for="relatedItem in related"
-          :key="relatedItem.title"
-          @click="$emit('view-detail', relatedItem)"
-          class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md cursor-pointer"
-        >
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article v-for="relatedItem in related" :key="relatedItem.title" @click="$emit('view-detail', relatedItem)" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg cursor-pointer transition-all duration-200">
           <div class="flex">
-            <div class="w-24 h-24 flex-shrink-0">
+            <div class="w-28 h-28 flex-shrink-0 bg-gray-200">
               <img :src="relatedItem.image" :alt="relatedItem.title" class="w-full h-full object-cover" />
             </div>
             <div class="p-4 flex-1">
-              <h4 class="font-semibold text-gray-900 mb-1 line-clamp-2">
+              <h4 class="font-semibold text-gray-900 mb-2 line-clamp-2 leading-snug">
                 {{ relatedItem.title }}
               </h4>
               <p class="text-sm text-gray-500">
@@ -80,6 +100,69 @@
 </template>
 
 <script setup>
-defineProps(['activity', 'related', 'formatDate', 'getCategoryBadgeClass', 'getCategoryLabel', 'calculateReadTime']);
-defineEmits(['back', 'view-detail']);
+import { defineProps, defineEmits } from 'vue';
+
+const props = defineProps({
+  activity: {
+    type: Object,
+    required: true,
+    validator: (activity) => {
+      return (
+        'title' in activity &&
+        'content' in activity &&
+        'author' in activity &&
+        'date' in activity &&
+        'category' in activity
+      );
+    }
+  },
+  related: {
+    type: Array,
+    required: true,
+    validator: (related) => related.every(item => 'title' in item && 'author' in item && 'date' in item)
+  },
+  formatDate: {
+    type: Function,
+    required: true
+  },
+  getCategoryBadgeClass: {
+    type: Function,
+    required: true
+  },
+  getCategoryLabel: {
+    type: Function,
+    required: true
+  },
+  calculateReadTime: {
+    type: Function,
+    required: true
+  },
+  showHeading: {
+    type: Boolean,
+    default: false
+  }
+});
+
+const emit = defineEmits(['back', 'view-detail']);
+
+// Helper functions to safely extract content
+const getLeadershipMessage = (content) => {
+  const match = content.match(/'With affiliates[^']+'/);
+  return match ? match[0] : '';
+};
+
+const getStudentReflections = (content) => {
+  const match = content.match(/'Lotus Outreach Cambodia has become[^']+'/);
+  return match ? match[0] : '';
+};
+
+const getPersonalStory = (content) => {
+  const match = content.match(/'After our parents passed away[^']+'/);
+  return match ? match[0] : '';
+};
+
+const getConclusion = (content) => {
+  const match = content.match(/' Ms. Va VannakSerey Raksmey[^']+'/);
+  return match ? match[0] : content.split("' Ms. Va VannakSerey Raksmey")[1] || '';
+};
 </script>

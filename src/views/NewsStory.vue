@@ -1,60 +1,60 @@
 <template>
-    <div class="bg-white">
-        <!-- Hero Banner -->
-        <HeroBanner />
-        
-        <!-- Activity Listing -->
-        <ActivityDetail
-            v-if="currentView === 'detail' && selectedActivity"
-            :activity="selectedActivity"
-            :related="relatedActivities"
-            :formatDate="formatDate"
-            :getCategoryBadgeClass="getCategoryBadgeClass"
-            :getCategoryLabel="getCategoryLabel"
-            :calculateReadTime="calculateReadTime"
-            @back="backToListing"
-            @view-detail="viewActivityDetail"
+  <div class="bg-white">
+    <!-- Hero Banner - Render only when currentView is 'listing' -->
+    <HeroBanner v-if="currentView === 'listing'" />
+    
+    <!-- Activity Listing -->
+    <ActivityDetail
+      v-if="currentView === 'detail' && selectedActivity"
+      :activity="selectedActivity"
+      :related="relatedActivities"
+      :formatDate="formatDate"
+      :getCategoryBadgeClass="getCategoryBadgeClass"
+      :getCategoryLabel="getCategoryLabel"
+      :calculateReadTime="calculateReadTime"
+      :showHeading="false"
+      @back="backToListing"
+      @view-detail="viewActivityDetail"
+    />
+    
+    <!-- Filter activity -->
+    <div v-else class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <!-- Filter -->
+      <ActivityFilter
+        :searchQuery="searchQuery"
+        :categories="categories"
+        :activeCategories="activeCategories"
+        :getCategoryButtonClass="getCategoryButtonClass"
+        @update:searchQuery="val => searchQuery = val"
+        @toggle-category="toggleCategory"
+        @search="handleSearch"
+      />
+
+      <div v-if="filteredActivities.length === 0" class="text-center py-12">
+        <!-- No results message can be added here -->
+      </div>
+
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <CardActivity
+          v-for="(activity, index) in filteredActivities.slice(0, visibleItems)"
+          :key="activity.title" 
+          :activity="activity"
+          :getCategoryBadgeClass="getCategoryBadgeClass"
+          :getCategoryLabel="getCategoryLabel"
+          :formatDate="formatDate"
+          @view-detail="viewActivityDetail"
         />
-        
-        <!-- Filter activity -->
-        <div v-else class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <!-- Filter -->
-            <ActivityFilter
-                :searchQuery="searchQuery"
-                :categories="categories"
-                :activeCategories="activeCategories"
-                :getCategoryButtonClass="getCategoryButtonClass"
-                @update:searchQuery="val => searchQuery = val"
-                @toggle-category="toggleCategory"
-                @search="handleSearch"
-            />
+      </div>
 
-            <div v-if="filteredActivities.length === 0" class="text-center py-12">
-                <!-- ... No Results ... -->
-            </div>
-
-            <!-- Card Activity -->
-            <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <CardActivity
-                    v-for="(activity, index) in filteredActivities.slice(0, visibleItems)"
-                    :key="index"
-                    :activity="activity"
-                    :getCategoryBadgeClass="getCategoryBadgeClass"
-                    :getCategoryLabel="getCategoryLabel"
-                    :formatDate="formatDate"
-                    @view-detail="viewActivityDetail"
-                />
-            </div>
-
-            <div v-if="filteredActivities.length > visibleItems" class="mt-12 text-center">
-                <button @click="loadMore" class="px-6 py-3 bg-white border border-gray-300 rounded-md text-gray-700">
-                Load More Activities
-                </button>
-            </div>
-        </div>
-        <!-- Success Stories -->
-         <SuccessStory />
+      <div v-if="filteredActivities.length > visibleItems" class="mt-12 text-center">
+        <button @click="loadMore" class="px-6 py-3 bg-white border border-gray-300 rounded-md text-gray-700">
+          Load More Activities
+        </button>
+      </div>
     </div>
+
+    <SuccessStory v-if="currentView === 'listing'" />
+  </div>
 </template>
 
 <script setup>
@@ -68,7 +68,6 @@ import CardActivity from '@/components/News/CardActivity.vue';
 import ActivityDetail from '@/components/News/ActivityDetail.vue';
 import ActivityFilter from '@/components/News/ActivityFilter.vue';
 import SuccessStory from '@/components/News/SuccessStory.vue';
-
 
 // View state management
 const currentView = ref("listing"); 
@@ -88,11 +87,12 @@ const fetchData = async () => {
     activities.value = response.data.activities;
     categories.value = response.data.categories;
   } catch (error) {
-    console.error("Failed to load data from home.json", error);
+    console.error("Failed to load data from newsStory.json", error);
   }
 };
 
 onMounted(fetchData);
+
 //======= Computed =======//
 // Computed filter activities
 const filteredActivities = computed(() => {
@@ -143,9 +143,10 @@ const relatedActivities = computed(() => {
 //======= Method =======//
 // View activity detail
 const viewActivityDetail = (activity) => {
-  selectedActivity.value = activity;
+  selectedActivity.value = activity; // Ensure activity is correctly assigned
   currentView.value = "detail";
   window.scrollTo({ top: 0, behavior: "smooth" });
+  console.log("Selected Activity:", activity.title, "Current View:", currentView.value); // Debug log
 };
 
 // Back to activity listing
@@ -229,7 +230,6 @@ const getCategoryLabel = (category) => {
   return labels[category] || "Activity";
 };
 </script>
-
 
 <style scoped>
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
