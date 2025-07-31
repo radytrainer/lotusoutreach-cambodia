@@ -54,20 +54,23 @@
                     </svg>
                 </button>
 
-                <div ref="timelineContainer" class="overflow-x-hidden mx-12 snap-x snap-mandatory">
+                <!-- Desktop Timeline (horizontal scroll, visible on sm and up) -->
+                <div ref="timelineContainer"
+                     class="hidden sm:block overflow-x-hidden mx-12 snap-x snap-mandatory">
                     <div class="flex items-center justify-between min-w-max px-8">
                         <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
 
                         <div v-for="(event, index) in timelineEvents" :key="index"
-                            class="relative flex flex-col items-center mx-8 min-w-[320px] snap-center">
+                             class="relative flex flex-col items-center mx-8 min-w-[320px] snap-center">
                             <div
-                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10">
+                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                       w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10">
                             </div>
 
                             <div class="flex flex-col items-center" :class="index % 2 === 0 ? 'mb-32' : 'mt-32'">
                                 <div
-                                    class="w-36 sm:w-44 md:w-48 h-36 sm:h-44 md:h-48 rounded-full overflow-hidden border-4 border-blue-500 mb-6 shadow-lg">
-
+                                    class="w-36 sm:w-44 md:w-48 h-36 sm:h-44 md:h-48 rounded-full overflow-hidden 
+                                           border-4 border-blue-500 mb-6 shadow-lg">
                                     <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
                                 </div>
                                 <div class="text-3xl font-bold text-gray-900 mb-3">{{ event.year }}</div>
@@ -79,10 +82,51 @@
                                         {{ event.description }}
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Mobile Timeline (horizontal scroll, one event per screen, visible on small screens only) -->
+                <div class="block sm:hidden relative px-4 py-8">
+                    <!-- Scrollable Timeline Container -->
+                    <div ref="mobileTimeline"
+                         class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full no-scrollbar">
+                        <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+                        <div v-for="(event, index) in timelineEvents" :key="'mobile-' + index"
+                             class="relative flex flex-col items-center w-[calc(100vw-4rem)] shrink-0 snap-center mx-8">
+                            <div
+                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                       w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-md z-10">
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4 shadow-md">
+                                    <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">{{ event.year }}</div>
+                                <p class="text-gray-700 leading-relaxed text-sm max-w-xs text-center">
+                                    <span v-if="event.highlight" class="text-blue-500 font-semibold">
+                                        {{ event.highlight }}
+                                    </span>
+                                    {{ event.description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Navigation Buttons -->
+                    <button @click="scrollMobile('left')"
+                            class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button @click="scrollMobile('right')"
+                            class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -106,7 +150,10 @@ const props = defineProps({
     }
 })
 
+const mobileTimeline = ref(null)
 const timelineContainer = ref(null)
+const currentIndex = ref(0)
+
 const timelineEvents = ref([
     {
         year: '1993',
@@ -148,10 +195,26 @@ const timelineEvents = ref([
         title: 'Official Registration',
         highlight: 'For the first time, ',
         description: 'LOCAM officially registered with the Ministry of Interior on January 21, establishing permanent presence in Cambodia.',
-        image: '/image/About/History.jpg'
+        image: '/image/About/2008.png'
     }
 ])
 
+const scrollMobile = (direction) => {
+    if (mobileTimeline.value) {
+        const container = mobileTimeline.value
+        const eventWidth = container.querySelector('div').offsetWidth + 64 // Include mx-8 (4rem = 64px)
+        const maxIndex = timelineEvents.value.length - 1
+
+        currentIndex.value += direction === 'left' ? -1 : 1
+        if (currentIndex.value < 0) currentIndex.value = 0
+        if (currentIndex.value > maxIndex) currentIndex.value = maxIndex
+
+        container.scrollTo({
+            left: currentIndex.value * eventWidth,
+            behavior: 'smooth'
+        })
+    }
+}
 
 const scrollTimeline = (direction) => {
     if (timelineContainer.value) {
@@ -190,5 +253,14 @@ onMounted(() => {
 
 .snap-center {
     scroll-snap-align: center;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 </style>
