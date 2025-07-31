@@ -2,7 +2,8 @@
   "images": [
     { "src": "/image/Home/Home_hero01.jpg", "alt": "Cambodia Girls" },
     { "src": "/image/Home/04.jpg", "alt": "Community Support" },
-    { "src": "/image/Home/Home_hero03.jpg", "alt": "Helping Hands" }
+    { "src": "/image/Home/05.jpg", "alt": "Helping Hands" },
+    { "src": "/image/Home/07.jpg", "alt": "Helping Hands" }
   ],
   "sharedContent": {
     "title": "Empowering <span class='text-pink-400'>Cambodian</span> Girls",
