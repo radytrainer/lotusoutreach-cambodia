@@ -1,9 +1,9 @@
 {
   "categories": [
     { "value": "education", "label": "Girls' Education" },
-    { "value": "health", "label": "Health & Nutrition" },
-    { "value": "protection", "label": "Anti-Trafficking & Child Protection" },
-    { "value": "livelihoods", "label": "Sustainable Livelihoods" }
+    { "value": "health", "label": "Care" },
+    { "value": "protection", "label": "Giving Back" },
+    { "value": "livelihoods", "label": "Training" }
   ],
   "activities": [
     {
@@ -13,69 +13,6 @@
       "author": "Lotus Outreach Cambodia",
       "category": "education",
       "image": "/image/News/1.jpg",
-      "location": "Nationwide, Cambodia"
-    },
-    {
-      "title": "Girls' Education Program Transforms Lives in Kampong Speu",
-      "content": "Our comprehensive program in Kampong Speu provides scholarships...",
-      "date": "2024-07-10",
-      "author": "Education Team",
-      "category": "education",
-      "image": "https://csaf.org.kh/wp-content/uploads/2023/12/5-1024x683.jpg",
-      "location": "Kampong Speu, Cambodia"
-    },
-    {
-      "title": "Vital Health Services for Mothers and Children in Takeo",
-      "content": "In Takeo province, our mobile health clinics offer essential...",
-      "date": "2024-06-25",
-      "author": "Health Outreach Team",
-      "category": "health",
-      "image": "https://www.globalgiving.org/pfil/3885/Bikes_distribution_to_PNC_students_Large.jpg",
-      "location": "Takeo, Cambodia"
-    },
-    {
-      "title": "Combating Human Trafficking and Providing Safe Havens",
-      "content": "Based in Phnom Penh, this program focuses on preventing human trafficking...",
-      "date": "2024-06-18",
-      "author": "Protection Program",
-      "category": "protection",
-      "image": "https://www.globalgiving.org/pfil/3885/ph_3885_218251.jpg",
-      "location": "Phnom Penh, Cambodia"
-    },
-    {
-      "title": "Empowering Women Through Vocational Skills in Battambang",
-      "content": "Our center in Battambang offers vocational training...",
-      "date": "2024-06-05",
-      "author": "Livelihoods Team",
-      "category": "livelihoods",
-      "image": "https://www.globalgiving.org/pfil/3885/6989625829_7142fa33a8_z_Large.jpg",
-      "location": "Battambang, Cambodia"
-    },
-    {
-      "title": "Access to Clean Water Transforms Lives in Siem Reap",
-      "content": "This project in Siem Reap focuses on installing new water wells...",
-      "date": "2024-05-28",
-      "author": "Community Development",
-      "category": "livelihoods",
-      "image": "https://b2616979.smushcdn.com/2616979/wp-content/uploads/Cambodia.10-2024.LisaHarbertson-253-scaled.jpg?lossy=2&strip=1&webp=1",
-      "location": "Siem Reap, Cambodia"
-    },
-    {
-      "title": "Creating Safe Environments for Children in Kandal",
-      "content": "In Kandal province, we establish and maintain safe playgrounds...",
-      "date": "2024-05-15",
-      "author": "Child Protection Unit",
-      "category": "protection",
-      "image": "https://www.globalgiving.org/pfil/5863/ph_5863_18889.jpg",
-      "location": "Kandal, Cambodia"
-    },
-    {
-      "title": "Supporting Higher Education for Promising Students - Nationwide",
-      "content": "Our nationwide scholarship program identifies and supports talented students...",
-      "date": "2024-05-01",
-      "author": "Scholarship Committee",
-      "category": "education",
-      "image": "https://www.globalgiving.org/pfil/3885/ph_3885_218247.jpg",
       "location": "Nationwide, Cambodia"
     },
     {
@@ -109,7 +46,7 @@
       "title": "Understanding Women's Health - Workshop for First-Year Students",
       "content": "On June 1, 2025, Lotus Outreach Cambodia held a women's health workshop led by former CATALYST student Pen Sreynich. Topics included menstrual health, hygiene, reproductive issues, and seeking medical care. The workshop empowered young women to take charge of their physical health.",
       "date": "2025-06-01",
-      "author": "Health Education Team",
+      "author": "Care",
       "category": "health",
       "image": "/image/News/17.jpg",
       "location": "Phnom Penh, Cambodia"
