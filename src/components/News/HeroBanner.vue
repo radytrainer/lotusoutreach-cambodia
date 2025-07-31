@@ -1,21 +1,25 @@
 <template>
   <!-- Hero Banner Component -->
-  <div class="relative h-[70vh] sm:h-[70vh] md:h-[100vh] bg-gray-100 overflow-hidden">
+  <div
+    class="relative h-[70vh] sm:h-[70vh] md:h-[100vh] bg-gray-100 overflow-hidden"
+  >
     <!-- Background Image -->
     <div class="absolute inset-0 overflow-hidden">
       <img
-        src="/public/image/News/Banner.png"
+        src="/public/image/News/new.jpg"
         alt="Lotus Outreach activities"
-        class="w-full h-full object-cover object-center md:object-fill lg:object-cover blur-sm"
+        class="w-full h-full object-cover object-center"
       />
-      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="absolute inset-0 bg-black/5 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
     </div>
 
     <!-- Content Overlay -->
     <div
       class="relative z-10 flex items-center justify-center h-full px-2 sm:px-4 md:px-6 lg:px-8"
     >
-      <div class="text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl mx-auto">
+      <div
+        class="text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl mx-auto"
+      >
         <h1
           class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 sm:mb-3 md:mb-4 leading-tight"
         >
@@ -25,18 +29,20 @@
             Empowering Communities
           </span>
           <br />
-          <span
-            class="inline-block transition-all duration-300 text-pink-400"
-          >
+          <span class="inline-block transition-all duration-300 text-pink-400">
             In Cambodia Through Sustainable Action
           </span>
         </h1>
-        <p class="text-base sm:text-lg md:text-xl text-white mb-4 sm:mb-6 md:mb-8 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto">
+        <p
+          class="text-base sm:text-lg md:text-xl text-white mb-4 sm:mb-6 md:mb-8 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto"
+        >
           Discover our ongoing activities and initiatives creating lasting
           change through education, sports, and community development across
           Cambodia.
         </p>
-        <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+        <div
+          class="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4"
+        >
           <router-link to="/program">
             <button
               class="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-pink-500 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto"
@@ -57,8 +63,6 @@
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
-<style scoped>
-</style>
+<style scoped></style>
