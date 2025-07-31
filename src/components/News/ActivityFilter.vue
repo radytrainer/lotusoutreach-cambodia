@@ -5,7 +5,7 @@
     </h2>
     <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
       Explore our ongoing initiatives and programs making a difference in
-      communities across Cambodia.
+      communities in Cambodia.
     </p>
 
     <!-- Search Bar -->

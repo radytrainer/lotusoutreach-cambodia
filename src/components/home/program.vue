@@ -17,7 +17,7 @@
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive programs designed to transform lives and build
-            stronger communities across Cambodia
+            stronger communities in Cambodia
           </p>
         </div>
 

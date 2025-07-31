@@ -73,72 +73,37 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, watchEffect } from 'vue'
 
-const currentStoryIndex = ref(0);
-const stories = ref([
-  {
-    name: 'Sat Marany',
-    program: 'PHYSICS GRADUATE, ROYAL UNIVERSITY OF PHNOM PENH',
-    avatar: '/image/News/02.jpg',
-    quote: {
-      paragraph1:
-        'Sat Marany, a 22-year-old from Banteay Meanchey Province, overcame significant challenges, including her parents working abroad since Grade 7. A recipient of the CATALYST Scholarship, she graduated with distinction from the Royal University of Phnom Penh in 2024, earning a Physics degree with a ',
-      highlight1: 'perfect GPA of 4.00 in her final year',
-      paragraph2:
-        'Currently, Marany works part-time at ISF International School and offers private tutoring, earning approximately $600 per month. She also volunteers at her university\'s Optoelectronics & Advanced Materials Laboratory and participated in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024 in Thailand, broadening her scientific knowledge and network.',
-      paragraph3:
-        'Deeply committed to education and community service, Marany mentors younger students, supports her younger brother\'s education, and contributes to her family\'s living expenses. Her long-term goal is to reunite her family in Cambodia and pursue a master’s degree in physics abroad.',
-      paragraph4:
-        'She extends heartfelt gratitude to the donors for enabling underprivileged Cambodian girls to access higher education and transform their lives, and special thanks to Lotus Outreach Cambodia staff, especially Ms. Raksmey and Ms. Pisey, for their unwavering support and guidance, empowering her and many others to ',
-      highlight2: 'persevere and thrive',
-    },
-  },
-  {
-    name: 'Sall Kannika',
-    program: 'COMPUTER SCIENCE, ASIA EURO UNIVERSITY',
-    avatar: '/image/News/kanitha02.jpg',
-    quote: {
-      paragraph1:
-        'Sall Kannika, a first-year Computer Science student at Asia Euro University, participated in the Design Thinking Hackathon organized by Hub Phnom Penh. Selected as one of 20 finalists from Phnom Penh and Battambang, she engaged in a five-day program that included intensive training in leadership, self-discovery, and real-world problem-solving, culminating in a ',
-      highlight1: 'winning project pitch for her A+ Forum initiative',
-      paragraph2:
-        'During the hackathon, Kannika developed skills in Design Thinking, teamwork, and community problem-solving. She built meaningful connections with 40 inspiring youths and mentors, gaining insights into local challenges and her own strengths. Her team’s project, A+ Forum, secured $500 in seed funding and ongoing mentorship to implement a solution addressing community needs.',
-      paragraph3:
-        'Kannika’s participation enhanced her leadership, self-awareness, and problem-solving abilities. She now applies these skills to drive positive change in her community, supported by mentors over a two-month project implementation phase. Her passion for innovation and community development continues to grow.',
-      paragraph4:
-        'She expresses deep gratitude to Hub Phnom Penh for fully sponsoring the program, including transportation, meals, and accommodation, and to her mentors for guiding her journey. This experience has empowered her to pursue her vision of creating impactful solutions and inspiring others to ',
-      highlight2: 'drive change through innovation',
-    },
-  },
-  {
-    name: 'Kimheng',
-    program: 'AGRONOMY, ROYAL UNIVERSITY OF AGRICULTURE',
-    avatar:  '/image/News/kimheng01.jpg',
-    quote: {
-      paragraph1:
-        'Kimheng, a 29-year-old from Takeo Province, Cambodia, overcame immense challenges as the youngest of eight children in a struggling household. After her father’s passing, she became the primary caregiver for her ailing mother. With support from Lotus Outreach Cambodia’s CATALYST Program and Buddhist Global Relief, she graduated in 2020 with a Bachelor’s degree in Agronomy, specializing in ',
-      highlight1: 'Laboratory Management',
-      paragraph2:
-        'Kimheng now manages a laboratory of 30 staff, overseeing operations, documentation, research, and translation, earning $650 monthly—a significant income in rural Cambodia. Her leadership role, traditionally male-dominated, was secured through her education, fluency in Chinese, and mentorship, despite initial resistance due to her age and gender.',
-      paragraph3:
-        'Her income has transformed her family’s life: funding her mother’s $10,000 eye surgery, building a $15,000 house, supporting her brother’s education in public administration, and covering medical costs for another sibling in Thailand. Kimheng’s leadership skills, honed through CATALYST, have made her a confident manager and community role model.',
-      paragraph4:
-        'Kimheng aspires to pursue a Master’s in seed breeding and tissue culture, possibly in China or Taiwan, to advance her expertise in agricultural biotechnology. She aims to become a bridge for international agricultural collaboration, translating research to benefit Cambodia. She expresses deep gratitude to Lotus Outreach and Buddhist Global Relief for empowering her to transform her life and family.',
-      highlight2: 'break gender barriers and uplift her community',
-    },
-  },
-]);
+const props = defineProps({
+  stories: {
+    type: Array,
+    required: true
+  }
+})
 
-const currentStory = computed(() => stories.value[currentStoryIndex.value]);
+const currentStoryIndex = ref(0)
+
+
+watchEffect(() => {
+  if (currentStoryIndex.value >= props.stories.length) {
+    currentStoryIndex.value = 0
+  }
+})
+
+
+const currentStory = computed(() => props.stories[currentStoryIndex.value] || {})
+
 
 const scrollLeft = () => {
-  currentStoryIndex.value = (currentStoryIndex.value - 1 + stories.value.length) % stories.value.length;
-};
+  const len = props.stories.length
+  currentStoryIndex.value = (currentStoryIndex.value - 1 + len) % len
+}
 
 const scrollRight = () => {
-  currentStoryIndex.value = (currentStoryIndex.value + 1) % stories.value.length;
-};
+  const len = props.stories.length
+  currentStoryIndex.value = (currentStoryIndex.value + 1) % len
+}
 </script>
 
 <style scoped>
@@ -148,7 +113,6 @@ const scrollRight = () => {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Slide transition for the image */
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.5s ease;
@@ -162,7 +126,6 @@ const scrollRight = () => {
   transform: translateX(-100%);
 }
 
-/* Fade transition for text content */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

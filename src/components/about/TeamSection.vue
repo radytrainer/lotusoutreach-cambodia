@@ -30,7 +30,7 @@
                 </div>
 
                 <!-- Ribbons -->
-                <div class="absolute top-[165px] left-0 right-0 z-20">
+                <div class="absolute top-[150px] left-0 right-0 z-20">
                   <div class="relative">
                     <div
                       class="bg-blue-400 text-white px-1 py-1 transform -skew-y-12 shadow-lg text-center w-60 mx-auto"

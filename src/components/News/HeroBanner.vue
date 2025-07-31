@@ -37,8 +37,7 @@
           class="text-base sm:text-lg md:text-xl text-white mb-4 sm:mb-6 md:mb-8 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto"
         >
           Discover our ongoing activities and initiatives creating lasting
-          change through education, sports, and community development across
-          Cambodia.
+          change through education, training, care, and giving back to the community.
         </p>
         <div
           class="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4"

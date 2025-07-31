@@ -202,7 +202,7 @@ const timelineEvents = ref([
 const scrollMobile = (direction) => {
     if (mobileTimeline.value) {
         const container = mobileTimeline.value
-        const eventWidth = container.querySelector('div').offsetWidth + 64 // Include mx-8 (4rem = 64px)
+        const eventWidth = container.querySelector('div').offsetWidth + 64 
         const maxIndex = timelineEvents.value.length - 1
 
         currentIndex.value += direction === 'left' ? -1 : 1
