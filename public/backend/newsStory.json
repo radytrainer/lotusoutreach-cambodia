@@ -1,9 +1,21 @@
 {
   "categories": [
-    { "value": "education", "label": "Girls' Education" },
-    { "value": "health", "label": "Care" },
-    { "value": "protection", "label": "Giving Back" },
-    { "value": "livelihoods", "label": "Training" }
+    {
+      "value": "education",
+      "label": "Girls' Education"
+    },
+    {
+      "value": "health",
+      "label": "Care"
+    },
+    {
+      "value": "protection",
+      "label": "Giving Back"
+    },
+    {
+      "value": "livelihoods",
+      "label": "Training"
+    }
   ],
   "activities": [
     {
