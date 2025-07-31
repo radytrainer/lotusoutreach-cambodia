@@ -7,7 +7,7 @@
       <span class="font-medium">Back to Activities</span>
     </button>
 
-    <article class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+    <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
       <div class="aspect-video overflow-hidden bg-gray-200">
         <img :src="activity.image || '/placeholder.svg'" :alt="activity.title" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90" />
       </div>
@@ -35,19 +35,21 @@
 
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
           <h2 class="text-2xl font-semibold text-gray-900 mt-8">Event Overview</h2>
-          <p >{{ activity.content }}</p>
+          <p>{{ activity.content }}</p>
+
           <h2 class="text-2xl font-semibold text-gray-900 mt-8">Key Highlights</h2>
           <div class="space-y-6">
-            <div v-if="activity.content && activity.content.includes('Mr. Glenn Fawcett')">
+            <div v-if="activity.content.includes('Mr. Glenn Fawcett')">
               <h3 class="text-xl font-medium text-gray-800">Message from Leadership</h3>
               <p class="text-gray-600">Mr. Glenn Fawcett, Executive Director of Lotus Outreach International, congratulated the graduates and shared: "{{ getLeadershipMessage(activity.content) }}"</p>
               <p class="text-gray-600">He encouraged graduates to give back in small ways and thanked partners Cambodian Women’s Crisis Centre (CWCC) and Cambodian Organization for Children and Development (COCD) for their support.</p>
             </div>
-            <div class="flex flex-col md:flex-row gap-4" v-if="activity.content && activity.content.includes('Ms. Sdeoung Lisa')">
+
+            <div v-if="activity.content.includes('Ms. Sdeoung Lisa')" class="flex flex-col md:flex-row gap-4">
               <div class="w-full md:w-1/2">
                 <h3 class="text-xl font-medium text-gray-800">Student Reflections</h3>
                 <p class="text-gray-600">Ms. Sdeoung Lisa and Ms. Sat Marany, student representatives, said: "{{ getStudentReflections(activity.content) }}"</p>
-                <div v-if="activity.content && activity.content.includes('Hoeun Ya')">
+                <div v-if="activity.content.includes('Hoeun Ya')">
                   <h3 class="text-xl font-medium text-gray-800">Personal Story</h3>
                   <p class="text-gray-600">Hoeun Ya, elder sister of graduate Hoeun Lina, shared: "{{ getPersonalStory(activity.content) }}"</p>
                 </div>
@@ -56,7 +58,8 @@
                 <img src="/image/News/2.jpg" alt="Student Reflection" class="w-full h-68 object-cover rounded-lg shadow-md">
               </div>
             </div>
-            <div v-if="activity.content && activity.content.includes('Ms. Va VannakSerey Raksmey')">
+
+            <div v-if="activity.content.includes('Ms. Va VannakSerey Raksmey')">
               <h3 class="text-xl font-medium text-gray-800">Gratitude and Conclusion</h3>
               <p class="text-gray-600">{{ getConclusion(activity.content) }}</p>
             </div>
@@ -73,21 +76,22 @@
       </div>
     </article>
 
-    <div v-if="related.length > 0" class="mt-12">
+    <div v-if="related.length" class="mt-12">
       <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Activities</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <article v-for="relatedItem in related" :key="relatedItem.title" @click="$emit('view-detail', relatedItem)" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg cursor-pointer transition-all duration-200">
+        <article
+          v-for="relatedItem in related"
+          :key="relatedItem.title"
+          @click="$emit('view-detail', relatedItem)"
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg cursor-pointer transition-all duration-200"
+        >
           <div class="flex">
             <div class="w-28 h-28 flex-shrink-0 bg-gray-200">
               <img :src="relatedItem.image" :alt="relatedItem.title" class="w-full h-full object-cover" />
             </div>
             <div class="p-4 flex-1">
-              <h4 class="font-semibold text-gray-900 mb-2 line-clamp-2 leading-snug">
-                {{ relatedItem.title }}
-              </h4>
-              <p class="text-sm text-gray-500">
-                {{ relatedItem.author }} • {{ formatDate(relatedItem.date) }}
-              </p>
+              <h4 class="font-semibold text-gray-900 mb-2 line-clamp-2 leading-snug">{{ relatedItem.title }}</h4>
+              <p class="text-sm text-gray-500">{{ relatedItem.author }} • {{ formatDate(relatedItem.date) }}</p>
             </div>
           </div>
         </article>
@@ -103,37 +107,17 @@ const props = defineProps({
   activity: {
     type: Object,
     required: true,
-    validator: (activity) => {
-      return (
-        'title' in activity &&
-        'content' in activity &&
-        'author' in activity &&
-        'date' in activity &&
-        'category' in activity
-      );
-    }
+    validator: (a) => 'title' in a && 'content' in a && 'author' in a && 'date' in a && 'category' in a
   },
   related: {
     type: Array,
     required: true,
-    validator: (related) => related.every(item => 'title' in item && 'author' in item && 'date' in item)
+    validator: (arr) => arr.every(i => 'title' in i && 'author' in i && 'date' in i)
   },
-  formatDate: {
-    type: Function,
-    required: true
-  },
-  getCategoryBadgeClass: {
-    type: Function,
-    required: true
-  },
-  getCategoryLabel: {
-    type: Function,
-    required: true
-  },
-  calculateReadTime: {
-    type: Function,
-    required: true
-  },
+  formatDate: Function,
+  getCategoryBadgeClass: Function,
+  getCategoryLabel: Function,
+  calculateReadTime: Function,
   showHeading: {
     type: Boolean,
     default: false
@@ -142,7 +126,6 @@ const props = defineProps({
 
 const emit = defineEmits(['back', 'view-detail']);
 
-// Helper functions to safely extract content
 const getLeadershipMessage = (content) => {
   const match = content.match(/'With affiliates[^']+'/);
   return match ? match[0] : '';
@@ -160,6 +143,6 @@ const getPersonalStory = (content) => {
 
 const getConclusion = (content) => {
   const match = content.match(/' Ms. Va VannakSerey Raksmey[^']+'/);
-  return match ? match[0] : content.split("' Ms. Va VannakSerey Raksmey")[1] || '';
+  return match ? match[0] : content.split("Ms. Va VannakSerey Raksmey")[1] || '';
 };
 </script>
