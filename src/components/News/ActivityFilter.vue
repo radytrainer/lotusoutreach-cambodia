@@ -8,15 +8,17 @@
       communities in Cambodia.
     </p>
 
-    <!-- Search Bar -->
-    <div class="max-w-md mx-auto relative">
+    <!-- Search and Filter Section -->
+    <div class="max-w-md mx-auto">
+      <!-- Search Input -->
       <div class="relative">
         <input
           v-model="localSearch"
           type="text"
           placeholder="Search activities..."
-          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-200 pr-10"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none pr-10"
           @input="updateSearch"
+          aria-label="Search activities"
         />
         <svg
           class="absolute right-3 top-3.5 h-5 w-5 text-gray-400"
@@ -33,16 +35,24 @@
         </svg>
       </div>
 
-      <!-- Category Filter -->
+      <!-- Category Buttons -->
       <div class="flex flex-wrap justify-center gap-2 mt-4">
         <button
           v-for="category in categories"
           :key="category.value"
-          @click="toggle(category.value)"
-          class="px-3 py-1 text-sm rounded-full transition-colors"
+          @click="toggleCategory(category.value)"
           :class="getCategoryButtonClass(category.value)"
+          class="px-3 py-1 text-sm rounded-full transition-colors"
         >
           {{ category.label }}
+        </button>
+
+        <!-- Optional: Clear Filters Button -->
+        <button
+          @click="clearFilters"
+          class="px-3 py-1 text-sm rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
+        >
+          Clear Filters
         </button>
       </div>
     </div>
@@ -51,7 +61,6 @@
 
 <script setup>
 import { ref, watch } from 'vue';
-import { computed } from 'vue';
 
 const props = defineProps({
   searchQuery: String,
@@ -64,16 +73,29 @@ const emits = defineEmits(['update:searchQuery', 'toggle-category', 'search']);
 
 const localSearch = ref(props.searchQuery || '');
 
-watch(() => props.searchQuery, (newVal) => {
-  localSearch.value = newVal;
-});
+// Sync local input with prop
+watch(
+  () => props.searchQuery,
+  (newValue) => {
+    localSearch.value = newValue;
+  }
+);
 
+// Emit updated search input
 const updateSearch = () => {
   emits('update:searchQuery', localSearch.value);
   emits('search');
 };
 
-const toggle = (category) => {
+// Toggle selected category
+const toggleCategory = (category) => {
   emits('toggle-category', category);
+};
+
+// Clear search and all filters
+const clearFilters = () => {
+  emits('update:searchQuery', '');
+  emits('search');
+  props.categories.forEach((c) => emits('toggle-category', c.value));
 };
 </script>
