@@ -291,11 +291,107 @@
     ],
     "trainingPrograms": [
         {
-            "title": "Lotus Pedals",
+            "title": "Life skills and soft skills training",
             "image": "/image/Program/train1.jpg",
             "icon": "fas fa-person-chalkboard",
             "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
-            "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
+            "fullDescription": "Students participate in a wide range of trainings covering essential topics such as self-awareness, goal setting, time management, communication, problem solving, emotional intelligence, financial literacy, personal safety, reproductive health, leadership, team building, gender awareness, public speaking, and more. These sessions help equip them with the tools needed to thrive academically, socially, and professionally.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        },
+        {
+            "title": "Leadership practice opportunities",
+            "image": "/image/Program/Leading.jpg",
+            "icon": "fas fa-person-chalkboard",
+            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "fullDescription": "Students are regularly given chances to lead through structured responsibilities. At each residence, two student leaders are elected to help manage day-to-day living and report to program staff. During exposure visits and field activities, team leaders are also chosen to coordinate tasks and support their peers, building real-world leadership experience.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        },
+        {
+            "title": "Career and major selection workshops",
+            "image": "/image/Program/Workshop.jpg",
+            "icon": "fas fa-person-chalkboard",
+            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "fullDescription": "Students are regularly given chances to lead through structured responsibilities. At each residence, two student leaders are elected to help manage day-to-day living and report to program staff. During exposure visits and field activities, team leaders are also chosen to coordinate tasks and support their peers, building real-world leadership experience.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        },
+        {
+            "title": "Job readiness and exposure visits",
+            "image": "/image/Program/job.jpg",
+            "icon": "fas fa-person-chalkboard",
+            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
+            "fullDescription": "Students are regularly given chances to lead through structured responsibilities. At each residence, two student leaders are elected to help manage day-to-day living and report to program staff. During exposure visits and field activities, team leaders are also chosen to coordinate tasks and support their peers, building real-world leadership experience.",
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
