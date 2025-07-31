@@ -8,25 +8,30 @@
   "activities": [
     {
       "title": "Lotus Outreach Cambodia Celebrates the Graduation of 38 CATALYST Students",
-      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates...",
+      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates from the CATALYST Program. The event recognized the students' hard work, resilience, and dedication throughout their academic journey. Graduates were celebrated for overcoming personal and financial challenges, and they expressed heartfelt gratitude for the support they received. The ceremony served as an inspiration for younger students to dream big and persevere toward achieving their goals.",
       "date": "2024-09-22",
       "author": "Lotus Outreach Cambodia",
       "category": "education",
       "image": "/image/News/1.jpg",
+      "image1": "/image/News/1.jpg",
       "location": "Nationwide, Cambodia"
     },
     {
-      "title": "CATALYST Monthly Gathering -Students Connect & Reflect",
-      "content": "On July 20, 2025, CATALYST students from various universities gathered to share life experiences, discuss job opportunities, and reflect on the challenges and accomplishments in their academic journey. The meeting created a strong sense of support and encouragement among junior and senior students alike.",
-      "date": "2025-07-20",
-      "author": "CATALYST Team",
-      "category": "education",
-      "image": "/image/News/14.jpg",
-      "location": "Phnom Penh, Cambodia"
+        "title": "CATALYST Monthly Gathering - Students Connect & Reflect",
+        "content": "The monthly gathering of CATALYST students from various universities on July 20, 2025, was a truly meaningful meeting that brought together both Juniors and Seniors students! \nDuring this meeting, they shared life experiences, discussed job opportunities, and opened up about the challenges and obstacles they’ve faced and overcome. They also reflected on the achievements they’ve accomplished so far.\nTheir determination and perseverance are living proof that anything is possible when you have a dream and the drive to work hard for it.",
+        "date": "2025-07-20",
+        "author": "CATALYST Team",
+        "category": "education",
+        "image": "/image/News/14.jpg",
+        "location": "Phnom Penh, Cambodia"
     },
+
     {
       "title": "GATE Project Monitoring Visit with Lotus Outreach Australia",
-      "content": "From June 30 to July 4, 2025, Ms. Charlie, President of Lotus Outreach Australia, visited the GATE Phnom Penh project to meet students, conduct home visits, and collaborate with CWCC and local high schools. The visit celebrated the students’ achievements and encouraged continued academic efforts.",
+      
+      "content": "From June 30 to July 4, 2025, Ms. Charlie, President of Lotus Outreach Australia—who funds the high school scholarship project in Phnom Penh (GATE Phnom Penh) through the partner organization Cambodia Women’s Crisis Center (CWCC)—visited to monitor project implementation, meet with alumnae, and conduct home visits to our current scholarship students.\nDuring the visit, Ms. Charlie and the team from Lotus Outreach Cambodia met with staff from CWCC and Local Education Working Groups (LEWGs) at the four target high schools: Borey 100 Khnang, Sensok, Pong Tuek, and Prek Kampoes. We also spent time engaging with Grade 11 and 12 students and visiting their families to connect and offer encouragement.\nThroughout the visit, Ms. Charlie expressed her joy and pride in the dedication and hard work of both the project team and the scholarship students, which has led to impressive and noteworthy academic achievements.\nWe would like to express our deepest gratitude to the CWCC team in Phnom Penh, as well as the management teams of the four partner schools, for their warm hospitality and strong collaboration, which made the visit both meaningful and successful.\nWe wish Ms. Charlie and her family, the CWCC team, and the school management teams continued happiness, good health, and the Four Blessings of the Buddha—longevity, beauty, happiness, and strength. May these blessings always be with you.",
+
+
       "date": "2025-07-04",
       "author": "GATE Program",
       "category": "education",
@@ -35,7 +40,7 @@
     },
     {
       "title": "Digital Platform & CV Writing Workshop for First-Year Students",
-      "content": "On June 22, 2025, intern Kim Sodalin led a sharing session with first-year students on using digital platforms, writing professional CVs and cover letters, and preparing for future job applications. The session aimed to equip students with essential tools for their career journey.",
+      "content": "On June 22, 2025, Ms. Kim Sodalin, a third-year International Relations student and intern at Lotus Outreach Cambodia, led an engaging workshop for first-year students on digital tools and professional job application preparation. She introduced valuable platforms that can support academic work and career development. Additionally, she shared expert advice on crafting effective CVs, writing professional emails, and preparing cover letters tailored for job opportunities. The session empowered students with practical skills and confidence to step into their future careers.",
       "date": "2025-06-22",
       "author": "Intern Support Team",
       "category": "livelihoods",
@@ -44,7 +49,7 @@
     },
     {
       "title": "Understanding Women's Health - Workshop for First-Year Students",
-      "content": "On June 1, 2025, Lotus Outreach Cambodia held a women's health workshop led by former CATALYST student Pen Sreynich. Topics included menstrual health, hygiene, reproductive issues, and seeking medical care. The workshop empowered young women to take charge of their physical health.",
+      "content": "On June 1, 2025, Lotus Outreach Cambodia organized an informative workshop titled 'Understanding Women’s Health' for first-year female students. Led by Pen Sreynich, a CATALYST alumna and ICU nurse at Kuntha Bopha Hospital, the session covered essential topics including personal hygiene, menstrual cycle awareness, reproductive health issues, and guidance on seeking professional care. Through her personal story and professional expertise, Ms. Sreynich inspired the students to take proactive steps in managing their health with confidence and awareness.",
       "date": "2025-06-01",
       "author": "Care",
       "category": "health",
