@@ -291,11 +291,107 @@
     ],
     "trainingPrograms": [
         {
-            "title": "Lotus Pedals",
+            "title": "Life skills and soft skills training",
             "image": "/image/Program/train1.jpg",
             "icon": "fas fa-person-chalkboard",
-            "description": "Providing durable bicycles to girls in rural Cambodia, enabling them to travel the long distance to school.",
-            "fullDescription": "The Lotus Pedals program addresses one of the most significant barriers to education for girls in rural Cambodia: transportation. Many girls live several kilometers away from their schools, making the daily journey on foot both time-consuming and potentially dangerous. By providing sturdy, reliable bicycles, we enable these young women to attend school regularly, arrive safely, and have more time for their studies and family responsibilities.",
+            "description": "Lotus Outreach Cambodia offers integrated life skills and soft skills training through holistic programs—like GATE, CATALYST, Lotus Pedals, and reintegration initiatives—that equip vulnerable girls and young women with education.",
+            "fullDescription": "Students participate in a wide range of trainings covering essential topics such as self-awareness, goal setting, time management, communication, problem solving, emotional intelligence, financial literacy, personal safety, reproductive health, leadership, team building, gender awareness, public speaking, and more. These sessions help equip them with the tools needed to thrive academically, socially, and professionally.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        },
+        {
+            "title": "Leadership practice opportunities",
+            "image": "/image/Program/Leading.jpg",
+            "icon": "fas fa-person-chalkboard",
+            "description": "Leadership & self-confidence boosting through continuous mentoring and workshops in both GATE and CATALYST. Interactive games like “Pass the Hoop” and “Blind Lead” are used as experiential tools during field visits.",
+            "fullDescription": "Students are regularly given chances to lead through structured responsibilities. At each residence, two student leaders are elected to help manage day-to-day living and report to program staff. During exposure visits and field activities, team leaders are also chosen to coordinate tasks and support their peers, building real-world leadership experience.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        },
+        {
+            "title": "Career and major selection workshops",
+            "image": "/image/Program/Workshop.jpg",
+            "icon": "fas fa-person-chalkboard",
+            "description": "These workshops are often led by trained counselors who work one-to-one with students to build a “life project” covering both personal and career development.",
+            "fullDescription": "Lotus Outreach Cambodia and its partners (like Cambodian Women’s Crisis Center) conduct career orientation workshops for high school girls under the GATE program. These sessions aim to introduce students to different educational and vocational pathways and help them explore options beyond secondary school. CATALYST workshops focus on personalized major and education planning, scholarship applications, and building personal goals. Ongoing life project counseling ensures academic planning is paired with self-development, leadership, and advocacy goals.",
+            "features": [
+                "High-quality, durable bicycles designed for rural terrain",
+                "Safety training and helmet provision",
+                "Maintenance workshops for recipients",
+                "Community engagement to ensure program sustainability",
+                "Follow-up support to track educational outcomes"
+            ],
+            "stats": [
+                {
+                    "number": "2,500+",
+                    "label": "Bicycles Distributed"
+                },
+                {
+                    "number": "85%",
+                    "label": "School Attendance Increase"
+                },
+                {
+                    "number": "150+",
+                    "label": "Villages Reached"
+                },
+                {
+                    "number": "95%",
+                    "label": "Program Satisfaction"
+                }
+            ]
+        },
+        {
+            "title": "Job readiness and exposure visits",
+            "image": "/image/Program/job.jpg",
+            "icon": "fas fa-person-chalkboard",
+            "description": "Career readiness workshops, stress management, life project guidance, mentoring. Vocational + life skills, job placement support, micro-enterprise guidance.",
+            "fullDescription": "Scholars participate in mentoring workshops that cover career preparedness, professional development, job interview skills, and workplace readiness. These build critical competencies such as communication, leadership, and life skills alongside academic planning. Counselors help each student develop a personal “life project”, structured around long-term career and personal goals. Participants in NFE—many of whom have left or are exiting red-light venues—receive vocational training such as sewing, cooking, beauty, or handicrafts. After completing training, Lotus Outreach assists graduates in job placement or micro‑enterprise creation, supporting a transition out of high-risk sectors. Follow-ups help sustain reintegration.",
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -324,39 +420,175 @@
         }
     ],
     "givingPrograms": [
-    {
-      "title": "Supporting 100 Children in Prey Nup",
-      "image": "/image/Program/giving1.jpg",
-      "icon": "fas fa-gift",
-      "description": "A charity event organized by CATALYST students and alumni to support 100 underserved children in Prey Nup District with school materials and hygiene supplies.",
-      "fullDescription": "On March 16, 2025, Lotus Outreach Cambodia, in collaboration with Let Us Create Futures and local authorities, successfully hosted its 6th Giving Back Event in Prey Nup District, Preah Sihanouk Province. This annual initiative, driven by the leadership of CATALYST students and alumni, is dedicated to fostering a culture of community service among young women. The event aimed to uplift children in need through the distribution of essential school materials, food, and hygiene products. It also empowered students to develop leadership, teamwork, and advocacy skills while creating a joyful and educational experience for the children.",
-      "features": [
-        "Supported 100 children with school bags, notebooks, pens, pencils, erasers, rulers, whiteboards, milk, snacks, bottled water, and soap",
-        "Donated food supplies (noodles, canned fish, sauces, tea, sugar) and 100,000 riels to Prey Nup Pagoda monks",
-        "Contributed storybooks and second-hand clothes to Let Us Create Futures",
-        "Conducted hygiene education and fun learning activities for children",
-        "Raised a total of $1,256.96 for the event through generous donor support"
-      ],
-      "image1": "/image/Program/giving2.jpg",
-      "image2": "/image/Program/giving3.jpg",
-      "stats": [
         {
-          "number": "$973.40",
-          "label": "Used for Educational & Hygiene Materials"
+            "title": "Supporting 100 Children in Prey Nup",
+            "image": "/image/Program/giving1.jpg",
+            "icon": "fas fa-gift",
+            "description": "A charity event organized by CATALYST students and alumni to support 100 underserved children in Prey Nup District with school materials and hygiene supplies.",
+            "fullDescription": "On March 16, 2025, Lotus Outreach Cambodia, in collaboration with Let Us Create Futures and local authorities, successfully hosted its 6th Giving Back Event in Prey Nup District, Preah Sihanouk Province. This annual initiative, driven by the leadership of CATALYST students and alumni, is dedicated to fostering a culture of community service among young women. The event aimed to uplift children in need through the distribution of essential school materials, food, and hygiene products. It also empowered students to develop leadership, teamwork, and advocacy skills while creating a joyful and educational experience for the children.",
+            "features": [
+                "Supported 100 children with school bags, notebooks, pens, pencils, erasers, rulers, whiteboards, milk, snacks, bottled water, and soap",
+                "Donated food supplies (noodles, canned fish, sauces, tea, sugar) and 100,000 riels to Prey Nup Pagoda monks",
+                "Contributed storybooks and second-hand clothes to Let Us Create Futures",
+                "Conducted hygiene education and fun learning activities for children",
+                "Raised a total of $1,256.96 for the event through generous donor support"
+            ],
+            "image1": "/image/Program/giving2.jpg",
+            "image2": "/image/Program/giving3.jpg",
+            "stats": [
+                {
+                    "number": "$973.40",
+                    "label": "Used for Educational & Hygiene Materials"
+                },
+                {
+                    "number": "$319.56",
+                    "label": "Carried Forward for Future Events"
+                },
+                {
+                    "number": "100",
+                    "label": "Children Benefited"
+                },
+                {
+                    "number": "100,000 riels",
+                    "label": "Cash Donated to Monks"
+                }
+            ]
         },
         {
-          "number": "$319.56",
-          "label": "Carried Forward for Future Events"
+            "title": "Peer mentoring and tutoring",
+            "image": "/image/Program/peer.jpg",
+            "icon": "fas fa-user-friends",
+            "description": "CATALYST scholars tutor and mentor younger GATE students across Phnom Penh, Siem Reap, and rural areas.",
+            "fullDescription": "In the CATALYST program, older scholars who were once GATE recipients actively mentor younger GATE students. They help with academic challenges, share strategies for managing university life, and support study habits—creating a structured peer-to-peer guidance network. This mentorship continues through counseling and workshops where experienced students pass on key knowledge about coursework, time management, and navigating scholarship programs in Cambodia.",
+            "features": [
+                "Academic tutoring in subjects like math, science, and English",
+                "Mentorship sessions on adjusting to university life",
+                "Workshops on study skills, time management, and scholarship application tips",
+                "Emotional support and regular check-ins from experienced peers",
+                "Participation from CATALYST alumni who offer long-term guidance"
+            ],
+            "image1": "/image/Program/mentoring.jpg",
+            "image2": "/image/Program/mentoring1.jpg",
+            "stats": [
+                {
+                    "number": "150+",
+                    "label": "Students Reached via Peer Mentorship"
+                },
+                {
+                    "number": "12",
+                    "label": "Active Peer Mentors"
+                },
+                {
+                    "number": "3",
+                    "label": "Provinces Served"
+                },
+                {
+                    "number": "2022-2025",
+                    "label": "Years of Continuous Mentorship"
+                }
+            ]
         },
         {
-          "number": "100",
-          "label": "Children Benefited"
+            "title": "Community outreach and service projects",
+            "image": "/image/Program/cm.jpg",
+            "icon": "fas fa-leaf",
+            "description": "Scholars organize and lead giving-back visits to remote schools in provinces like Mondolkiri, Takeo, Siem Reap.",
+            "fullDescription": "Each year, CATALYST scholars lead Giving Back Projects in rural Cambodian provinces like Mondolkiri, Takeo, Siem Reap, and Pallin. They plan fundraising, supply school materials, and organize interactive learning sessions for children. Examples include distributing backpacks, notebooks, hygiene essentials, snacks, and water to 80+ children at Bu Rang Elementary School in Mondolkiri (Feb 2024). Scholars also led play-based learning and sanitation lessons.",
+            "features": [
+                "Supported 100 children with school bags, notebooks, pens, pencils, erasers, rulers, whiteboards, milk, snacks, bottled water, and soap",
+                "Donated food supplies (noodles, canned fish, sauces, tea, sugar) and 100,000 riels to Prey Nup Pagoda monks",
+                "Contributed storybooks and second-hand clothes to Let Us Create Futures",
+                "Conducted hygiene education and fun learning activities for children",
+                "Raised a total of $1,256.96 for the event through generous donor support"
+            ],
+            "image1": "/image/Program/community1.jpg",
+            "image2": "/image/Program/community2.jpg",
+            "stats": [
+                {
+                    "number": "$973.40",
+                    "label": "Used for Educational & Hygiene Materials"
+                },
+                {
+                    "number": "$319.56",
+                    "label": "Carried Forward for Future Events"
+                },
+                {
+                    "number": "100",
+                    "label": "Children Benefited"
+                },
+                {
+                    "number": "100,000 riels",
+                    "label": "Cash Donated to Monks"
+                }
+            ]
         },
         {
-          "number": "100,000 riels",
-          "label": "Cash Donated to Monks"
+            "title": "Sharing knowledge with junior students",
+            "image": "/image/Program/Sharing.jpg",
+            "icon": "fas fa-lightbulb",
+            "description": "Scholars run educational activities—sanitation, games, storytelling—for younger students during outreach.",
+            "fullDescription": "During outreach visits, CATALYST scholars facilitate educational and recreational activities such as storytelling, sanitation workshops, coloring sessions, and games. These create learning environments where younger students are taught by role models from similar backgrounds. This direct engagement empowers scholars to build facilitation, leadership, and communication skills while positively impacting primary-age students in under-resourced schools.",
+            "features": [
+                "Supported 100 children with school bags, notebooks, pens, pencils, erasers, rulers, whiteboards, milk, snacks, bottled water, and soap",
+                "Donated food supplies (noodles, canned fish, sauces, tea, sugar) and 100,000 riels to Prey Nup Pagoda monks",
+                "Contributed storybooks and second-hand clothes to Let Us Create Futures",
+                "Conducted hygiene education and fun learning activities for children",
+                "Raised a total of $1,256.96 for the event through generous donor support"
+            ],
+            "image1": "/image/Program/share1.jpg",
+            "image2": "/image/Program/share2.jpg",
+            "stats": [
+                {
+                    "number": "$973.40",
+                    "label": "Used for Educational & Hygiene Materials"
+                },
+                {
+                    "number": "$319.56",
+                    "label": "Carried Forward for Future Events"
+                },
+                {
+                    "number": "100",
+                    "label": "Children Benefited"
+                },
+                {
+                    "number": "100,000 riels",
+                    "label": "Cash Donated to Monks"
+                }
+            ]
+        },
+        {
+            "title": "Supporting the next generation of scholarship recipients",
+            "image": "/image/Program/community.jpg",
+            "icon": "fa fa-user-graduate",
+            "description": "Fundraising by scholars and alumni to support incoming GATE recipients; alumni mentoring network established.",
+            "fullDescription": "CATALYST scholars often raise funds to support new scholarship recipients—for example, in 2024 they exceeded their modest $550 goal by raising over $1,313 to aid 81 young children in Mondolkiri with school supplies and hygiene items. Additionally, an Alumni Association of GATE and CATALYST graduates (elected into committees in 2020) fosters mentorship of incoming students, community outreach, and coordinated fundraising to sustain the scholarship pipeline.",
+            "features": [
+                "Supported 100 children with school bags, notebooks, pens, pencils, erasers, rulers, whiteboards, milk, snacks, bottled water, and soap",
+                "Donated food supplies (noodles, canned fish, sauces, tea, sugar) and 100,000 riels to Prey Nup Pagoda monks",
+                "Contributed storybooks and second-hand clothes to Let Us Create Futures",
+                "Conducted hygiene education and fun learning activities for children",
+                "Raised a total of $1,256.96 for the event through generous donor support"
+            ],
+            "image1": "/image/Program/support1.jpg",
+            "image2": "/image/Program/support2.jpg",
+            "stats": [
+                {
+                    "number": "$973.40",
+                    "label": "Used for Educational & Hygiene Materials"
+                },
+                {
+                    "number": "$319.56",
+                    "label": "Carried Forward for Future Events"
+                },
+                {
+                    "number": "100",
+                    "label": "Children Benefited"
+                },
+                {
+                    "number": "100,000 riels",
+                    "label": "Cash Donated to Monks"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
