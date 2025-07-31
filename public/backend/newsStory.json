@@ -20,34 +20,44 @@
   "activities": [
     {
       "title": "Lotus Outreach Cambodia Celebrates the Graduation of 38 CATALYST Students",
-      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates from the CATALYST Program. The event recognized the students' hard work, resilience, and dedication throughout their academic journey. Graduates were celebrated for overcoming personal and financial challenges, and they expressed heartfelt gratitude for the support they received. The ceremony served as an inspiration for younger students to dream big and persevere toward achieving their goals.",
+      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates. These students are part of the 226 young women who have completed their higher education journey through the CATALYST Project since its launch in 2012. The ceremony was graced by Mr. Glenn Fawcett, Executive Director of Lotus Outreach International, and brought together 130 attendees, including parents, guardians, and the graduates themselves, as well as Lotus Outreach Cambodia staff.\n\nIn his remarks, Mr. Glenn Fawcett warmly congratulated the students and shared an inspiring message: \"With affiliates in seven countries and strong partnerships with local NGOs in India, Cambodia, Vietnam, Guatemala, Brazil, and the United States, we are a global community that believes empowerment is at the heart of sustainable change. Educating a woman has a profound multiplying effect—not just for her, but for her family and community for generations to come. Women are powerful change agents and essential to Cambodia’s development as future leaders and role models.\" He further encouraged graduates to begin giving back in small ways now, rather than waiting until they are financially successful.\n\nMr. Fawcett also took the opportunity to thank Lotus Outreach Cambodia’s local partners—the Cambodian Women’s Crisis Centre (CWCC) and Cambodian Organization for Children and Development (COCD)—for their ongoing support and contributions to girls’ education and empowerment.\n\nDuring the event, two student representatives, Ms. Sdeoung Lisa and Ms. Sat Marany, reflected on their four-year journey with Lotus Outreach Cambodia. “Lotus Outreach Cambodia has become like a second family to us,” they shared. “They offered us unconditional love and support, expecting only that we study hard, develop skills, and secure jobs to improve our lives and serve society. Beyond academic support, we received soft skills training and were encouraged to give back by helping children in rural provinces—an experience that filled us with pride and purpose.”\n\nThe voices of families were also heard. Hoeun Ya, elder sister of graduate Hoeun Lina, shared a moving story: “After our parents passed away, our family struggled greatly. I asked Lina to quit school in 9th grade to help out, but she refused. She continued and was fortunate to receive a scholarship from Lotus Outreach Cambodia starting in Grade 11. This support has been the most valuable gift for our family—no one before Lina had the chance to reach university. She is now a role model for our nieces and nephews.”\n\nTo conclude the ceremony, Ms. Va VannakSerey Raksmey, Executive Director of Lotus Outreach Cambodia, led the graduates in expressing heartfelt gratitude to their parents and guardians for their sacrifices and unwavering belief in their daughters’ potential. The event concluded on a joyful note, with Mr. Glenn Fawcett, Ms. Va VannakSerey Raksmey, and Ms. Chea Pisey presenting letters of commendation to the 38 graduates, followed by a celebratory photo session to capture the pride and happiness of the day.",
       "date": "2024-09-22",
       "author": "Lotus Outreach Cambodia",
       "category": "education",
       "image": "/image/News/1.jpg",
-      "image1": "/image/News/1.jpg",
+      "image1": [
+        "/image/News/new1_01.jpg",
+        "/image/News/new1_02.jpg",
+        "/image/News/new1_03.jpg",
+        "/image/News/new1_04.jpg"
+      ],
       "location": "Nationwide, Cambodia"
     },
     {
-        "title": "CATALYST Monthly Gathering - Students Connect & Reflect",
-        "content": "The monthly gathering of CATALYST students from various universities on July 20, 2025, was a truly meaningful meeting that brought together both Juniors and Seniors students! \nDuring this meeting, they shared life experiences, discussed job opportunities, and opened up about the challenges and obstacles they’ve faced and overcome. They also reflected on the achievements they’ve accomplished so far.\nTheir determination and perseverance are living proof that anything is possible when you have a dream and the drive to work hard for it.",
-        "date": "2025-07-20",
-        "author": "CATALYST Team",
-        "category": "education",
-        "image": "/image/News/14.jpg",
-        "location": "Phnom Penh, Cambodia"
+      "title": "CATALYST Monthly Gathering - Students Connect & Reflect",
+      "content": "The monthly gathering of CATALYST students from various universities on July 20, 2025, was a truly meaningful meeting that brought together both Juniors and Seniors students! \nDuring this meeting, they shared life experiences, discussed job opportunities, and opened up about the challenges and obstacles they’ve faced and overcome. They also reflected on the achievements they’ve accomplished so far.\nTheir determination and perseverance are living proof that anything is possible when you have a dream and the drive to work hard for it.",
+      "date": "2025-07-20",
+      "author": "CATALYST Team",
+      "category": "education",
+      "image": "/image/News/14.jpg",
+      "image1": [
+        "/image/News/new2_01.jpg",
+        "/image/News/new2_02.jpg"
+      ],
+      "location": "Phnom Penh, Cambodia"
     },
-
     {
       "title": "GATE Project Monitoring Visit with Lotus Outreach Australia",
-      
       "content": "From June 30 to July 4, 2025, Ms. Charlie, President of Lotus Outreach Australia—who funds the high school scholarship project in Phnom Penh (GATE Phnom Penh) through the partner organization Cambodia Women’s Crisis Center (CWCC)—visited to monitor project implementation, meet with alumnae, and conduct home visits to our current scholarship students.\nDuring the visit, Ms. Charlie and the team from Lotus Outreach Cambodia met with staff from CWCC and Local Education Working Groups (LEWGs) at the four target high schools: Borey 100 Khnang, Sensok, Pong Tuek, and Prek Kampoes. We also spent time engaging with Grade 11 and 12 students and visiting their families to connect and offer encouragement.\nThroughout the visit, Ms. Charlie expressed her joy and pride in the dedication and hard work of both the project team and the scholarship students, which has led to impressive and noteworthy academic achievements.\nWe would like to express our deepest gratitude to the CWCC team in Phnom Penh, as well as the management teams of the four partner schools, for their warm hospitality and strong collaboration, which made the visit both meaningful and successful.\nWe wish Ms. Charlie and her family, the CWCC team, and the school management teams continued happiness, good health, and the Four Blessings of the Buddha—longevity, beauty, happiness, and strength. May these blessings always be with you.",
-
-
       "date": "2025-07-04",
       "author": "GATE Program",
       "category": "education",
       "image": "/image/News/15.jpg",
+      "image1": [
+        "/image/News/new3_01.jpg",
+        "/image/News/new3_02.jpg",
+        "/image/News/new3_03.jpg"
+      ],
       "location": "Phnom Penh, Cambodia"
     },
     {
@@ -57,6 +67,10 @@
       "author": "Intern Support Team",
       "category": "livelihoods",
       "image": "/image/News/16.jpg",
+      "image1": [
+        "/image/News/new4_01.jpg",
+        "/image/News/new4_02.jpg"
+      ],
       "location": "Phnom Penh, Cambodia"
     },
     {
@@ -66,6 +80,10 @@
       "author": "Care",
       "category": "health",
       "image": "/image/News/17.jpg",
+      "image1": [
+        "/image/News/new5_01.jpg",
+        "/image/News/new5_02.jpg"
+      ],
       "location": "Phnom Penh, Cambodia"
     }
   ],

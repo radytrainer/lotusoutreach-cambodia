@@ -1,57 +1,42 @@
 <template>
-  <!-- Hero Banner Component -->
-  <div
-    class="relative h-[70vh] sm:h-[70vh] md:h-[100vh] bg-gray-100 overflow-hidden"
-  >
-    <!-- Background Image -->
-    <div class="absolute inset-0 overflow-hidden">
+  <!-- Hero Banner -->
+  <section class="relative h-[70vh] md:h-[100vh] bg-gray-100 overflow-hidden">
+    <!-- Background Image with Gradient -->
+    <div class="absolute inset-0">
       <img
         src="/public/image/News/new.jpg"
         alt="Lotus Outreach activities"
         class="w-full h-full object-cover object-center"
       />
-      <div class="absolute inset-0 bg-black/5 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
     </div>
 
-    <!-- Content Overlay -->
-    <div
-      class="relative z-10 flex items-center justify-center h-full px-2 sm:px-4 md:px-6 lg:px-8"
-    >
-      <div
-        class="text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl mx-auto"
-      >
-        <h1
-          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 sm:mb-3 md:mb-4 leading-tight"
-        >
-          <span
-            class="inline-block transform transition-all duration-500 hover:scale-105"
-          >
+    <!-- Text Content -->
+    <div class="relative z-10 flex items-center justify-center h-full px-4 md:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+          <span class="inline-block transition-transform duration-500 hover:scale-105">
             Empowering Communities
           </span>
           <br />
-          <span class="inline-block transition-all duration-300 text-pink-400">
+          <span class="text-pink-400">
             In Cambodia Through Sustainable Action
           </span>
         </h1>
-        <p
-          class="text-base sm:text-lg md:text-xl text-white mb-4 sm:mb-6 md:mb-8 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto"
-        >
-          Discover our ongoing activities and initiatives creating lasting
-          change through education, training, care, and giving back to the community.
+        <p class="text-white text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          Discover our ongoing activities and initiatives creating lasting change through education, training, care, and giving back to the community.
         </p>
-        <div
-          class="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4"
-        >
+        <div class="flex flex-col sm:flex-row justify-center gap-3">
           <router-link to="/program">
             <button
-              class="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-pink-500 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto"
+              class="px-6 py-3 bg-pink-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 w-full sm:w-auto"
             >
               Our Programs
             </button>
           </router-link>
           <router-link to="/donate">
             <button
-              class="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto mt-2 sm:mt-0"
+              class="px-6 py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-gray-900 transition-transform hover:-translate-y-1 w-full sm:w-auto"
             >
               Get Involved
             </button>
@@ -59,9 +44,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script setup></script>
+<script setup>
+// No JS needed for static hero section
+</script>
 
-<style scoped></style>
+<style scoped>
+/* You can add scoped CSS here if needed later */
+</style>

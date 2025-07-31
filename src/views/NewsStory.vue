@@ -2,15 +2,12 @@
   <div class="bg-white">
     <HeroBanner v-if="currentView === 'listing'" />
 
-    <!-- Activity Listing -->
     <ActivityDetail v-if="currentView === 'detail' && selectedActivity" :activity="selectedActivity"
       :related="relatedActivities" :formatDate="formatDate" :getCategoryBadgeClass="getCategoryBadgeClass"
       :getCategoryLabel="getCategoryLabel" :calculateReadTime="calculateReadTime" :showHeading="false"
       @back="backToListing" @view-detail="viewActivityDetail" />
 
-    <!-- Filter activity -->
     <div v-else class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <!-- Filter -->
       <ActivityFilter :searchQuery="searchQuery" :categories="categories" :activeCategories="activeCategories"
         :getCategoryButtonClass="getCategoryButtonClass" @update:searchQuery="val => searchQuery = val"
         @toggle-category="toggleCategory" @search="handleSearch" />
@@ -44,7 +41,6 @@ import ActivityDetail from '@/components/News/ActivityDetail.vue';
 import ActivityFilter from '@/components/News/ActivityFilter.vue';
 import SuccessStory from '@/components/News/SuccessStory.vue';
 
-
 const currentView = ref("listing");
 const selectedActivity = ref(null);
 const visibleItems = ref(6);
@@ -54,14 +50,12 @@ const activities = ref([]);
 const categories = ref([]);
 const stories = ref([]);
 
-
 const fetchData = async () => {
   try {
     const response = await axios.get('/backend/newsStory.json');
     activities.value = response.data.activities;
     categories.value = response.data.categories;
     stories.value = response.data.stories;
-
   } catch (error) {
     console.error("Failed to load data from newsStory.json", error);
   }
@@ -69,7 +63,6 @@ const fetchData = async () => {
 
 onMounted(fetchData);
 
-//======= Computed =======//
 const filteredActivities = computed(() => {
   const query = searchQuery.value.toLowerCase().trim();
   const hasSearchQuery = query !== "";
@@ -103,7 +96,6 @@ const filteredActivities = computed(() => {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 });
 
-
 const relatedActivities = computed(() => {
   if (!selectedActivity.value) return [];
   return activities.value
@@ -115,30 +107,27 @@ const relatedActivities = computed(() => {
     .slice(0, 2);
 });
 
-//======= Method =======//
-// View activity detail
 const viewActivityDetail = (activity) => {
   selectedActivity.value = activity;
   currentView.value = "detail";
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo(0, 0); 
   console.log("Selected Activity:", activity.title, "Current View:", currentView.value);
 };
 
-// Back to activity listing
+
 const backToListing = () => {
   currentView.value = "listing";
   selectedActivity.value = null;
-  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-// Calculate read time
+
 const calculateReadTime = (content) => {
   const wordsPerMinute = 200;
   const wordCount = content.split(/\s+/).length;
   return Math.ceil(wordCount / wordsPerMinute);
 };
 
-// Get category button class based on active state
+
 const getCategoryButtonClass = (category) => {
   const isActive = activeCategories.value.includes(category);
   return {
@@ -150,7 +139,7 @@ const getCategoryButtonClass = (category) => {
   };
 };
 
-// Get category badge class for activity cards
+
 const getCategoryBadgeClass = (category) => {
   return {
     "bg-blue-100 text-blue-800": category === "education",
@@ -177,7 +166,6 @@ const toggleCategory = (category) => {
   }
   visibleItems.value = 6;
 };
-
 
 const resetFilters = () => {
   searchQuery.value = "";
