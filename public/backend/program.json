@@ -435,6 +435,8 @@
       ],
       "image1": "/image/Program/giving2.jpg",
       "image2": "/image/Program/giving3.jpg",
+      "image3": "/image/Program/mentoring.jpg",
+      "image4": "/image/Program/mentoring1.jpg",
       "stats": [
         {
           "number": "$973.40",
@@ -467,8 +469,8 @@
         "Conducted hygiene education and fun learning activities for children",
         "Raised a total of $1,256.96 for the event through generous donor support"
       ],
-      "image1": "/image/Program/giving2.jpg",
-      "image2": "/image/Program/giving3.jpg",
+      "image3": "/image/Program/mentoring.jpg",
+      "image4": "/image/Program/mentoring1.jpg",
       "stats": [
         {
           "number": "$973.40",
