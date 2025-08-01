@@ -10,7 +10,7 @@ export default defineConfig({
     vueDevTools(),
     VitePWA({
       registerType: 'auto',
-      includeAssets: ['/src/assets/Lotus_1.png'],
+      includeAssets: ['/public/icons/Lotus_1.png'],
       manifest: {
         name: 'Lotus Outreach Cambodia',
         short_name: 'Lotus Outreach',
@@ -21,12 +21,12 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '/src/assets/Lotus_1.png',
+            src: '/public/icons/Lotus_1.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/src/assets/Lotus_2.png',
+            src: '/public/icons/Lotus_2.png',
             sizes: '512x512',
             type: 'image/png'
           }
