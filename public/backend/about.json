@@ -49,20 +49,20 @@
     "teamMembers": [
         {
             "id": 1,
+            "name": "Raksmey Va",
+            "position": "Executive Director ",
+            "image": "/image/Team/Reaksmey.jpg",
+            "details": "Raksmey holds a Master’s Degree in Gender and Development Studies from the Asian Institute of Technology in Thailand. She has been with Lotus Outreach since October 2007 and currently serves as the Executive Director of Lotus Outreach Cambodia. In this leadership role, she oversees all strategic and operational aspects of the organization’s work in Cambodia. She is passionate about inspiring and empowering children and young Cambodian women to realize their full potential and dreams through education and opportunity.",
+            "tags": ["Leadership", "Empowerment", "Education"]
+        },
+        {
+            "id": 2,
             "name": "Glenn Fawcett",
             "position": "Deputy Director",
             "image": "https://lotusoutreach.org/wp-content/uploads/2020/02/IMG_9668-1024x768.jpg",
             "details": "Glenn has completed post-graduate studies in Poverty Reduction in Policy and Practice at the London University School of Oriental and African Studies (SOAS). An Australian native, he began his journey with Lotus Outreach as a volunteer in New Delhi in 1995. After serving as Director of Operations since 1997, Glenn was appointed Executive Director of Lotus Outreach International in 2017.\nWith over 25 years of living and traveling extensively throughout South and Southeast Asia, Glenn is deeply connected to the villages and communities where Lotus Outreach works. He is driven by a strong sense of social justice and is committed to developing social development approaches that have large-scale, replicable impact.\nIn Cambodia, Glenn serves as Deputy Director of Lotus Outreach Cambodia, working closely with the local team to strengthen and expand programs that empower women and children through education and development.",
             "tags": ["Education", "Empowerment", "Leadership"]
             
-        },
-        {
-            "id": 2,
-            "name": "Raksmey Va",
-            "position": "Executive Director ",
-            "image": "/image/Team/Reaksmey.jpg",
-            "details": "Raksmey holds a Master’s Degree in Gender and Development Studies from the Asian Institute of Technology in Thailand. She has been with Lotus Outreach since October 2007 and currently serves as the Executive Director of Lotus Outreach Cambodia. In this leadership role, she oversees all strategic and operational aspects of the organization’s work in Cambodia. She is passionate about inspiring and empowering children and young Cambodian women to realize their full potential and dreams through education and opportunity.",
-            "tags": ["Leadership", "Empowerment", "Education"]
         },
         {
             "id": 3,
