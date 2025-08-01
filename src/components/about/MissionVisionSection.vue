@@ -19,11 +19,11 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-end justify-center mt-20 relative overflow-hidden">
-                <div class="relative w-full h-full">
+            <div class="flex items-end justify-center mt-20 relative overflow-hidden rounded-2xl">
+                <div class="relative w-full h-full ">
                     <div
                         ref="carouselContainer"
-                        class="flex transition-transform duration-700 ease-in-out"
+                        class="flex transition-transform duration-700 ease-in-out "
                         :style="{ transform: `translateX(-${(currentIndex + images.length) * 100}%)` }"
                     >
                         <!-- Cloned last images at the start for infinite effect -->
