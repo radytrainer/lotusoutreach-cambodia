@@ -2,7 +2,7 @@
   <div class="relative w-full text-white">
     <!-- Background Image -->
     <img
-      src="/image/Home/05.jpg"
+      src="/image/contact/header.jpg"
       alt="Contact Us - Cambodia"
       class="w-full h-[28rem] md:h-[36rem] lg:h-[40rem] 2xl:h-[44rem] object-cover object-center"
       loading="eager"
