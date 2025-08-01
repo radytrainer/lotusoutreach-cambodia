@@ -23,11 +23,11 @@
         ]">
           <!-- Title -->
           <h1 v-if="content?.title || slides[current]?.title" v-html="content?.title || slides[current].title"
-            class="text-4xl sm:text-4xl lg:text-6xl font-bold text-white mb-1 sm:mb-6 leading-snug sm:leading-tight" />
+            :class="['text-4xl sm:text-4xl lg:text-6xl font-bold text-white mb-1 sm:mb-6 leading-snug sm:leading-tight', content?.titleClass || '']" />
 
           <!-- Description -->
-          <p v-if="content?.description || slides[current]?.description"
-            class="text-sm sm:text-lg lg:text-2xl text-gray-200 mb-4 sm:mb-6 leading-relaxed">
+          <p v-if="content?.description || slides[current]?.description "
+            :class="['text-sm sm:text-lg lg:text-2xl text-gray-200 mb-4 sm:mb-6 leading-relaxed', content?.descriptionClass || '']">
             {{ content?.description || slides[current].description }}
           </p>
 
@@ -97,3 +97,23 @@ onBeforeUnmount(() => {
   clearInterval(interval)
 })
 </script>
+
+<style scoped>
+
+.about-description-font {
+  font-size: 2rem; 
+}
+/* Tablet screens (up to 768px) */
+@media (max-width: 768px) {
+  .about-description-font {
+    font-size: 1.5rem; /* Smaller font size for tablets */
+  }
+}
+
+/* Mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .about-description-font {
+    font-size: 1.25rem; /* Even smaller font size for mobile phones */
+  }
+}
+</style>

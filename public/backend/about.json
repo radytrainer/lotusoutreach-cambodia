@@ -14,8 +14,8 @@
         }
     ],
     "sharedContent": {
-        "title": "See Our <span class='text-pink-400'>About</span>",
         "description": "Learn about our solutions in education, training, and care that empower vulnerable communities.",
+        "descriptionClass": "about-description-font",
         "buttons": [
             {
                 "text": "Learn more",
