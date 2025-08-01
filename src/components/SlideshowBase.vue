@@ -106,14 +106,14 @@ onBeforeUnmount(() => {
 /* Tablet screens (up to 768px) */
 @media (max-width: 768px) {
   .about-description-font {
-    font-size: 1.5rem; /* Smaller font size for tablets */
+    font-size: 1.5rem; 
   }
 }
 
 /* Mobile screens (up to 480px) */
 @media (max-width: 480px) {
   .about-description-font {
-    font-size: 1.25rem; /* Even smaller font size for mobile phones */
+    font-size: 1.25rem; 
   }
 }
 </style>
