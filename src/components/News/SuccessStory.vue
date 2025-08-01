@@ -41,7 +41,7 @@
               <div class="relative flex flex-col items-center">
                 <!-- Name -->
                 <div
-                  class="bg-blue-400 text-white px-8 py-4 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[300px] md:max-w-[400px] z-20"
+                  class="bg-blue-400 text-white px-8 py-4 transform -skew-y-6 -rotate-6 shadow-lg text-center w-full max-w-[300px] md:max-w-[400px] z-200"
                 >
                   <h3 class="font-bold text-4xl uppercase tracking-wide">
                     {{ currentStory.name }}
