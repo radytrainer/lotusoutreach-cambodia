@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <div
-      class="relative bg-cover bg-center bg-no-repeat text-white py-20 header-bg"
+      class="relative bg-cover bg-center bg-no-repeat text-white py-20 header-bg h-screen"
       :style="{ backgroundImage: `url(${selectedProgram.image})` }">
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <div class="container mx-auto px-4 max-w-7xl relative z-10">
