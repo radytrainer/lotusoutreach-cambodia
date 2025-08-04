@@ -51,6 +51,14 @@
         </li>
         <li>
           <RouterLink
+            to="/gallery"
+            :class="{ 'text-pink-600': isActive('/newstory') }"
+            class="hover:text-pink-600 transition-colors"
+            >Galleries</RouterLink
+          >
+        </li>
+        <li>
+          <RouterLink
             to="/contact"
             :class="{ 'text-pink-600': isActive('/contact') }"
             class="hover:text-pink-600 transition-colors"
