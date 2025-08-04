@@ -5,7 +5,11 @@
         Our Organizational Activities Gallery
       </h1>
 
-      <section v-for="(section, sectionIndex) in sections" :key="sectionIndex" class="mb-24">
+      <section
+        v-for="(section, sectionIndex) in sections"
+        :key="sectionIndex"
+        class="mb-24 bg-white p-6 sm:p-8 rounded-xl shadow-lg"
+      >
         <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center sm:text-left border-b-2 border-gray-300 pb-4">
           {{ section.title }}
         </h2>
@@ -207,14 +211,14 @@ onUnmounted(() => {
 const getGridLayout = (layoutType) => {
   switch (layoutType) {
     case "two-wide":
-      return "grid grid-cols-1 sm:grid-cols-2";
+      return "grid grid-cols-1 md:grid-cols-2"; // Larger images, two columns on medium screens
     case "three-tall":
-      return "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
+      return "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"; // Three columns on large screens
     case "four-square":
-      return "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+      return "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"; // Starts with 2 columns earlier, denser
     case "default":
     default:
-      return "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+      return "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"; // Standard responsive grid
   }
 };
 
@@ -222,14 +226,14 @@ const getGridLayout = (layoutType) => {
 const getImageHeight = (layoutType) => {
   switch (layoutType) {
     case "two-wide":
-      return "h-80 sm:h-96 lg:h-[450px]"; // Taller images for two-column layout
+      return "h-72 sm:h-96 lg:h-[500px]"; // Taller images for two-column layout
     case "three-tall":
-      return "h-96 sm:h-[450px] lg:h-[550px]"; // Even taller for three-column
+      return "h-80 sm:h-[400px] lg:h-[500px]"; // Even taller for three-column
     case "four-square":
-      return "h-64 sm:h-72 lg:h-80"; // More square-like for four-column
+      return "h-56 sm:h-64 lg:h-72"; // More square-like and slightly denser for four-column
     case "default":
     default:
-      return "h-64 sm:h-72"; // Standard height
+      return "h-64 sm:h-72 lg:h-80"; // Standard height
   }
 };
 </script>
