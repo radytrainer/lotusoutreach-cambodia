@@ -94,15 +94,15 @@
               <div class="space-y-3 text-gray-600 text-sm">
                 <div class="flex items-center">
                   <i class="fas fa-envelope mr-2 text-blue-600"></i>
-                  <span>info@lotusoutreach.org</span>
+                  <span>Lotus.Outreach.Cambodia@gmail.com</span>
                 </div>
                 <div class="flex items-center">
                   <i class="fas fa-phone mr-2 text-pink-600"></i>
-                  <span>+855 23 123 456</span>
+                  <span>+855 12 911 075</span>
                 </div>
                 <div class="flex items-center">
                   <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>
-                  <span>Phnom Penh, Cambodia</span>
+                  <span>26a Street 492, Phnom Penh, Cambodia</span>
                 </div>
               </div>
             </div>
