@@ -17,7 +17,7 @@ onMounted(() => {
     console.log('Telegram User:', tg.initDataUnsafe.user);
     document.body.style.backgroundColor = themeParams.value.bg_color || '#ffffff';
     // Ensure no automatic navigation
-    tg.MainButton.hide(); // Hide the main button if not needed
+    tg.MainButton.hide(); 
   }
 });
 </script>
