@@ -2,35 +2,21 @@
   <section class="py-8 md:py-16 bg-white font-poppins">
     <div class="container mx-auto px-4 max-w-7xl">
       <!-- Back Button -->
-      <router-link
-        :to="{ name: 'News' }"
-        class="inline-flex items-center text-blue-600 hover:underline font-medium text-lg"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 mr-2"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
+      <router-link :to="{ name: 'News' }"
+        class="inline-flex items-center text-blue-600 hover:underline font-medium text-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
             d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-          />
+            clip-rule="evenodd" />
         </svg>
         Back to News & Stories
       </router-link>
 
       <!-- Hero Section -->
       <div class="relative mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg">
-        <img
-          :src="currentStory.avatar"
-          :alt="currentStory.name + ' graduating'"
-          class="w-full h-64 md:h-96 object-cover object-center"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end"
-        >
+        <img :src="currentStory.avatar" :alt="currentStory.name + ' graduating'"
+          class="w-full h-68 md:h-96 object-cover object-center" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end">
           <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-2">
             {{ currentStory.name }}
           </h1>
@@ -42,11 +28,7 @@
       <div class="mb-8 md:mb-12">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Her Journey</h2>
         <div class="space-y-8">
-          <div
-            v-for="(item, index) in currentStory.fullStory"
-            :key="index"
-            class="bg-white p-6 rounded-lg shadow-sm"
-          >
+          <div v-for="(item, index) in currentStory.fullStory" :key="index" class="bg-white p-6 rounded-lg shadow-sm">
             <h3 v-if="item.title" class="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
               {{ item.title }}
             </h3>
@@ -59,16 +41,9 @@
       <div class="mb-8 md:mb-12">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Moments from Her Life</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div
-            v-for="(image, index) in currentStory.images"
-            :key="index"
-            class="rounded-lg overflow-hidden shadow-md"
-          >
-            <img
-              :src="image"
-              :alt="`Image of ${currentStory.name} ${index + 1}`"
-              class="w-full h-64 object-cover object-center transform hover:scale-105 transition-transform duration-300"
-            />
+          <div v-for="(image, index) in currentStory.images" :key="index" class="rounded-lg overflow-hidden shadow-md">
+            <img :src="image" :alt="`Image of ${currentStory.name} ${index + 1}`"
+              class="w-full h-64 object-cover object-center transform hover:scale-105 transition-transform duration-300" />
           </div>
         </div>
       </div>
@@ -244,6 +219,46 @@ const stories = [
           'Kimheng expresses deep gratitude to Lotus Outreach and Buddhist Global Relief: “Thank you, Lotus Outreach and BGR. Your support gave me confidence and freedom. You didn’t just educate me—you empowered me to transform my life and support my whole family.” Her story reminds us that when girls are educated, families rise, communities transform, and stereotypes are shattered.',
       },
     ],
+  },
+  {
+    name: 'LEANG RANY',
+    program: 'BUSINESS MANAGEMENT GRADUATE, 2020',
+    avatar: '/image/News/rany06.jpg',
+    images: [
+      '/image/News/rany02.jpg',
+      '/image/News/rany04.jpg',
+      '/image/News/rany05.jpg',
+      '/image/News/rany06.jpg',
+      '/image/News/rany07.jpg',
+      '/image/News/rany08.jpg',
+    ],
+    fullStory: [
+      {
+        title: 'From Accountant to “Queen of Marble”: Leang Rany’s Journey of Family, Grit, and Growth',
+        content:
+          'When Leang Rany joined the CATALYST program in 2016, few could have predicted that she would one day lead one of the most inspiring youth-led businesses in Cambodia’s construction industry. A graduate in Business Management in 2020, Rany began her journey as an accountant in a small marble company in Phnom Penh. But behind her warm and friendly demeanor was a driven young woman with bold dreams—dreams that would transform not just her own future, but her entire family’s.'
+      },
+      {
+        title: '',
+        content:
+          'By 2019, she had learned the ins and outs of the marble business—from accounting and purchasing to managing building contracts. Determined to build something of her own, Rany convinced her family to put their farmland up as collateral to secure a $25,000 startup loan. Just one year later, she expanded the investment to $100,000.'
+      },
+      {
+        title: '',
+        content:
+          'Today, Rany is the proud founder and CEO of Krusar Marble Company, named in honor of her family. With a showroom, warehouse, and processing unit near Phnom Penh International Airport, her business employs 21 staff, including every member of her immediate family. This was no accident—Rany\'s mission was clear: to create opportunities that would keep her siblings from having to migrate to Thailand as farm laborers.'
+      },
+      {
+        title: '',
+        content:
+          'Even as her business grows, Rany stays grounded. She has given her family shares in the business and will soon distribute their first profit dividends. Her approach balances professional ambition with deep care and inclusion, turning her company into more than just a business—it is a shared legacy.'
+       },
+      {
+        title: '',
+        content:
+          'Rany now serves as an inspiring role model for CATALYST students and alumni, proving that with determination, trust, and the right support, young people can lead thriving enterprises rooted in purpose and community.'
+      }
+    ]
   },
 ];
 
