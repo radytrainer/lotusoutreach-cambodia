@@ -16,7 +16,7 @@
       <!-- Image Section (Left on MD+, Top on Mobile) -->
       <div class="w-full md:w-2/5 flex flex-col">
         <!-- Image Wrapper -->
-        <div class="object-contain w-full h-full">
+        <div class="relative w-full h-80 md:h-full">
           <img
             :src="selectedMember.image || '/placeholder.svg?height=600&width=400&text=Team Member'"
             :alt="selectedMember.name"
@@ -29,12 +29,11 @@
         <!-- Back Button Below Image (Mobile Only) -->
         <div class="bg-white p-4 border-t border-gray-100 md:hidden">
           <button
-            @click="goBack"
-            class="w-full bg-pink-600 text-white hover:bg-pink-700 flex items-center justify-center space-x-2 p-3 rounded-md transition-colors"
-          >
-            <ChevronLeftIcon class="w-5 h-5" />
-            <span>Back to Team</span>
-          </button>
+          @click="goBack"
+          class="w-full px-4 py-2 p-4 bg-pink-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+        >
+          Back to Team
+        </button>
         </div>
       </div>
 
