@@ -16,6 +16,7 @@ import ProgramTraining from '@/components/Program/ProgramTraining.vue';
 import ProgramGiving from '@/components/Program/ProgramGiving.vue';
 import SuccessStory from '@/components/News/SuccessStory.vue';
 import StoryDetailPage from '@/components/News/StoryDetailPage.vue';
+import GalleryView from '@/views/GalleryView.vue';
 
 const routes = [
   {
@@ -43,6 +44,7 @@ const routes = [
         ],
       },
       { path: 'newstory', name: 'News', component: NewsStory },
+      { path: 'gallery', name: 'gallery', component: GalleryView },
       {path: 'team', name: 'TeamSection',component: TeamSection},
       {path: 'team/:id', name: 'DetailTeam', component: DetailTeam, props: true },
       { path: 'success-story', name: 'SuccessStory', component: SuccessStory },
