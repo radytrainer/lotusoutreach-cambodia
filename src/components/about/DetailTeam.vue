@@ -4,33 +4,50 @@
       v-if="selectedMember"
       class="w-full max-w-6xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row relative"
     >
-      <!-- Back Button - Now on the top right of the card -->
+      <!-- Back Button - Top Right on Desktop Only -->
       <button
         @click="goBack"
-        class="absolute top-6 right-6 bg-pink-600 text-white hover:text-gray-900 flex items-center space-x-2 z-10 p-2 rounded-md transition-colors"
+        class="hidden md:flex absolute top-6 right-6 bg-pink-600 text-white hover:text-gray-900 items-center space-x-2 z-10 p-2 rounded-md transition-colors"
       >
         <ChevronLeftIcon class="w-5 h-5" />
         <span>Back to Team</span>
       </button>
 
-      <!-- Image Section (Left on MD+, First on Mobile) -->
-      <div class="relative w-full md:w-2/5 h-80 md:h-auto flex-shrink-0">
-        <img
-          :src="selectedMember.image || '/placeholder.svg?height=600&width=400&text=Team Member'"
-          :alt="selectedMember.name"
-          class="object-cover object-center w-full h-full"
-        />
-        <!-- Optional: Subtle gradient overlay for image depth -->
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent" />
+      <!-- Image Section (Left on MD+, Top on Mobile) -->
+      <div class="w-full md:w-2/5 flex flex-col">
+        <!-- Image Wrapper -->
+        <div class="relative w-full h-80 md:h-full">
+          <img
+            :src="selectedMember.image || '/placeholder.svg?height=600&width=400&text=Team Member'"
+            :alt="selectedMember.name"
+            class="object-cover object-center w-full h-full"
+          />
+          <!-- Optional: Subtle gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent" />
+        </div>
+
+        <!-- Back Button Below Image (Mobile Only) -->
+        <div class="bg-white p-4 border-t border-gray-100 md:hidden">
+          <button
+            @click="goBack"
+            class="w-full bg-pink-600 text-white hover:bg-pink-700 flex items-center justify-center space-x-2 p-3 rounded-md transition-colors"
+          >
+            <ChevronLeftIcon class="w-5 h-5" />
+            <span>Back to Team</span>
+          </button>
+        </div>
       </div>
 
       <!-- Info Section (Right on MD+, Last on Mobile) -->
-      <!-- Adjusted padding-top to account for the back button on mobile if it overlaps -->
-      <div class="p-8 md:p-12 pt-20 md:pt-12 flex flex-col w-full md:w-3/5">
+      <div class="p-8 md:p-12 pt-8 flex flex-col w-full md:w-3/5">
         <!-- Name and Position Header -->
         <div class="mb-8 pb-4 border-b border-gray-100">
-          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">{{ selectedMember.name }}</h1>
-          <p class="text-xl md:text-2xl text-blue-600 font-medium mt-2">{{ selectedMember.position }}</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+            {{ selectedMember.name }}
+          </h1>
+          <p class="text-xl md:text-2xl text-blue-600 font-medium mt-2">
+            {{ selectedMember.position }}
+          </p>
         </div>
 
         <!-- Details Section -->
@@ -42,7 +59,10 @@
         </div>
 
         <!-- Skills & Expertise Section -->
-        <div v-if="selectedMember.tags && selectedMember.tags.length > 0" class="w-full text-left mt-auto pt-6 border-t border-gray-200">
+        <div
+          v-if="selectedMember.tags && selectedMember.tags.length > 0"
+          class="w-full text-left mt-auto pt-6 border-t border-gray-200"
+        >
           <h3 class="text-xl font-semibold text-gray-900 mb-4">Skills & Expertise</h3>
           <div class="flex flex-wrap gap-3">
             <span
@@ -72,7 +92,6 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref, computed, onMounted, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
@@ -97,7 +116,6 @@ const fetchTeamData = async () => {
 
 onMounted(fetchTeamData);
 
-// Watch route param changes
 watch(
   () => route.params.id,
   () => {
@@ -105,13 +123,10 @@ watch(
   }
 );
 
-// Computed selected member
 const selectedMember = computed(() => {
   const id = String(route.params.id);
-  const member = teamMembers.value.find((p) => String(p.id) === id);
-  // console.log("Selected member:", member, "Route param ID:", id);
-  return member;
+  return teamMembers.value.find((p) => String(p.id) === id);
 });
 
-const goBack = () => router.back({name: "TeamSection"});
+const goBack = () => router.back({ name: "TeamSection" });
 </script>
