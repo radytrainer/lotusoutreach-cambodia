@@ -16,7 +16,7 @@
       <!-- Image Section (Left on MD+, Top on Mobile) -->
       <div class="w-full md:w-2/5 flex flex-col">
         <!-- Image Wrapper -->
-        <div class="relative w-full h-80 md:h-full">
+        <div class="object-contain w-full h-full">
           <img
             :src="selectedMember.image || '/placeholder.svg?height=600&width=400&text=Team Member'"
             :alt="selectedMember.name"
