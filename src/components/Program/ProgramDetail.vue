@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen">
-    <div
-      class="relative bg-cover bg-center bg-no-repeat text-white py-20 header-bg h-screen"
+    <div class="relative bg-cover bg-center bg-no-repeat text-white py-20 header-bg h-screen"
       :style="{ backgroundImage: `url(${selectedProgram.image})` }">
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <div class="container mx-auto px-4 max-w-7xl relative z-10">
@@ -40,18 +39,12 @@
             </div>
             <div v-if="selectedProgram && (selectedProgram.image1 || selectedProgram.image2)" class="space-y-6">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <img
-                     v-if="selectedProgram.image1"
-                      :src="selectedProgram.image1"
-                      :alt="`${selectedProgram.title} Image 1`"
-                      class="w-full h-64 object-cover rounded-xl shadow-lg transition-all duration-300 transform"
-                    />
-                  <img
-                      v-if="selectedProgram.image2"
-                      :src="selectedProgram.image2"
-                      :alt="`${selectedProgram.title} Image 2`"
-                      class="w-full h-64 object-cover rounded-xl shadow-lg transition-all duration-300 transform"
-                    />
+                <img v-if="selectedProgram.image1" :src="selectedProgram.image1"
+                  :alt="`${selectedProgram.title} Image 1`"
+                  class="w-full h-64 object-cover rounded-xl shadow-lg transition-all duration-300 transform" />
+                <img v-if="selectedProgram.image2" :src="selectedProgram.image2"
+                  :alt="`${selectedProgram.title} Image 2`"
+                  class="w-full h-64 object-cover rounded-xl shadow-lg transition-all duration-300 transform" />
               </div>
             </div>
             <div v-if="selectedProgram.gallery">
@@ -81,11 +74,11 @@
               <div class="space-y-3">
                 <button
                   class="w-full bg-white text-blue-600 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200">
-                  Donate Now
+                  <RouterLink to="/donate">Donate Now</RouterLink>
                 </button>
                 <button
                   class="w-full border-2 border-white text-white py-2 rounded-md font-medium hover:bg-white hover:text-pink-600 transition-colors duration-200">
-                  Learn More
+                  <RouterLink to="/contact">Learn More</RouterLink>
                 </button>
               </div>
             </div>
@@ -141,12 +134,15 @@ defineEmits(['go-back'])
   .header-bg {
     min-height: 60vh;
   }
+
   h1 {
     font-size: 2rem !important;
   }
+
   h2 {
     font-size: 1.5rem !important;
   }
+
   .text-base {
     font-size: 0.875rem;
   }
