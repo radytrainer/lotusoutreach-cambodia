@@ -300,7 +300,7 @@
   
   <div class="text-center text-sm text-gray-600 mb-2">
   <h4 class="text-gray-400 m-0 inline-block">
-    @Develop by students PNC generation 2025
+    @Develop by PNC students generation 2025
   </h4>
   
   </div>

@@ -26,22 +26,23 @@
         <p class="text-white text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto">
           Discover our ongoing activities and initiatives creating lasting change through education, training, care, and giving back to the community.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-3">
-          <router-link to="/program">
-            <button
-              class="px-6 py-3 bg-pink-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1 w-full sm:w-auto"
-            >
-              Our Programs
-            </button>
-          </router-link>
-          <router-link to="/donate">
-            <button
-              class="px-6 py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-gray-900 transition-transform hover:-translate-y-1 w-full sm:w-auto"
-            >
-              Get Involved
-            </button>
-          </router-link>
-        </div>
+         <!-- Take Action to Support the Mission -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+            <router-link to="/program">
+              <button
+                class="px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold text-base rounded-full shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-in-out w-full sm:w-auto"
+              >
+                Our Programs
+              </button>
+            </router-link>
+            <router-link to="/donate">
+              <button
+                class="px-6 py-3 border border-white text-white font-semibold text-base rounded-full hover:bg-white hover:text-pink-600 transform hover:-translate-y-1 transition-all duration-300 ease-in-out w-full sm:w-auto"
+              >
+                Get Involved
+              </button>
+            </router-link>
+          </div>
       </div>
     </div>
   </section>
