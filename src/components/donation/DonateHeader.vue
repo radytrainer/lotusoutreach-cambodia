@@ -1,31 +1,35 @@
 <template>
-    <!-- Header Section -->
-    <header class="relative w-full flex-shrink-0 overflow-hidden">
-      <img
-        src="/public/image/Donate/donate.png"
-        alt="Cambodia program 1"
-        class="w-full h-[28rem] object-cover md:h-[36rem] lg:h-[36rem] xl:h-[36rem] 2xl:h-[40rem]"
-      />
+  <!-- Header Section -->
+  <header class="relative w-full flex-shrink-0 overflow-hidden">
+    <!-- Background Image -->
+    <img
+      src="/public/image/Donate/donate.png"
+      alt="Cambodia program 1"
+      class="w-full h-[20rem] sm:h-[28rem] md:h-[36rem] lg:h-[42rem] xl:h-[48rem] 2xl:h-[52rem] object-cover"
+    />
 
-      <div
-        class="absolute inset-0 bg-black/30 backdrop-brightness-75 flex items-center justify-center"
-      >
-        <div class="text-center text-white px-4 animate-fade-in">
-          <h1
-            class="text-4xl font-extrabold md:text-8xl lg:text-9xl xl:text-[5rem] drop-shadow-lg"
+    <!-- Overlay and Content -->
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <div class="text-center text-white px-2 animate-fade-in max-w-4xl">
+        <!-- Title -->
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold drop-shadow-lg"
+        >
+          DONATE
+        </h1>
+
+        <!-- Subtitle and Description -->
+        <div class="mt-2 space-y-2">
+          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+            Your Generosity Changes Lives
+          </h3>
+          <p
+            class="text-pink-100 text-base sm:text-lg md:text-xl lg:text-2xl px-4 md:px-8"
           >
-            DONATE
-          </h1>
-          <div class="mt-6">
-            <h3 class="text-4xl font-semibold md:text-5xl">
-              Your Generosity Changes Lives
-            </h3>
-            <p class="text-pink-100 text-lg mt-3 md:text-xl">
-              Every contribution directly supports our mission to create
-              positive change.
-            </p>
-          </div>
+            Every contribution directly supports our mission to create positive change.
+          </p>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 </template>
