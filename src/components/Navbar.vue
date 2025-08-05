@@ -67,10 +67,26 @@
         </li>
         <li>
           <RouterLink
-            to="/donate"
-            class="bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700 transition-colors"
-            >Donate</RouterLink
-          >
+              to="/donate"
+              class="flex items-center gap-2 bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700 transition-colors"
+            >
+              Donate
+              <!-- Animated Heart Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-4 h-4 text-white-800"
+              >
+                <path
+                  d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 
+                    8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 
+                    4.13 2.44h1.75C14.09 5.01 15.76 4 17.5 
+                    4 20 4 22 6 22 8.5c0 3.78-3.4 
+                    6.86-8.55 11.54l-1.35 1.31z"
+                />
+              </svg>
+            </RouterLink>
         </li>
       </ul>
 
