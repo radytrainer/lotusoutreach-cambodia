@@ -36,7 +36,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">LOCAM through the years</h2>
-                <p class="text-gray-600 max-w-4xl mx-auto">
+                <p class="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg md:text-2xl lg:text-base">
                     Lotus Outreach Cambodia is part of the global Lotus Outreach network, dedicated to improving the
                     lives of vulnerable women and children through education, training, and care.
                 </p>
@@ -100,12 +100,12 @@
                             </div>
                             <div class="flex flex-col items-center">
                                 <div
-                                    class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4 shadow-md">
+                                    class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4 shadow-md md:w-[400px] md:h-[400px]">
                                     <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
                                 </div>
                                 <div class="text-2xl font-bold text-gray-900 mb-2 mt-8">{{ event.year }}</div>
-                                <p class="text-gray-700 leading-relaxed text-sm max-w-xs text-center">
-                                    <span v-if="event.highlight" class="text-blue-500 font-semibold">
+                                <p class="text-gray-700 leading-relaxed text-sm max-w-xs text-center text-base sm:text-lg md:text-2xl lg:text-base">
+                                    <span v-if="event.highlight" class="text-blue-500 font-semibold ">
                                         {{ event.highlight }}
                                     </span>
                                     {{ event.description }}
