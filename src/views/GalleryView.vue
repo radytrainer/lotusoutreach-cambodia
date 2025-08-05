@@ -1,100 +1,99 @@
 <template>
-  <div class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <h1 class="text-5xl font-extrabold text-gray-900 text-center mb-16 leading-tight tracking-tight">
-        Our Organizational Activities Gallery
-      </h1>
+  <!-- Hero Banner -->
+  <section class="relative h-[70vh] md:h-[100vh] bg-gray-100 overflow-hidden">
+    <!-- Background Image with Gradient -->
+    <div class="absolute inset-0">
+      <img src="/public/image/Galleries/heading.jpg" alt="Lotus Outreach activities"
+        class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/60 to-black/40"></div>
+    </div>
 
-      <section
-        v-for="(section, sectionIndex) in sections"
-        :key="sectionIndex"
-        class="mb-24 bg-white p-6 sm:p-8 rounded-xl shadow-lg"
-      >
-        <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center sm:text-left border-b-2 border-gray-300 pb-4">
-          {{ section.title }}
-        </h2>
-        <div :class="getGridLayout(section.layout)" class="gap-8">
-          <div
-            v-for="(image, imageIndex) in section.images"
-            :key="imageIndex"
-            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer"
-            @click="openModal(image, sectionIndex, imageIndex)"
-          >
-            <img
-              :src="image.src"
-              :alt="image.alt"
-              :class="getImageHeight(section.layout)"
-              class="w-full object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-105"
-              loading="lazy"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-              <p class="text-white text-xl font-semibold drop-shadow-lg">{{ image.alt }}</p>
+    <!-- Text Content -->
+    <div class="relative z-10 flex items-center justify-center h-full px-4 md:px-6 lg:px-8 text-center">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-4xl md:text-6xl lg:text-6xl font-bold leading-tight mb-4 text-white">
+          Our Gallery of <span class="text-pink-500">Activities</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-white max-w-3xl mx-auto mt-4 font-medium">
+          In rural Cambodia, education changes lives. Each photo captures the spirit of Lotus Outreach Cambodia’s
+          mission empowering girls and strengthening communities through knowledge, opportunity, and hope.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <div class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 text-center mb-16">
+          Our Organizational Activities Gallery
+        </h1>
+
+        <!-- Gallery Sections -->
+        <section v-for="(section, sectionIndex) in sections" :key="sectionIndex"
+          class="mb-16 bg-white p-6 md:p-10 rounded-2xl shadow-md">
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 border-b pb-3 text-center md:text-left">
+            {{ section.title }}
+          </h2>
+          <div :class="getGridLayout(section.layout)" class="gap-6 sm:gap-8">
+            <div v-for="(image, imageIndex) in section.images" :key="imageIndex"
+              class="relative overflow-hidden rounded-xl shadow group hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer"
+              @click="openModal(image, sectionIndex, imageIndex)">
+              <img :src="image.src" :alt="image.alt" :class="getImageHeight(section.layout)"
+                class="w-full object-cover object-center transition duration-300 group-hover:scale-105 rounded-xl"
+                loading="lazy" />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                <p class="text-white font-medium text-lg drop-shadow">{{ image.alt }}</p>
+              </div>
             </div>
           </div>
+        </section>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div v-if="isModalOpen"
+        class="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-6 animate-fade-in"
+        @click.self="closeModal" @keydown.escape="closeModal" tabindex="-1">
+        <div class="relative max-w-full max-h-full flex items-center justify-center">
+          <!-- Close -->
+          <button class="absolute top-4 right-4 text-white text-4xl font-light z-10 p-2 hover:text-gray-300"
+            @click="closeModal">&times;</button>
+
+          <!-- Previous -->
+          <button v-if="canNavigate"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl z-10 hover:text-gray-300"
+            @click.stop="prevImage">
+            <ChevronLeftIcon class="w-10 h-10" />
+          </button>
+
+          <!-- Image -->
+          <img :src="currentImage.src" :alt="currentImage.alt"
+            class="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-xl" />
+
+          <!-- Next -->
+          <button v-if="canNavigate"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl z-10 hover:text-gray-300"
+            @click.stop="nextImage">
+            <ChevronRightIcon class="w-10 h-10" />
+          </button>
+
+          <!-- Caption -->
+          <p class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-lg bg-black/60 px-5 py-2 rounded-full">
+            {{ currentImage.alt }}
+          </p>
         </div>
-      </section>
-    </div>
-
-    <!-- Lightbox Modal -->
-    <div
-      v-if="isModalOpen"
-      class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
-      role="dialog"
-      aria-modal="true"
-      @click.self="closeModal"
-      @keydown.escape="closeModal"
-      tabindex="-1"
-    >
-      <div class="relative max-w-full max-h-full flex items-center justify-center">
-        <!-- Close Button -->
-        <button
-          class="absolute top-4 right-4 text-white text-5xl font-light leading-none cursor-pointer z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
-          @click="closeModal"
-          aria-label="Close image viewer"
-        >
-          &times;
-        </button>
-
-        <!-- Previous Button -->
-        <button
-          v-if="canNavigate"
-          class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors z-10"
-          @click.stop="prevImage"
-          aria-label="Previous image"
-        >
-          <ChevronLeftIcon class="w-10 h-10" />
-        </button>
-
-        <!-- Image -->
-        <img
-          :src="currentImage.src"
-          :alt="currentImage.alt"
-          class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
-        />
-
-        <!-- Next Button -->
-        <button
-          v-if="canNavigate"
-          class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors z-10"
-          @click.stop="nextImage"
-          aria-label="Next image"
-        >
-          <ChevronRightIcon class="w-10 h-10" />
-        </button>
-
-        <!-- Image Caption -->
-        <p class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-xl font-medium bg-black/60 px-6 py-3 rounded-full shadow-lg">
-          {{ currentImage.alt }}
-        </p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue';
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next';
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next'
 
+// Gallery data
 const sections = ref([
   {
     title: "Annual Team Building Retreat 2024",
@@ -143,101 +142,98 @@ const sections = ref([
       { src: "/image/Home/08.jpg", alt: "Cheers and toasts" },
     ],
   },
-]);
+])
 
-const isModalOpen = ref(false);
-const currentImage = ref(null);
-const currentSectionIndex = ref(0);
-const currentImageIndex = ref(0);
+// Lightbox State
+const isModalOpen = ref(false)
+const currentImage = ref(null)
+const currentSectionIndex = ref(0)
+const currentImageIndex = ref(0)
 
-// Computed property to check if navigation is possible (more than one image in the current section)
 const canNavigate = computed(() => {
-  return sections.value[currentSectionIndex.value]?.images.length > 1;
-});
+  return sections.value[currentSectionIndex.value]?.images.length > 1
+})
 
 const openModal = (image, sectionIdx, imageIdx) => {
-  currentImage.value = image;
-  currentSectionIndex.value = sectionIdx;
-  currentImageIndex.value = imageIdx;
-  isModalOpen.value = true;
-  document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-};
+  currentImage.value = image
+  currentSectionIndex.value = sectionIdx
+  currentImageIndex.value = imageIdx
+  isModalOpen.value = true
+  document.body.style.overflow = 'hidden'
+}
 
 const closeModal = () => {
-  isModalOpen.value = false;
-  currentImage.value = null;
-  document.body.style.overflow = ''; // Restore scrolling
-};
+  isModalOpen.value = false
+  currentImage.value = null
+  document.body.style.overflow = ''
+}
 
 const navigateImage = (direction) => {
-  const currentSectionImages = sections.value[currentSectionIndex.value].images;
-  let newIndex = currentImageIndex.value + direction;
+  const images = sections.value[currentSectionIndex.value].images
+  let newIndex = currentImageIndex.value + direction
+  if (newIndex < 0) newIndex = images.length - 1
+  else if (newIndex >= images.length) newIndex = 0
 
-  if (newIndex < 0) {
-    newIndex = currentSectionImages.length - 1; // Wrap around to the last image
-  } else if (newIndex >= currentSectionImages.length) {
-    newIndex = 0; // Wrap around to the first image
-  }
+  currentImageIndex.value = newIndex
+  currentImage.value = images[newIndex]
+}
 
-  currentImageIndex.value = newIndex;
-  currentImage.value = currentSectionImages[newIndex];
-};
+const prevImage = () => navigateImage(-1)
+const nextImage = () => navigateImage(1)
 
-const prevImage = () => navigateImage(-1);
-const nextImage = () => navigateImage(1);
-
-// Handle keyboard navigation for lightbox
+// Keyboard navigation
 const handleKeydown = (event) => {
   if (isModalOpen.value) {
-    if (event.key === 'Escape') {
-      closeModal();
-    } else if (event.key === 'ArrowLeft' && canNavigate.value) {
-      prevImage();
-    } else if (event.key === 'ArrowRight' && canNavigate.value) {
-      nextImage();
-    }
+    if (event.key === 'Escape') closeModal()
+    else if (event.key === 'ArrowLeft' && canNavigate.value) prevImage()
+    else if (event.key === 'ArrowRight' && canNavigate.value) nextImage()
   }
-};
+}
 
-onMounted(() => {
-  window.addEventListener('keydown', handleKeydown);
-});
+onMounted(() => window.addEventListener('keydown', handleKeydown))
+onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 
-onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeydown);
-});
-
-// Helper function to get grid layout classes based on section.layout
+// Layout helpers
 const getGridLayout = (layoutType) => {
   switch (layoutType) {
     case "two-wide":
-      return "grid grid-cols-1 md:grid-cols-2"; // Larger images, two columns on medium screens
+      return "grid grid-cols-1 md:grid-cols-2"
     case "three-tall":
-      return "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"; // Three columns on large screens
+      return "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
     case "four-square":
-      return "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"; // Starts with 2 columns earlier, denser
-    case "default":
+      return "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
     default:
-      return "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"; // Standard responsive grid
+      return "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
   }
-};
+}
 
-// Helper function to get image height classes based on section.layout
 const getImageHeight = (layoutType) => {
   switch (layoutType) {
     case "two-wide":
-      return "h-72 sm:h-96 lg:h-[500px]"; // Taller images for two-column layout
     case "three-tall":
-      return "h-80 sm:h-[400px] lg:h-[500px]"; // Even taller for three-column
+      return "h-72 md:h-96"
     case "four-square":
-      return "h-56 sm:h-64 lg:h-72"; // More square-like and slightly denser for four-column
-    case "default":
+      return "h-56 md:h-64"
     default:
-      return "h-64 sm:h-72 lg:h-80"; // Standard height
+      return "h-64 md:h-72"
   }
-};
+}
 </script>
 
 <style scoped>
-/* No custom CSS needed as Tailwind CSS handles all styling */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
 </style>
