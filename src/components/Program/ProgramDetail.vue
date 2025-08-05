@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <div
-      class="relative bg-cover bg-center bg-no-repeat text-white py-20 header-bg h-screen"
+      class="relative bg-cover bg-center bg-no-repeat text-white py-20 header-bg md:h-screen h-[60vh]"
       :style="{ backgroundImage: `url(${selectedProgram.image})` }">
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <div class="container mx-auto px-4 max-w-7xl relative z-10">
@@ -14,7 +14,7 @@
             <i :class="selectedProgram.icon" class="text-2xl text-white"></i>
           </div>
           <div>
-            <h1 class="text-3xl md:text-5xl font-poppins font-semibold mb-2">{{ selectedProgram.title }}</h1>
+            <h1 class="text-2xl md:text-5xl font-poppins font-semibold mb-2">{{ selectedProgram.title }}</h1>
             <p class="text-base md:text-lg text-white/90">{{ selectedProgram.description }}</p>
           </div>
         </div>
