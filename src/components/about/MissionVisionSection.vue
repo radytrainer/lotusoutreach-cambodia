@@ -1,18 +1,18 @@
 <template>
   <section class="pb-16 bg-white" id="mission-vision-values">
     <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
     >
       <!-- Left Column: Mission/Vision Text -->
-      <div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-6">
+      <div class="lg:text-left">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-6 text-center">
           Our Mission, Vision & Values
         </h2>
         <div ref="principlesContainer">
           <div
             v-for="(item, index) in principles"
             :key="index"
-            class="mb-6 flex items-start gap-4"
+            class="mb-6 flex items-start gap-4 justify-center lg:justify-start"
           >
             <div class="w-10 h-10 flex items-center justify-center rounded-full">
               <i :class="`${item.icon} text-blue-600 text-xl`"></i>
@@ -29,9 +29,9 @@
         </div>
       </div>
 
-      <!-- Right Column: Bigger Carousel for Desktop -->
+      <!-- Right Column: Carousel -->
       <div
-        class="relative w-full h-45 sm:h-50 md:h-[24rem] lg:h-[28rem] xl:h-[26rem] rounded-xl overflow-hidden"
+        class="relative w-full h-72 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[36rem] rounded-xl overflow-hidden"
       >
         <div
           ref="carouselContainer"
