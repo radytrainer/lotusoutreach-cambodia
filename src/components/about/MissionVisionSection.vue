@@ -5,7 +5,7 @@
     >
       <!-- Left Column: Mission/Vision Text -->
       <div class="lg:text-left">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-6">
           Our Mission, Vision & Values
         </h2>
         <div ref="principlesContainer">
@@ -31,7 +31,7 @@
 
       <!-- Right Column: Carousel -->
       <div
-        class="relative w-full h-72 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[36rem] rounded-xl overflow-hidden"
+        class="relative w-full h-45 sm:h-50 md:h-[30rem] lg:h-[28rem] xl:h-[26rem] rounded-xl overflow-hidden"
       >
         <div
           ref="carouselContainer"
