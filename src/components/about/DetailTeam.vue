@@ -41,8 +41,8 @@
 
         <!-- About Section -->
         <div class="w-full text-center lg:text-left mb-8">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">About</h2>
-          <p class="text-gray-700 text-base leading-relaxed whitespace-pre-line">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 text-base sm:text-lg md:text-2xl lg:text-base">About</h2>
+          <p class="text-gray-700 text-base leading-relaxed whitespace-pre-line text-base sm:text-lg md:text-2xl lg:text-base">
             {{ selectedMember.details }}
           </p>
         </div>
@@ -50,10 +50,10 @@
         <!-- Skills -->
         <div v-if="selectedMember.tags && selectedMember.tags.length > 0"
           class="w-full text-center lg:text-left mt-auto pt-6 border-t border-gray-200">
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">Skills & Expertise</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4 text-base sm:text-lg md:text-2xl lg:text-base">Skills & Expertise</h3>
           <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
             <span v-for="(tag, index) in selectedMember.tags" :key="index"
-              class="inline-flex items-center rounded-full border border-blue-200 px-3 py-1 text-sm font-medium bg-blue-50 text-blue-700 shadow-sm">
+              class="inline-flex items-center rounded-full border border-blue-200 px-3 py-1 text-sm font-medium bg-blue-50 text-blue-700 shadow-sm text-base sm:text-lg md:text-2xl lg:text-base">
               {{ tag }}
             </span>
           </div>
