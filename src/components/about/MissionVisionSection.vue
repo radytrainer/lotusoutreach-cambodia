@@ -18,10 +18,10 @@
               <i :class="`${item.icon} text-blue-600 text-xl`"></i>
             </div>
             <div>
-              <h3 class="text-lg sm:text-xl font-semibold text-blue-800 mb-1">
+              <h3 class="text-lg sm:text-xl font-semibold text-blue-800 mb-1 sm:text-base md:text-2xl lg:text-base">
                 {{ item.title }}
               </h3>
-              <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+              <p class="text-gray-700 leading-relaxed text-sm sm:text-base md:text-2xl lg:text-base">
                 {{ item.text }}
               </p>
             </div>
