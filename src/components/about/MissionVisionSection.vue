@@ -14,7 +14,7 @@
             :key="index"
             class="mb-6 flex items-start gap-4"
           >
-            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full">
               <i :class="`${item.icon} text-blue-600 text-xl`"></i>
             </div>
             <div>
