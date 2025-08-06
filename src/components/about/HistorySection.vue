@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="flex flex-col items-center" :class="index % 2 === 0 ? 'mb-32' : 'mt-32'">
-                                <div class="w-36 sm:w-44 md:w-44 h-36 sm:h-44 md:h-44 rounded-full overflow-hidden 
+                                <div class="w-36 sm:w-44 md:w-48 h-36 sm:h-44 md:h-48 rounded-full overflow-hidden 
                          border-4 border-blue-500 mb-6 shadow-lg">
                                     <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
                                 </div>
