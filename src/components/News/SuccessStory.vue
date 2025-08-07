@@ -130,10 +130,10 @@ const scrollRight = () => {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); /* smoother easing */
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .slide-enter-from {
-  transform: translateX(80%); /* slightly less distance for smoother feel */
+  transform: translateX(80%); 
 }
 .slide-leave-to {
   transform: translateX(-80%);
@@ -141,7 +141,7 @@ const scrollRight = () => {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.7s ease-in-out; /* slower fade */
+  transition: opacity 0.7s ease-in-out;
 }
 .fade-enter-from,
 .fade-leave-to {
