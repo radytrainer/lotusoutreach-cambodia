@@ -1,10 +1,10 @@
 <template>
     <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <!-- Hero Section -->
-        <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start mb-20">
-            <div class="relative mr-0 md:mr-8 mb-16 md:mb-0">
+        <div class="relative max-w-6xl mx-auto flex flex-col items-center md:flex-col lg:flex-row lg:items-start mb-20">
+            <div class="relative mb-16 lg:mr-8 lg:mb-0">
                 <div
-                    class="w-100 sm:w-80 md:w-[450px] aspect-square rounded-full border-[6px] sm:border-[10px] md:border-[12px] border-blue-500 overflow-hidden mx-auto">
+                    class="w-100 sm:w-80 md:w-[500px] aspect-square rounded-full border-[6px] sm:border-[10px] md:border-[10px] border-blue-500 overflow-hidden mx-auto">
                     <img src="/image/About/History.jpg" alt="History"
                         class="w-full h-full object-cover object-center" />
                 </div>
@@ -21,10 +21,14 @@
                     </p>
                 </div>
             </div>
-            <div class="flex-1 text-left">
-                <h1 class="text-4xl font-bold text-gray-800 mb-4">History</h1>
-                <h2 class="text-2xl font-semibold text-gray-600 mb-6">| Donate For Girls Around The World!</h2>
-                <p v-for="(paragraph, index) in content" :key="index" class="text-gray-700 mb-4" v-html="paragraph" />
+
+            <div class="text-left">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center md:text-left md:text-5xl">History</h1>
+                <h2 class="text-2xl font-semibold text-gray-600 mb-6 text-center md:text-left md:text-3xl">
+                    | Donate For Girls Around The World!
+                </h2>
+                <p v-for="(paragraph, index) in content" :key="index"
+                 class="text-base sm:text-lg md:text-2xl lg:text-base text-gray-700 mb-4 text-center md:text-left" v-html="paragraph" />
             </div>
         </div>
 
@@ -32,7 +36,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">LOCAM through the years</h2>
-                <p class="text-gray-600 max-w-4xl mx-auto">
+                <p class="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg md:text-2xl lg:text-base">
                     Lotus Outreach Cambodia is part of the global Lotus Outreach network, dedicated to improving the
                     lives of vulnerable women and children through education, training, and care.
                 </p>
@@ -41,36 +45,33 @@
             <!-- Timeline Navigation -->
             <div class="relative">
                 <button @click="scrollTimeline('left')"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                    class="hidden lg:flex absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
                     <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
 
                 <button @click="scrollTimeline('right')"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                    class="hidden lg:flex absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
                     <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
 
-                <!-- Desktop Timeline (horizontal scroll, visible on sm and up) -->
-                <div ref="timelineContainer"
-                     class="hidden sm:block overflow-x-hidden mx-12 snap-x snap-mandatory">
+                <!-- Desktop Timeline (from lg and up) -->
+                <div ref="timelineContainer" class="hidden lg:block overflow-x-hidden mx-12 snap-x snap-mandatory">
                     <div class="flex items-center justify-between min-w-max px-8">
                         <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
 
                         <div v-for="(event, index) in timelineEvents" :key="index"
-                             class="relative flex flex-col items-center mx-8 min-w-[320px] snap-center">
-                            <div
-                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                                       w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10">
+                            class="relative flex flex-col items-center mx-8 min-w-[320px] snap-center">
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                       w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10">
                             </div>
 
                             <div class="flex flex-col items-center" :class="index % 2 === 0 ? 'mb-32' : 'mt-32'">
-                                <div
-                                    class="w-36 sm:w-44 md:w-48 h-36 sm:h-44 md:h-48 rounded-full overflow-hidden 
-                                           border-4 border-blue-500 mb-6 shadow-lg">
+                                <div class="w-36 sm:w-44 md:w-48 h-36 sm:h-44 md:h-48 rounded-full overflow-hidden 
+                         border-4 border-blue-500 mb-6 shadow-lg">
                                     <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
                                 </div>
                                 <div class="text-3xl font-bold text-gray-900 mb-3">{{ event.year }}</div>
@@ -87,26 +88,24 @@
                     </div>
                 </div>
 
-                <!-- Mobile Timeline (horizontal scroll, one event per screen, visible on small screens only) -->
-                <div class="block sm:hidden relative px-4 py-8">
-                    <!-- Scrollable Timeline Container -->
+                <!-- Mobile + Tablet Timeline -->
+                <div class="block lg:hidden relative px-4 py-8">
                     <div ref="mobileTimeline"
-                         class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full no-scrollbar">
+                        class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full no-scrollbar">
                         <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
                         <div v-for="(event, index) in timelineEvents" :key="'mobile-' + index"
-                             class="relative flex flex-col items-center w-[calc(100vw-4rem)] shrink-0 snap-center mx-8">
-                            <div
-                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                                       w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-md z-10">
+                            class="relative flex flex-col items-center w-[calc(100vw-4rem)] shrink-0 snap-center mx-8">
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                       w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-md z-10">
                             </div>
                             <div class="flex flex-col items-center">
                                 <div
-                                    class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4 shadow-md">
+                                    class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4 shadow-md md:w-[400px] md:h-[400px]">
                                     <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
                                 </div>
                                 <div class="text-2xl font-bold text-gray-900 mb-2 mt-8">{{ event.year }}</div>
-                                <p class="text-gray-700 leading-relaxed text-sm max-w-xs text-center">
-                                    <span v-if="event.highlight" class="text-blue-500 font-semibold">
+                                <p class="text-gray-700 leading-relaxed text-sm max-w-xs text-center text-base sm:text-lg md:text-2xl lg:text-base">
+                                    <span v-if="event.highlight" class="text-blue-500 font-semibold ">
                                         {{ event.highlight }}
                                     </span>
                                     {{ event.description }}
@@ -114,15 +113,16 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Mobile Navigation Buttons -->
                     <button @click="scrollMobile('left')"
-                            class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
                         <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
                     <button @click="scrollMobile('right')"
-                            class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
                         <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
@@ -132,6 +132,7 @@
         </div>
     </section>
 </template>
+
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
@@ -202,7 +203,7 @@ const timelineEvents = ref([
 const scrollMobile = (direction) => {
     if (mobileTimeline.value) {
         const container = mobileTimeline.value
-        const eventWidth = container.querySelector('div').offsetWidth + 64 
+        const eventWidth = container.querySelector('div').offsetWidth + 64
         const maxIndex = timelineEvents.value.length - 1
 
         currentIndex.value += direction === 'left' ? -1 : 1
@@ -260,7 +261,9 @@ onMounted(() => {
 }
 
 .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 </style>
