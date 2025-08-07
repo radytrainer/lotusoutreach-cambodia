@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div v-for="(program, index) in educationPrograms" :key="index"
+        <div v-for="(program, index) in visibleEdu" :key="index"
           class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100">
           <div class="relative h-48 overflow-hidden">
             <img :src="program.image" :alt="program.alt"
@@ -40,14 +40,31 @@
           </div>
         </div>
       </div>
+      <!-- See More / See Less Buttons -->
+      <div class="text-center mt-10">
+        <button
+          v-if="educationPrograms.length > 4 && !showAll"
+          @click="showAll = true"
+          class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+        >
+          See More
+        </button>
+        <button
+          v-if="showAll"
+          @click="showAll = false"
+          class="px-6 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition"
+        >
+          See Less
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, toRef } from 'vue'
 
-defineProps({
+const props = defineProps({
   educationPrograms: {
     type: Array,
     required: true,
@@ -70,7 +87,19 @@ defineEmits(['show-detail']);
 // Fallback for broken images
 const handleImageError = (event) => {
   event.target.src = 'https://lotusoutreach.org/wp-content/uploads/2023/02/placeholder.jpg';
+
 };
+
+// / Show more / less toggle
+const showAll = ref(false)
+
+// Convert prop to reactive ref so we can use it in computed
+const programList = toRef(props, 'educationPrograms')
+
+// Only show 4 or all based on toggle
+const visibleEdu = computed(() =>
+  showAll.value ? programList.value : programList.value.slice(0, 4)
+)
 </script>
 
 <style scoped>
