@@ -1,7 +1,7 @@
 <template>
     <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <!-- Hero Section -->
-        <div class="relative max-w-6xl mx-auto flex flex-col items-center md:flex-col lg:flex-row lg:items-start mb-20">
+        <div class="relative max-w-6xl mx-auto flex flex-col items-center md:flex-col lg:flex-row lg:items-start md:mb-28 mb-10 md:mt-16">
             <div class="relative mb-16 lg:mr-8 lg:mb-0">
                 <div
                     class="w-100 sm:w-80 md:w-[500px] aspect-square rounded-full border-[6px] sm:border-[10px] md:border-[10px] border-blue-500 overflow-hidden mx-auto">
