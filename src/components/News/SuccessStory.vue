@@ -130,21 +130,22 @@ const scrollRight = () => {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.5s ease;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .slide-enter-from {
-  transform: translateX(100%);
+  transform: translateX(80%); 
 }
 .slide-leave-to {
-  transform: translateX(-100%);
+  transform: translateX(-80%);
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.7s ease-in-out;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
 }
+
 </style>
