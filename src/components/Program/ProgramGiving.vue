@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div v-for="(giving, index) in givingPrograms" :key="index"
+        <div v-for="(giving, index) in visibleGiving" :key="index"
           class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100">
           <div class="h-48 overflow-hidden relative">
             <img :src="giving.image" :alt="giving.title"
@@ -36,13 +36,31 @@
           </div>
         </div>
       </div>
+      <!-- See More / See Less Buttons -->
+      <div class="text-center mt-10">
+        <button
+          v-if="givingPrograms.length > 4 && !showAll"
+          @click="showAll = true"
+          class="px-6 py-2 bg-pink-600 text-white rounded hover:bg-pink-700 transition"
+        >
+          See More
+        </button>
+        <button
+          v-if="showAll"
+          @click="showAll = false"
+          class="px-6 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition"
+        >
+          See Less
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { ref, computed, toRef } from 'vue'
 
-defineProps({
+const props = defineProps({
   givingPrograms: {
     type: Array,
     required: true,
@@ -61,13 +79,16 @@ defineEmits(['show-detail'])
 const handleImageError = (event) => {
   event.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found'
 }
+
+// Show more / less toggle
+const showAll = ref(false)
+
+// Convert prop to reactive ref so we can use it in computed
+const programList = toRef(props, 'givingPrograms')
+
+// Only show 4 or all based on toggle
+const visibleGiving = computed(() =>
+  showAll.value ? programList.value : programList.value.slice(0, 4)
+)
 </script>
 
-<style scoped>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
-}
-</style>
