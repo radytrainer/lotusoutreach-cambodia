@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-16" id="partners">
+  <section class="bg-white py-16" id="partners"  data-aos="fade-up">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-10">Our Networks</h2>
       <div class="relative overflow-hidden">

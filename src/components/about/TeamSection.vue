@@ -1,5 +1,5 @@
 <template>
-  <section id="team" class="bg-gray-50 py-20">
+  <section id="team" class="bg-gray-50 py-20"  data-aos="fade-up">
     <div class="container mx-auto px-4 p-9">
       <h2 class="text-4xl text-blue-700 md:text-6xl font-extrabold text-center mb-20">
         Our Inspired Team
