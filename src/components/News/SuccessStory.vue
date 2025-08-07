@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 font-poppins">
+  <section class="py-16 font-poppins" data-aos="fade-up">
     <!-- Title Section -->
     <div class="text-center mb-16 px-4">
       <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">

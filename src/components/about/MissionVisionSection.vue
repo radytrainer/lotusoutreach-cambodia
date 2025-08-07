@@ -1,5 +1,5 @@
 <template>
-  <section class="pb-16 bg-white" id="mission-vision-values">
+  <section class="pb-16 bg-white" id="mission-vision-values"  data-aos="fade-up">
     <div
       class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
     >

@@ -1,7 +1,8 @@
 <template>
     <section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <!-- Hero Section -->
-        <div class="relative max-w-6xl mx-auto flex flex-col items-center md:flex-col lg:flex-row lg:items-start md:mb-28 mb-10 md:mt-16">
+        <div class="relative max-w-6xl mx-auto flex flex-col items-center md:flex-col lg:flex-row lg:items-start md:mb-28 mb-10 md:mt-16"
+            data-aos="fade-up">
             <div class="relative mb-16 lg:mr-8 lg:mb-0">
                 <div
                     class="w-100 sm:w-80 md:w-[500px] aspect-square rounded-full border-[6px] sm:border-[10px] md:border-[10px] border-blue-500 overflow-hidden mx-auto">
@@ -28,12 +29,13 @@
                     | Donate For Girls Around The World!
                 </h2>
                 <p v-for="(paragraph, index) in content" :key="index"
-                 class="text-base sm:text-lg md:text-2xl lg:text-base text-gray-700 mb-4 text-center md:text-left" v-html="paragraph" />
+                    class="text-base sm:text-lg md:text-2xl lg:text-base text-gray-700 mb-4 text-center md:text-left"
+                    v-html="paragraph" />
             </div>
         </div>
 
         <!-- Timeline -->
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto" data-aos="fade-up">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">LOCAM through the years</h2>
                 <p class="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg md:text-2xl lg:text-base">
@@ -104,7 +106,8 @@
                                     <img :src="event.image" :alt="event.title" class="w-full h-full object-cover" />
                                 </div>
                                 <div class="text-2xl font-bold text-gray-900 mb-2 mt-8">{{ event.year }}</div>
-                                <p class="text-gray-700 leading-relaxed text-sm max-w-xs text-center text-base sm:text-lg md:text-2xl lg:text-base">
+                                <p
+                                    class="text-gray-700 leading-relaxed text-sm max-w-xs text-center text-base sm:text-lg md:text-2xl lg:text-base">
                                     <span v-if="event.highlight" class="text-blue-500 font-semibold ">
                                         {{ event.highlight }}
                                     </span>
