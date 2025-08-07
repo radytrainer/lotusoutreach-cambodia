@@ -11,10 +11,10 @@
     <!-- Text Content -->
     <div class="relative z-10 flex items-center justify-center h-full px-4 md:px-6 lg:px-8 text-center">
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl sm:text-4xl md:text-6xl lg:text-6xl font-bold leading-tight mb-4 text-white">
+       <h1 class="text-4xl sm:text-2xl md:text-2xl lg:text-6xl font-bold leading-tight mb-2 text-white">
           Our Gallery of <span class="text-pink-500">Activities</span>
         </h1>
-        <p class="text-lg sm:text-xl text-white max-w-3xl mx-auto mt-4 font-medium">
+        <p class="text-lg sm:text-xl text-white max-w-3xl mx-auto mt-2 font-beginner">
           In rural Cambodia, education changes lives. Each photo captures the spirit of Lotus Outreach Cambodia’s
           mission empowering girls and strengthening communities through knowledge, opportunity, and hope.
         </p>
@@ -27,7 +27,7 @@
     <div class="max-w-7xl mx-auto">
       <!-- Gallery Sections -->
       <div v-for="(section, sectionIndex) in galleryData" :key="sectionIndex" class="mb-20">
-        <h2 class="text-4xl font-bold text-gray-800 mb-10 border-b-4 border-gray-200 pb-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-10 border-b-4 border-gray-200 pb-4">
           {{ section.title }}
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -83,40 +83,213 @@ export default {
     return {
       galleryData: [
         {
-          title: "Abstract & Conceptual",
+          title: "Monitor Family Status",
           images: [
-            { src: "/image/Gallery/G1.jpg", alt: "Hands with Yellow Object", description: "A close-up shot emphasizing texture and color.", pathTitle: "FLOWER IN DOOR" },
-            { src: "/image/Gallery/G2.jpg", alt: "Man with Tattoos", description: "An intense portrait capturing unique details and expression." },
-            { src: "/image/Gallery/G3.jpg", alt: "Red Sports Car Detail", description: "Sleek lines and vibrant color of a modern vehicle." },
-            { src: "/image/Gallery/G4.jpg", alt: "Pointing Hands", description: "A simple gesture, conveying direction or focus." },
+            { 
+              src: "/image/Gallery/G1.jpg", 
+              alt: "Staff Visiting a Family Home", 
+              description: "A team member observes household conditions during a regular family status check.",
+               
+            },
+            { 
+              src: "/image/Gallery/G2.jpg", 
+              alt: "Mother Sharing Family Situation", 
+              description: "A local mother discusses challenges and living conditions with outreach staff." 
+            },
+            { 
+              src: "/image/Gallery/G3.jpg", 
+              alt: "Staff Discussing Support Plans", 
+              description: "Outreach workers planning follow-up support for families in need after a visit."  
+            },
+            { 
+              src: "/image/Gallery/G4.jpg", 
+              alt: "Fimily sharing stories", 
+              description: "Family sharing a story about how she doesn't have the money to support her children's education." 
+            },
           ]
+
         },
         {
           title: "Lifestyle & Portraits",
           images: [
-            { src: "/image/Gallery/G5.jpg", alt: "Holding Beverage Can", description: "A casual moment, highlighting product interaction." },
-            { src: "/image/Gallery/G6.jpg", alt: "Man in Yellow Shirt", description: "A relaxed portrait with vibrant colors and clear skies.", pathTitle: "FLOWER IN DOOR" },
-            { src: "/image/Gallery/G7.jpg", alt: "Relaxing by Pool", description: "Luxury and leisure by a stunning infinity pool." },
-            { src: "/image/Gallery/G8.jpg", alt: "EV Charging Port", description: "The future of mobility, captured in detail." },
+            { 
+              src: "/image/Gallery/G5.jpg", 
+              alt: "Girl Smiling During Staff Visit", 
+              description: "A girl supported by Lotus Outreach Cambodia enjoys a quiet moment during staff visit her house."
+            },
+            { 
+              src: "/image/Gallery/G6.jpg", 
+              alt: "Portrait of a Girl After Passing Schoolship", 
+              description: "A confident young girl symbolizing hope through education."
+            },
+            { 
+              src: "/image/Gallery/G7.jpg", 
+              alt: "Girl Stan, up is hopeful", 
+              description: "A calm afternoon spent with staff, showing balance and well-being in her everyday life."
+            },
+            { 
+              src: "/image/Gallery/G8.jpg", 
+              alt: "Girl Exploring Her Environment", 
+              description: "A curious girl observes her surroundings, reflecting her connection to both tradition and the future."
+            },
           ]
+
         },
         {
-          title: "Architecture & Design",
+          title: "Home Visit By Staff",
           images: [
-            { src: "/image/Gallery/G9.jpg", alt: "Modern Architecture", description: "Innovative design blending with natural landscapes.", pathTitle: "FLOWER IN DOOR" },
-            { src: "/image/Gallery/G10.jpg", alt: "Glowing Teal Lamp", description: "An artistic light fixture creating a unique ambiance.", pathTitle: "FLOWER IN DOOR" },
-            { src: "/image/Gallery/G11.jpg", alt: "Gourmet Dining", description: "A close-up of a beautifully plated meal." },
-            { src: "/image/Gallery/G12.jpg", alt: "Woman on Railing", description: "A captivating portrait with a thoughtful gaze." },
+            { 
+              src: "/image/Gallery/G9.jpg", 
+              alt: "Staff Arriving at a Family's Home", 
+              description: "A view of the home environment where staff members conduct outreach and support visits."
+            },
+            { 
+              src: "/image/Gallery/G10.jpg", 
+              alt: "Inside a Beneficiary's Home", 
+              description: "A look at the interior space where conversations and monitoring take place during a home visit."
+            },
+            { 
+              src: "/image/Gallery/G11.jpg", 
+              alt: "Girl Speaking with Staff at Home", 
+              description: "A young beneficiary shares her story with Lotus Outreach Cambodia staff during a home assessment."
+            },
+            { 
+              src: "/image/Gallery/G12.jpg", 
+              alt: "Sharing a Meal with the Family", 
+              description: "A meaningful moment as staff members are welcomed with traditional hospitality during a home visit."
+            },
           ]
+
         },
         {
-          title: "Diverse Perspectives",
+          title: "Visit Real Life",
           images: [
-            { src: "/image/Gallery/G13.jpg", alt: "Camera Lens Detail", description: "The intricate mechanics of photography." },
-            { src: "/image/Gallery/G14.jpg", alt: "Delicate Hands", description: "A soft focus on human connection." },
-            { src: "/image/Gallery/G16.jpg", alt: "Curious French Bulldog", description: "An adorable pet with an inquisitive expression." },
-            { src: "/image/Gallery/G17.jpg", alt: "Blue Texture", description: "Abstract patterns and tactile surfaces." },
+            { 
+              src: "/image/Gallery/G13.jpg", 
+              alt: "Volunteer visiting a girl's home in a rural village", 
+              description: "A Lotus Outreach Cambodia team member listens to a young girl's story during a home visit, highlighting daily struggles and hopes." 
+            },
+            { 
+              src: "/image/Gallery/G14.jpg", 
+              alt: "Simple home environment of a supported family", 
+              description: "A humble wooden house where a student supported by Lotus Outreach lives, reflecting the resilience of families in poverty." 
+            },
+            { 
+              src: "/image/Gallery/G16.jpg", 
+              alt: "Mother and daughter sharing a moment outside their home", 
+              description: "A touching scene of love and support between a mother and her daughter, who receives educational aid from the program." 
+            },
+            { 
+              src: "/image/Gallery/G17.jpg", 
+              alt: "Children smiling during a home visit", 
+              description: "Despite their challenges, children welcome visitors with joy — a testament to the impact of consistent support and encouragement." 
+            },
           ]
+
+        },
+        {
+          title: "Province Visit Activity",
+            images: [
+              {
+                src: "/image/Gallery/G18.jpg",
+                alt: "Children in Rural Cambodia",
+                description: "Curious and smiling children gathering during a community education activity."
+              },
+              {
+                src: "/image/Gallery/G19.jpg",
+                alt: "Traditional House in the Province",
+                description: "A glimpse of rural Cambodian life during the team’s outreach in the countryside."
+              },
+              {
+                src: "/image/Gallery/G20.jpg",
+                alt: "Supportive Interaction",
+                description: "A warm and respectful gesture exchanged between a team member and a local participant."
+              },
+              {
+                src: "/image/Gallery/G21.jpg",
+                alt: "Community Outreach Moment",
+                description: "Lotus Outreach Cambodia staff engaging with local villagers during a province visit."
+              },
+            ]
+        },
+        {
+          title: "Workshop Activity",
+          images: [
+            { 
+              src: "/image/Gallery/G22.jpg", 
+              alt: "Participants Engaged in Workshop", 
+              description: "Community members attentively participating in a skills-building or educational session."
+            },
+            { 
+              src: "/image/Gallery/G23.jpg", 
+              alt: "Hands-on Learning Moment", 
+              description: "A facilitator guiding participants through a practical exercise during the workshop."
+            },
+            { 
+              src: "/image/Gallery/G24.jpg", 
+              alt: "Youth Interaction During Workshop", 
+              description: "Young participants collaborating and sharing ideas in a supportive learning environment."
+            },
+            { 
+              src: "/image/Gallery/G25.jpg", 
+              alt: "Workshop Materials and Setup", 
+              description: "A table filled with supplies and documents used during the Lotus Outreach Cambodia workshop."
+            },
+          ]
+
+        },
+        {
+          title: "Trips Activity",
+          images: [
+            { 
+              src: "/image/Gallery/G26.jpg", 
+              alt: "Students Visiting a Historical Site", 
+              description: "Participants explore a culturally significant location as part of an educational trip experience."
+            },
+            { 
+              src: "/image/Gallery/G27.jpg", 
+              alt: "Group Walk Through Local Village", 
+              description: "The team walks together through a rural community, observing and learning from local life."
+            },
+            { 
+              src: "/image/Gallery/G28.jpg", 
+              alt: "Enjoying a Break During the Trip", 
+              description: "A joyful moment of rest and conversation captured during the outreach journey."
+            },
+            { 
+              src: "/image/Gallery/G29.jpg", 
+              alt: "Reflective Moment by the Landscape", 
+              description: "A peaceful scene showing a participant observing the natural beauty during the trip."
+            },
+          ]
+
+        },
+        {
+          title: "Traditional Dance Activity",
+          images: [
+            { 
+              src: "/image/Gallery/G30.jpg", 
+              alt: "Khmer Dancers Performing on Stage", 
+              description: "Young performers dressed in traditional Khmer costumes gracefully showcasing classical dance movements."
+            },
+            { 
+              src: "/image/Gallery/G31.jpg", 
+              alt: "Hand Gestures in Khmer Dance", 
+              description: "A close-up of elegant hand movements, symbolizing stories and emotions in classical Cambodian dance."
+            },
+            { 
+              src: "/image/Gallery/G32.jpg", 
+              alt: "Students Preparing for Dance Performance", 
+              description: "Participants in traditional attire preparing backstage for their cultural performance during the event."
+            },
+            // Uncomment this if you use the 4th image:
+            // { 
+            //   src: "/image/Gallery/G34.jpg", 
+            //   alt: "Traditional Dance Costume Details", 
+            //   description: "A detailed look at the intricate patterns and accessories of a Khmer classical dance outfit."
+            // },
+          ]
+
         },
       ],
       showLightbox: false,
