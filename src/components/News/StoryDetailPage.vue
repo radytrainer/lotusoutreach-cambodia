@@ -13,16 +13,19 @@
       </router-link>
 
       <!-- Hero Section -->
-      <div class="relative mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg">
+      <div class="relative mb-8 md:mb-12 h-72 md:h-[450px] rounded-lg overflow-hidden shadow-lg">
         <img :src="currentStory.avatar" :alt="currentStory.name + ' graduating'"
-          class="w-full h-68 md:h-96 object-cover object-center" />
+          class="w-full h-full object-cover object-center" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end">
           <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-2">
             {{ currentStory.name }}
           </h1>
-          <p class="text-lg md:text-xl text-blue-200">{{ currentStory.program }}</p>
+          <p class="text-lg md:text-xl text-blue-200">
+            {{ currentStory.program }}
+          </p>
         </div>
       </div>
+
 
       <!-- Full Story Section -->
       <div class="mb-8 md:mb-12">
@@ -252,7 +255,7 @@ const stories = [
         title: '',
         content:
           'Even as her business grows, Rany stays grounded. She has given her family shares in the business and will soon distribute their first profit dividends. Her approach balances professional ambition with deep care and inclusion, turning her company into more than just a business—it is a shared legacy.'
-       },
+      },
       {
         title: '',
         content:
@@ -260,6 +263,103 @@ const stories = [
       }
     ]
   },
+  {
+    name: 'PEN SREYNICH',
+    program: 'MIDWIFERY, BATTAMBANG REGIONAL TRAINING CENTER FOR HEALTH',
+    avatar: '/image/News/nich_08.jpg',
+    images: [
+      '/image/News/nich_02.jpg',
+      '/image/News/nich_03.jpg',
+      '/image/News/nich_04.jpg',
+      '/image/News/nich_05.jpg',
+      '/image/News/nich_06.jpg',
+      '/image/News/nich_07.jpg'
+    ],
+    fullStory: [
+      {
+        title: 'From Trauma to Triumph',
+        content:
+          'Phnom Penh, Cambodia – What began as a childhood marked by abandonment and adversity has transformed into a story of courage, resilience, and hope. Pen Sreynich, a young midwife now working at Kuntha Bopha Hospital in Phnom Penh, is not only saving lives in the ICU Department but also inspiring young girls across Cambodia to dream beyond their circumstances.'
+      },
+      {
+        title: 'Early Life Challenges',
+        content:
+          'Originally from Banteay Meanchey Province, Sreynich faced hardship early in life. Her family moved to Pailin Province when she was young, but her parents soon migrated to Thailand for work. Left behind, she endured pressure from her mother to drop out of school and suffered violence from her father. This traumatic period left her feeling deeply afraid and hopeless, to the point where she contemplated suicide and no longer wished to see her father.'
+      },
+      {
+        title: 'A Turning Point',
+        content:
+          'Her life took a turn when her aunt brought her back to Banteay Meanchey and encouraged her to continue her studies. That turning point paved the way for a journey of healing and growth. With the help of Lotus Outreach Cambodia’s GATE Program and later the CATALYST Project, Sreynich received educational support, life skills training, and mentoring that helped her finish high school and pursue her dream of becoming a midwife.'
+      },
+      {
+        title: 'Pursuing Midwifery',
+        content:
+          'In 2017, she began studying midwifery at the Battambang Regional Training Center for Health and graduated in 2021. Today, she proudly serves in a key role at one of Cambodia’s busiest pediatric hospitals. “I feel grateful to be in a warm, supportive environment and to contribute meaningfully to the healthcare system,” she said.'
+      },
+      {
+        title: 'Giving Back Through Mentorship',
+        content:
+          'Her journey hasn’t stopped with her personal success. As an active CATALYST alumna, Sreynich regularly returns to mentor and motivate current students, especially on topics related to women’s health. Through workshops, educational events, and "Pay It Forward" initiatives, she is ensuring that other young girls see the possibilities that once seemed out of reach to her.'
+      },
+      {
+        title: 'Advocating for Gender Equality',
+        content:
+          'She is also a vocal advocate for gender equality in Cambodia. “I hope that our society will change its view that ‘women only belong in the kitchen,’” she says. “Women have the same capabilities and rights as men. We must all promote gender equality to build a more peaceful world.”'
+      },
+      {
+        title: 'Inspiration for Change',
+        content:
+          'Sreynich’s story is a powerful reminder of how targeted support, educational opportunity, and a caring community can help a young girl overcome trauma—and emerge as a leader for change.'
+      }
+    ]
+  },
+  {
+    "name": "Vann Sophin",
+    "program": "ACCOUNTING, VANDA INSTITUTE OF ACCOUNTING",
+    "avatar": "/image/News/phin_06.jpg",
+    "images": [
+      "/image/News/phin_01.jpg",
+      "/image/News/phin_02.jpg",
+      "/image/News/phin_03.jpg",
+      "/image/News/phin_04.jpg",
+      "/image/News/phin_05.jpg",
+      "/image/News/phin_07.JPG",
+    ],
+    "fullStory": [
+      {
+        "title": "From Poverty to Purpose",
+        "content": "Siem Reap Province – Born and raised in Siem Reap, Vann Sophin is the eldest of three siblings. Her early life was shaped by hardship and perseverance. Her father worked as a woodcutter, transporting chopped wood by bicycle and selling it along the streets to support the family. Her mother remained at home, managing household duties and raising a few animals to contribute to the family’s livelihood."
+      },
+      {
+        "title": "Facing Economic Challenges",
+        "content": "Life took a difficult turn when her father was injured by a saw during his work in the forest. Forced to leave his dangerous job behind, he began selling ice blocks instead—a safer yet lower-income alternative. Despite these economic struggles, the family remained resilient."
+      },
+      {
+        "title": "Determined to Succeed",
+        "content": "As a young girl, Sophin walked to school every day. Often, she attended classes without money or adequate learning materials. Unable to afford separate notebooks for each subject, she was sometimes looked down on by teachers. “I felt hurt,” she reflected. “But from the bottom of my heart, I committed to studying hard. I wanted to grow up and achieve more than those who judged me.” That determination led to strong academic performance. Sophin earned top scores and the praise of her parents, proving that poverty could not stop her from reaching her potential."
+      },
+      {
+        "title": "Joining CATALYST and GATE Programs",
+        "content": "In October 2017, a turning point came when she joined the CATALYST Project by Lotus Outreach Cambodia. She also became a participant in the GATE Program for three years (Grades 9–11), receiving essential support such as school materials, a monthly allowance, rice, accommodation, and mentorship—all of which helped ease the burden on her family."
+      },
+      {
+        "title": "Graduation and Career",
+        "content": "Sophin graduated in October 2020 with a degree in Accounting from the Vanda Institute of Accounting in Siem Reap. Today, she proudly works as an Accounting Support Officer at Sahakkreas M Plus Cash Express in her home province. “I love this job very much,” she shared. “My coworkers and supervisor are incredibly supportive. I always give my best to ensure everything runs smoothly. Everyone appreciates me—especially my employee. When she told me she was glad to have a supervisor like me, I was over the moon.”"
+      },
+      {
+        "title": "Giving Back and Mentorship",
+        "content": "Not only has she built a successful career, but she also dedicates her time to helping younger CATALYST scholars. She actively supports them in finding job opportunities and even helps recruit them to work with her current institution. She remains involved with Lotus Outreach Cambodia by donating funds annually to the organization’s Giving Back Program. Additionally, she shares her personal growth and the challenges she has overcome, hoping to inspire others to follow in her footsteps."
+      },
+      {
+        "title": "Gratitude to Donors",
+        "content": "With heartfelt emotion, she thanked the donors who made her success possible. “I am beyond thankful for your priceless support. I could never have done this without you. I never even dreamed of being where I am today. Because of your help, I’ve become an outstanding student and now a company supervisor. You gave me hope and a new beginning.”"
+      },
+      {
+        "title": "Looking Ahead",
+        "content": "From a struggling schoolgirl to a confident young professional, Vann Sophin’s journey is a powerful example of how opportunity, determination, and support can transform lives. Now, she looks to the future with hope and purpose. “I hope to see a future with fewer poor people and more educated individuals in our society,” she said. “I want to see every child—especially girls—have the chance to pursue higher education and become valuable contributors to their families and communities. We need to work hard so that no one can judge us or doubt what we are capable of.”"
+      }
+    ]
+  }
 ];
 
 const currentStory = computed(() => stories[props.id]);
