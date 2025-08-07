@@ -20,7 +20,6 @@
             stronger communities in Cambodia
           </p>
         </div>
-
         <div
           v-for="(program, index) in programs"
           :key="index"
@@ -30,6 +29,7 @@
           <div
             v-if="program.image && (index === 0 || index === 2)"
             class="bg-white rounded-3xl shadow-md overflow-hidden"
+            data-aos="fade-up"
           >
             <div class="grid grid-cols-1 lg:grid-cols-2">
               <div :class="{ 'order-2': index === 2 }" class="relative">
@@ -99,11 +99,11 @@
               </div>
             </div>
           </div>
-
           <!-- Training Section -->
           <div
             v-else-if="program.section === 'Training'"
             class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+            data-aos="fade-up"
           >
             <div class="order-2 lg:order-1 p-4 md:p-6">
               <div class="flex items-center mb-6">
@@ -219,6 +219,7 @@
           <div
             v-else
             class="bg-gradient-to-br from-blue-50 to-blue-50 rounded-3xl p-6 md:p-10 lg:p-16"
+            data-aos="fade-up"
           >
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div class="relative">
