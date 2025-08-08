@@ -5,13 +5,14 @@
       class="relative h-[60vh] sm:h-[80vh] md:h-screen bg-cover md:object-contain bg-no-repeat text-white"
       :style="{ backgroundImage: `url(${program.image})` }"
     >
-      <div
-        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"
-      ></div>
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
 
+      <!-- Header Content -->
       <div
         class="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10 h-full flex flex-col justify-end pb-4 sm:pb-6 md:pb-16 lg:pb-20"
       >
+        <!-- Back Button -->
         <button
           @click="goBack"
           class="group flex items-center gap-2 bg-white/20 px-3 py-1.5 sm:px-5 sm:py-3 rounded-full text-white border border-white/30 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-300 shadow-lg backdrop-blur-sm mb-4 sm:mb-6 md:mb-8 w-fit"
@@ -30,11 +31,12 @@
               d="M10 19l-7-7m0 0l7-7m-7 7h18"
             ></path>
           </svg>
-          <span class="font-semibold tracking-wide text-xs sm:text-sm md:text-base"
-            >Back to MyGirl</span
-          >
+          <span class="font-semibold tracking-wide text-xs sm:text-sm md:text-base">
+            Back to MyGirl
+          </span>
         </button>
 
+        <!-- Program Title & Summary -->
         <div class="flex items-center">
           <div
             class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-blue-200/20 flex items-center justify-center mr-3 sm:mr-4 md:mr-6"
@@ -65,16 +67,12 @@
     >
       <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
         <div class="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8">
-          <h2
-            class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2"
-          >
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             {{ section.title }}
           </h2>
 
           <!-- First Content Block -->
-          <div
-            class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center md:items-center"
-          >
+          <div class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
             <div class="w-full md:w-1/2">
               <img
                 :src="program.childImg1"
@@ -83,18 +81,14 @@
               />
             </div>
             <div class="w-full md:w-1/2 h-full flex items-center">
-              <p
-                class="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed"
-              >
+              <p class="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
                 {{ firstParagraph(section.content) }}
               </p>
             </div>
           </div>
 
-          <!-- Second Content Block (Reversed)  -->
-          <div
-            class="flex flex-col md:flex-row-reverse gap-4 sm:gap-6 items-center md:items-center"
-          >
+          <!-- Second Content Block (Reversed) -->
+          <div class="flex flex-col md:flex-row-reverse gap-4 sm:gap-6 items-center">
             <div class="w-full md:w-1/2">
               <img
                 :src="program.childImg2"
@@ -120,23 +114,28 @@
 import { useRoute, useRouter } from "vue-router";
 import { ref } from "vue";
 
+// Router setup
 const route = useRoute();
 const router = useRouter();
 
+// Navigation
+const goBack = () => router.push("/");
+
+// Helper functions
+const splitParagraphs = (content) =>
+  content.split("\n").filter((p) => p.trim() !== "");
+
 const firstParagraph = (content) => {
-  const paragraphs = content.split("\n").filter((p) => p.trim() !== "");
-  const half = Math.ceil(paragraphs.length / 2);
-  return paragraphs.slice(0, half).join("\n");
+  const paragraphs = splitParagraphs(content);
+  return paragraphs.slice(0, Math.ceil(paragraphs.length / 2)).join("\n");
 };
 
 const remainingParagraph = (content) => {
-  const paragraphs = content.split("\n").filter((p) => p.trim() !== "");
-  const half = Math.ceil(paragraphs.length / 2);
-  return paragraphs.slice(half).join("\n");
+  const paragraphs = splitParagraphs(content);
+  return paragraphs.slice(Math.ceil(paragraphs.length / 2)).join("\n");
 };
 
-const goBack = () => router.push("/");
-
+// Program data
 const programs = [
   {
     id: 1,
@@ -206,6 +205,8 @@ const programs = [
     ],
   },
 ];
+
+// Get current program
 const programId = parseInt(route.params.id);
 const program = ref(programs.find((p) => p.id === programId));
 </script>
