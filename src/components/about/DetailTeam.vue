@@ -110,5 +110,5 @@ const selectedMember = computed(() => {
   return teamMembers.value.find((p) => String(p.id) === id);
 });
 
-const goBack = () => router.back({ name: "TeamSection" });
+const goBack = () => router.back({ name: "About" });
 </script>
