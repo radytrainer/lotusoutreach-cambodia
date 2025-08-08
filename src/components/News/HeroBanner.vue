@@ -1,6 +1,6 @@
 <template>
   <!-- Hero Banner -->
-  <section class="relative h-[70vh] md:h-[100vh] bg-gray-100 overflow-hidden">
+  <section class="relative h-[70vh] md:h-[50vh] lg:h-[100vh] bg-gray-100 overflow-hidden">
     <!-- Background Image with Gradient -->
     <div class="absolute inset-0">
       <img
