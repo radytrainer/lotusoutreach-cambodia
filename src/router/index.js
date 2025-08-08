@@ -3,7 +3,6 @@ import DefaultLayout from '../layouts/DefaultLayout.vue';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
 import ContactView from '@/views/ContactView.vue';
-import Education from '@/components/Education.vue';
 import DonateView from '@/views/DonateView.vue';
 import ProgramView from '@/views/ProgramView.vue';
 import NewsStory from '@/views/NewsStory.vue';
@@ -29,7 +28,6 @@ const routes = [
       },
 
       { path: 'contact', name: 'Contact', component: ContactView },
-      { path: 'education/:id', name: 'Education', component: Education },
       { path: 'donate', name: 'Donate', component: DonateView },
       { path: 'education', name: 'education', component: ProgramEdu },
       { path: 'care', name: 'care', component: ProgramCare },
