@@ -5,7 +5,7 @@
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
-      <span class="font-medium">Back to Activities</span>
+      <span class="font-medium sm:text-lg md:text-2xl lg:text-base">Back to Activities</span>
     </button>
 
     <article
@@ -18,15 +18,15 @@
         <div class="mb-8">
           <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
             <span
-              class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
+              class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 text-base sm:text-lg md:text-xl lg:text-base">
               {{ getCategoryLabel(activity.category) }}
             </span>
-            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">{{ formatDate(activity.date) }}</span>
+            <span class="text-sm font-medium text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl lg:text-base">{{ formatDate(activity.date) }}</span>
           </div>
-          <h1 class="text-2xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight dark:text-white">
+          <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight dark:text-white">
             {{ activity.title }}
           </h1>
-          <div class="flex flex-wrap items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-8">
+          <div class="flex flex-wrap items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-8 text-base sm:text-lg md:text-xl lg:text-base">
             <span class="font-medium">By {{ activity.author }}</span>
             <span>•</span>
             <span>{{ calculateReadTime(activity.content) }} min read</span>
@@ -45,7 +45,7 @@
         </div>
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6 dark:text-gray-300 dark:prose-invert">
           <h2 class="md:text-2xl text-xl font-semibold text-gray-900 mt-8 dark:text-white">Event Overview</h2>
-          <p class="md:text-[16px] md:text-justify">{{ activity.content }}</p>
+          <p class="md:text-justify text-base sm:text-lg md:text-xl lg:text-base">{{ activity.content }}</p>
           <h2 class="md:text-2xl text-xl font-semibold text-gray-900 mt-8 dark:text-white">Visual Highlights</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div v-for="(img, index) in activity.image1" :key="index">
@@ -54,13 +54,13 @@
           </div>
           <div
             class="mt-12 p-6 bg-indigo-50 rounded-xl text-center border border-indigo-100 dark:bg-indigo-950 dark:border-indigo-900">
-            <h3 class="text-xl font-bold text-indigo-900 mb-3 dark:text-indigo-200">Support Our Mission</h3>
-            <p class="text-gray-600 mb-5 dark:text-gray-400 md:text-[16px] text-[14px]">Help us continue empowering
+            <h3 class="lg:text-xl font-bold text-indigo-900 mb-3 dark:text-indigo-200 md:text-2xl">Support Our Mission</h3>
+            <p class="text-gray-600 mb-5 dark:text-gray-400 md:text-xl lg:text-[16px]">Help us continue empowering
               communities through education,
               health, and sustainable development in Cambodia.</p>
             <router-link to="/donate">
               <button
-                class="bg-indigo-600 text-white md:text-[14px] text-[12px] md:px-6 px-4 md:py-2 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200 font-medium dark:bg-indigo-500 dark:hover:bg-indigo-600">
+                class="bg-indigo-600 text-white md:text-xl lg:text-[14px] md:px-6 px-4 md:py-2 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200 font-medium dark:bg-indigo-500 dark:hover:bg-indigo-600">
                 Get Involved Today
               </button>
             </router-link>
@@ -71,7 +71,7 @@
 
     <div v-if="related.length > 0" class="mt-12">
       <h3 class="text-2xl font-bold text-gray-900 mb-6 dark:text-white">Related Activities</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
         <article v-for="relatedItem in related" :key="relatedItem.title" @click="$emit('view-detail', relatedItem)"
           class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg cursor-pointer transition-all duration-200 dark:bg-gray-800">
           <div class="flex">
