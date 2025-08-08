@@ -1,23 +1,34 @@
 <template>
   <section class="py-16 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Section Header -->
       <div class="mb-16 text-center">
         <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink-600 shadow-md mb-4">
           <i class="fas fa-people-carry text-xl text-white"></i>
         </div>
-        <h2 class="text-3xl md:text-4xl font-poppins font-semibold text-gray-900 mb-2">Giving Back Programs</h2>
+        <h2 class="text-3xl md:text-4xl font-poppins font-semibold text-gray-900 mb-2">
+          Giving Back Programs
+        </h2>
         <div class="w-20 h-1 bg-pink-600 mx-auto mb-4 rounded"></div>
         <p class="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
           Empowering Cambodian women through impactful giving back initiatives and professional development programs
         </p>
       </div>
+
+      <!-- Program Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div v-for="(giving, index) in visibleGiving" :key="index"
-          class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100">
+        <div
+          v-for="(giving, index) in visibleGiving"
+          :key="index"
+          class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100"
+        >
           <div class="h-48 overflow-hidden relative">
-            <img :src="giving.image" :alt="giving.title"
+            <img
+              :src="giving.image"
+              :alt="giving.title"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              @error="handleImageError" />
+              @error="handleImageError"
+            />
             <div class="absolute top-3 left-3">
               <div class="w-8 h-8 rounded-full bg-pink-600 flex items-center justify-center">
                 <i :class="giving.icon" class="text-sm text-white"></i>
@@ -25,17 +36,23 @@
             </div>
           </div>
           <div class="p-5">
-            <h3 class="text-base font-poppins font-medium text-gray-900 mb-2">{{ giving.title }}</h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-3">{{ giving.description }}</p>
+            <h3 class="text-base font-poppins font-medium text-gray-900 mb-2">
+              {{ giving.title }}
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-3">
+              {{ giving.description }}
+            </p>
             <button
               @click="$emit('show-detail', giving, 'giving')"
               class="text-pink-600 font-medium hover:text-pink-700 transition-colors duration-200 text-sm"
-              :aria-label="`Learn more about ${giving.title}`">
+              :aria-label="`Learn more about ${giving.title}`"
+            >
               Learn More <i class="fas fa-arrow-right ml-1"></i>
             </button>
           </div>
         </div>
       </div>
+
       <!-- See More / See Less Buttons -->
       <div class="text-center mt-10">
         <button
@@ -64,31 +81,30 @@ const props = defineProps({
   givingPrograms: {
     type: Array,
     required: true,
-    validator: (programs) => programs.every(program =>
-      typeof program.title === 'string' &&
-      typeof program.image === 'string' &&
-      typeof program.icon === 'string' &&
-      typeof program.description === 'string'
-    )
+    validator: (programs) =>
+      programs.every(
+        (program) =>
+          typeof program.title === 'string' &&
+          typeof program.image === 'string' &&
+          typeof program.icon === 'string' &&
+          typeof program.description === 'string'
+      )
   }
 })
 
 defineEmits(['show-detail'])
 
-// Fallback for broken images
+// Image fallback handler
 const handleImageError = (event) => {
   event.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found'
 }
 
 // Show more / less toggle
 const showAll = ref(false)
-
-// Convert prop to reactive ref so we can use it in computed
 const programList = toRef(props, 'givingPrograms')
 
-// Only show 4 or all based on toggle
+// Visible items depending on toggle
 const visibleGiving = computed(() =>
   showAll.value ? programList.value : programList.value.slice(0, 4)
 )
 </script>
-
