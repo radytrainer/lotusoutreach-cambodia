@@ -3,11 +3,6 @@
     <section id="programs" class="mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
-          <div
-            class="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4"
-          >
-            Our Programs
-          </div>
           <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
             Four Pillars of
             <span
