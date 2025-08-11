@@ -21,7 +21,7 @@
             </div>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed">
-            Transforming lives in rural Cambodia through education, healthcare,
+            Transforming lives through education, training, care, 
             and community development programs that respect local culture and
             traditions.
           </p>
