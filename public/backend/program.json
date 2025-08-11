@@ -255,38 +255,6 @@
                     "label": "School Completion Rate"
                 }
             ]
-        },
-        {
-            "title": "CTC",
-            "image": "/image/Program/ctc.png",
-            "icon": "fas fa-hands-helping",
-            "description": "Providing trauma therapy and assistance to survivors of trafficking and sexual and domestic violence in a women's shelter in rural Cambodia.",
-            "fullDescription": "The Counseling and Training Center (CTC) provides comprehensive support services to women and girls who have survived trafficking, sexual violence, and domestic abuse. Located in a safe, residential facility, CTC offers trauma-informed therapy, life skills training, and reintegration support to help survivors heal and rebuild their lives with dignity and independence.",
-            "features": [
-                "Professional trauma counseling and therapy services",
-                "Safe residential accommodation and 24/7 support",
-                "Vocational training and job placement assistance",
-                "Legal advocacy and court accompaniment",
-                "Family mediation and community reintegration support"
-            ],
-            "stats": [
-                {
-                    "number": "450+",
-                    "label": "Women Supported"
-                },
-                {
-                    "number": "78%",
-                    "label": "Successful Reintegration"
-                },
-                {
-                    "number": "24/7",
-                    "label": "Crisis Support Available"
-                },
-                {
-                    "number": "12",
-                    "label": "Months Average Stay"
-                }
-            ]
         }
     ],
     "trainingPrograms": [
