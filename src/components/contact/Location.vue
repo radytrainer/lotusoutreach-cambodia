@@ -6,9 +6,6 @@
         <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4">
           Our Location
         </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Come visit us in Phnom Penh, Cambodia, where our dedicated team supports rural communities with impactful programs.
-        </p>
       </div>
 
       <!-- Map and Card -->

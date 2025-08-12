@@ -25,9 +25,6 @@
 
             <div class="text-left">
                 <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center md:text-left md:text-5xl">History</h1>
-                <h2 class="text-2xl font-semibold text-gray-600 mb-6 text-center md:text-left md:text-3xl">
-                    | Donate For Girls Around The World!
-                </h2>
                 <p v-for="(paragraph, index) in content" :key="index"
                     class="text-base sm:text-lg md:text-2xl lg:text-base text-gray-700 mb-4 text-center md:text-left"
                     v-html="paragraph" />
