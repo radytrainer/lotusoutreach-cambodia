@@ -16,7 +16,7 @@
       </div>
 
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <Card-activity v-for="(activity, index) in filteredActivities.slice(0, visibleItems)" :key="activity.title"
+        <CardActivity v-for="(activity, index) in filteredActivities.slice(0, visibleItems)" :key="activity.title"
           :activity="activity" :getCategoryBadgeClass="getCategoryBadgeClass" :getCategoryLabel="getCategoryLabel"
           :formatDate="formatDate" @view-detail="viewActivityDetail" />
       </div>
@@ -34,10 +34,12 @@
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
+import axios from "axios";
 import convex from '@/convex';
 import HeroBanner from '@/components/News/HeroBanner.vue';
 import CardActivity from '@/components/News/CardActivity.vue';
 import ActivityDetail from '@/components/News/ActivityDetail.vue';
+import ActivityFilter from '@/components/News/ActivityFilter.vue';
 import SuccessStory from '@/components/News/SuccessStory.vue';
 
 const currentView = ref("listing");
@@ -46,21 +48,18 @@ const visibleItems = ref(6);
 const searchQuery = ref("");
 const activeCategories = ref([]);
 const activities = ref([]);
-const categories = ref([
-  { value: 'education', label: 'Girls\' Education' },
-  { value: 'health', label: 'Health & Nutrition' },
-  { value: 'protection', label: 'Anti-Trafficking & Child Protection' },
-  { value: 'livelihoods', label: 'Sustainable Livelihoods' },
-]);
+const categories = ref([]);
 const stories = ref([]);
 
 const fetchData = async () => {
   try {
     const result = await convex.query("getActivities");
-    activities.value = result;
+    const response = await axios.get('/backend/newsStory.json');
+    categories.value = response.data.categories;
+    stories.value = response.data.stories;
+    activities.value = result || [];
   } catch (error) {
-    console.error("Failed to load activities from Convex:", error);
-    alert(`Failed to fetch activities: ${error.message || 'Unknown error'}`);
+    console.error("Failed to load data from newsStory.json", error);
   }
 };
 
@@ -104,9 +103,7 @@ const relatedActivities = computed(() => {
   return activities.value
     .filter(
       (activity) =>
-        activity.title !== selectedActivity
-
-.value.title &&
+        activity.title !== selectedActivity.value.title &&
         (activity.category === selectedActivity.value.category || Math.random() > 0.5)
     )
     .slice(0, 2);
@@ -115,20 +112,23 @@ const relatedActivities = computed(() => {
 const viewActivityDetail = (activity) => {
   selectedActivity.value = activity;
   currentView.value = "detail";
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 0); 
   console.log("Selected Activity:", activity.title, "Current View:", currentView.value);
 };
+
 
 const backToListing = () => {
   currentView.value = "listing";
   selectedActivity.value = null;
 };
 
+
 const calculateReadTime = (content) => {
   const wordsPerMinute = 200;
   const wordCount = content.split(/\s+/).length;
   return Math.ceil(wordCount / wordsPerMinute);
 };
+
 
 const getCategoryButtonClass = (category) => {
   const isActive = activeCategories.value.includes(category);
@@ -140,6 +140,7 @@ const getCategoryButtonClass = (category) => {
     "bg-gray-100 text-gray-800": !isActive,
   };
 };
+
 
 const getCategoryBadgeClass = (category) => {
   return {
