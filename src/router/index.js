@@ -17,6 +17,7 @@ import ProgramGiving from '@/components/Program/ProgramGiving.vue';
 import SuccessStory from '@/components/News/SuccessStory.vue';
 import StoryDetailPage from '@/components/News/StoryDetailPage.vue';
 import GalleryView from '@/views/GalleryView.vue';
+import Activities from '@/views/Activities.vue';
 
 const routes = [
   {
@@ -49,6 +50,8 @@ const routes = [
       {path: 'team/:id', name: 'DetailTeam', component: DetailTeam, props: true },
       { path: 'success-story', name: 'SuccessStory', component: SuccessStory },
       { path: 'success-story/:id', name: 'StoryDetail', component: StoryDetailPage, props: true },
+      //Convex Activities Route
+      { path: '/Admin', name: 'Activities',component: Activities,},
     ],
   },
 ];
