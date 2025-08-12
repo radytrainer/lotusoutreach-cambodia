@@ -1,4 +1,3 @@
-
 <template>
   <div class="bg-white">
     <HeroBanner v-if="currentView === 'listing'" />
