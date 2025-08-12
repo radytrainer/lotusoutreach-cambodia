@@ -234,6 +234,12 @@ const stories = [
       '/image/News/rany06.jpg',
       '/image/News/rany07.jpg',
       '/image/News/rany08.jpg',
+      '/image/News/rany09.jpg',
+      '/image/News/rany10.jpg',
+      '/image/News/rany11.jpg',
+      '/image/News/rany12.jpg',
+      '/image/News/rany13.jpg',
+      '/image/News/rany14.jpg'
     ],
     fullStory: [
       {
