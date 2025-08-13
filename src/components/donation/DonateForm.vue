@@ -254,7 +254,7 @@ const handleSubmit = async () => {
 
 const setAmount = (value) => {
   form.amount = value;
-  validateForm(); // Re-validate to clear errors and enable button if other fields are valid
+  validateForm(); 
 };
 </script>
 
