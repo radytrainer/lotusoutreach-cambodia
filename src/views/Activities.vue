@@ -313,7 +313,7 @@ const newActivity = ref({
   date: '',
   author: '',
   category: 'education',
-  image: '/placeholder.svg',
+  image: '',
   image1: [],
   location: '',
 });
