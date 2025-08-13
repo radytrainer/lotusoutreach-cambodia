@@ -305,6 +305,7 @@
 import { ref, onMounted } from 'vue';
 import CardActivity from '@/components/News/CardActivity.vue';
 import convex from '@/convex';
+import Swal from 'sweetalert2';
 
 const activities = ref([]);
 const newActivity = ref({
@@ -520,19 +521,19 @@ const saveActivity = async () => {
     newActivity.value.image1 = image1Urls;
 
     if (editingId.value) {
-    console.log('Updating activity:', { id: editingId.value, ...newActivity.value });
-    await convex.mutation("mutations:updateActivity", {
-      id: editingId.value,
-      ...newActivity.value,
-    });
-    $.notify("Activity updated successfully", "success");
-  } else {
-    console.log('Creating activity:', newActivity.value);
-    await convex.mutation("mutations:createActivity", newActivity.value);
-    $.notify("Activity created successfully", "success");
-  }
-  await fetchActivities();
-  resetForm();
+      console.log('Updating activity:', { id: editingId.value, ...newActivity.value });
+      await convex.mutation("mutations:updateActivity", {
+        id: editingId.value,
+        ...newActivity.value,
+      });
+      $.notify("Activity updated successfully", "success");
+    } else {
+      console.log('Creating activity:', newActivity.value);
+      await convex.mutation("mutations:createActivity", newActivity.value);
+      $.notify("Activity created successfully", "success");
+    }
+    await fetchActivities();
+    resetForm();
   } catch (error) {
     console.error('Error saving activity:', error);
     alert(`Failed to save activity: ${error.message || 'Unknown error'}`);
@@ -540,18 +541,6 @@ const saveActivity = async () => {
     isUploading.value = false;
   }
 };
-
-const deleteActivity = async (id) => {
-  try {
-    await convex.mutation("mutations:deleteActivity", { id });
-    await fetchActivities();
-    $.notify("Activity deleted successfully", "error");
-  } catch (error) {
-    console.error('Error deleting activity:', error);
-    $.notify(`Failed to delete activity: ${error.message || 'Unknown error'}`, "warning");
-  }
-};
-
 const resetForm = () => {
   newActivity.value = {
     title: '',
@@ -583,4 +572,31 @@ const fetchActivities = async () => {
 };
 
 onMounted(fetchActivities);
+
+const deleteActivity = async (id) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "This action cannot be undone.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes, delete it",
+    cancelButtonText: "Cancel",
+    reverseButtons: true,
+    customClass: {
+      confirmButton: 'swal2-confirm',
+      cancelButton: 'swal2-cancel bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded'
+    },
+  }).then(async (result) => {
+    if (result.isConfirmed) {
+      try {
+        await convex.mutation("mutations:deleteActivity", { id });
+        await fetchActivities();
+
+        Swal.fire("Deleted!", "The activity has been removed.", "success");
+      } catch (error) {
+        Swal.fire("Error!", "Failed to delete activity.", "error");
+      }
+    }
+  });
+};
 </script>
