@@ -7,7 +7,6 @@
           Our Location
         </h2>
       </div>
-
       <!-- Map and Card -->
       <div class="max-w-7xl mx-auto px-4">
         <div class="relative rounded-3xl overflow-hidden shadow-ml border border-blue-100">
@@ -20,7 +19,6 @@
             referrerpolicy="no-referrer-when-downgrade"
             title="Lotus Outreach Cambodia Map"
           ></iframe>
-
           <!-- Floating Glass Card -->
           <div class="absolute top-6 left-6 bg-white/70 backdrop-blur-md rounded-xl p-6 shadow-lg max-w-[90%] sm:max-w-sm border border-blue-200">
             <h3 class="text-2xl font-bold text-blue-700 mb-1">

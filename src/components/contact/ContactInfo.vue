@@ -1,6 +1,4 @@
 <template>
-  <!-- Responsive Contact Info Card -->
-  
     <div class="bg-blue-500 text-white p-6 md:p-12 rounded-xl shadow-md">
       <div class="h-full flex flex-col justify-center">
         <!-- Header -->
@@ -42,7 +40,6 @@
               <p class="text-blue-100">+855 12 911 075</p>
             </div>
           </div>
-
           <!-- Address -->
           <div class="flex flex-col sm:flex-row sm:items-start sm:space-x-4">
             <div class="mb-2 sm:mb-0">

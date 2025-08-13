@@ -1,12 +1,9 @@
 <template>
-  <!-- Call to Action -->
   <section class="relative h-[60vh] bg-cover bg-center flex items-center overflow-hidden">
-    <!-- Background image with overlay -->
     <img src="/public/image/contact/contactMission.png" alt="Cambodian girls in a classroom"
       class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-br from-indigo-400/40"></div>
     <div class="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
-
     <!-- Content -->
     <div class="container mx-auto px-6 relative z-10 text-center">
       <div class="max-w-3xl mx-auto">
@@ -24,6 +21,5 @@
         </router-link>
       </div>
     </div>
-
   </section>
 </template>
