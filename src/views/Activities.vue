@@ -364,7 +364,7 @@ const editActivity = (activity) => {
     date: activity.date ? new Date(activity.date).toISOString().split('T')[0] : '',
     author: activity.author || '',
     category: activity.category || 'education',
-    image: activity.image || '/placeholder.svg',
+    image: activity.image || '',
     image1: Array.isArray(activity.image1) ? activity.image1 : [],
     location: activity.location || '',
   };
@@ -480,7 +480,7 @@ const saveActivity = async () => {
       }
       newActivity.value.image = await uploadFile(mainImageFile.value);
     } else if (!newActivity.value.image || newActivity.value.image.trim() === '') {
-      newActivity.value.image = '/placeholder.svg';
+      newActivity.value.image = '';
     } else {
       try {
         new URL(newActivity.value.image);
@@ -559,7 +559,7 @@ const resetForm = () => {
     date: '',
     author: '',
     category: 'education',
-    image: '/placeholder.svg',
+    image: '',
     image1: [],
     location: '',
   };
