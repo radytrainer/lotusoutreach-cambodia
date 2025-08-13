@@ -20,7 +20,6 @@
           :key="index"
           class="mb-20 sm:mb-24 md:mb-32 px-4 sm:px-6 lg:px-8"
         >
-          <!-- Image-based Section -->
           <div
             v-if="program.image && (index === 0 || index === 2)"
             class="bg-white rounded-3xl shadow-md overflow-hidden"

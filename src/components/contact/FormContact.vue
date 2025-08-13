@@ -8,7 +8,6 @@
       or wish to support our work in Cambodia, fill out the form below.
     </p>
   </div>
-
   <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-8">
     <!-- Contact Form -->
     <div class="bg-white p-12 rounded-xl shadow-md border border-gray-100">
@@ -39,7 +38,6 @@
             />
           </div>
         </div>
-
         <div>
           <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
           <textarea
@@ -51,7 +49,6 @@
             placeholder="Your Message"
           ></textarea>
         </div>
-
         <div class="pt-2">
           <button
             type="submit"
@@ -62,7 +59,6 @@
             {{ isSubmitting ? "Sending..." : "Send Message" }}
           </button>
         </div>
-
         <!-- Feedback Message -->
         <p
           v-if="formStatus"
@@ -77,8 +73,6 @@
         </p>
       </form>
     </div>
-
-    <!-- Contact Info Section -->
     <ContactInfo />
   </div>
 </template>
@@ -88,7 +82,6 @@ import { ref } from "vue";
 import emailjs from "emailjs-com";
 import ContactInfo from "./ContactInfo.vue";
 
-// Reactive form data
 const form = ref({
   name: "",
   email: "",
@@ -98,12 +91,11 @@ const form = ref({
 const isSubmitting = ref(false);
 const formStatus = ref(null);
 
-// Replace with your EmailJS credentials
+// EmailJS configuration
 const SERVICE_ID = "service_g730mbw";
 const TEMPLATE_ID = "template_kgkljol";
 const PUBLIC_KEY = "Bl7S83_6GRufEYlOa";
 
-// Submit form handler
 const handleSubmit = async () => {
   if (!form.value.name || !form.value.email || !form.value.message) {
     formStatus.value = {
@@ -112,16 +104,16 @@ const handleSubmit = async () => {
     };
     return;
   }
-
   isSubmitting.value = true;
   formStatus.value = null;
 
+  // Prepare template parameters for EmailJS
   const templateParams = {
     from_name: form.value.name,
     from_email: form.value.email,
     message: form.value.message,
   };
-
+  // Send email using EmailJS
   try {
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
 
@@ -129,7 +121,6 @@ const handleSubmit = async () => {
       success: true,
       message: "🎉 Thank you for contacting us! We'll get back to you shortly.",
     };
-
     // Reset form
     form.value = {
       name: "",

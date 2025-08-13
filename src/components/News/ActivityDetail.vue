@@ -7,7 +7,6 @@
       </svg>
       <span class="font-medium sm:text-lg md:text-2xl lg:text-base">Back to Activities</span>
     </button>
-
     <article
       class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl dark:bg-gray-800">
       <div class="aspect-video overflow-hidden bg-gray-200 dark:bg-gray-700">

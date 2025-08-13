@@ -11,7 +11,6 @@
         </svg>
         Back to News & Stories
       </router-link>
-
       <!-- Hero Section -->
       <div class="relative mb-8 md:mb-12 h-72 md:h-[450px] rounded-lg overflow-hidden shadow-lg">
         <img :src="currentStory.avatar" :alt="currentStory.name + ' graduating'"
@@ -25,8 +24,6 @@
           </p>
         </div>
       </div>
-
-
       <!-- Full Story Section -->
       <div class="mb-8 md:mb-12">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Her Journey</h2>
@@ -39,7 +36,6 @@
           </div>
         </div>
       </div>
-
       <!-- Image Gallery Section -->
       <div class="mb-8 md:mb-12">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Moments from Her Life</h2>
@@ -53,9 +49,23 @@
     </div>
   </section>
 </template>
-
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+import axios from 'axios';
+
+const storyDetails = ref([]);
+
+const fetchData = async () => {
+  try {
+    const response = await axios.get('/backend/newsStory.json');
+    storyDetails.value = response.data.storyDetails || [];
+    console.log("Data loaded from newsStory.json", storyDetails.value);
+  } catch (error) {
+    console.error("Failed to load data from newsStory.json", error);
+  }
+};
+
+fetchData();
 
 const props = defineProps({
   id: {
@@ -64,312 +74,18 @@ const props = defineProps({
   },
 });
 
-const stories = [
-  {
-    name: 'SAT MARANY',
-    program: 'PHYSICS GRADUATE, ROYAL UNIVERSITY OF PHNOM PENH',
-    avatar: '/image/News/01.jpg',
-    images: [
-      '/image/News/07.jpg',
-      '/image/News/03.jpg',
-      '/image/News/04.jpg',
-      '/image/News/05.jpg',
-      '/image/News/06.jpg',
-      '/image/News/08.jpg',
-    ],
-    fullStory: [
-      {
-        title: 'Early Life and Challenges',
-        content:
-          'Sat Marany, a 22-year-old from Banteay Meanchey Province, has shown remarkable resilience and determination throughout her academic journey. Since Grade 7, her parents have worked in Thailand, leaving her and her brother in the care of their grandparents.',
-      },
-      {
-        title: 'Academic Achievements and Scholarship',
-        content:
-          'Marany became a recipient of the CATALYST Scholarship from Lotus Outreach Cambodia during her first year at university and remained in the program until graduation. In 2024, she graduated with distinction from the Royal University of Phnom Penh, earning a degree in Physics with a perfect GPA of 4.00 in her final year.',
-      },
-      {
-        title: 'Current Employment and Volunteering',
-        content:
-          'Today, Marany works part-time at ISF International School and also offers private tutoring, earning approximately $600 per month. Despite her full schedule, she continues to volunteer at the Optoelectronics & Advanced Materials Laboratory at her university, demonstrating her passion for lifelong learning.',
-      },
-      {
-        title: 'International Workshop Participation',
-        content:
-          'Her academic interests led her to participate in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024, held in Thailand from November 10–16, where she broadened her scientific knowledge and professional network.',
-      },
-      {
-        title: 'Commitment to Education and Community',
-        content:
-          'Marany is deeply committed to education and community service. She regularly volunteers in activities that link science with social impact and serves as a mentor to younger students, sharing her life experiences to inspire and guide them. She is also deeply involved in her younger brother’s education, providing both financial and academic support. In addition, she contributes to her parents’ and grandparents’ living expenses.',
-      },
-      {
-        title: 'Future Aspirations',
-        content:
-          'Marany’s long-term goal is to reunite her family in Cambodia. Motivated by this dream, she continues to focus on her personal development and is actively seeking scholarship opportunities to pursue a master’s degree in physics or a related science field abroad.',
-      },
-      {
-        title: 'Gratitude and Acknowledgments',
-        content:
-          'She extends her heartfelt gratitude to the donors who have made it possible for underprivileged Cambodian girls to access higher education and transform their lives. She also gives special thanks to the dedicated staff of Lotus Outreach Cambodia, especially Ms. Raksmey and Ms. Pisey, for their unwavering support and guidance—both academically and personally. Their encouragement and belief in the students\' potential have empowered Marany and many others to persevere and thrive, despite life\'s many challenges.',
-      },
-    ],
-  },
-  {
-    name: 'SALL KANNIKA',
-    program: 'COMPUTER SCIENCE STUDENT, ASIA EURO UNIVERSITY',
-    avatar: '/image/News/11.jpg',
-    images: ['/image/News/kanitha03.jpg', '/image/News/11.jpg', '/image/News/12.jpg'],
-    fullStory: [
-      {
-        title: 'Introduction to the Hackathon',
-        content:
-          'My name is Sall Kannika, and I am a first-year Computer Science student at Asia Euro University. I recently had the incredible opportunity to participate in the Design Thinking Hackathon, a youth program funded by Hub Phnom Penh. Out of many applicants, I was proud to be selected as one of 20 finalists from Phnom Penh and Battambang.',
-      },
-      {
-        title: 'Program Overview and Goals',
-        content:
-          'The program lasted five days, including three days of intensive training and two days of travel between Phnom Penh and Battambang. Everything—from transportation and meals to accommodation—was fully sponsored for participants traveling from Phnom Penh. The Design Thinking Hackathon aimed to equip young people with essential life skills, leadership abilities, and real-world problem-solving experience.',
-      },
-      {
-        title: 'Day 1: Self-Discovery',
-        content:
-          'Day 1 focused on self-discovery. We used tools like mind mapping to explore the differences between a growth mindset and a fixed mindset. We also engaged in deep self-reflection, learning to identify our personal values, strengths, and weaknesses.',
-      },
-      {
-        title: 'Day 2: Community Problem-Solving',
-        content:
-          'Day 2 centered on community problem-solving. We explored local issues, formed teams, identified root causes, and applied Design Thinking techniques to craft innovative solutions.',
-      },
-      {
-        title: 'Day 3: Building and Presenting Solutions',
-        content:
-          'Day 3 was dedicated to building and presenting our solutions. Each team pitched their ideas, and the top four teams, including mine, received seed funding and mentoring support to bring their projects to life. My team’s project, A+ Forum, was well-received, winning $500 in seed funding and a certificate of achievement.',
-      },
-      {
-        title: 'Project Implementation',
-        content:
-          'The winning four teams, each with four members, are currently implementing their projects over a two-month period with mentor support, gaining real-life experience in project planning, teamwork, and social impact. Even teams that did not win were encouraged to pursue their ideas, reinforcing that every effort counts toward community change.',
-      },
-      {
-        title: 'Life-Changing Experience and Skill Development',
-        content:
-          'Participating in this program was a life-changing experience. I built meaningful friendships and networks with 40 inspiring youths and mentors from Battambang and Phnom Penh, applied Design Thinking to tackle real community problems, and strengthened my leadership, teamwork, and problem-solving skills.',
-      },
-      {
-        title: 'Personal Growth and Reaffirmation',
-        content:
-          'I developed greater self-awareness by exploring my values, strengths, weaknesses, and aspirations, and gained a deeper understanding of local challenges through community-based learning. This journey has reaffirmed my passion for learning, community development, and innovation.',
-      },
-      {
-        title: 'My Project: A+ Forum',
-        content:
-          'I presented my project, A+ Forum, during the final pitch competition. The idea was well-received, and our team was selected as one of the winners. We are now in the process of turning this vision into reality with the support of our mentors and the $500 implementation grant.',
-      },
-    ],
-  },
-  {
-    name: 'KIMHENG',
-    program: 'AGRONOMY, ROYAL UNIVERSITY OF AGRICULTURE',
-    avatar: '/image/News/kimheng07.jpg',
-    images: [
-      '/image/News/kimheng02.jpg',
-      '/image/News/kimheng03.jpg',
-      '/image/News/kimheng04.jpg',
-      '/image/News/kimheng05.jpg',
-      '/image/News/kimheng06.jpg',
-      '/image/News/kimheng08.jpg',
-    ],
-    fullStory: [
-      {
-        title: 'Introduction',
-        content:
-          '“Problems are afraid of me now—not the other way around.” At 29, Kimheng stands as a powerful example of what access to education can make possible, especially for young women from poor, rural communities. Born in Takeo Province, Cambodia, Kimheng grew up as the youngest of eight children in a struggling household. After her father passed away seven years ago, Kimheng became the primary caregiver for her ailing mother—an unexpected but deeply gendered responsibility in a family where six of her siblings, all men, moved into their wives’ homes after marriage. She stayed behind, quietly holding her family together.',
-      },
-      {
-        title: 'Joining the CATALYST Program',
-        content:
-          'Kimheng’s path began to change in 2016 when she was selected as part of the first Lotus Outreach Cambodia\'s CATALYST Program, supported by Buddhist Global Relief (BGR). With this opportunity, she pursued a Bachelor’s degree in Agronomy at the Royal University of Agriculture, eventually specializing in Laboratory Management. She graduated in 2020—an achievement that marked a personal triumph and one that would ripple through her family and community.',
-      },
-      {
-        title: 'Breaking Gender Barriers in Science',
-        content:
-          'In a field traditionally dominated by men, Kimheng now manages a laboratory of 30 staff, overseeing operations, documentation, research, and translation—at a monthly salary of $650, a significant income in rural Cambodia. Her position as a lab manager is groundbreaking, as such roles are typically held by men. Kimheng rose to the challenge thanks to her education, multilingual abilities (including fluency in Chinese), and mentoring support. Her entry into management was sparked by a relationship with a Chinese project director during her university years, who recognized her talent and dedication and encouraged her to take on the leadership role after COVID lockdowns. Initially, her authority was questioned due to her age and gender, but Kimheng stood firm, implemented policy-based leadership, and earned the respect of her team. “I just followed the policy and had to be a little authoritarian at first,” she says. “Now I can manage people, inspire them, and give clear direction. I feel incredibly confident.”',
-      },
-      {
-        title: 'Education as a Tool for Family Upliftment',
-        content:
-          'Kimheng’s accomplishments have had a transformational effect on her entire family. After graduating, she used her income to: pay $10,000 for her mother’s urgent eye surgery, build a $15,000 house for her mother—her lifelong dream, support her brother’s education in public administration, and cover medical treatment costs for another sibling in Thailand. These achievements represent generational shifts for her family.',
-      },
-      {
-        title: 'A Catalyst for Leadership',
-        content:
-          'Kimheng’s leadership roots trace back to her time with the CATALYST Program, where she was trained in team leadership and communication. This foundation helped her believe in herself when offered the manager role, enabling her to lead with confidence and inspire her team.',
-      },
-      {
-        title: 'Future Aspirations',
-        content:
-          'Kimheng’s long-term dream is to pursue a Master’s in seed breeding and tissue culture, possibly in China or Taiwan, where she has already attended a program and discovered a passion for academic translation and agricultural exchange. However, financing this dream remains a challenge. “Support for a Master’s is just $1,500 a year—it’s not enough,” she says. Yet, Kimheng remains undeterred, driven by her hunger to learn and deepen her technical skills in agricultural biotechnology, specifically tissue culture and propagation, within a university setting. She aims to be a bridge between Cambodia and the wider world, translating research and facilitating international collaboration in agriculture.',
-      },
-      {
-        title: 'Overcoming Gender Realities',
-        content:
-          'Kimheng’s journey is shaped by deep gendered dynamics: being left behind to care for her mother, facing resistance as a young female leader, and entering a scientific field where women are underrepresented. Her story is one of resistance and triumph. “I’ve learned that education gives you choices. I’m no longer dependent. I don’t fear problems—because now, they fear me.”',
-      },
-      {
-        title: 'A Message of Gratitude',
-        content:
-          'Kimheng expresses deep gratitude to Lotus Outreach and Buddhist Global Relief: “Thank you, Lotus Outreach and BGR. Your support gave me confidence and freedom. You didn’t just educate me—you empowered me to transform my life and support my whole family.” Her story reminds us that when girls are educated, families rise, communities transform, and stereotypes are shattered.',
-      },
-    ],
-  },
-  {
-    name: 'LEANG RANY',
-    program: 'BUSINESS MANAGEMENT GRADUATE, 2020',
-    avatar: '/image/News/rany06.jpg',
-    images: [
-      '/image/News/rany02.jpg',
-      '/image/News/rany04.jpg',
-      '/image/News/rany05.jpg',
-      '/image/News/rany06.jpg',
-      '/image/News/rany07.jpg',
-      '/image/News/rany08.jpg',
-      '/image/News/rany09.jpg',
-      '/image/News/rany10.jpg',
-      '/image/News/rany11.jpg',
-      '/image/News/rany12.jpg',
-      '/image/News/rany13.jpg',
-      '/image/News/rany14.jpg'
-    ],
-    fullStory: [
-      {
-        title: 'From Accountant to “Queen of Marble”: Leang Rany’s Journey of Family, Grit, and Growth',
-        content:
-          'When Leang Rany joined the CATALYST program in 2016, few could have predicted that she would one day lead one of the most inspiring youth-led businesses in Cambodia’s construction industry. A graduate in Business Management in 2020, Rany began her journey as an accountant in a small marble company in Phnom Penh. But behind her warm and friendly demeanor was a driven young woman with bold dreams—dreams that would transform not just her own future, but her entire family’s.'
-      },
-      {
-        title: '',
-        content:
-          'By 2019, she had learned the ins and outs of the marble business—from accounting and purchasing to managing building contracts. Determined to build something of her own, Rany convinced her family to put their farmland up as collateral to secure a $25,000 startup loan. Just one year later, she expanded the investment to $100,000.'
-      },
-      {
-        title: '',
-        content:
-          'Today, Rany is the proud founder and CEO of Krusar Marble Company, named in honor of her family. With a showroom, warehouse, and processing unit near Phnom Penh International Airport, her business employs 21 staff, including every member of her immediate family. This was no accident—Rany\'s mission was clear: to create opportunities that would keep her siblings from having to migrate to Thailand as farm laborers.'
-      },
-      {
-        title: '',
-        content:
-          'Even as her business grows, Rany stays grounded. She has given her family shares in the business and will soon distribute their first profit dividends. Her approach balances professional ambition with deep care and inclusion, turning her company into more than just a business—it is a shared legacy.'
-      },
-      {
-        title: '',
-        content:
-          'Rany now serves as an inspiring role model for CATALYST students and alumni, proving that with determination, trust, and the right support, young people can lead thriving enterprises rooted in purpose and community.'
-      }
-    ]
-  },
-  {
-    name: 'PEN SREYNICH',
-    program: 'MIDWIFERY, BATTAMBANG REGIONAL TRAINING CENTER FOR HEALTH',
-    avatar: '/image/News/nich_08.jpg',
-    images: [
-      '/image/News/nich_02.jpg',
-      '/image/News/nich_03.jpg',
-      '/image/News/nich_04.jpg',
-      '/image/News/nich_05.jpg',
-      '/image/News/nich_06.jpg',
-      '/image/News/nich_07.jpg'
-    ],
-    fullStory: [
-      {
-        title: 'From Trauma to Triumph',
-        content:
-          'Phnom Penh, Cambodia – What began as a childhood marked by abandonment and adversity has transformed into a story of courage, resilience, and hope. Pen Sreynich, a young midwife now working at Kuntha Bopha Hospital in Phnom Penh, is not only saving lives in the ICU Department but also inspiring young girls across Cambodia to dream beyond their circumstances.'
-      },
-      {
-        title: 'Early Life Challenges',
-        content:
-          'Originally from Banteay Meanchey Province, Sreynich faced hardship early in life. Her family moved to Pailin Province when she was young, but her parents soon migrated to Thailand for work. Left behind, she endured pressure from her mother to drop out of school and suffered violence from her father. This traumatic period left her feeling deeply afraid and hopeless, to the point where she contemplated suicide and no longer wished to see her father.'
-      },
-      {
-        title: 'A Turning Point',
-        content:
-          'Her life took a turn when her aunt brought her back to Banteay Meanchey and encouraged her to continue her studies. That turning point paved the way for a journey of healing and growth. With the help of Lotus Outreach Cambodia’s GATE Program and later the CATALYST Project, Sreynich received educational support, life skills training, and mentoring that helped her finish high school and pursue her dream of becoming a midwife.'
-      },
-      {
-        title: 'Pursuing Midwifery',
-        content:
-          'In 2017, she began studying midwifery at the Battambang Regional Training Center for Health and graduated in 2021. Today, she proudly serves in a key role at one of Cambodia’s busiest pediatric hospitals. “I feel grateful to be in a warm, supportive environment and to contribute meaningfully to the healthcare system,” she said.'
-      },
-      {
-        title: 'Giving Back Through Mentorship',
-        content:
-          'Her journey hasn’t stopped with her personal success. As an active CATALYST alumna, Sreynich regularly returns to mentor and motivate current students, especially on topics related to women’s health. Through workshops, educational events, and "Pay It Forward" initiatives, she is ensuring that other young girls see the possibilities that once seemed out of reach to her.'
-      },
-      {
-        title: 'Advocating for Gender Equality',
-        content:
-          'She is also a vocal advocate for gender equality in Cambodia. “I hope that our society will change its view that ‘women only belong in the kitchen,’” she says. “Women have the same capabilities and rights as men. We must all promote gender equality to build a more peaceful world.”'
-      },
-      {
-        title: 'Inspiration for Change',
-        content:
-          'Sreynich’s story is a powerful reminder of how targeted support, educational opportunity, and a caring community can help a young girl overcome trauma—and emerge as a leader for change.'
-      }
-    ]
-  },
-  {
-    "name": "Vann Sophin",
-    "program": "ACCOUNTING, VANDA INSTITUTE OF ACCOUNTING",
-    "avatar": "/image/News/phin_06.jpg",
-    "images": [
-      "/image/News/phin_01.jpg",
-      "/image/News/phin_02.jpg",
-      "/image/News/phin_03.jpg",
-      "/image/News/phin_04.jpg",
-      "/image/News/phin_05.jpg",
-      "/image/News/phin_07.JPG",
-    ],
-    "fullStory": [
-      {
-        "title": "From Poverty to Purpose",
-        "content": "Siem Reap Province – Born and raised in Siem Reap, Vann Sophin is the eldest of three siblings. Her early life was shaped by hardship and perseverance. Her father worked as a woodcutter, transporting chopped wood by bicycle and selling it along the streets to support the family. Her mother remained at home, managing household duties and raising a few animals to contribute to the family’s livelihood."
-      },
-      {
-        "title": "Facing Economic Challenges",
-        "content": "Life took a difficult turn when her father was injured by a saw during his work in the forest. Forced to leave his dangerous job behind, he began selling ice blocks instead—a safer yet lower-income alternative. Despite these economic struggles, the family remained resilient."
-      },
-      {
-        "title": "Determined to Succeed",
-        "content": "As a young girl, Sophin walked to school every day. Often, she attended classes without money or adequate learning materials. Unable to afford separate notebooks for each subject, she was sometimes looked down on by teachers. “I felt hurt,” she reflected. “But from the bottom of my heart, I committed to studying hard. I wanted to grow up and achieve more than those who judged me.” That determination led to strong academic performance. Sophin earned top scores and the praise of her parents, proving that poverty could not stop her from reaching her potential."
-      },
-      {
-        "title": "Joining CATALYST and GATE Programs",
-        "content": "In October 2017, a turning point came when she joined the CATALYST Project by Lotus Outreach Cambodia. She also became a participant in the GATE Program for three years (Grades 9–11), receiving essential support such as school materials, a monthly allowance, rice, accommodation, and mentorship—all of which helped ease the burden on her family."
-      },
-      {
-        "title": "Graduation and Career",
-        "content": "Sophin graduated in October 2020 with a degree in Accounting from the Vanda Institute of Accounting in Siem Reap. Today, she proudly works as an Accounting Support Officer at Sahakkreas M Plus Cash Express in her home province. “I love this job very much,” she shared. “My coworkers and supervisor are incredibly supportive. I always give my best to ensure everything runs smoothly. Everyone appreciates me—especially my employee. When she told me she was glad to have a supervisor like me, I was over the moon.”"
-      },
-      {
-        "title": "Giving Back and Mentorship",
-        "content": "Not only has she built a successful career, but she also dedicates her time to helping younger CATALYST scholars. She actively supports them in finding job opportunities and even helps recruit them to work with her current institution. She remains involved with Lotus Outreach Cambodia by donating funds annually to the organization’s Giving Back Program. Additionally, she shares her personal growth and the challenges she has overcome, hoping to inspire others to follow in her footsteps."
-      },
-      {
-        "title": "Gratitude to Donors",
-        "content": "With heartfelt emotion, she thanked the donors who made her success possible. “I am beyond thankful for your priceless support. I could never have done this without you. I never even dreamed of being where I am today. Because of your help, I’ve become an outstanding student and now a company supervisor. You gave me hope and a new beginning.”"
-      },
-      {
-        "title": "Looking Ahead",
-        "content": "From a struggling schoolgirl to a confident young professional, Vann Sophin’s journey is a powerful example of how opportunity, determination, and support can transform lives. Now, she looks to the future with hope and purpose. “I hope to see a future with fewer poor people and more educated individuals in our society,” she said. “I want to see every child—especially girls—have the chance to pursue higher education and become valuable contributors to their families and communities. We need to work hard so that no one can judge us or doubt what we are capable of.”"
-      }
-    ]
-  }
-];
-
-const currentStory = computed(() => stories[props.id]);
+const currentStory = computed(() => {
+  return storyDetails.value[props.id] || {}; 
+});
 </script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+</style>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');

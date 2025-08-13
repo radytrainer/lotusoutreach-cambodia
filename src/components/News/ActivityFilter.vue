@@ -7,10 +7,7 @@
       Explore our ongoing initiatives and programs making a difference in
       communities in Cambodia.
     </p>
-
-    <!-- Search and Filter Section -->
     <div class="max-w-xl mx-auto space-y-6">
-      <!-- Search Input --> 
       <div class="relative shadow-sm">
         <input
           v-model="localSearch"
@@ -34,8 +31,6 @@
           />
         </svg>
       </div>
-
-      <!-- Category Buttons -->
       <div class="flex flex-wrap justify-center gap-3">
         <button
           v-for="category in categories"
@@ -46,8 +41,6 @@
         >
           {{ category.label }}
         </button>
-
-        <!-- Clear Filters -->
         <button
           @click="clearFilters"
           class="px-4 py-2 lg:text-sm rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all font-medium shadow-sm text-base sm:text-lg md:text-xl lg:text-base"
@@ -74,7 +67,6 @@ const emits = defineEmits(['update:searchQuery', 'toggle-category', 'search']);
 
 const localSearch = ref(props.searchQuery || '');
 
-// Sync local input with prop
 watch(
   () => props.searchQuery,
   (newValue) => {
@@ -82,18 +74,14 @@ watch(
   }
 );
 
-// Emit updated search input
 const updateSearch = () => {
   emits('update:searchQuery', localSearch.value);
   emits('search');
 };
 
-// Toggle selected category
 const toggleCategory = (category) => {
   emits('toggle-category', category);
 };
-
-// Clear search and all filters
 const clearFilters = () => {
   emits('update:searchQuery', '');
   emits('search');
