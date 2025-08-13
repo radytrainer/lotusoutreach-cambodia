@@ -520,19 +520,19 @@ const saveActivity = async () => {
     newActivity.value.image1 = image1Urls;
 
     if (editingId.value) {
-      console.log('Updating activity:', { id: editingId.value, ...newActivity.value });
-      await convex.mutation("mutations:updateActivity", {
-        id: editingId.value,
-        ...newActivity.value,
-      });
-      alert('Activity updated successfully');
-    } else {
-      console.log('Creating activity:', newActivity.value);
-      await convex.mutation("mutations:createActivity", newActivity.value);
-      alert('Activity created successfully');
-    }
-    await fetchActivities();
-    resetForm();
+    console.log('Updating activity:', { id: editingId.value, ...newActivity.value });
+    await convex.mutation("mutations:updateActivity", {
+      id: editingId.value,
+      ...newActivity.value,
+    });
+    $.notify("Activity updated successfully", "success");
+  } else {
+    console.log('Creating activity:', newActivity.value);
+    await convex.mutation("mutations:createActivity", newActivity.value);
+    $.notify("Activity created successfully", "success");
+  }
+  await fetchActivities();
+  resetForm();
   } catch (error) {
     console.error('Error saving activity:', error);
     alert(`Failed to save activity: ${error.message || 'Unknown error'}`);
@@ -545,10 +545,10 @@ const deleteActivity = async (id) => {
   try {
     await convex.mutation("mutations:deleteActivity", { id });
     await fetchActivities();
-    alert('Activity deleted successfully');
+    $.notify("Activity deleted successfully", "error");
   } catch (error) {
     console.error('Error deleting activity:', error);
-    alert(`Failed to delete activity: ${error.message || 'Unknown error'}`);
+    $.notify(`Failed to delete activity: ${error.message || 'Unknown error'}`, "warning");
   }
 };
 
