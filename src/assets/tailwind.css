@@ -6,3 +6,8 @@
 [class*="vue-devtools"] {
     display: none !important;
   }
+
+
+.notifyjs-corner {
+  top: 80px !important; /* increase value to move it lower */
+}
