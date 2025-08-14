@@ -32,7 +32,7 @@
         </div>
 
         <!-- Timeline -->
-        <div class="max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="max-w-8xl mx-auto" data-aos="fade-up">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">LOCAM through the years</h2>
                 <p class="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg md:text-2xl lg:text-base">
