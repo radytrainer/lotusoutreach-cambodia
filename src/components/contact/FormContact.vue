@@ -5,76 +5,68 @@
     <div class="w-20 h-1 bg-blue-200 mx-auto mb-6"></div>
     <p class="text-lg text-gray-600">
       We'd love to hear from you! Whether you have questions, want to volunteer,
-      or wish to support our work in Cambodia, fill out the form below.
+      or wish to support our work, fill out the form below.
     </p>
   </div>
-  <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-8">
+  <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-0 sm:px-4 lg:px-12">
     <!-- Contact Form -->
-    <div class="bg-white p-12 rounded-xl shadow-md border border-gray-100">
+    <div class="bg-white w-full p-6 sm:p-8 lg:p-12 rounded-xl shadow-md border border-gray-100">
       <form @submit.prevent="handleSubmit" class="space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-            <input
-              id="name"
-              v-model="form.name"
-              type="text"
-              required
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your Name"
-              aria-required="true"
-            />
+            <label for="name" class="block text-sm sm:text-base lg:text-base font-medium text-gray-700 mb-2">
+              Name
+            </label>
+            <input id="name" v-model="form.name" type="text" required
+              class="w-full px-4 py-3 text-sm sm:text-base lg:text-base rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="Your Name" aria-required="true" />
           </div>
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-            <input
-              id="email"
-              v-model="form.email"
-              type="email"
-              required
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your Email"
-              aria-required="true"
-            />
+            <label for="email" class="block text-sm sm:text-base lg:text-base font-medium text-gray-700 mb-2">
+              Email
+            </label>
+            <input id="email" v-model="form.email" type="email" required
+              class="w-full px-4 py-3 text-sm sm:text-base lg:text-base rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="Your Email" aria-required="true" />
           </div>
         </div>
+
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-          <textarea
-            id="message"
-            v-model="form.message"
-            required
-            rows="5"
-            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-            placeholder="Your Message"
-          ></textarea>
+          <label for="message" class="block text-sm sm:text-base lg:text-base font-medium text-gray-700 mb-2">
+            Message
+          </label>
+          <textarea id="message" v-model="form.message" required rows="5"
+            class="w-full px-4 py-3 text-sm sm:text-base lg:text-base rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+            placeholder="Your Message"></textarea>
         </div>
+
         <div class="pt-2">
-          <button
-            type="submit"
-            :disabled="isSubmitting"
-            class="w-full px-6 py-4 bg-pink-600 text-white font-medium rounded-lg hover:bg-pink-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-            aria-label="Submit contact form"
-          >
+          <button type="submit" :disabled="isSubmitting"
+            class="w-full px-6 py-4 text-sm sm:text-base lg:text-base bg-pink-600 text-white font-medium rounded-lg hover:bg-pink-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+            aria-label="Submit contact form">
             {{ isSubmitting ? "Sending..." : "Send Message" }}
           </button>
         </div>
+
         <!-- Feedback Message -->
-        <p
-          v-if="formStatus"
-          :class="[
-            'text-center py-3 px-4 rounded-lg text-sm font-medium',
-            formStatus.success
-              ? 'bg-blue-50 text-blue-700 border border-blue-200'
-              : 'bg-pink-50 text-pink-700 border border-pink-200',
-          ]"
-        >
+        <p v-if="formStatus" :class="[
+          'text-center py-3 px-4 rounded-lg text-sm sm:text-base lg:text-base font-medium',
+          formStatus.success
+            ? 'bg-blue-50 text-blue-700 border border-blue-200'
+            : 'bg-pink-50 text-pink-700 border border-pink-200',
+        ]">
           {{ formStatus.message }}
         </p>
       </form>
     </div>
+
+    <!-- Contact Info -->
     <ContactInfo />
   </div>
+
+
+
+
 </template>
 
 <script setup>
