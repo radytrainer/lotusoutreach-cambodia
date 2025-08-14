@@ -3,14 +3,14 @@
     <section id="programs" class="mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
-          <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+          <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
             Four Pillars of
             <span
               class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
               >Empowerment</span
             >
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p class="md:text-xl text:lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive programs designed to transform lives and build
             stronger communities in Cambodia
           </p>
@@ -72,7 +72,7 @@
                 </p>
                 <router-link
                   :to="program.link"
-                  class="w-full sm:w-fit group bg-blue-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-full font-semibold text-sm md:text-base hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  class="w-fit sm:w-fit group bg-blue-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-full font-semibold text-sm md:text-base hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   :aria-label="`Learn more about the ${program.program}`"
                 >
                   {{ program.linkText }}
