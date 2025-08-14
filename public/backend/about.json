@@ -30,7 +30,6 @@
         "In late 2007, Lotus Outreach inaugurated its local office in Phnom Penh, solidifying its presence in Cambodia and expanding its capacity to serve vulnerable communities more effectively.",
         "<strong class=\"text-blue-600\">Best Addition:</strong> Today, Lotus Outreach Cambodia empowers women and girls through education, skills training, and care programs—breaking the cycle of poverty and creating lasting change."
     ],
-
     "principles": [
         {
             "icon": "fas fa-bullseye",
@@ -55,7 +54,11 @@
             "position": "Executive Director ",
             "image": "/image/Team/Reaksmey.jpg",
             "details": "Raksmey holds a Master’s Degree in Gender and Development Studies from the Asian Institute of Technology in Thailand. She has been with Lotus Outreach since October 2007 and currently serves as the Executive Director of Lotus Outreach Cambodia. In this leadership role, she oversees all strategic and operational aspects of the organization’s work in Cambodia. She is passionate about inspiring and empowering children and young Cambodian women to realize their full potential and dreams through education and opportunity.",
-            "tags": ["Leadership", "Empowerment", "Education"]
+            "tags": [
+                "Leadership",
+                "Empowerment",
+                "Education"
+            ]
         },
         {
             "id": 2,
@@ -63,8 +66,11 @@
             "position": "Deputy Director",
             "image": "/image/About/Glenn.jpg",
             "details": "Glenn has completed post-graduate studies in Poverty Reduction in Policy and Practice at the London University School of Oriental and African Studies (SOAS). An Australian native, he began his journey with Lotus Outreach as a volunteer in New Delhi in 1995. After serving as Director of Operations since 1997, Glenn was appointed Executive Director of Lotus Outreach International in 2017.\nWith over 25 years of living and traveling extensively throughout South and Southeast Asia, Glenn is deeply connected to the villages and communities where Lotus Outreach works. He is driven by a strong sense of social justice and is committed to developing social development approaches that have large-scale, replicable impact.\nIn Cambodia, Glenn serves as Deputy Director of Lotus Outreach Cambodia, working closely with the local team to strengthen and expand programs that empower women and children through education and development.",
-            "tags": ["Education", "Empowerment", "Leadership"]
-            
+            "tags": [
+                "Education",
+                "Empowerment",
+                "Leadership"
+            ]
         },
         {
             "id": 3,
@@ -72,7 +78,11 @@
             "position": "Senior Project Officer",
             "image": "/image/Team/Pisey.jpg",
             "details": "Pisey earned her BA in Biochemistry in 2016. After two years working with youth, she joined Lotus Outreach Cambodia as a CATALYST Project Officer in March 2017. In her role, Pisey actively networks across sectors to identify free and subsidized training, internship, and employment opportunities for our beneficiaries. She is passionate about mentoring young women, supporting them to overcome challenges in both education and life.",
-            "tags": ["Mentorship", "Youth Development", "Networking"]
+            "tags": [
+                "Mentorship",
+                "Youth Development",
+                "Networking"
+            ]
         },
         {
             "id": 4,
@@ -80,7 +90,11 @@
             "position": "Finance and Administration Officer",
             "image": "/image/Team/sreymeo.jpg",
             "details": "Sreymao holds a Bachelor’s Degree in Accounting and Finance from Human Resource University (HRU), completed in 2011. Since joining Lotus Outreach Cambodia in June 2023, she has been responsible for managing all accounting and administrative tasks to ensure smooth and efficient operations.",
-            "tags": ["Finance", "Administration", "Operations"]
+            "tags": [
+                "Finance",
+                "Administration",
+                "Operations"
+            ]
         }
     ],
     "originalPartnerLogos": [
@@ -118,6 +132,72 @@
             "img": "/image/About/Bayon.png",
             "url": "https://www.ecoledubayon.org/en/who-are-we/bayon-education-development",
             "info": "Bayon Education Development"
+        }
+    ],
+    "timelineEvents": [
+        {
+            "year": "1993",
+            "title": "The Beginning in India",
+            "highlight": "Launch of the first ",
+            "description": "story began in 1993 in Himachal Pradesh, India, when Khyentse Norbu, a renowned Buddhist teacher and filmmaker, launched an education sponsorship program for Tibetan refugee children.",
+            "image": "/image/About/1993.jpg"
+        },
+        {
+            "year": "2002",
+            "title": "Global Expansion",
+            "highlight": "Incorporation of ",
+            "description": "Lotus Outreach International officially incorporated in California, with programs expanding across Asia and Latin America.",
+            "image": "/image/About/2002.jpg"
+        },
+        {
+            "year": "2005",
+            "title": "First Steps in Cambodia",
+            "highlight": "Lotus Outreach’s ",
+            "description": "engagement in Cambodia began in 2005 through partnerships with local NGOs to support vulnerable girls and women, even before a formal office was established.",
+            "image": "/image/About/2005.jpg"
+        },
+        {
+            "year": "2006",
+            "title": "GATE Program Launch",
+            "highlight": "Our flagship Girls’",
+            "description": "Access to Education (GATE) program, launched in 2006 with a local partner, helps underprivileged girls complete school through scholarships, supplies, bicycles, tuition aid, living support, and life skills training.",
+            "image": "/image/About/2006.jpg"
+        },
+        {
+            "year": "2007",
+            "title": "Life-Changing Encounter",
+            "highlight": "Inauguration of the ",
+            "description": "In late 2007, Lotus Outreach established a local office in Phnom Penh, ",
+            "image": "/image/About/2007.jpg"
+        },
+        {
+            "year": "2008",
+            "title": "Official Registration",
+            "highlight": "For the first time, ",
+            "description": "LOCAM officially registered with the Ministry of Interior on January 21, establishing permanent presence in Cambodia.",
+            "image": "/image/About/2008.png"
+        }
+    ],
+    "missionVisionImage": [
+        {
+            "src": "/image/About/value.jpg",
+            "alt": "Girls with bicycles supported by Lotus Outreach"
+        },
+        {
+            "src": "/image/Home/05.jpg",
+            "alt": "Community support by Lotus Outreach"
+        },
+        {
+            "src": "/image/Home/07.jpg",
+            "alt": "Empowerment programs by Lotus Outreach"
+        },
+        {
+            "src": "/image/Home/08.jpg",
+            "alt": "Empowerment programs by Lotus Outreach"
+        },
+        {
+            "src": "/image/Home/care02.png",
+            "alt": "Care program by Lotus Outreach"
         }
     ]
 }

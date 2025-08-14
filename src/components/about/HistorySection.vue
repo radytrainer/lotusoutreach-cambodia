@@ -133,14 +133,19 @@
     </section>
 </template>
 
-
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
+const mobileTimeline = ref(null)
+const timelineContainer = ref(null)
+const currentIndex = ref(0)
 
 const props = defineProps({
     yearsOfExperience: {
         type: Number,
         default: 31
+    },
+    timelineEvents: {
+        type: Array,
     },
     content: {
         type: Array,
@@ -150,55 +155,6 @@ const props = defineProps({
         ]
     }
 })
-
-const mobileTimeline = ref(null)
-const timelineContainer = ref(null)
-const currentIndex = ref(0)
-
-const timelineEvents = ref([
-    {
-        year: '1993',
-        title: 'The Beginning in India',
-        highlight: 'Launch of the first ',
-        description: 'story began in 1993 in Himachal Pradesh, India, when Khyentse Norbu, a renowned Buddhist teacher and filmmaker, launched an education sponsorship program for Tibetan refugee children.',
-        image: '/image/About/1993.jpg'
-    },
-    {
-        year: '2002',
-        title: 'Global Expansion',
-        highlight: 'Incorporation of ',
-        description: 'Lotus Outreach International officially incorporated in California, with programs expanding across Asia and Latin America.',
-        image: '/image/About/2002.jpg'
-    },
-    {
-        year: '2005',
-        title: 'First Steps in Cambodia',
-        highlight: 'Lotus Outreach’s ',
-        description: 'engagement in Cambodia began in 2005 through partnerships with local NGOs to support vulnerable girls and women, even before a formal office was established.',
-        image: '/image/About/2005.jpg',
-    },
-    {
-        year: '2006',
-        title: 'GATE Program Launch',
-        highlight: 'Our flagship Girls’',
-        description: 'Access to Education (GATE) program, launched in 2006 with a local partner, helps underprivileged girls complete school through scholarships, supplies, bicycles, tuition aid, living support, and life skills training.',
-        image: '/image/About/2006.jpg'
-    },
-    {
-        year: '2007',
-        title: 'Life-Changing Encounter',
-        highlight: 'Inauguration of the ',
-        description: 'In late 2007, Lotus Outreach established a local office in Phnom Penh, ',
-        image: '/image/About/2007.jpg',
-    },
-    {
-        year: '2008',
-        title: 'Official Registration',
-        highlight: 'For the first time, ',
-        description: 'LOCAM officially registered with the Ministry of Interior on January 21, establishing permanent presence in Cambodia.',
-        image: '/image/About/2008.png'
-    }
-])
 
 const scrollMobile = (direction) => {
     if (mobileTimeline.value) {

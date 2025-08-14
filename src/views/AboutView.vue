@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen bg-white">
     <SlideshowBase :slides="slides" :content="sharedContent" align="center" />
-    <HistorySection :years-of-experience="yearsOfExperience" :content="historyContent" />
-    <MissionVisionSection :principles="principles" />
+    <HistorySection :years-of-experience="yearsOfExperience" :content="historyContent" :timelineEvents="timelineEvents"/>
+    <MissionVisionSection :principles="principles" :missionVisionImage="missionVisionImage"/>
     <TeamSection :team-members="teamMembers" />
     <PartnerSection :logos="partnerLogos" :marquee-width="marqueeWidth" :marquee-duration="marqueeDuration" />
   </div>
@@ -29,6 +29,8 @@ const marqueeWidth = ref('0px');
 const marqueeDuration = ref(30);
 const slides = ref([]);
 const sharedContent = ref([]);
+const timelineEvents = ref([]);
+const missionVisionImage = ref([]);
 
 const startYear = 2008;
 const currentYear = new Date().getFullYear();
@@ -49,6 +51,8 @@ const fetchAboutData = async () => {
     teamMembers.value = data.teamMembers;
     slides.value = data.slides;
     sharedContent.value = data.sharedContent;
+    timelineEvents.value = data.timelineEvents || [];
+    missionVisionImage.value = data.missionVisionImage || [];
     partnerLogos.value = [
       ...data.originalPartnerLogos,
       ...data.originalPartnerLogos,

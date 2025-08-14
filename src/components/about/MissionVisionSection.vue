@@ -28,7 +28,6 @@
           </div>
         </div>
       </div>
-
       <!-- Right Column: Carousel -->
       <div
         class="relative w-full h-45 sm:h-50 md:h-[30rem] lg:h-[28rem] xl:h-[26rem] rounded-xl overflow-hidden"
@@ -36,11 +35,11 @@
         <div
           ref="carouselContainer"
           class="flex transition-transform duration-700 ease-in-out h-full"
-          :style="{ transform: `translateX(-${(currentIndex + images.length) * 100}%)` }"
+          :style="{ transform: `translateX(-${(currentIndex + missionVisionImage.length) * 100}%)` }"
         >
           <!-- Clone Last -->
           <img
-            v-for="(image, index) in images"
+            v-for="(image, index) in missionVisionImage"
             :key="'start-' + index"
             :src="image.src"
             :alt="image.alt"
@@ -48,7 +47,7 @@
           />
           <!-- Original -->
           <img
-            v-for="(image, index) in images"
+            v-for="(image, index) in missionVisionImage"
             :key="'original-' + index"
             :src="image.src"
             :alt="image.alt"
@@ -56,7 +55,7 @@
           />
           <!-- Clone First -->
           <img
-            v-for="(image, index) in images"
+            v-for="(image, index) in missionVisionImage"
             :key="'end-' + index"
             :src="image.src"
             :alt="image.alt"
@@ -71,23 +70,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-defineProps({ principles: Array })
+defineProps({ principles: Array, missionVisionImage: Array })
 
 const principlesContainer = ref(null)
 const carouselContainer = ref(null)
 const currentIndex = ref(0)
 
-const images = ref([
-  { src: '/image/About/value.jpg', alt: 'Girls with bicycles supported by Lotus Outreach' },
-  { src: '/image/Home/05.jpg', alt: 'Community support by Lotus Outreach' },
-  { src: '/image/Home/07.jpg', alt: 'Empowerment programs by Lotus Outreach' },
-  { src: '/image/Home/08.jpg', alt: 'Empowerment programs by Lotus Outreach' },
-  { src: '/image/Home/care02.png', alt: 'Care program by Lotus Outreach' }
-])
-
 const nextImage = () => {
   currentIndex.value++
-  if (currentIndex.value >= images.value.length) {
+  if (currentIndex.value >= missionVisionImage.value.length) {
     setTimeout(() => {
       carouselContainer.value.style.transition = 'none'
       currentIndex.value = 0
