@@ -22,12 +22,7 @@
           "src": "/image/Gallery/G4.jpg",
           "alt": "Fimily sharing stories",
           "description": "Family sharing a story about how she doesn't have the money to support her children's education."
-        }
-      ]
-    },
-    {
-      "title": "Lifestyle & Portraits",
-      "images": [
+        },
         {
           "src": "/image/Gallery/G5.jpg",
           "alt": "Girl Smiling During Staff Visit",
@@ -47,13 +42,8 @@
           "src": "/image/Gallery/G8.jpg",
           "alt": "Girl Exploring Her Environment",
           "description": "A curious girl observes her surroundings, reflecting her connection to both tradition and the future."
-        }
-      ]
-    },
-    {
-      "title": "Home Visit By Staff",
-      "images": [
-        {
+        },
+         {
           "src": "/image/Gallery/G9.jpg",
           "alt": "Staff Arriving at a Family's Home",
           "description": "A view of the home environment where staff members conduct outreach and support visits."
@@ -72,12 +62,7 @@
           "src": "/image/Gallery/G12.jpg",
           "alt": "Sharing a Meal with the Family",
           "description": "A meaningful moment as staff members are welcomed with traditional hospitality during a home visit."
-        }
-      ]
-    },
-    {
-      "title": "Visit Real Life",
-      "images": [
+        },
         {
           "src": "/image/Gallery/G13.jpg",
           "alt": "Volunteer visiting a girl's home in a rural village",
@@ -97,9 +82,16 @@
           "src": "/image/Gallery/G17.jpg",
           "alt": "Children smiling during a home visit",
           "description": "Despite their challenges, children welcome visitors with joy — a testament to the impact of consistent support and encouragement."
+        },
+        {
+          "src": "/image/Gallery/G18.jpg",
+          "alt": "Children in Rural Cambodia",
+          "description": "Curious and smiling children gathering during a community education activity."
         }
+
       ]
     },
+    
     {
       "title": "Province Visit Activity",
       "images": [
@@ -122,6 +114,26 @@
           "src": "/image/Gallery/G21.jpg",
           "alt": "Community Outreach Moment",
           "description": "Lotus Outreach Cambodia staff engaging with local villagers during a province visit."
+        },
+         {
+          "src": "/image/Gallery/G26.jpg",
+          "alt": "Students Visiting a Historical Site",
+          "description": "Participants explore a culturally significant location as part of an educational trip experience."
+        },
+        {
+          "src": "/image/Gallery/G27.jpg",
+          "alt": "Group Walk Through Local Village",
+          "description": "The team walks together through a rural community, observing and learning from local life."
+        },
+        {
+          "src": "/image/Gallery/G28.jpg",
+          "alt": "Enjoying a Break During the Trip",
+          "description": "A joyful moment of rest and conversation captured during the outreach journey."
+        },
+        {
+          "src": "/image/Gallery/G29.jpg",
+          "alt": "Reflective Moment by the Landscape",
+          "description": "A peaceful scene showing a participant observing the natural beauty during the trip."
         }
       ]
     },
@@ -147,37 +159,7 @@
           "src": "/image/Gallery/G25.jpg",
           "alt": "Workshop Materials and Setup",
           "description": "A table filled with supplies and documents used during the Lotus Outreach Cambodia workshop."
-        }
-      ]
-    },
-    {
-      "title": "Trips Activity",
-      "images": [
-        {
-          "src": "/image/Gallery/G26.jpg",
-          "alt": "Students Visiting a Historical Site",
-          "description": "Participants explore a culturally significant location as part of an educational trip experience."
         },
-        {
-          "src": "/image/Gallery/G27.jpg",
-          "alt": "Group Walk Through Local Village",
-          "description": "The team walks together through a rural community, observing and learning from local life."
-        },
-        {
-          "src": "/image/Gallery/G28.jpg",
-          "alt": "Enjoying a Break During the Trip",
-          "description": "A joyful moment of rest and conversation captured during the outreach journey."
-        },
-        {
-          "src": "/image/Gallery/G29.jpg",
-          "alt": "Reflective Moment by the Landscape",
-          "description": "A peaceful scene showing a participant observing the natural beauty during the trip."
-        }
-      ]
-    },
-    {
-      "title": "Traditional Dance Activity",
-      "images": [
         {
           "src": "/image/Gallery/G30.jpg",
           "alt": "Khmer Dancers Performing on Stage",
@@ -195,5 +177,7 @@
         }
       ]
     }
+    
+    
   ]
 }
