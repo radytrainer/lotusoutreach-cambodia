@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen bg-white">
     <SlideshowBase :slides="slides" :content="sharedContent" align="center" />
-    <HistorySection :years-of-experience="yearsOfExperience" :content="historyContent" />
-    <MissionVisionSection :principles="principles" />
+    <HistorySection :years-of-experience="yearsOfExperience" :content="historyContent"/>
+    <MissionVisionSection :principles="principles"  />
     <TeamSection :team-members="teamMembers" />
     <PartnerSection :logos="partnerLogos" :marquee-width="marqueeWidth" :marquee-duration="marqueeDuration" />
   </div>
@@ -49,6 +49,7 @@ const fetchAboutData = async () => {
     teamMembers.value = data.teamMembers;
     slides.value = data.slides;
     sharedContent.value = data.sharedContent;
+
     partnerLogos.value = [
       ...data.originalPartnerLogos,
       ...data.originalPartnerLogos,
