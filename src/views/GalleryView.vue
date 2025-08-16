@@ -38,12 +38,7 @@
               :alt="image.alt"
               class="w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
             />
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <p class="text-white font-semibold truncate">{{ image.pathTitle || image.alt }}</p>
-              <p v-if="image.description" class="text-sm text-gray-300 mt-1 line-clamp-2">
-                {{ image.description }}
-              </p>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -80,10 +75,7 @@
       aria-label="Next"
     >&rsaquo;</button>
 
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/60 text-white px-6 py-3 rounded-lg max-w-md text-center">
-      <p class="font-semibold text-lg">{{ currentImage.pathTitle || currentImage.alt }}</p>
-      <p v-if="currentImage.description" class="text-sm mt-1 text-gray-300">{{ currentImage.description }}</p>
-    </div>
+   
   </div>
 </template>
 
