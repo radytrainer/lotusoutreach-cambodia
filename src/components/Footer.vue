@@ -21,9 +21,7 @@
             </div>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed">
-            Transforming lives through education, training, care, 
-            and community development programs that respect local culture and
-            traditions.
+            Transforming lives through education, skills training, and care programs.
           </p>
         </div>
 
