@@ -8,6 +8,7 @@
     <Program
       :programs="programs"
       :subSectionIcons="subSectionIcons"
+      :shareMoment="shareMoment"
       class="w-full max-w-full mx-auto px-2 sm:px-4 py-4 sm:py-8"
     />
     <QuoteSection class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8 mb-24"/>
@@ -27,6 +28,8 @@ const images = ref([]);
 const sharedContent = ref({});
 const programs = ref([]); 
 const subSectionIcons = ref([]);
+const shareMoment = ref([])
+
 
 
 const fetchHomeData = async () => {
@@ -38,6 +41,9 @@ const fetchHomeData = async () => {
     sharedContent.value = data.sharedContent;
     programs.value = data.programs;
     subSectionIcons.value = data.subSectionIcons;
+    shareMoment.value = data.shareMoment;
+    
+  
    
   }catch (error){
     console.error("Failed to fetching home data:", error);
