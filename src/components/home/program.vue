@@ -16,22 +16,14 @@
 
         <!-- Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            v-for="(program, index) in programs"
-            :key="index"
-            class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition w-full max-w-sm mx-auto hover:-translate-y-2 w-full mx-auto flex flex-col"
-          >
+          <div v-for="(program, index) in programs" :key="index"
+            class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition w-full max-w-sm mx-auto hover:-translate-y-2 w-full mx-auto flex flex-col">
             <!-- Image -->
             <div class="relative">
-              <img
-                :src="program.image"
-                :alt="`Image for ${program.section}`"
-                class="w-full h-80 sm:h-72 md:h-80 object-cover"
-                loading="lazy"
-              />
+              <img :src="program.image" :alt="`Image for ${program.section}`"
+                class="w-full h-80 sm:h-72 md:h-80 object-cover" loading="lazy" />
               <span
-                class="absolute top-3 left-3 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md"
-              >
+                class="absolute top-3 left-3 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 News
               </span>
             </div>
@@ -44,11 +36,11 @@
               <p class="text-sm text-gray-600 mb-6 line-clamp-3 flex-1">
                 {{ program.description }}
               </p>
-              <button
-                class="self-start bg-pink-600 hover:bg-pink-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
-              >
+              <router-link :to="program.link"
+                class="self-start bg-pink-600 hover:bg-pink-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
                 Read More
-              </button>
+              </router-link>
+
             </div>
           </div>
         </div>
