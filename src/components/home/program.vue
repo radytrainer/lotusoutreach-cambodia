@@ -40,10 +40,22 @@
                 class="self-start bg-pink-600 hover:bg-pink-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
                 Read More
               </router-link>
-
             </div>
           </div>
         </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Share Moment
+          </h2>
+          <p class="md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Life is made of little joys—don’t keep them to yourself, share the moment with those who matter.
+          </p>
+        </div>
+        
       </div>
     </section>
   </div>
