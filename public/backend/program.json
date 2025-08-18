@@ -29,7 +29,35 @@
         {
             "section": "Education",
             "program": "CATALYST Program",
-            "description": "At Lotus Outreach Cambodia, we empower young women through our CATALYST program—a university scholarship and leadership initiative that supports graduates in pursuing higher education. Beyond financial support, CATALYST nurtures leadership skills, civic engagement, and career readiness, preparing scholars to become change makers in their communities and beyond.",
+            "description": "Our Education Program addresses financial and social barriers that prevent girls from completing school. In partnership with local organizations, we support girls from lower secondary school onward, while our direct support focuses on providing university scholarships for four years. Together, these efforts ensure that students have the materials, resources, and support they need to thrive academically.",
+            "skills": [
+                {
+                    "title": "Mentoring and academic follow-up",
+                    "description": "Guidance and support for girls’ academic success."
+                }
+            ],
+            "EduSections": [
+                {
+                    "title": "Bicycles and transportation support",
+                    "description": "Bicycles for rural girls to access school.",
+                    "icon": "M6 18h12l1-6H5l1 6zm2-10h8v2H8v-2z"
+                },
+                {
+                    "title": "Rice support for students and families",
+                    "description": "Rice to support girls’ school attendance.",
+                    "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"
+                },
+                {
+                    "title": "University and vocational support",
+                    "description": "Scholarships for women in IT, law.",
+                    "icon": "M4 6h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z"
+                },
+                {
+                    "title": "Scholarships and school materials",
+                    "description": "Scholarships, supplies for girls’ education.",
+                    "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                }
+            ],
             "image": "/image/Program/train1.jpg",
             "link": "/program",
             "linkText": "Learn More About Education"
@@ -37,12 +65,12 @@
         {
             "section": "Training",
             "program": "Life Skills & Personal Development",
-            "description": "We provide essential life skills and personal development training to equip our scholars for success in their academic and professional journeys. Through workshops and mentorship, participants gain soft skills, digital literacy, leadership abilities, and job readiness.",
+            "description": "The Training Program equips students with the knowledge, confidence, and soft skills to succeed in school, work, and life. Through structured life skills training, career guidance, and personal development workshops, we prepare youth to make informed decisions about their futures.",
             "skills": [
-                "Digital Literacy & Technology Skills",
-                "Leadership & Communication",
-                "Professional Development",
-                "Job Readiness & Career Planning"
+                "Life skills and soft skills training ",
+                "Leadership practice opportunities ",
+                "Career and major selection workshops",
+                "Job readiness and exposure visits"
             ],
             "subSections": [
                 {
@@ -73,7 +101,25 @@
         {
             "section": "Care Program",
             "program": "Girl Support & Community Care",
-            "description": "Our Rice for Education program offers vital food support to the families of scholarship recipients, helping to alleviate economic pressures that can lead to school dropouts. Additionally, our Lotus Pedals initiative provides bicycles to girls who live far from school, ensuring safe and reliable transportation to help them attend classes consistently.",
+            "description": "The Care Program recognizes that students cannot succeed without basic physical and emotional security. We provide essential support such as food, emergency aid, and trauma-informed care to help students and their families overcome the challenges of poverty, illness, and instability.",
+            "activities": [
+                {
+                    "title": "Monthly stipends or rice aid",
+                    "description": "Rice aid to support families, ensuring girls stay in school."
+                },
+                {
+                    "title": "Emergency health and crisis support",
+                    "description": "Health and relief support for communities during crises."
+                },
+                {
+                    "title": "Psycho-social and mental health support",
+                    "description": "Counseling and therapy for girls and survivors of violence"
+                },
+                {
+                    "title": "Support for vulnerable families and caregivers",
+                    "description": "Resources and aid for at-risk families to reduce poverty."
+                }
+            ],
             "image": "/image/Program/r4e.jpg",
             "link": "/program",
             "linkText": "Learn More About Care"
@@ -81,19 +127,23 @@
         {
             "section": "Giving Back",
             "program": "Paying Forward Initiative",
-            "description": "Since 2018, we have fostered a culture of social responsibility through our Paying Forward initiative. Our beneficiaries actively engage in community service and charitable activities.",
+            "description": "The Giving Back Program fosters a spirit of compassion, leadership, and responsibility among our students. As they progress in their education, students are encouraged and supported to give back to their communities through volunteering, mentoring, and service projects becoming role models and change makers in their own right.",
             "activities": [
                 {
-                    "title": "Food Drives",
-                    "description": "Organizing community food distribution programs"
+                    "title": "Peer mentoring and tutoring",
+                    "description": "Peer support and tutoring for girls’ academic success."
                 },
                 {
-                    "title": "Tutoring Programs",
-                    "description": "Providing educational support to younger students"
+                    "title": "Community outreach and service projects",
+                    "description": "Engaging communities to support girls’ education, safety."
                 },
                 {
-                    "title": "Environmental Clean-ups",
-                    "description": "Leading sustainability initiatives in local communities"
+                    "title": "Sharing knowledge with junior students",
+                    "description": "Mentoring younger girls to excel in education."
+                },
+                {
+                    "title": "Supporting the next generation of scholarship recipients",
+                    "description": "Guiding scholarship recipients for future leadership."
                 }
             ],
             "image": "/image/Home/care01.png",
