@@ -25,6 +25,88 @@
             "description": "Inspiring the next generation of female leaders"
         }
     ],
+    "programs": [
+        {
+            "section": "Education",
+            "program": "CATALYST Program",
+            "description": "At Lotus Outreach Cambodia, we empower young women through our CATALYST program—a university scholarship and leadership initiative that supports graduates in pursuing higher education. Beyond financial support, CATALYST nurtures leadership skills, civic engagement, and career readiness, preparing scholars to become change makers in their communities and beyond.",
+            "image": "/image/Program/train1.jpg",
+            "link": "/program",
+            "linkText": "Learn More About Education"
+        },
+        {
+            "section": "Training",
+            "program": "Life Skills & Personal Development",
+            "description": "We provide essential life skills and personal development training to equip our scholars for success in their academic and professional journeys. Through workshops and mentorship, participants gain soft skills, digital literacy, leadership abilities, and job readiness.",
+            "skills": [
+                "Digital Literacy & Technology Skills",
+                "Leadership & Communication",
+                "Professional Development",
+                "Job Readiness & Career Planning"
+            ],
+            "subSections": [
+                {
+                    "title": "Digital Skills",
+                    "description": "Technology & Innovation",
+                    "icon": "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                },
+                {
+                    "title": "Leadership",
+                    "description": "Communication & Management",
+                    "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                },
+                {
+                    "title": "Career Prep",
+                    "description": "Professional Development",
+                    "icon": "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6"
+                },
+                {
+                    "title": "Mentorship",
+                    "description": "Guidance & Support",
+                    "icon": "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                }
+            ],
+            "image": null,
+            "link": "/program",
+            "linkText": "Explore Training Programs"
+        },
+        {
+            "section": "Care Program",
+            "program": "Girl Support & Community Care",
+            "description": "Our Rice for Education program offers vital food support to the families of scholarship recipients, helping to alleviate economic pressures that can lead to school dropouts. Additionally, our Lotus Pedals initiative provides bicycles to girls who live far from school, ensuring safe and reliable transportation to help them attend classes consistently.",
+            "image": "/image/Program/r4e.jpg",
+            "link": "/program",
+            "linkText": "Learn More About Care"
+        },
+        {
+            "section": "Giving Back",
+            "program": "Paying Forward Initiative",
+            "description": "Since 2018, we have fostered a culture of social responsibility through our Paying Forward initiative. Our beneficiaries actively engage in community service and charitable activities.",
+            "activities": [
+                {
+                    "title": "Food Drives",
+                    "description": "Organizing community food distribution programs"
+                },
+                {
+                    "title": "Tutoring Programs",
+                    "description": "Providing educational support to younger students"
+                },
+                {
+                    "title": "Environmental Clean-ups",
+                    "description": "Leading sustainability initiatives in local communities"
+                }
+            ],
+            "image": "/image/Home/care01.png",
+            "link": "/program",
+            "linkText": "Explore Giving Back"
+        }
+    ],
+    "subSectionIcons": [
+        "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+        "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6",
+        "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+    ],
     "educationPrograms": [
         {
             "title": "Lotus Pedals",
@@ -434,7 +516,6 @@
             "icon": "fas fa-mountain",
             "description": "Mr. Chea Bunseang – CEO, Bunseang Architects and Associates",
             "fullDescription": "As one of Cambodia’s most respected architects, Mr. Bunseang holds a Master's in Urban Environmental Management from the Asian Institute of Technology. He previously worked with UN-Habitat, the UN Mission in East Timor, and as a consultant for World Bank development projects. He later studied and worked in the United States, overcoming language barriers and racism before returning home to found his own design firm. He encouraged participants to rise above setbacks: “I was judged for how I looked and how I spoke. But hard work, self-discipline, and being proactive helped people see my value—not just my limitations.”",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -469,7 +550,6 @@
             "icon": "fas fa-fist-raised",
             "description": "Ms. Sovuthika Chhim – Head of Modern Trade, Smart Axiata",
             "fullDescription": "From working as a tour operator to becoming a senior leader at one of Cambodia’s biggest telecom firms, Sovuthika’s journey reflects determination and grit. She won the “Axiata Champion 2020” award and is an active mentor with Wedu Global, helping women enter tech and leadership roles.",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -504,7 +584,6 @@
             "icon": "fas fa-heartbeat",
             "description": "Mrs. Sok Thany – Founder, Jasmine Curtain & Jasmine Water",
             "fullDescription": "With a background in business and a fear of poverty that fueled her ambition, Mrs. Sok Thany worked her way from sales executive to entrepreneur. After returning from Thailand to raise her children, she founded Jasmine Drinking Water (2005) and later Jasmine Curtain (2012). Today, her businesses are among the leading brands in Siem Reap.",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -539,7 +618,6 @@
             "icon": "fas fa-swimmer",
             "description": "Mrs. Ra Ya – Founder, Survival Swim Club",
             "fullDescription": "Growing up in a floating village, Ra Ya sold food on the street and cleaned hotel rooms to support her education. Against family expectations that girls shouldn’t study, she persisted, earned a scholarship, and eventually completed her Master’s in Business Management. In 2018, she founded Survival Swim Club, which teaches lifesaving skills and empowers women.",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -613,7 +691,6 @@
             "fullDescription": "These panels were more than workshops—they were launch pads for personal transformation. By learning directly from Cambodian role models who understand their realities, students walked away with clarity, confidence, and conviction. Lotus Outreach Cambodia is proud to continue investing in Cambodia’s next generation of leaders—those who will not only build their futures, but help reshape their communities.",
             "features": [
                 "If not you, then who? If not now, then when?"
-              
             ],
             "image1": "/image/Program/slideshowT18.jpg",
             "image2": "/image/Program/slideshowT19.jpg",

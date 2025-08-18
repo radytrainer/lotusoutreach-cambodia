@@ -5,11 +5,6 @@
       :content="sharedContent"
       class="w-full max-w-full mx-auto px-2 sm:px-4"
     />
-    <Program
-      :programs="programs"
-      :subSectionIcons="subSectionIcons"
-      class="w-full max-w-full mx-auto px-2 sm:px-4 py-4 sm:py-8"
-    />
     <QuoteSection class="w-full max-w-full mx-auto px-2 sm:px-4 py-6 sm:py-8 mb-24"/>
   </div>
 </template>
@@ -19,7 +14,7 @@
 import { onMounted, ref } from "vue"; 
 import axios from "axios"; 
 import SlideshowBase from "@/components/SlideshowBase.vue";
-import Program from "@/components/home/program.vue";
+import Program from "@/components/Program/program.vue";
 import QuoteSection from "@/components/home/QuoteSection.vue";
 
 
