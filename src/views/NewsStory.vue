@@ -35,6 +35,7 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import axios from "axios";
+import convex from '@/convex';
 import HeroBanner from '@/components/News/HeroBanner.vue';
 import CardActivity from '@/components/News/CardActivity.vue';
 import ActivityDetail from '@/components/News/ActivityDetail.vue';
@@ -52,10 +53,11 @@ const stories = ref([]);
 
 const fetchData = async () => {
   try {
+    const result = await convex.query("getActivities");
     const response = await axios.get('/backend/newsStory.json');
-    activities.value = response.data.activities;
     categories.value = response.data.categories;
     stories.value = response.data.stories;
+    activities.value = result || [];
   } catch (error) {
     console.error("Failed to load data from newsStory.json", error);
   }

@@ -18,6 +18,8 @@
             Donation Amount (USD)*
           </label>
           <div class="flex flex-wrap gap-3 mb-4">
+            <button type="button" @click="setAmount(10)" class="px-4 py-2 bg-pink-100 text-pink-700 rounded-lg hover:bg-pink-200 transition-all duration-200">$10</button>
+            <button type="button" @click="setAmount(20)" class="px-4 py-2 bg-pink-100 text-pink-700 rounded-lg hover:bg-pink-200 transition-all duration-200">$20</button>
             <button type="button" @click="setAmount(50)" class="px-4 py-2 bg-pink-100 text-pink-700 rounded-lg hover:bg-pink-200 transition-all duration-200">$50</button>
             <button type="button" @click="setAmount(100)" class="px-4 py-2 bg-pink-100 text-pink-700 rounded-lg hover:bg-pink-200 transition-all duration-200">$100</button>
             <button type="button" @click="setAmount(250)" class="px-4 py-2 bg-pink-100 text-pink-700 rounded-lg hover:bg-pink-200 transition-all duration-200">$250</button>
@@ -252,7 +254,7 @@ const handleSubmit = async () => {
 
 const setAmount = (value) => {
   form.amount = value;
-  validateForm(); // Re-validate to clear errors and enable button if other fields are valid
+  validateForm(); 
 };
 </script>
 

@@ -1,6 +1,5 @@
 <template>
   <section class="py-16 font-poppins" data-aos="fade-up">
-    <!-- Title Section -->
     <div class="text-center mb-16 px-4">
       <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">
         Success <span class="text-blue-600">Stories</span>
@@ -10,11 +9,8 @@
         <span class="font-semibold text-blue-700">transformed</span>
       </p>
     </div>
-
-    <!-- Main Container -->
     <div class="container mx-auto px-4 max-w-7xl">
       <div class="flex flex-col lg:flex-row items-center gap-12">
-        <!-- Image & Name Section -->
         <div class="relative w-full lg:w-1/2 flex justify-center items-center">
           <Transition name="slide" mode="out-in">
             <div :key="currentStoryIndex" class="w-full flex justify-center">
@@ -25,8 +21,7 @@
               </div>
             </div>
           </Transition>
-
-          <!-- Name + Program -->
+          <!-- Story Name and Program -->
           <Transition name="fade" mode="out-in">
             <div :key="'name-' + currentStoryIndex"
               class="absolute bottom-16 left-1/2 -translate-x-1/2 w-full px-4 z-10">

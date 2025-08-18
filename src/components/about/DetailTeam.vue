@@ -29,7 +29,6 @@
 
       <!-- Info Section -->
       <div class="p-8 md:p-10 lg:p-12 flex flex-col w-full lg:w-3/5">
-        <!-- Name and Position -->
         <div class="mb-8 pb-4 border-b border-gray-100 text-center lg:text-left">
           <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
             {{ selectedMember.name }}
@@ -39,7 +38,6 @@
           </p>
         </div>
 
-        <!-- About Section -->
         <div class="w-full text-center lg:text-left mb-8">
           <h2 class="text-2xl font-bold text-gray-900 mb-4 text-base sm:text-lg md:text-2xl lg:text-base">About</h2>
           <p class="text-gray-700 text-base leading-relaxed whitespace-pre-line text-base sm:text-lg md:text-2xl lg:text-base">
@@ -47,7 +45,6 @@
           </p>
         </div>
 
-        <!-- Skills -->
         <div v-if="selectedMember.tags && selectedMember.tags.length > 0"
           class="w-full text-center lg:text-left mt-auto pt-6 border-t border-gray-200">
           <h3 class="text-xl font-semibold text-gray-900 mb-4 text-base sm:text-lg md:text-2xl lg:text-base">Skills & Expertise</h3>
@@ -61,7 +58,6 @@
       </div>
     </div>
 
-    <!-- Fallback -->
     <div v-else class="text-center text-gray-500">
       <div class="bg-white rounded-xl shadow-lg p-8 max-w-md w-full text-center text-gray-700">
         <p class="text-lg mb-4">Team member not found.</p>
@@ -83,7 +79,7 @@ import axios from "axios";
 const route = useRoute();
 const router = useRouter();
 const teamMembers = ref([]);
-const defaultImage = "/images/default-user.jpg"; // fallback image
+const defaultImage = "/images/default-user.jpg"; 
 
 const fetchTeamData = async () => {
   try {

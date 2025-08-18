@@ -1,16 +1,11 @@
 <template>
-  <!-- Quote -->
   <section
     class="relative min-h-[500px] sm:min-h-[600px] md:min-h-[650px] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
     data-aos="fade-up">
-    <!-- Background Image -->
     <div class="absolute inset-0">
       <img src="/public/image/Home/Quote.png" alt="Cambodia background" class="w-full h-full object-cover" />
-      <!-- Dark Overlay -->
       <div class="absolute inset-0 bg-black/60"></div>
     </div>
-
-    <!-- Centered Content -->
     <div class="relative z-10 w-full max-w-4xl mx-auto text-center">
       <div class="mb-6 sm:mb-8">
         <svg class="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 mx-auto mb-4 sm:mb-6 text-white" fill="none"

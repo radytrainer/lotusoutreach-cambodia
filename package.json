@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@convex-vue/core": "^0.0.4",
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@twa-dev/sdk": "^8.0.2",
@@ -16,13 +17,16 @@
     "aos": "^2.3.4",
     "axios": "^1.11.0",
     "emailjs-com": "^3.2.0",
+    "jquery": "^3.7.1",
     "lucide-vue-next": "^0.525.0",
+    "sweetalert2": "^11.22.3",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
     "autoprefixer": "^10.4.21",
+    "convex": "^1.25.4",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "vite": "^7.0.0",
