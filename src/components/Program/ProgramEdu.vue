@@ -1,8 +1,18 @@
 <template>
   <section class="py-16 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Back Button to Program -->
+      <div v-if="!selectedProgram" class="mb-6">
+        <router-link
+          to="/program"
+          class="flex items-center text-blue-600 hover:text-blue-700 transition font-poppins font-medium text-sm"
+        >
+          <i class="fas fa-arrow-left mr-2"></i> Back to All Programs
+        </router-link>
+      </div>
+
       <!-- Section Header -->
-      <div class="mb-16 text-center">
+      <div v-if="!selectedProgram" class="mb-16 text-center">
         <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 shadow-md mb-4">
           <i class="fas fa-graduation-cap text-xl text-white"></i>
         </div>
@@ -16,13 +26,12 @@
       </div>
 
       <!-- Program Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div v-if="!selectedProgram" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div
           v-for="(program, index) in visibleEdu"
           :key="index"
           class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100"
         >
-          <!-- Image & Icon -->
           <div class="relative h-48 overflow-hidden">
             <img
               :src="program.image"
@@ -36,8 +45,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Card Content -->
           <div class="p-5">
             <h3 class="text-base font-poppins font-medium text-gray-900 mb-2">
               {{ program.title }}
@@ -46,7 +53,7 @@
               {{ program.description }}
             </p>
             <button
-              @click="$emit('show-detail', program)"
+              @click="selectedProgram = program"
               class="text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200 text-sm"
               :aria-label="`Learn more about ${program.title}`"
               :aria-describedby="`desc-${index}`"
@@ -61,7 +68,7 @@
       </div>
 
       <!-- See More / See Less Buttons -->
-      <div class="text-center mt-10">
+      <div v-if="!selectedProgram" class="text-center mt-10">
         <button
           v-if="educationPrograms.length > 4 && !showAll"
           @click="showAll = true"
@@ -77,46 +84,45 @@
           See Less
         </button>
       </div>
+
+      <!-- Program Detail View -->
+      <ProgramDetail
+        v-if="selectedProgram"
+        :educationPrograms="educationPrograms"
+        :selectedProgram="selectedProgram"
+        @go-back="selectedProgram = null"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed, toRef } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import axios from 'axios'
+import ProgramDetail from './ProgramDetail.vue'
 
-const props = defineProps({
-  educationPrograms: {
-    type: Array,
-    required: true,
-    validator: (programs) =>
-      programs.every((program) =>
-        typeof program.title === 'string' &&
-        typeof program.image === 'string' &&
-        typeof program.icon === 'string' &&
-        typeof program.description === 'string' &&
-        typeof program.alt === 'string' &&
-        (typeof program.fullDescription === 'string' || program.fullDescription === undefined) &&
-        (Array.isArray(program.features) || program.features === undefined) &&
-        (Array.isArray(program.stats) || program.stats === undefined) &&
-        (Array.isArray(program.gallery) || program.gallery === undefined)
-      )
+const educationPrograms = ref([])
+const showAll = ref(false)
+const selectedProgram = ref(null)
+
+const fetchProgramEduData = async () => {
+  try {
+    const response = await axios.get('/backend/program.json')
+    educationPrograms.value = response.data.educationPrograms || []
+  } catch (error) {
+    console.error("Failed to fetch education programs:", error)
+    educationPrograms.value = []
   }
-})
+}
 
-defineEmits(['show-detail'])
+onMounted(fetchProgramEduData)
 
-// Fallback for broken images
 const handleImageError = (event) => {
   event.target.src = 'https://lotusoutreach.org/wp-content/uploads/2023/02/placeholder.jpg'
 }
 
-// Show more / less toggle
-const showAll = ref(false)
-const programList = toRef(props, 'educationPrograms')
-
-// Only show 4 or all based on toggle
 const visibleEdu = computed(() =>
-  showAll.value ? programList.value : programList.value.slice(0, 4)
+  showAll.value ? educationPrograms.value : educationPrograms.value.slice(0, 4)
 )
 </script>
 

@@ -21,81 +21,44 @@
       }
     ]
   },
-  "programs": [
+  "news": [
     {
-      "section": "Education",
-      "program": "CATALYST Program",
-      "description": "At Lotus Outreach Cambodia, we empower young women through our CATALYST program—a university scholarship and leadership initiative that supports graduates in pursuing higher education. Beyond financial support, CATALYST nurtures leadership skills, civic engagement, and career readiness, preparing scholars to become change makers in their communities and beyond.",
-      "image": "/image/Program/train1.jpg",
-      "link": "/program",
-      "linkText": "Learn More About Education"
+      "name": "Sat Marany",
+      "description": "Sat Marany, a 22-year-old from Banteay Meanchey Province, overcame significant challenges, including her parents working abroad since Grade 7. A recipient of the CATALYST Scholarship, she graduated with distinction from the Royal University of Phnom Penh in 2024, earning a Physics degree with a perfect GPA of 4.00 in her final year Currently, Marany works part-time at ISF International School and offers private tutoring, earning approximately $600 per month. She also volunteers at her university's Optoelectronics & Advanced Materials Laboratory and participated in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024 in Thailand, broadening her scientific knowledge and network.",
+      "image": "/image/News/02.jpg",
+      "link": "/success-story/0"
     },
     {
-      "section": "Training",
-      "program": "Life Skills & Personal Development",
-      "description": "We provide essential life skills and personal development training to equip our scholars for success in their academic and professional journeys. Through workshops and mentorship, participants gain soft skills, digital literacy, leadership abilities, and job readiness.",
-      "skills": [
-        "Digital Literacy & Technology Skills",
-        "Leadership & Communication",
-        "Professional Development",
-        "Job Readiness & Career Planning"
-      ],
-      "subSections": [
-        {
-          "title": "Digital Skills",
-          "description": "Technology & Innovation",
-          "icon": "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-        },
-        {
-          "title": "Leadership",
-          "description": "Communication & Management",
-          "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-        },
-        {
-          "title": "Career Prep",
-          "description": "Professional Development",
-          "icon": "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6"
-        },
-        {
-          "title": "Mentorship",
-          "description": "Guidance & Support",
-          "icon": "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-        }
-      ],
-      "image": null,
-      "link": "/program",
-      "linkText": "Explore Training Programs"
+      "name": "Supporting 100 Children in Prey Nup",
+      "description": "On March 16, 2025, Lotus Outreach Cambodia, in collaboration with Let Us Create Futures and local authorities, successfully hosted its 6th Giving Back Event in Prey Nup District, Preah Sihanouk Province. This annual initiative, driven by the leadership of CATALYST students and alumni, is dedicated to fostering a culture of community service among young women. The event aimed to uplift children in need through the distribution of essential school materials, food, and hygiene products. It also empowered students to develop leadership, teamwork, and advocacy skills while creating a joyful and educational experience for the children.",
+      "image": "/image/Program/giving1.jpg",
+      "link": "/program"
     },
     {
-      "section": "Care Program",
-      "program": "Girl Support & Community Care",
-      "description": "Our Rice for Education program offers vital food support to the families of scholarship recipients, helping to alleviate economic pressures that can lead to school dropouts. Additionally, our Lotus Pedals initiative provides bicycles to girls who live far from school, ensuring safe and reliable transportation to help them attend classes consistently.",
-      "image": "/image/Program/r4e.jpg",
-      "link": "/program",
-      "linkText": "Learn More About Care"
-    },
-    {
-      "section": "Giving Back",
-      "program": "Paying Forward Initiative",
-      "description": "Since 2018, we have fostered a culture of social responsibility through our Paying Forward initiative. Our beneficiaries actively engage in community service and charitable activities.",
-      "activities": [
-        {
-          "title": "Food Drives",
-          "description": "Organizing community food distribution programs"
-        },
-        {
-          "title": "Tutoring Programs",
-          "description": "Providing educational support to younger students"
-        },
-        {
-          "title": "Environmental Clean-ups",
-          "description": "Leading sustainability initiatives in local communities"
-        }
-      ],
-      "image": "/image/Home/care01.png",
-      "link": "/program",
-      "linkText": "Explore Giving Back"
+      "name": "Graduation",
+      "description": "Sat Marany, a 22-year-old from Banteay Meanchey Province, overcame significant challenges, including her parents working abroad since Grade 7. A recipient of the CATALYST Scholarship, she graduated with distinction from the Royal University of Phnom Penh in 2024, earning a Physics degree with a perfect GPA of 4.00 in her final year Currently, Marany works part-time at ISF International School and offers private tutoring, earning approximately $600 per month. She also volunteers at her university's Optoelectronics & Advanced Materials Laboratory and participated in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024 in Thailand, broadening her scientific knowledge and network.",
+      "image": "/image/Home/07.jpg",
+      "link": "/program"
     }
+  ],
+  "shareMoment": [
+    {
+      "image": "/image/News/02.jpg"
+      
+    },
+    {
+      "image": "/image/Program/giving1.jpg"
+      
+    },
+    {
+      "image": "/image/Home/05.jpg"
+      
+    },
+    {
+      "image": "/image/News/02.jpg"
+      
+    }
+    
   ],
   "subSectionIcons": [
     "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",

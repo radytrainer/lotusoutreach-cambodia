@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="text-left">
+            <div class="text-left ml-6">
                 <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center md:text-left md:text-5xl">History</h1>
                 <p v-for="(paragraph, index) in content" :key="index"
                     class="text-base sm:text-lg md:text-2xl lg:text-base text-gray-700 mb-4 text-center md:text-left"
@@ -32,7 +32,7 @@
         </div>
 
         <!-- Timeline -->
-        <div class="max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="max-w-[1380px] mx-auto" data-aos="fade-up">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">LOCAM through the years</h2>
                 <p class="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg md:text-2xl lg:text-base">
@@ -187,8 +187,8 @@ const timelineEvents = ref([
     {
         year: '2007',
         title: 'Life-Changing Encounter',
-        highlight: 'Inauguration of the ',
-        description: 'In late 2007, Lotus Outreach established a local office in Phnom Penh, ',
+        highlight: 'In late 2007,',
+        description: 'Lotus Outreach established a local office in Phnom Penh, ',
         image: '/image/About/2007.jpg',
     },
     {

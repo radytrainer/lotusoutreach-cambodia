@@ -1,8 +1,18 @@
 <template>
   <section class="py-16 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Back Button to Program -->
+      <div v-if="!selectedProgram" class="mb-6">
+        <router-link
+          to="/program"
+          class="flex items-center text-pink-600 hover:text-pink-700 transition font-poppins font-medium text-sm"
+        >
+          <i class="fas fa-arrow-left mr-2"></i> Back to All Programs
+        </router-link>
+      </div>
+
       <!-- Section Header -->
-      <div class="mb-16 text-center">
+      <div v-if="!selectedProgram" class="mb-16 text-center">
         <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink-600 shadow-md mb-4">
           <i class="fas fa-people-carry text-xl text-white"></i>
         </div>
@@ -16,13 +26,13 @@
       </div>
 
       <!-- Program Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div v-if="!selectedProgram" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div
           v-for="(giving, index) in visibleGiving"
           :key="index"
           class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100"
         >
-          <div class="h-48 overflow-hidden relative">
+          <div class="relative h-48 overflow-hidden">
             <img
               :src="giving.image"
               :alt="giving.title"
@@ -43,7 +53,7 @@
               {{ giving.description }}
             </p>
             <button
-              @click="$emit('show-detail', giving, 'giving')"
+              @click="selectedProgram = giving"
               class="text-pink-600 font-medium hover:text-pink-700 transition-colors duration-200 text-sm"
               :aria-label="`Learn more about ${giving.title}`"
             >
@@ -54,7 +64,7 @@
       </div>
 
       <!-- See More / See Less Buttons -->
-      <div class="text-center mt-10">
+      <div v-if="!selectedProgram" class="text-center mt-10">
         <button
           v-if="givingPrograms.length > 4 && !showAll"
           @click="showAll = true"
@@ -70,41 +80,53 @@
           See Less
         </button>
       </div>
+
+      <!-- Program Detail View -->
+      <ProgramDetail
+        v-if="selectedProgram"
+        :educationPrograms="givingPrograms"
+        :selectedProgram="selectedProgram"
+        @go-back="selectedProgram = null"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed, toRef } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import axios from 'axios'
+import ProgramDetail from './ProgramDetail.vue'
 
-const props = defineProps({
-  givingPrograms: {
-    type: Array,
-    required: true,
-    validator: (programs) =>
-      programs.every(
-        (program) =>
-          typeof program.title === 'string' &&
-          typeof program.image === 'string' &&
-          typeof program.icon === 'string' &&
-          typeof program.description === 'string'
-      )
+const givingPrograms = ref([])
+const showAll = ref(false)
+const selectedProgram = ref(null)
+
+const fetchProgramEduData = async () => {
+  try {
+    const response = await axios.get('/backend/program.json')
+    givingPrograms.value = response.data.givingPrograms || []
+  } catch (error) {
+    console.error("Failed to fetch giving programs:", error)
+    givingPrograms.value = []
   }
-})
-
-defineEmits(['show-detail'])
-
-// Image fallback handler
-const handleImageError = (event) => {
-  event.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found'
 }
 
-// Show more / less toggle
-const showAll = ref(false)
-const programList = toRef(props, 'givingPrograms')
+onMounted(fetchProgramEduData)
 
-// Visible items depending on toggle
+const handleImageError = (event) => {
+  event.target.src = 'https://lotusoutreach.org/wp-content/uploads/2023/02/placeholder.jpg'
+}
+
 const visibleGiving = computed(() =>
-  showAll.value ? programList.value : programList.value.slice(0, 4)
+  showAll.value ? givingPrograms.value : givingPrograms.value.slice(0, 4)
 )
 </script>
+
+<style scoped>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+</style>

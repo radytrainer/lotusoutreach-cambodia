@@ -25,6 +25,138 @@
             "description": "Inspiring the next generation of female leaders"
         }
     ],
+    "programs": [
+        {
+            "section": "Education",
+            "program": "CATALYST Program",
+            "description": "Our Education Program addresses financial and social barriers that prevent girls from completing school. In partnership with local organizations, we support girls from lower secondary school onward, while our direct support focuses on providing university scholarships for four years. Together, these efforts ensure that students have the materials, resources, and support they need to thrive academically.",
+            "skills": [
+                {
+                    "title": "Mentoring and academic follow-up",
+                    "description": "Guidance and support for girls’ academic success."
+                }
+            ],
+            "EduSections": [
+                {
+                    "title": "Bicycles and transportation support",
+                    "description": "Bicycles for rural girls to access school.",
+                    "icon": "M6 18h12l1-6H5l1 6zm2-10h8v2H8v-2z"
+                },
+                {
+                    "title": "Rice support for students and families",
+                    "description": "Rice to support girls’ school attendance.",
+                    "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"
+                },
+                {
+                    "title": "University and vocational support",
+                    "description": "Scholarships for women in IT, law.",
+                    "icon": "M4 6h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z"
+                },
+                {
+                    "title": "Scholarships and school materials",
+                    "description": "Scholarships, supplies for girls’ education.",
+                    "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                }
+            ],
+            "image": "/image/Program/train1.jpg",
+            "link": "/program",
+            "linkText": "Learn More About Education"
+        },
+        {
+            "section": "Training",
+            "program": "Life Skills & Personal Development",
+            "description": "The Training Program equips students with the knowledge, confidence, and soft skills to succeed in school, work, and life. Through structured life skills training, career guidance, and personal development workshops, we prepare youth to make informed decisions about their futures.",
+            "skills": [
+                "Life skills and soft skills training ",
+                "Leadership practice opportunities ",
+                "Career and major selection workshops",
+                "Job readiness and exposure visits"
+            ],
+            "subSections": [
+                {
+                    "title": "Digital Skills",
+                    "description": "Technology & Innovation",
+                    "icon": "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                },
+                {
+                    "title": "Leadership",
+                    "description": "Communication & Management",
+                    "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                },
+                {
+                    "title": "Career Prep",
+                    "description": "Professional Development",
+                    "icon": "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6"
+                },
+                {
+                    "title": "Mentorship",
+                    "description": "Guidance & Support",
+                    "icon": "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                }
+            ],
+            "image": null,
+            "link": "/program",
+            "linkText": "Explore Training Programs"
+        },
+        {
+            "section": "Care Program",
+            "program": "Girl Support & Community Care",
+            "description": "The Care Program recognizes that students cannot succeed without basic physical and emotional security. We provide essential support such as food, emergency aid, and trauma-informed care to help students and their families overcome the challenges of poverty, illness, and instability.",
+            "activities": [
+                {
+                    "title": "Monthly stipends or rice aid",
+                    "description": "Rice aid to support families, ensuring girls stay in school."
+                },
+                {
+                    "title": "Emergency health and crisis support",
+                    "description": "Health and relief support for communities during crises."
+                },
+                {
+                    "title": "Psycho-social and mental health support",
+                    "description": "Counseling and therapy for girls and survivors of violence"
+                },
+                {
+                    "title": "Support for vulnerable families and caregivers",
+                    "description": "Resources and aid for at-risk families to reduce poverty."
+                }
+            ],
+            "image": "/image/Program/r4e.jpg",
+            "link": "/program",
+            "linkText": "Learn More About Care"
+        },
+        {
+            "section": "Giving Back",
+            "program": "Paying Forward Initiative",
+            "description": "The Giving Back Program fosters a spirit of compassion, leadership, and responsibility among our students. As they progress in their education, students are encouraged and supported to give back to their communities through volunteering, mentoring, and service projects becoming role models and change makers in their own right.",
+            "activities": [
+                {
+                    "title": "Peer mentoring and tutoring",
+                    "description": "Peer support and tutoring for girls’ academic success."
+                },
+                {
+                    "title": "Community outreach and service projects",
+                    "description": "Engaging communities to support girls’ education, safety."
+                },
+                {
+                    "title": "Sharing knowledge with junior students",
+                    "description": "Mentoring younger girls to excel in education."
+                },
+                {
+                    "title": "Supporting the next generation of scholarship recipients",
+                    "description": "Guiding scholarship recipients for future leadership."
+                }
+            ],
+            "image": "/image/Home/care01.png",
+            "link": "/program",
+            "linkText": "Explore Giving Back"
+        }
+    ],
+    "subSectionIcons": [
+        "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+        "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6",
+        "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+    ],
     "educationPrograms": [
         {
             "title": "Lotus Pedals",
@@ -434,7 +566,6 @@
             "icon": "fas fa-mountain",
             "description": "Mr. Chea Bunseang – CEO, Bunseang Architects and Associates",
             "fullDescription": "As one of Cambodia’s most respected architects, Mr. Bunseang holds a Master's in Urban Environmental Management from the Asian Institute of Technology. He previously worked with UN-Habitat, the UN Mission in East Timor, and as a consultant for World Bank development projects. He later studied and worked in the United States, overcoming language barriers and racism before returning home to found his own design firm. He encouraged participants to rise above setbacks: “I was judged for how I looked and how I spoke. But hard work, self-discipline, and being proactive helped people see my value—not just my limitations.”",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -469,7 +600,6 @@
             "icon": "fas fa-fist-raised",
             "description": "Ms. Sovuthika Chhim – Head of Modern Trade, Smart Axiata",
             "fullDescription": "From working as a tour operator to becoming a senior leader at one of Cambodia’s biggest telecom firms, Sovuthika’s journey reflects determination and grit. She won the “Axiata Champion 2020” award and is an active mentor with Wedu Global, helping women enter tech and leadership roles.",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -504,7 +634,6 @@
             "icon": "fas fa-heartbeat",
             "description": "Mrs. Sok Thany – Founder, Jasmine Curtain & Jasmine Water",
             "fullDescription": "With a background in business and a fear of poverty that fueled her ambition, Mrs. Sok Thany worked her way from sales executive to entrepreneur. After returning from Thailand to raise her children, she founded Jasmine Drinking Water (2005) and later Jasmine Curtain (2012). Today, her businesses are among the leading brands in Siem Reap.",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -539,7 +668,6 @@
             "icon": "fas fa-swimmer",
             "description": "Mrs. Ra Ya – Founder, Survival Swim Club",
             "fullDescription": "Growing up in a floating village, Ra Ya sold food on the street and cleaned hotel rooms to support her education. Against family expectations that girls shouldn’t study, she persisted, earned a scholarship, and eventually completed her Master’s in Business Management. In 2018, she founded Survival Swim Club, which teaches lifesaving skills and empowers women.",
-
             "features": [
                 "High-quality, durable bicycles designed for rural terrain",
                 "Safety training and helmet provision",
@@ -613,7 +741,6 @@
             "fullDescription": "These panels were more than workshops—they were launch pads for personal transformation. By learning directly from Cambodian role models who understand their realities, students walked away with clarity, confidence, and conviction. Lotus Outreach Cambodia is proud to continue investing in Cambodia’s next generation of leaders—those who will not only build their futures, but help reshape their communities.",
             "features": [
                 "If not you, then who? If not now, then when?"
-              
             ],
             "image1": "/image/Program/slideshowT18.jpg",
             "image2": "/image/Program/slideshowT19.jpg",

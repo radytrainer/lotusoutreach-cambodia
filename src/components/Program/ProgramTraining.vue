@@ -1,8 +1,18 @@
 <template>
   <section class="py-16 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Back Button to Program -->
+      <div v-if="!selectedProgram" class="mb-6">
+        <router-link
+          to="/program"
+          class="flex items-center text-blue-600 hover:text-blue-700 transition font-poppins font-medium text-sm"
+        >
+          <i class="fas fa-arrow-left mr-2"></i> Back to All Programs
+        </router-link>
+      </div>
+
       <!-- Section Header -->
-      <div class="mb-16 text-center">
+      <div v-if="!selectedProgram" class="mb-16 text-center">
         <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 shadow-md mb-4">
           <i class="fas fa-chalkboard-teacher text-xl text-white"></i>
         </div>
@@ -13,14 +23,14 @@
         </p>
       </div>
 
-      <!-- Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Program Cards -->
+      <div v-if="!selectedProgram" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div
           v-for="(training, index) in visibleTrainings"
           :key="index"
           class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100"
         >
-          <div class="h-48 overflow-hidden relative">
+          <div class="relative h-48 overflow-hidden">
             <img
               :src="training.image"
               :alt="training.title"
@@ -37,7 +47,7 @@
             <h3 class="text-base font-poppins font-medium text-gray-900 mb-2">{{ training.title }}</h3>
             <p class="text-xs text-gray-600 leading-relaxed mb-3">{{ training.description }}</p>
             <button
-              @click="$emit('show-detail', training, 'training')"
+              @click="selectedProgram = training"
               class="text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200 text-sm"
               :aria-label="`Learn more about ${training.title}`"
             >
@@ -48,7 +58,7 @@
       </div>
 
       <!-- See More / See Less Buttons -->
-      <div class="text-center mt-10">
+      <div v-if="!selectedProgram" class="text-center mt-10">
         <button
           v-if="trainingPrograms.length > 4 && !showAll"
           @click="showAll = true"
@@ -64,43 +74,53 @@
           See Less
         </button>
       </div>
+
+      <!-- Program Detail View -->
+      <ProgramDetail
+        v-if="selectedProgram"
+        :educationPrograms="trainingPrograms"
+        :selectedProgram="selectedProgram"
+        @go-back="selectedProgram = null"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed, toRef } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import axios from 'axios'
+import ProgramDetail from './ProgramDetail.vue'
 
-const props = defineProps({
-  trainingPrograms: {
-    type: Array,
-    required: true,
-    validator: (programs) =>
-      programs.every(
-        (program) =>
-          typeof program.title === 'string' &&
-          typeof program.image === 'string' &&
-          typeof program.icon === 'string' &&
-          typeof program.description === 'string'
-      ),
-  },
-})
+const trainingPrograms = ref([])
+const showAll = ref(false)
+const selectedProgram = ref(null)
 
-defineEmits(['show-detail'])
-
-// Fallback image
-const handleImageError = (event) => {
-  event.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found'
+const fetchProgramEduData = async () => {
+  try {
+    const response = await axios.get('/backend/program.json')
+    trainingPrograms.value = response.data.trainingPrograms || []
+  } catch (error) {
+    console.error("Failed to fetch training programs:", error)
+    trainingPrograms.value = []
+  }
 }
 
-// Show more / less toggle
-const showAll = ref(false)
+onMounted(fetchProgramEduData)
 
-// Convert prop to reactive ref so we can use it in computed
-const programList = toRef(props, 'trainingPrograms')
+const handleImageError = (event) => {
+  event.target.src = 'https://lotusoutreach.org/wp-content/uploads/2023/02/placeholder.jpg'
+}
 
-// Only show 4 or all based on toggle
 const visibleTrainings = computed(() =>
-  showAll.value ? programList.value : programList.value.slice(0, 4)
+  showAll.value ? trainingPrograms.value : trainingPrograms.value.slice(0, 4)
 )
 </script>
+
+<style scoped>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+</style>

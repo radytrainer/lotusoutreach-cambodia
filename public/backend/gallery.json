@@ -1,0 +1,182 @@
+{
+     "galleryData": [
+    {
+      "title": "Graduation Ceremony",
+      "images": [
+        {
+          "src": "/image/Gallery/G1.jpg"
+        },
+        {
+          "src": "/image/Gallery/G2.jpg"
+        },
+        {
+          "src": "/image/Gallery/G3.jpg"
+        },
+        {
+          "src": "/image/Gallery/G4.jpg"
+        },
+        {
+          "src": "/image/Gallery/G5.jpg"
+        },
+        {
+          "src": "/image/Gallery/G6.jpg"
+        },
+        {
+          "src": "/image/Gallery/G7.jpg"
+        },
+        {
+          "src": "/image/Gallery/G8.jpg"
+        },
+         {
+          "src": "/image/Gallery/G9.jpg"
+        },
+        {
+          "src": "/image/Gallery/G10.jpg"
+        },
+        {
+          "src": "/image/Gallery/G11.jpg"
+        },
+        {
+          "src": "/image/Gallery/G12.jpg"
+        },
+        {
+          "src": "/image/Gallery/G13.jpg"
+        },
+        {
+          "src": "/image/Gallery/G14.jpg"
+        },
+        {
+          "src": "/image/Gallery/G16.jpg"
+        },
+        {
+          "src": "/image/Gallery/G17.jpg"
+        },
+        {
+          "src": "/image/Gallery/G18.jpg"
+        }
+
+      ]
+    },
+    
+    {
+      "title": "Social Audit / Home visit",
+      "images": [
+        {
+          "src": "/image/Gallery/G18.jpg"
+        },
+        {
+          "src": "/image/Gallery/G19.jpg"
+        },
+        {
+          "src": "/image/Gallery/G20.jpg"
+          
+        },
+        {
+          "src": "/image/Gallery/G21.jpg"
+          
+        },
+         {
+          "src": "/image/Gallery/G26.jpg"
+        },
+        {
+          "src": "/image/Gallery/G27.jpg"
+        },
+        {
+          "src": "/image/Gallery/G28.jpg"
+        },
+        {
+          "src": "/image/Gallery/G29.jpg"
+          
+        }
+      ]
+    },
+    {
+      "title": "Study Visit",
+      "images": [
+        {
+          "src": "/image/Gallery/G22.jpg"
+        },
+        {
+          "src": "/image/Gallery/G23.jpg"
+        },
+        {
+          "src": "/image/Gallery/G24.jpg"
+        },
+        {
+          "src": "/image/Gallery/G25.jpg"
+        },
+        {
+          "src": "/image/Gallery/G30.jpg"
+        },
+        {
+          "src": "/image/Gallery/G31.jpg"
+        },
+        {
+          "src": "/image/Gallery/G32.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Workshop / Training",
+      "images": [
+        {
+          "src": "/image/Gallery/G22.jpg"
+        },
+        {
+          "src": "/image/Gallery/G23.jpg"
+          
+        },
+        {
+          "src": "/image/Gallery/G24.jpg"
+         
+        },
+        {
+          "src": "/image/Gallery/G25.jpg"
+          
+        },
+        {
+          "src": "/image/Gallery/G30.jpg"
+         
+        },
+        {
+          "src": "/image/Gallery/G31.jpg"
+          
+        },
+        {
+          "src": "/image/Gallery/G32.jpg"
+          
+        }
+      ]
+    },
+    {
+      "title": "Other Activity",
+      "images": [
+        {
+          "src": "/image/Gallery/G22.jpg"
+        },
+        {
+          "src": "/image/Gallery/G23.jpg"
+        },
+        {
+          "src": "/image/Gallery/G24.jpg"
+          
+        },
+        {
+          "src": "/image/Gallery/G25.jpg"
+          
+        },
+        {
+          "src": "/image/Gallery/G30.jpg"
+        },
+        {
+          "src": "/image/Gallery/G31.jpg"
+        },
+        {
+          "src": "/image/Gallery/G32.jpg"
+        }
+      ]
+    }
+    
+    
+  ]
+}
