@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="text-left">
+            <div class="text-left ml-6">
                 <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center md:text-left md:text-5xl">History</h1>
                 <p v-for="(paragraph, index) in content" :key="index"
                     class="text-base sm:text-lg md:text-2xl lg:text-base text-gray-700 mb-4 text-center md:text-left"
@@ -187,8 +187,8 @@ const timelineEvents = ref([
     {
         year: '2007',
         title: 'Life-Changing Encounter',
-        highlight: 'Inauguration of the ',
-        description: 'In late 2007, Lotus Outreach established a local office in Phnom Penh, ',
+        highlight: 'In late 2007,',
+        description: 'Lotus Outreach established a local office in Phnom Penh, ',
         image: '/image/About/2007.jpg',
     },
     {

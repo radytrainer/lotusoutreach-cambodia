@@ -26,8 +26,8 @@
     },
     "historyContent": [
         "Lotus Outreach Cambodia (LOCAM) is part of the global Lotus Outreach network, which is dedicated to improving the lives of vulnerable women and children through education, training, and care.",
-        "A pivotal moment came when Khyentse Norbu visited Cambodia for the first time and met a young girl at a safe house orphanage—a moment that shaped the organization’s long-term commitment to the country: “This particular girl held my finger–and she wouldn’t let me go. But so tight; really, really tight. She wouldn’t let me go. I had this really strong feeling, connection, so to speak. So I immediately asked the orphanage, I really want to support this girl, you know, all the way through her university and on. She was also a little bit blind. So, I have to really give credit to her strength to have Lotus Outreach here today. It is really because of her.”",
-        "In late 2007, Lotus Outreach inaugurated its local office in Phnom Penh, solidifying its presence in Cambodia and expanding its capacity to serve vulnerable communities more effectively.",
+        "A pivotal moment came when Khyentse Norbu visited Cambodia for the first time and met a young girl at a safe house orphanage a moment that shaped the organization’s long-term commitment to the country: “This particular girl held my finger and she wouldn’t let me go. But so tight; really, really tight. She wouldn’t let me go. I had this really strong feeling, connection, so to speak. So I immediately asked the orphanage, I really want to support this girl, you know, all the way through her university and on. She was also a little bit blind. So, I have to really give credit to her strength to have Lotus Outreach here today. It is really because of her.”",
+        "In late 2007, Lotus Outreach inaugurated its local office in Phnom Penh, solidifying its presence in Cambodia and expanding its capacity to serve vulnerable communities more effectively. For the first time, LOCAM officially registered with the Ministry of Interior on January 21, establishing permanent presence in Cambodia.",
         "<strong class=\"text-blue-600\">Best Addition:</strong> Today, Lotus Outreach Cambodia empowers women and girls through education, skills training, and care programs—breaking the cycle of poverty and creating lasting change."
     ],
     "principles": [
@@ -132,6 +132,16 @@
             "img": "/image/About/Bayon.png",
             "url": "https://www.ecoledubayon.org/en/who-are-we/bayon-education-development",
             "info": "Bayon Education Development"
+        },
+        {
+            "img": "/image/About/PUC.JPG",
+            "url": "https://www.puc.edu.kh/",
+            "info": "Paññāsāstra University of Cambodia"
+        },
+        {
+            "img": "/image/About/BBU.png",
+            "url": "https://web.bbu.edu.kh/",
+            "info": "Build Bright University"
         }
     ]
 }
