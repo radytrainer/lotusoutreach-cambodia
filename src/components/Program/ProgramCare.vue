@@ -1,8 +1,18 @@
 <template>
   <section class="py-16 bg-white" data-aos="fade-up">
     <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Back Button to Program -->
+      <div v-if="!selectedProgram" class="mb-6">
+        <router-link
+          to="/program"
+          class="flex items-center text-pink-600 hover:text-pink-700 transition font-poppins font-medium text-sm"
+        >
+          <i class="fas fa-arrow-left mr-2"></i> Back to All Programs
+        </router-link>
+      </div>
+
       <!-- Section Header -->
-      <div class="mb-16 text-center">
+      <div v-if="!selectedProgram" class="mb-16 text-center">
         <div
           class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink-600 shadow-md mb-4"
         >
@@ -12,22 +22,18 @@
           Care Programs
         </h2>
         <div class="w-20 h-1 bg-pink-600 mx-auto mb-4 rounded"></div>
-        <p
-          class="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
-        >
-          Strengthening Cambodian communities with essential resources and
-          compassionate support
+        <p class="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          Strengthening Cambodian communities with essential resources and compassionate support
         </p>
       </div>
 
       <!-- Program Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div v-if="!selectedProgram" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div
           v-for="(program, index) in visibleCare"
           :key="index"
           class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100"
         >
-          <!-- Image -->
           <div class="h-48 overflow-hidden relative">
             <img
               :src="program.image"
@@ -36,15 +42,11 @@
               @error="handleImageError"
             />
             <div class="absolute top-3 left-3">
-              <div
-                class="w-8 h-8 rounded-full bg-pink-600 flex items-center justify-center"
-              >
+              <div class="w-8 h-8 rounded-full bg-pink-600 flex items-center justify-center">
                 <i :class="program.icon" class="text-sm text-white"></i>
               </div>
             </div>
           </div>
-
-          <!-- Content -->
           <div class="p-5">
             <h3 class="text-base font-poppins font-medium text-gray-900 mb-2">
               {{ program.title }}
@@ -53,7 +55,7 @@
               {{ program.description }}
             </p>
             <button
-              @click="$emit('show-detail', program, 'community')"
+              @click="selectedProgram = program"
               class="text-pink-600 font-medium hover:text-pink-700 transition-colors duration-200 text-sm"
               :aria-label="`Learn more about ${program.title}`"
             >
@@ -64,11 +66,11 @@
       </div>
 
       <!-- See More / See Less Buttons -->
-      <div class="text-center mt-10">
+      <div v-if="!selectedProgram" class="text-center mt-10">
         <button
           v-if="communityPrograms.length > 4 && !showAll"
           @click="showAll = true"
-          class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          class="px-6 py-2 bg-pink-600 text-white rounded hover:bg-pink-700 transition"
         >
           See More
         </button>
@@ -80,46 +82,46 @@
           See Less
         </button>
       </div>
+
+      <!-- Program Detail View -->
+      <ProgramDetail
+        v-if="selectedProgram"
+        :educationPrograms="communityPrograms"
+        :selectedProgram="selectedProgram"
+        @go-back="selectedProgram = null"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed, toRef } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import axios from 'axios'
+import ProgramDetail from './ProgramDetail.vue'
 
-/* Props */
-const props = defineProps({
-  communityPrograms: {
-    type: Array,
-    required: true,
-    validator: (programs) =>
-      programs.every(
-        (program) =>
-          typeof program.title === 'string' &&
-          typeof program.image === 'string' &&
-          typeof program.icon === 'string' &&
-          typeof program.description === 'string'
-      ),
-  },
-})
-
-/* Emits */
-defineEmits(['show-detail'])
-
-/* Reactive State */
+const communityPrograms = ref([])
 const showAll = ref(false)
-const programList = toRef(props, 'communityPrograms')
+const selectedProgram = ref(null)
 
-/* Computed Properties */
-const visibleCare = computed(() =>
-  showAll.value ? programList.value : programList.value.slice(0, 4)
-)
-
-/* Methods */
-const handleImageError = (event) => {
-  event.target.src =
-    'https://via.placeholder.com/300x200?text=Image+Not+Found'
+const fetchProgramEduData = async () => {
+  try {
+    const response = await axios.get('/backend/program.json')
+    communityPrograms.value = response.data.communityPrograms || []
+  } catch (error) {
+    console.error("Failed to fetch community programs:", error)
+    communityPrograms.value = []
+  }
 }
+
+onMounted(fetchProgramEduData)
+
+const handleImageError = (event) => {
+  event.target.src = 'https://lotusoutreach.org/wp-content/uploads/2023/02/placeholder.jpg'
+}
+
+const visibleCare = computed(() =>
+  showAll.value ? communityPrograms.value : communityPrograms.value.slice(0, 4)
+)
 </script>
 
 <style scoped>
