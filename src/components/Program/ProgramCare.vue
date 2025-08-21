@@ -4,7 +4,7 @@
       <!-- Back Button to Program -->
       <div v-if="!selectedProgram" class="mb-6">
         <router-link
-          to="/program"
+          to="/program/#care-section"
           class="flex items-center text-pink-600 hover:text-pink-700 transition font-poppins font-medium text-sm"
         >
           <i class="fas fa-arrow-left mr-2"></i> Back to All Programs

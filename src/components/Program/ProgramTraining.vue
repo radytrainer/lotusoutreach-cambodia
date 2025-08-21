@@ -3,11 +3,10 @@
     <div class="container mx-auto px-4 max-w-7xl">
       <!-- Back Button to Program -->
       <div v-if="!selectedProgram" class="mb-6">
-        <router-link
-          to="/program"
+        <router-link to="/program#training-section"
           class="flex items-center text-blue-600 hover:text-blue-700 transition font-poppins font-medium text-sm"
-        >
-          <i class="fas fa-arrow-left mr-2"></i> Back to All Programs
+          aria-label="Go back to training programs section">
+          <font-awesome-icon icon="arrow-left" class="mr-2" /> Back to Training Programs
         </router-link>
       </div>
 
@@ -25,18 +24,12 @@
 
       <!-- Program Cards -->
       <div v-if="!selectedProgram" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div
-          v-for="(training, index) in visibleTrainings"
-          :key="index"
-          class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100"
-        >
+        <div v-for="(training, index) in visibleTrainings" :key="index"
+          class="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100">
           <div class="relative h-48 overflow-hidden">
-            <img
-              :src="training.image"
-              :alt="training.title"
+            <img :src="training.image" :alt="training.title"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              @error="handleImageError"
-            />
+              @error="handleImageError" />
             <div class="absolute top-3 left-3">
               <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
                 <i :class="training.icon" class="text-sm text-white"></i>
@@ -46,11 +39,9 @@
           <div class="p-5">
             <h3 class="text-base font-poppins font-medium text-gray-900 mb-2">{{ training.title }}</h3>
             <p class="text-xs text-gray-600 leading-relaxed mb-3">{{ training.description }}</p>
-            <button
-              @click="selectedProgram = training"
+            <button @click="selectedProgram = training"
               class="text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200 text-sm"
-              :aria-label="`Learn more about ${training.title}`"
-            >
+              :aria-label="`Learn more about ${training.title}`">
               Learn More <i class="fas fa-arrow-right ml-1"></i>
             </button>
           </div>
@@ -59,29 +50,19 @@
 
       <!-- See More / See Less Buttons -->
       <div v-if="!selectedProgram" class="text-center mt-10">
-        <button
-          v-if="trainingPrograms.length > 4 && !showAll"
-          @click="showAll = true"
-          class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-        >
+        <button v-if="trainingPrograms.length > 4 && !showAll" @click="showAll = true"
+          class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
           See More
         </button>
-        <button
-          v-if="showAll"
-          @click="showAll = false"
-          class="px-6 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition"
-        >
+        <button v-if="showAll" @click="showAll = false"
+          class="px-6 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition">
           See Less
         </button>
       </div>
 
       <!-- Program Detail View -->
-      <ProgramDetail
-        v-if="selectedProgram"
-        :educationPrograms="trainingPrograms"
-        :selectedProgram="selectedProgram"
-        @go-back="selectedProgram = null"
-      />
+      <ProgramDetail v-if="selectedProgram" :educationPrograms="trainingPrograms" :selectedProgram="selectedProgram"
+        @go-back="selectedProgram = null" />
     </div>
   </section>
 </template>

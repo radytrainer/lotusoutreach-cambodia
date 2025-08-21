@@ -4,10 +4,10 @@
       <!-- Back Button to Program -->
       <div v-if="!selectedProgram" class="mb-6">
         <router-link
-          to="/program"
+          to="/program#education-section"
           class="flex items-center text-blue-600 hover:text-blue-700 transition font-poppins font-medium text-sm"
         >
-          <i class="fas fa-arrow-left mr-2"></i> Back to All Programs
+          <i class="fas fa-arrow-left mr-2"></i> Back to Education
         </router-link>
       </div>
 

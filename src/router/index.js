@@ -24,10 +24,7 @@ const routes = [
     component: DefaultLayout,
     children: [
       { path: '', name: 'Home', component: Home },
-      { path: 'about', name: 'About', component: About,
-       
-      },
-
+      { path: 'about', name: 'About', component: About },
       { path: 'contact', name: 'Contact', component: ContactView },
       { path: 'donate', name: 'Donate', component: DonateView },
       { path: 'education', name: 'education', component: ProgramEdu },
@@ -44,12 +41,11 @@ const routes = [
       },
       { path: 'newstory', name: 'News', component: NewsStory },
       { path: 'gallery', name: 'gallery', component: GalleryView },
-      {path: 'team', name: 'TeamSection',component: TeamSection},
-      {path: 'team/:id', name: 'DetailTeam', component: DetailTeam, props: true },
+      { path: 'team', name: 'TeamSection', component: TeamSection },
+      { path: 'team/:id', name: 'DetailTeam', component: DetailTeam, props: true },
       { path: 'success-story', name: 'SuccessStory', component: SuccessStory },
       { path: 'success-story/:id', name: 'StoryDetail', component: StoryDetailPage, props: true },
-      //Convex Activities Route
-      { path: '/Admin', name: 'Activities',component: Activities,},
+      { path: '/Admin', name: 'Activities', component: Activities },
     ],
   },
 ];
@@ -57,7 +53,30 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 };
+    if (savedPosition) {
+      return savedPosition;
+    } else if (to.hash) {
+      // Asynchronous polling to wait for the hash element to exist in the DOM
+      return new Promise((resolve) => {
+        let checks = 0;
+        const maxChecks = 100; // Approx. 1-2 seconds timeout (16ms per frame * 100)
+        const checkElement = () => {
+          const el = document.querySelector(to.hash);
+          if (el) {
+            resolve({ el: to.hash, behavior: 'auto' }); // 'auto' for instant jump
+          } else if (checks >= maxChecks) {
+            console.warn(`Element ${to.hash} not found after ${maxChecks} checks. Scrolling to top.`);
+            resolve({ top: 0 });
+          } else {
+            checks++;
+            requestAnimationFrame(checkElement);
+          }
+        };
+        checkElement();
+      });
+    } else {
+      return { top: 0 };
+    }
   },
   routes,
 });
