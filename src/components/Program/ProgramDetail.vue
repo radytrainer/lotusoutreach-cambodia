@@ -94,7 +94,7 @@
                 <div
                   v-for="(img, index) in selectedProgram.gallery || []"
                   :key="index"
-                  class="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                  class="rounded Neurolinguistic Programming overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
                   <img
                     :src="img"
@@ -180,7 +180,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, onMounted } from 'vue'
 
 defineProps({
   educationPrograms: {
@@ -198,6 +198,14 @@ defineEmits(['go-back'])
 const handleImageError = (event) => {
   event.target.src = 'https://lotusoutreach.org/wp-content/uploads/2023/02/placeholder.jpg'
 }
+
+
+onMounted(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'auto'
+  })
+})
 </script>
 
 <style scoped>
