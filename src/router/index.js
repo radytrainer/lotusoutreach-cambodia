@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { nextTick } from 'vue'; // Import nextTick for DOM synchronization
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
@@ -31,14 +32,7 @@ const routes = [
       { path: 'care', name: 'care', component: ProgramCare },
       { path: 'training', name: 'training', component: ProgramTraining },
       { path: 'givingBack', name: 'givingBack', component: ProgramGiving },
-      {
-        path: 'program',
-        name: 'Program',
-        component: ProgramView,
-        children: [
-          { path: ':title', name: 'ProgramDetail', component: programDetail, props: true },
-        ],
-      },
+      { path: 'program', name: 'Program', component: ProgramView },
       { path: 'newstory', name: 'News', component: NewsStory },
       { path: 'gallery', name: 'gallery', component: GalleryView },
       { path: 'team', name: 'TeamSection', component: TeamSection },
@@ -52,33 +46,36 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  routes,
   scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      window.scrollTo(0, 0); 
+    }
     if (savedPosition) {
       return savedPosition;
     } else if (to.hash) {
-      // Asynchronous polling to wait for the hash element to exist in the DOM
-      return new Promise((resolve) => {
-        let checks = 0;
-        const maxChecks = 100; // Approx. 1-2 seconds timeout (16ms per frame * 100)
-        const checkElement = () => {
-          const el = document.querySelector(to.hash);
-          if (el) {
-            resolve({ el: to.hash, behavior: 'auto' }); // 'auto' for instant jump
-          } else if (checks >= maxChecks) {
-            console.warn(`Element ${to.hash} not found after ${maxChecks} checks. Scrolling to top.`);
-            resolve({ top: 0 });
-          } else {
-            checks++;
-            requestAnimationFrame(checkElement);
-          }
-        };
-        checkElement();
+      return nextTick().then(() => {
+        const element = document.querySelector(to.hash);
+        if (element) {
+          const header = document.querySelector('header'); 
+          const offset = -(header ? header.offsetHeight : 80); 
+          const content = element.querySelector('.content'); 
+          const position = content
+            ? content.getBoundingClientRect().top + window.scrollY + offset
+            : element.getBoundingClientRect().top + window.scrollY + offset;
+          return {
+            top: position,
+            behavior: 'auto', 
+          };
+        } else {
+          console.warn(`Element with selector ${to.hash} not found, scrolling to top`);
+          return { top: 0, behavior: 'auto' };
+        }
       });
     } else {
-      return { top: 0 };
+      return { top: 0, behavior: 'auto' };
     }
   },
-  routes,
 });
 
 export default router;
