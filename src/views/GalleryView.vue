@@ -12,7 +12,7 @@
         Our Gallery of <span class="text-pink-500">Activities</span>
       </h1>
       <p class="text-lg md:text-xl text-white max-w-3xl">
-        In rural Cambodia, education changes lives. Each photo captures the spirit of Lotus Outreach Cambodia’s mission empowering girls and strengthening communities through knowledge, opportunity, and hope.
+        In rural Cambodia, education changes lives. Each photo captures the spirit of Lotus Outreach Cambodia’s mission, empowering girls and strengthening communities through knowledge, opportunity, and hope. 
       </p>
     </div>
   </section>
@@ -20,7 +20,7 @@
   <!-- Gallery Sections -->
   <div class="bg-neutral-50 py-16 px-6 md:px-12">
     <div class="max-w-7xl mx-auto space-y-24">
-      <div v-for="(section, sIdx) in galleryData" :key="sIdx">
+      <div v-for="(section, sIdx) in galleryData" :key="sIdx" class="mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 border-b-4 border-pink-500 pb-2">
           {{ section.title }}
         </h2>
@@ -28,18 +28,28 @@
         <!-- Masonry-style responsive grid -->
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
           <div 
-            v-for="(image, iIdx) in section.images" 
+            v-for="(image, iIdx) in visibleImages(section, sIdx)" 
             :key="iIdx"
             class="mb-4 relative break-inside rounded-xl shadow-lg cursor-pointer group overflow-hidden border border-gray-200 transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
             @click="openLightbox(sIdx, iIdx)"
           >
             <img 
               :src="image.src" 
-              :alt="image.alt"
+              :alt="image.alt" 
               class="w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
             />
-            
           </div>
+        </div>
+
+        <!-- See More / See Less Button -->
+        <div class="text-center mt-6">
+          <button 
+            v-if="section.images.length > maxVisible"
+            @click="toggleExpand(sIdx)"
+            class="px-6 py-2 bg-pink-500 text-white rounded-full shadow hover:bg-pink-600 transition"
+          >
+            {{ expandedSections[sIdx] ? 'See Less' : 'See More' }}
+          </button>
         </div>
       </div>
     </div>
@@ -74,8 +84,6 @@
       @click="nextImage"
       aria-label="Next"
     >&rsaquo;</button>
-
-   
   </div>
 </template>
 
@@ -87,6 +95,22 @@ const showLightbox = ref(false);
 const currentImageIndex = ref(0);
 const galleryData = ref([]);
 
+// --- "See More" logic ---
+const maxVisible = 6; // 2 rows × 3 images per row
+const expandedSections = ref({});
+
+const visibleImages = (section, sIdx) => {
+  if (expandedSections.value[sIdx]) {
+    return section.images; // show all
+  }
+  return section.images.slice(0, maxVisible); // show only first 9
+};
+
+const toggleExpand = (sIdx) => {
+  expandedSections.value[sIdx] = !expandedSections.value[sIdx];
+};
+
+// --- Lightbox logic ---
 const allImages = computed(() => galleryData.value.flatMap(section => section.images));
 const currentImage = computed(() => allImages.value[currentImageIndex.value] || {});
 

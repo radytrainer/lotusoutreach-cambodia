@@ -13,7 +13,6 @@
         @toggle-category="toggleCategory" @search="handleSearch" />
 
       <div v-if="filteredActivities.length === 0" class="text-center py-12">
-        <p>No activities found.</p>
       </div>
 
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -29,17 +28,12 @@
       </div>
     </div>
 
-    <div id="success-stories" v-if="currentView === 'listing' && stories.length">
-      <SuccessStory :stories="stories" />
-    </div>
-    <div v-else-if="currentView === 'listing' && !stories.length" class="text-center py-12">
-      <p>Loading success stories...</p>
-    </div>
+    <SuccessStory v-if="currentView === 'listing' && stories.length" :stories="stories" />
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch, nextTick } from "vue";
+import { ref, computed, onMounted, nextTick} from "vue";
 import axios from "axios";
 import convex from '@/convex';
 import HeroBanner from '@/components/News/HeroBanner.vue';
@@ -56,76 +50,20 @@ const activeCategories = ref([]);
 const activities = ref([]);
 const categories = ref([]);
 const stories = ref([]);
-const isDataLoaded = ref(false);
 
 const fetchData = async () => {
   try {
     const result = await convex.query("getActivities");
     const response = await axios.get('/backend/newsStory.json');
-    categories.value = response.data.categories || [];
-    stories.value = response.data.stories || [];
+    categories.value = response.data.categories;
+    stories.value = response.data.stories;
     activities.value = result || [];
-    isDataLoaded.value = true; 
-    console.log("Stories loaded:", stories.value);
   } catch (error) {
     console.error("Failed to load data from newsStory.json", error);
-    isDataLoaded.value = true; 
   }
 };
 
-onMounted(() => {
-  // Disable browser's default scroll restoration
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-  fetchData();
-  // Defer handleHashScroll to ensure DOM is ready
-  nextTick(() => {
-    handleHashScroll();
-  });
-});
-
-watch([isDataLoaded, stories], () => {
-  if (isDataLoaded.value && stories.value.length && window.location.hash) {
-    nextTick(() => {
-      handleHashScroll();
-    });
-  }
-});
-
-const handleHashScroll = () => {
-  if (window.location.hash) {
-    const element = document.querySelector(window.location.hash);
-    if (element) {
-      const header = document.querySelector('header');
-      const offset = -(header ? header.offsetHeight : 80); 
-      const position = element.getBoundingClientRect().top + window.scrollY + offset;
-      window.scrollTo({
-        top: position,
-        behavior: 'auto' // Instant scroll to avoid flicker
-      });
-      console.log(`Scrolled to ${window.location.hash}`);
-    } else {
-      console.warn(`Element with selector ${window.location.hash} not found`);
-      // Retry after a short delay if element is not found
-      setTimeout(() => {
-        nextTick(() => {
-          const retryElement = document.querySelector(window.location.hash);
-          if (retryElement) {
-            const header = document.querySelector('header');
-            const offset = -(header ? header.offsetHeight : 80);
-            const position = retryElement.getBoundingClientRect().top + window.scrollY + offset;
-            window.scrollTo({
-              top: position,
-              behavior: 'auto'
-            });
-            console.log(`Retried scroll to ${window.location.hash}`);
-          }
-        });
-      }, 100);
-    }
-  }
-};
+onMounted(fetchData);
 
 const filteredActivities = computed(() => {
   const query = searchQuery.value.toLowerCase().trim();
@@ -171,27 +109,35 @@ const relatedActivities = computed(() => {
     .slice(0, 2);
 });
 
+const lastViewedActivity = ref(null);
 const viewActivityDetail = (activity) => {
   selectedActivity.value = activity;
+  lastViewedActivity.value = activity; 
   currentView.value = "detail";
-  // No scrollTo here to preserve natural scroll position
-  console.log("Selected Activity:", activity.title, "Current View:", currentView.value);
+  window.scrollTo(0, 0); 
 };
+
 
 const backToListing = () => {
   currentView.value = "listing";
-  selectedActivity.value = null;
-  // Defer hash scrolling to ensure DOM is updated
   nextTick(() => {
-    handleHashScroll();
+    if (lastViewedActivity.value) {
+      const el = document.querySelector(`[data-activity="${lastViewedActivity.value.title}"]`);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto", block: "center" });
+      }
+    }
   });
+  selectedActivity.value = null;
 };
+
 
 const calculateReadTime = (content) => {
   const wordsPerMinute = 200;
   const wordCount = content.split(/\s+/).length;
   return Math.ceil(wordCount / wordsPerMinute);
 };
+
 
 const getCategoryButtonClass = (category) => {
   const isActive = activeCategories.value.includes(category);
@@ -203,6 +149,7 @@ const getCategoryButtonClass = (category) => {
     "bg-gray-100 text-gray-800": !isActive,
   };
 };
+
 
 const getCategoryBadgeClass = (category) => {
   return {
