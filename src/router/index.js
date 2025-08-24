@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { nextTick } from 'vue'; // Import nextTick for DOM synchronization
+import { nextTick } from 'vue';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
@@ -49,7 +49,7 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      window.scrollTo(0, 0); 
+      window.scrollTo(0, 0);
     }
     if (savedPosition) {
       return savedPosition;

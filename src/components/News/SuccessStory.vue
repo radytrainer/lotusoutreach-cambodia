@@ -11,7 +11,7 @@
     </div>
     <div class="container mx-auto px-4 max-w-7xl">
       <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="relative w-full lg:w-1/2 flex justify-center items-center">
+        <div class="relative w-full lg:w-1/2 flex  justify-center items-center">
           <Transition name="slide" mode="out-in">
             <div :key="currentStoryIndex" class="w-full flex justify-center">
               <div
