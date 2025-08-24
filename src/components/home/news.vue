@@ -9,7 +9,7 @@
                    bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             News
           </h2>
-          <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p class="md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Comprehensive programs designed to transform lives and build
             stronger communities in Cambodia.
           </p>
@@ -56,7 +56,7 @@
                    bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Share Moment
           </h2>
-          <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p class="md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Life is made of little joys—don’t keep them to yourself, share the moment with those who matter.
           </p>
         </div>
