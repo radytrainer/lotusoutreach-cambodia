@@ -64,7 +64,8 @@
                 </div>
                 <!-- Sub-sections -->
                 <div
-                  class="p-4 sm:p-8 mt-12 bg-gradient-to-br from-blue-200 to-blue-400 rounded-3xl relative overflow-hidden h-[570px]">
+                  class="p-4 sm:p-8 mt-12 bg-gradient-to-br from-blue-200 to-blue-400 rounded-3xl relative overflow-hidden h-auto lg:h-[570px]">
+                  <!-- Animated background -->
                   <div class="absolute inset-0 opacity-10">
                     <div class="absolute top-4 left-4 w-16 h-16 border-2 border-white rounded-full animate-pulse"></div>
                     <div class="absolute top-12 right-8 w-8 h-8 border border-white rounded-full animate-bounce"></div>
@@ -72,24 +73,40 @@
                       class="absolute bottom-8 left-12 w-12 h-12 border border-white rounded-full animate-pulse delay-300">
                     </div>
                   </div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+
+                  <!-- Grid layout -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 relative z-10">
                     <div v-for="(subSection, subIndex) in program.EduSections" :key="subIndex"
-                      class="bg-white/95 rounded-2xl p-5 text-center shadow-lg hover:shadow-2xl">
+                      class="bg-white/95 rounded-2xl p-5 text-center shadow-lg hover:shadow-2xl transition-all duration-300 group">
+
+                      <!-- Icon -->
                       <div
                         class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 duration-300 shadow-lg">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="subSection.icon" />
                         </svg>
                       </div>
+
+                      <!-- Title -->
                       <h5 class="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {{ subSection.title }}</h5>
-                      <p class="text-gray-600 text-sm leading-relaxed">{{ subSection.description }}</p>
+                        {{ subSection.title }}
+                      </h5>
+
+                      <!-- Description -->
+                      <p class="text-gray-600 text-sm leading-relaxed">
+                        {{ subSection.description }}
+                      </p>
+
+                      <!-- Divider -->
                       <div
                         class="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mt-4 group-hover:w-16 transition-all duration-300">
                       </div>
                     </div>
                   </div>
                 </div>
+
+
+
               </div>
             </div>
           </div>
