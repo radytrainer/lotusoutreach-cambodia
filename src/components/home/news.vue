@@ -9,8 +9,7 @@
             News
           </h2>
           <p class="md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Comprehensive programs designed to transform lives and build
-            stronger communities in Cambodia.
+            We are dedicated to empowering women and children through education, skill-building, and community development programs.
           </p>
         </div>
 
@@ -54,7 +53,7 @@
             Share Moment
           </h2>
           <p class="md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Life is made of little joys—don’t keep them to yourself, share the moment with those who matter.
+            Whether it’s a success story, a special milestone, or a heartfelt memory, Share Moment is all about connection.
           </p>
         </div>
 
