@@ -55,41 +55,61 @@
             Life is filled with joyful moments share them with those who matter through Lutos Outreach Cambodia.
           </p>
         </div>
+        <div class="relative w-full max-w-6xl mx-auto mb-12 bg-neutral-50">
+          <!-- Desktop/Tablet -->
+          <div class="hidden sm:block relative w-full md:h-[600px]">
+            <!-- Top center -->
+            <div v-if="shareMoment[0]"
+              class="absolute left-1/2 -translate-x-1/2 top-48 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+              @click="openLightbox(0)">
+              <img :src="shareMoment[0].image" class="w-full h-[350px] object-cover rounded-xl" />
+            </div>
 
-        <div class="relative w-full max-w-6xl mx-auto mb-12 h-[600px] bg-neutral-50">
-          <!-- Top center -->
-          <div v-if="shareMoment[0]"
-            class="absolute left-1/2 -translate-x-1/2 top-48 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
-            @click="openLightbox(0)">
-            <img :src="shareMoment[0].image" class="w-full h-[350px] object-cover rounded-xl" />
+            <!-- Middle left -->
+            <div v-if="shareMoment[1]"
+              class="absolute top-20 -left-12 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+              @click="openLightbox(1)">
+              <img :src="shareMoment[1].image" class="w-full h-[250px] object-cover rounded-xl" />
+            </div>
+
+            <!-- Middle right -->
+            <div v-if="shareMoment[2]"
+              class="absolute top-20 -right-12 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+              @click="openLightbox(2)">
+              <img :src="shareMoment[2].image" class="w-full h-[250px] object-cover rounded-xl" />
+            </div>
+
+            <!-- Bottom left -->
+            <div v-if="shareMoment[3]"
+              class="absolute bottom-2 -left-1 w-[360px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+              @click="openLightbox(3)">
+              <img :src="shareMoment[3].image" class="w-full h-[250px] object-cover rounded-xl" />
+            </div>
+
+            <!-- Bottom right -->
+            <div v-if="shareMoment[4]"
+              class="absolute bottom-2 -right-1 w-[360px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+              @click="openLightbox(4)">
+              <img :src="shareMoment[4].image" class="w-full h-[250px] object-cover rounded-xl" />
+            </div>
           </div>
-
-          <!-- Middle left -->
-          <div v-if="shareMoment[1]"
-            class="absolute top-20 -left-12 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
-            @click="openLightbox(1)">
-            <img :src="shareMoment[1].image" class="w-full h-[250px] object-cover rounded-xl" />
+        </div>
+        <!-- Mobile only -->
+        <div class="block sm:hidden grid grid-cols-1 gap-4">
+          <div v-if="shareMoment[0]" @click="openLightbox(0)">
+            <img :src="shareMoment[0].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
           </div>
-
-          <!-- Middle right -->
-          <div v-if="shareMoment[2]"
-            class="absolute top-20 -right-12 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
-            @click="openLightbox(2)">
-            <img :src="shareMoment[2].image" class="w-full h-[250px] object-cover rounded-xl" />
+          <div v-if="shareMoment[1]" @click="openLightbox(1)">
+            <img :src="shareMoment[1].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
           </div>
-
-          <!-- Bottom left -->
-          <div v-if="shareMoment[3]"
-            class="absolute bottom-2 -left-1 w-[360px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
-            @click="openLightbox(3)">
-            <img :src="shareMoment[3].image" class="w-full h-[250px] object-cover rounded-xl" />
+          <div v-if="shareMoment[2]" @click="openLightbox(2)">
+            <img :src="shareMoment[2].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
           </div>
-
-          <!-- Bottom right -->
-          <div v-if="shareMoment[4]"
-            class="absolute bottom-2 -right-1 w-[360px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
-            @click="openLightbox(4)">
-            <img :src="shareMoment[4].image" class="w-full h-[250px] object-cover rounded-xl" />
+          <div v-if="shareMoment[3]" @click="openLightbox(3)">
+            <img :src="shareMoment[3].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
+          </div>
+          <div v-if="shareMoment[4]" @click="openLightbox(4)">
+            <img :src="shareMoment[4].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
           </div>
         </div>
 
