@@ -61,33 +61,47 @@
     {
       "title": "Social Audit / Home visit",
       "images": [
-        {
-          "src": "/image/Gallery/G18.jpg"
-        },
-        {
-          "src": "/image/Gallery/G19.jpg"
-        },
-        {
-          "src": "/image/Gallery/G20.jpg"
-          
-        },
-        {
-          "src": "/image/Gallery/G21.jpg"
-          
-        },
-         {
-          "src": "/image/Gallery/G26.jpg"
-        },
-        {
-          "src": "/image/Gallery/G27.jpg"
-        },
-        {
-          "src": "/image/Gallery/G28.jpg"
-        },
-        {
-          "src": "/image/Gallery/G29.jpg"
-          
-        }
+        {"src": "/image/Gallery/audit/1.jpg"},
+        {"src": "/image/Gallery/audit/2.jpg"},
+        {"src": "/image/Gallery/audit/3.jpg"},
+        {"src": "/image/Gallery/audit/4.jpg"},
+        {"src": "/image/Gallery/audit/5.jpg"},
+        {"src": "/image/Gallery/audit/6.jpg"},
+        {"src": "/image/Gallery/audit/7.jpg"},
+        {"src": "/image/Gallery/audit/8.jpg"},
+        {"src": "/image/Gallery/audit/9.jpg"},
+        {"src": "/image/Gallery/audit/10.jpg"},
+        {"src": "/image/Gallery/audit/11.jpg"},
+        {"src": "/image/Gallery/audit/12.jpg"},
+        {"src": "/image/Gallery/audit/13.jpg"},
+        {"src": "/image/Gallery/audit/14.jpg"},
+        {"src": "/image/Gallery/audit/15.jpg"},
+        {"src": "/image/Gallery/audit/16.jpg"},
+        {"src": "/image/Gallery/audit/21.jpg"},
+        {"src": "/image/Gallery/audit/22.jpg"},
+        {"src": "/image/Gallery/audit/23.jpg"},
+        {"src": "/image/Gallery/audit/24.jpg"},
+        {"src": "/image/Gallery/audit/25.jpg"},
+        {"src": "/image/Gallery/audit/26.jpg"},
+        {"src": "/image/Gallery/audit/27.jpg"},
+        {"src": "/image/Gallery/audit/28.jpg"},
+        {"src": "/image/Gallery/audit/30.jpg"},
+        {"src": "/image/Gallery/audit/31.jpg"},
+        {"src": "/image/Gallery/audit/32.jpg"},
+        {"src": "/image/Gallery/audit/33.jpg"},
+        {"src": "/image/Gallery/audit/35.jpg"},
+        {"src": "/image/Gallery/audit/36.jpg"},
+        {"src": "/image/Gallery/audit/37.jpg"},
+        {"src": "/image/Gallery/audit/38.jpg"},
+        {"src": "/image/Gallery/audit/40.jpg"},
+        {"src": "/image/Gallery/audit/41.jpg"},
+        {"src": "/image/Gallery/audit/42.jpg"},
+        {"src": "/image/Gallery/audit/43.jpg"},
+        {"src": "/image/Gallery/audit/44.jpg"},
+        {"src": "/image/Gallery/audit/45.jpg"},
+        {"src": "/image/Gallery/audit/48.jpg"},
+        {"src": "/image/Gallery/audit/50.jpg"}
+
       ]
     },
     {
