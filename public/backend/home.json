@@ -135,16 +135,19 @@
   ],
   "shareMoment": [
     {
-      "image": "/image/News/02.jpg"
+      "image": "/image/Home/sm_05.jpg"
     },
     {
-      "image": "/image/Program/giving1.jpg"
+      "image": "/image/Home/sm_02.jpg"
     },
     {
-      "image": "/image/Home/05.jpg"
+      "image": "/image/Home/sm_03.jpg"
     },
     {
-      "image": "/image/News/02.jpg"
+      "image": "/image/Home/sm_04.jpg"
+    },
+    {
+      "image": "/image/Home/sm_01.jpg"
     }
   ],
   "subSectionIcons": [
