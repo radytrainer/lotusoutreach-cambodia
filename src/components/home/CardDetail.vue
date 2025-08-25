@@ -125,7 +125,7 @@
                   <div class="space-y-3">
                     <RouterLink to="/donate">
                       <button
-                        class="w-full bg-white text-blue-600 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200 dark:bg-gray-200 dark:text-gray-900">
+                        class="w-full bg-white text-blue-600 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200 dark:bg-gray-200 dark:text-gray-900 mb-3">
                         Donate Now
                       </button>
                     </RouterLink>
