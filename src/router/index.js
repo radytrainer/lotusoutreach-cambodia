@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { nextTick } from 'vue';
+import { nextTick } from 'vue'; // Import nextTick for DOM synchronization
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
@@ -18,6 +18,7 @@ import SuccessStory from '@/components/News/SuccessStory.vue';
 import StoryDetailPage from '@/components/News/StoryDetailPage.vue';
 import GalleryView from '@/views/GalleryView.vue';
 import Activities from '@/views/Activities.vue';
+import CardDetail from '@/components/home/CardDetail.vue'; 
 
 const routes = [
   {
@@ -40,6 +41,13 @@ const routes = [
       { path: 'success-story', name: 'SuccessStory', component: SuccessStory },
       { path: 'success-story/:id', name: 'StoryDetail', component: StoryDetailPage, props: true },
       { path: '/Admin', name: 'Activities', component: Activities },
+
+      {
+        path: 'card-detail/:type/:name',
+        name: 'CardDetail',
+        component: CardDetail,
+        props: true 
+      }
     ],
   },
 ];
@@ -49,7 +57,7 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0); 
     }
     if (savedPosition) {
       return savedPosition;

@@ -17,29 +17,29 @@
 
         <!-- Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <div v-for="(newItem, index) in news" :key="index"
+          <div v-for="(newItem, index) in props.news" :key="index"
             class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg 
                    transition transform hover:-translate-y-2 flex flex-col">
             
             <!-- Image -->
             <div class="relative">
-              <img :src="newItem.image" :alt="`Image for ${newItem.name}`"
+              <img :src="getItemImage(newItem)" :alt="`Image for ${newItem.name || 'News Item'}`"
                 class="w-full h-56 sm:h-64 md:h-72 object-cover" loading="lazy" />
               <span
-                class="absolute top-3 left-3 bg-green-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full shadow-md">
-                News
+                class="absolute top-3 left-3 bg-pink-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full shadow-md">
+                {{ newItem.type.charAt(0).toUpperCase() + newItem.type.slice(1) }}
               </span>
             </div>
 
             <!-- Content -->
             <div class="p-4 sm:p-6 flex flex-col flex-1">
               <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 line-clamp-1">
-                {{ newItem.name }}
+                {{ newItem.name || 'Untitled' }}
               </h3>
               <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 line-clamp-3 flex-1">
-                {{ newItem.description }}
+                {{ getItemDescription(newItem) }}
               </p>
-              <router-link :to="newItem.link"
+              <router-link :to="`/card-detail/${newItem.type}/${encodeURIComponent(newItem.name || 'untitled')}`"
                 class="self-start bg-pink-600 hover:bg-pink-700 text-white text-sm sm:text-base font-medium px-4 py-2 rounded-lg transition">
                 Read More
               </router-link>
@@ -68,7 +68,7 @@
               class="mb-4 relative break-inside rounded-xl shadow-lg cursor-pointer group overflow-hidden border border-gray-200 transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
               @click="openLightbox(idx)">
               <img :src="image.image" :alt="image.alt"
-                class="w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110" />
+                class="w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110" loading="lazy" />
             </div>
           </div>
         </div>
@@ -105,9 +105,9 @@
 <script setup>
 import { ref, computed } from "vue";
 
-defineProps({
-  news: { type: Array, required: true },
-  subSectionIcons: { type: Array, required: true },
+const props = defineProps({
+  news: { type: Array, default: () => [] },
+  subSectionIcons: { type: Array, default: () => [] },
   shareMoment: { type: Array, required: true }
 });
 
@@ -122,11 +122,31 @@ function closeLightbox() {
   showLightbox.value = false;
 }
 function prevImage() {
-  currentIndex.value = (currentIndex.value - 1 + shareMoment.length) % shareMoment.length;
+  currentIndex.value = (currentIndex.value - 1 + props.shareMoment.length) % props.shareMoment.length;
 }
 function nextImage() {
-  currentIndex.value = (currentIndex.value + 1) % shareMoment.length;
+  currentIndex.value = (currentIndex.value + 1) % props.shareMoment.length;
 }
 
-const currentImage = computed(() => shareMoment[currentIndex.value]);
+const currentImage = computed(() => props.shareMoment[currentIndex.value] || { src: '', alt: '' });
+
+function getItemImage(item) {
+  if (item.type === "story") return item.avatar || "/image/placeholder.jpg";
+  if (item.type === "program") return item.image || "/image/placeholder.jpg";
+  if (item.type === "event") return item.image || item.image1?.[0] || "/image/placeholder.jpg";
+  return "/image/placeholder.jpg";
+}
+
+function getItemDescription(item) {
+  if (item.type === "story") {
+    return item.fullStory?.[0]?.content || "No description available.";
+  }
+  if (item.type === "program") {
+    return item.description || "No description available.";
+  }
+  if (item.type === "event") {
+    return item.content?.substring(0, 150) + "..." || "No description available.";
+  }
+  return "No description available.";
+}
 </script>
