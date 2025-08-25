@@ -93,41 +93,55 @@
               <img :src="shareMoment[4].image" class="w-full h-[250px] object-cover rounded-xl" />
             </div>
           </div>
+          <!-- Mobile only -->
+          <div class="block sm:hidden grid grid-cols-1 gap-4">
+            <div v-if="shareMoment[0]" @click="openLightbox(0)">
+              <img :src="shareMoment[0].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
+            </div>
+            <div v-if="shareMoment[1]" @click="openLightbox(1)">
+              <img :src="shareMoment[1].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
+            </div>
+            <div v-if="shareMoment[2]" @click="openLightbox(2)">
+              <img :src="shareMoment[2].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
+            </div>
+            <div v-if="shareMoment[3]" @click="openLightbox(3)">
+              <img :src="shareMoment[3].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
+            </div>
+            <div v-if="shareMoment[4]" @click="openLightbox(4)">
+              <img :src="shareMoment[4].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
+            </div>
+          </div>
         </div>
-        <!-- Mobile only -->
-        <div class="block sm:hidden grid grid-cols-1 gap-4">
-          <div v-if="shareMoment[0]" @click="openLightbox(0)">
-            <img :src="shareMoment[0].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
-          </div>
-          <div v-if="shareMoment[1]" @click="openLightbox(1)">
-            <img :src="shareMoment[1].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
-          </div>
-          <div v-if="shareMoment[2]" @click="openLightbox(2)">
-            <img :src="shareMoment[2].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
-          </div>
-          <div v-if="shareMoment[3]" @click="openLightbox(3)">
-            <img :src="shareMoment[3].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
-          </div>
-          <div v-if="shareMoment[4]" @click="openLightbox(4)">
-            <img :src="shareMoment[4].image" class="w-full h-56 rounded-xl shadow-lg object-cover" />
-          </div>
-        </div>
+      </div>
 
-        <!-- Lightbox -->
-        <div v-if="showLightbox" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
-          @click.self="closeLightbox">
-          <!-- Close -->
-          <button class="absolute top-4 right-4 text-white text-3xl sm:text-4xl hover:text-gray-300"
-            @click="closeLightbox">&times;</button>
-          <!-- Prev -->
-          <button class="absolute left-4 sm:left-6 text-white text-3xl sm:text-5xl hover:text-gray-300"
-            @click="prevImage">&lsaquo;</button>
-          <!-- Current Image -->
-          <img :src="currentImage.src" :alt="currentImage.alt"
-            class="max-w-[90vw] max-h-[80vh] sm:max-h-[85vh] object-contain rounded-lg shadow-2xl" />
-          <!-- Next -->
-          <button class="absolute right-4 sm:right-6 text-white text-3xl sm:text-5xl hover:text-gray-300"
-            @click="nextImage">&rsaquo;</button>
+      <!-- Lightbox Modal -->
+      <div v-if="showLightbox"
+        class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out"
+        :class="{ 'opacity-100': showLightbox, 'opacity-0': !showLightbox }">
+        <div
+          class="relative max-w-5xl w-full rounded-2xl overflow-hidden transform transition-all duration-300 ease-in-out"
+          :class="{ 'scale-100': showLightbox, 'scale-95': !showLightbox }">
+          <!-- Close Button -->
+          <button @click="closeLightbox"
+            class="absolute top-4 right-4 text-white text-2xl font-bold hover:text-red-500 transition-colors duration-200">
+            &times;
+          </button>
+          <!-- Image -->
+          <img :src="shareMoment[currentImageIndex].image" class="w-full max-h-[85vh] object-contain" />
+          <!-- Navigation Arrows -->
+          <button v-if="shareMoment.length > 1" @click="prevImage"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-white md:text-4xl sm:text-4xl text-xl font-bold bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200">
+            &#10094;
+          </button>
+          <button v-if="shareMoment.length > 1" @click="nextImage"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-white md:text-4xl sm:text-4xl text-xl font-bold bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75 transition-all duration-200">
+            &#10095;
+          </button>
+          <!-- Image Counter -->
+          <div v-if="shareMoment.length > 1"
+            class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-gray-800 bg-opacity-70 px-4 py-2 rounded-full text-sm font-medium">
+            {{ currentImageIndex + 1 }} / {{ shareMoment.length }}
+          </div>
         </div>
       </div>
     </section>
@@ -143,11 +157,12 @@ const props = defineProps({
   shareMoment: { type: Array, required: true }
 });
 
+
 const showLightbox = ref(false);
-const currentIndex = ref(0);
+const currentImageIndex = ref(0);
 
 function openLightbox(index) {
-  currentIndex.value = index;
+  currentImageIndex.value = index;
   showLightbox.value = true;
 }
 
@@ -156,14 +171,20 @@ function closeLightbox() {
 }
 
 function prevImage() {
-  currentIndex.value = (currentIndex.value - 1 + props.shareMoment.length) % props.shareMoment.length;
+  if (currentImageIndex.value > 0) {
+    currentImageIndex.value--;
+  } else {
+    currentImageIndex.value = props.shareMoment.length - 1;
+  }
 }
 
 function nextImage() {
-  currentIndex.value = (currentIndex.value + 1) % props.shareMoment.length;
+  if (currentImageIndex.value < props.shareMoment.length - 1) {
+    currentImageIndex.value++;
+  } else {
+    currentImageIndex.value = 0;
+  }
 }
-
-const currentImage = computed(() => props.shareMoment[currentIndex.value] || { src: '', alt: '' });
 
 function getItemImage(item) {
   if (item.type === "story") return item.avatar || "/image/placeholder.jpg";
@@ -185,5 +206,3 @@ function getItemDescription(item) {
   return "No description available.";
 }
 </script>
-
-<style scoped></style>
