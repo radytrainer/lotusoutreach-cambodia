@@ -30,18 +30,26 @@
           >
             Donate
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 
-              8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 
-              4.13 2.44h1.75C14.09 5.01 15.76 4 17.5 
-              4 20 4 22 6 22 8.5c0 3.78-3.4 
-              6.86-8.55 11.54l-1.35 1.31z"/>
+              <path d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 4.13 2.44h1.75C14.09 5.01 15.76 4 17.5 4 20 4 22 6 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
             </svg>
           </RouterLink>
+        </li>
+        <li>
+          <button @click="handleLoginClick" class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </button>
         </li>
       </ul>
 
       <!-- Mobile/Tablet Icon Only Toggle -->
-      <div class="lg:hidden">
+      <div class="lg:hidden flex items-center space-x-3">
+        <button @click="handleLoginClick" class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </button>
         <button
           @click="toggleMobileMenu"
           class="text-gray-700 hover:text-pink-600 focus:outline-none"
@@ -76,13 +84,16 @@
             >
               Donate
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 
-                8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 
-                4.13 2.44h1.75C14.09 5.01 15.76 4 17.5 
-                4 20 4 22 6 22 8.5c0 3.78-3.4 
-                6.86-8.55 11.54l-1.35 1.31z"/>
+                <path d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 4.13 2.44h1.75C14.09 5.01 15.76 4 17.5 4 20 4 22 6 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
               </svg>
             </RouterLink>
+          </li>
+          <li class="flex justify-center">
+            <button @click="toggleMobileMenu; handleLoginClick()" class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </button>
           </li>
         </ul>
       </div>
@@ -91,15 +102,25 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRoute } from "vue-router";
+import { ref, inject } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 const mobileMenuOpen = ref(false);
 const route = useRoute();
+const router = useRouter();
+const isLoggedIn = inject('isLoggedIn'); 
 
 const isActive = (path) => route.path === path;
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value;
+};
+
+const handleLoginClick = () => {
+  if (isLoggedIn.value) {
+    router.push('/admin');
+  } else {
+    router.push('/login');
+  }
 };
 </script>
 
