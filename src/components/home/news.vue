@@ -4,8 +4,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-12 md:mb-16">
-          <h2
-            class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 
                    bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             News
           </h2>
@@ -17,29 +16,26 @@
 
         <!-- Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <div v-for="(newItem, index) in news" :key="index"
-            class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg 
+          <div v-for="(newItem, index) in props.news" :key="index" class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg 
                    transition transform hover:-translate-y-2 flex flex-col">
-            
             <!-- Image -->
             <div class="relative">
-              <img :src="newItem.image" :alt="`Image for ${newItem.name}`"
+              <img :src="getItemImage(newItem)" :alt="`Image for ${newItem.name || 'News Item'}`"
                 class="w-full h-56 sm:h-64 md:h-72 object-cover" loading="lazy" />
               <span
-                class="absolute top-3 left-3 bg-green-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full shadow-md">
-                News
+                class="absolute top-3 left-3 bg-pink-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full shadow-md">
+                {{ newItem.type.charAt(0).toUpperCase() + newItem.type.slice(1) }}
               </span>
             </div>
-
             <!-- Content -->
             <div class="p-4 sm:p-6 flex flex-col flex-1">
               <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 line-clamp-1">
-                {{ newItem.name }}
+                {{ newItem.name || 'Untitled' }}
               </h3>
               <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 line-clamp-3 flex-1">
-                {{ newItem.description }}
+                {{ getItemDescription(newItem) }}
               </p>
-              <router-link :to="newItem.link"
+              <router-link :to="`/card-detail/${newItem.type}/${encodeURIComponent(newItem.name || 'untitled')}`"
                 class="self-start bg-pink-600 hover:bg-pink-700 text-white text-sm sm:text-base font-medium px-4 py-2 rounded-lg transition">
                 Read More
               </router-link>
@@ -50,51 +46,67 @@
 
       <!-- Share Moment Section -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 md:mt-20">
-        <div class="text-center mb-12 md:mb-16">
-          <h2
-            class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 
+        <div class="text-center mb-8 md:mb-8">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 
                    bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Share Moment
           </h2>
           <p class="md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Life is made of little joys—don’t keep them to yourself, share the moment with those who matter.
+            Life is filled with joyful moments share them with those who matter through Lutos Outreach Cambodia.
           </p>
         </div>
 
-        <!-- Masonry Gallery -->
-        <div class="bg-neutral-50 py-12 sm:py-16 px-4 sm:px-6 md:px-12">
-          <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
-            <div v-for="(image, idx) in shareMoment" :key="idx"
-              class="mb-4 relative break-inside rounded-xl shadow-lg cursor-pointer group overflow-hidden border border-gray-200 transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
-              @click="openLightbox(idx)">
-              <img :src="image.image" :alt="image.alt"
-                class="w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110" />
-            </div>
+        <div class="relative w-full max-w-6xl mx-auto mb-12 h-[600px] bg-neutral-50">
+          <!-- Top center -->
+          <div v-if="shareMoment[0]"
+            class="absolute left-1/2 -translate-x-1/2 top-48 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+            @click="openLightbox(0)">
+            <img :src="shareMoment[0].image" class="w-full h-[350px] object-cover rounded-xl" />
+          </div>
+
+          <!-- Middle left -->
+          <div v-if="shareMoment[1]"
+            class="absolute top-20 -left-12 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+            @click="openLightbox(1)">
+            <img :src="shareMoment[1].image" class="w-full h-[250px] object-cover rounded-xl" />
+          </div>
+
+          <!-- Middle right -->
+          <div v-if="shareMoment[2]"
+            class="absolute top-20 -right-12 w-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+            @click="openLightbox(2)">
+            <img :src="shareMoment[2].image" class="w-full h-[250px] object-cover rounded-xl" />
+          </div>
+
+          <!-- Bottom left -->
+          <div v-if="shareMoment[3]"
+            class="absolute bottom-2 -left-1 w-[360px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+            @click="openLightbox(3)">
+            <img :src="shareMoment[3].image" class="w-full h-[250px] object-cover rounded-xl" />
+          </div>
+
+          <!-- Bottom right -->
+          <div v-if="shareMoment[4]"
+            class="absolute bottom-2 -right-1 w-[360px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
+            @click="openLightbox(4)">
+            <img :src="shareMoment[4].image" class="w-full h-[250px] object-cover rounded-xl" />
           </div>
         </div>
 
         <!-- Lightbox -->
-        <div v-if="showLightbox" 
-          class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
+        <div v-if="showLightbox" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
           @click.self="closeLightbox">
-          
           <!-- Close -->
-          <button 
-            class="absolute top-4 right-4 text-white text-3xl sm:text-4xl hover:text-gray-300"
+          <button class="absolute top-4 right-4 text-white text-3xl sm:text-4xl hover:text-gray-300"
             @click="closeLightbox">&times;</button>
-
           <!-- Prev -->
-          <button 
-            class="absolute left-4 sm:left-6 text-white text-3xl sm:text-5xl hover:text-gray-300"
+          <button class="absolute left-4 sm:left-6 text-white text-3xl sm:text-5xl hover:text-gray-300"
             @click="prevImage">&lsaquo;</button>
-
           <!-- Current Image -->
           <img :src="currentImage.src" :alt="currentImage.alt"
             class="max-w-[90vw] max-h-[80vh] sm:max-h-[85vh] object-contain rounded-lg shadow-2xl" />
-
           <!-- Next -->
-          <button 
-            class="absolute right-4 sm:right-6 text-white text-3xl sm:text-5xl hover:text-gray-300"
+          <button class="absolute right-4 sm:right-6 text-white text-3xl sm:text-5xl hover:text-gray-300"
             @click="nextImage">&rsaquo;</button>
         </div>
       </div>
@@ -105,9 +117,9 @@
 <script setup>
 import { ref, computed } from "vue";
 
-defineProps({
-  news: { type: Array, required: true },
-  subSectionIcons: { type: Array, required: true },
+const props = defineProps({
+  news: { type: Array, default: () => [] },
+  subSectionIcons: { type: Array, default: () => [] },
   shareMoment: { type: Array, required: true }
 });
 
@@ -118,15 +130,40 @@ function openLightbox(index) {
   currentIndex.value = index;
   showLightbox.value = true;
 }
+
 function closeLightbox() {
   showLightbox.value = false;
 }
+
 function prevImage() {
-  currentIndex.value = (currentIndex.value - 1 + shareMoment.length) % shareMoment.length;
-}
-function nextImage() {
-  currentIndex.value = (currentIndex.value + 1) % shareMoment.length;
+  currentIndex.value = (currentIndex.value - 1 + props.shareMoment.length) % props.shareMoment.length;
 }
 
-const currentImage = computed(() => shareMoment[currentIndex.value]);
+function nextImage() {
+  currentIndex.value = (currentIndex.value + 1) % props.shareMoment.length;
+}
+
+const currentImage = computed(() => props.shareMoment[currentIndex.value] || { src: '', alt: '' });
+
+function getItemImage(item) {
+  if (item.type === "story") return item.avatar || "/image/placeholder.jpg";
+  if (item.type === "program") return item.image || "/image/placeholder.jpg";
+  if (item.type === "event") return item.image || item.image1?.[0] || "/image/placeholder.jpg";
+  return "/image/placeholder.jpg";
+}
+
+function getItemDescription(item) {
+  if (item.type === "story") {
+    return item.fullStory?.[0]?.content || "No description available.";
+  }
+  if (item.type === "program") {
+    return item.description || "No description available.";
+  }
+  if (item.type === "event") {
+    return item.content?.substring(0, 150) + "..." || "No description available.";
+  }
+  return "No description available.";
+}
 </script>
+
+<style scoped></style>

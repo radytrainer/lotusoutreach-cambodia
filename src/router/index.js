@@ -18,6 +18,7 @@ import SuccessStory from '@/components/News/SuccessStory.vue';
 import StoryDetailPage from '@/components/News/StoryDetailPage.vue';
 import GalleryView from '@/views/GalleryView.vue';
 import Activities from '@/views/Activities.vue';
+import CardDetail from '@/components/home/CardDetail.vue'; 
 
 const routes = [
   {
@@ -40,6 +41,13 @@ const routes = [
       { path: 'success-story', name: 'SuccessStory', component: SuccessStory },
       { path: 'success-story/:id', name: 'StoryDetail', component: StoryDetailPage, props: true },
       { path: '/Admin', name: 'Activities', component: Activities },
+
+      {
+        path: 'card-detail/:type/:name',
+        name: 'CardDetail',
+        component: CardDetail,
+        props: true 
+      }
     ],
   },
 ];

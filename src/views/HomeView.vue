@@ -22,13 +22,11 @@ import SlideshowBase from "@/components/SlideshowBase.vue";
 import News from "@/components/home/news.vue";
 import QuoteSection from "@/components/home/QuoteSection.vue";
 
-
 const images = ref([]);
 const sharedContent = ref({});
 const news = ref([]); 
-const shareMoment = ref([])
+const shareMoment = ref([]);
 const subSectionIcons = ref([]);
-
 
 const fetchHomeData = async () => {
   try {
@@ -39,12 +37,11 @@ const fetchHomeData = async () => {
     news.value = data.news;
     subSectionIcons.value = data.subSectionIcons;
     shareMoment.value = data.shareMoment;
-    
-  }catch (error){
-    console.error("Failed to fetching home data:", error);
-  };
-  
-}
+    console.log("Fetched news:", news.value); // Debug log
+  } catch (error) {
+    console.error("Failed to fetch home data:", error);
+  }
+};
 
 onMounted(fetchHomeData);
 </script>

@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, nextTick} from "vue";
 import axios from "axios";
 import convex from '@/convex';
 import HeroBanner from '@/components/News/HeroBanner.vue';
@@ -109,16 +109,25 @@ const relatedActivities = computed(() => {
     .slice(0, 2);
 });
 
+const lastViewedActivity = ref(null);
 const viewActivityDetail = (activity) => {
   selectedActivity.value = activity;
+  lastViewedActivity.value = activity; 
   currentView.value = "detail";
   window.scrollTo(0, 0); 
-  console.log("Selected Activity:", activity.title, "Current View:", currentView.value);
 };
 
 
 const backToListing = () => {
   currentView.value = "listing";
+  nextTick(() => {
+    if (lastViewedActivity.value) {
+      const el = document.querySelector(`[data-activity="${lastViewedActivity.value.title}"]`);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto", block: "center" });
+      }
+    }
+  });
   selectedActivity.value = null;
 };
 

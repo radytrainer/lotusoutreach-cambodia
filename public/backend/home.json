@@ -1,9 +1,21 @@
 {
   "images": [
-    { "src": "/image/Home/Home_hero01.jpg", "alt": "Cambodia Girls" },
-    { "src": "/image/Home/04.jpg", "alt": "Community Support" },
-    { "src": "/image/Home/05.jpg", "alt": "Helping Hands" },
-    { "src": "/image/Home/07.jpg", "alt": "Helping Hands" }
+    {
+      "src": "/image/Home/Home_hero01.jpg",
+      "alt": "Cambodia Girls"
+    },
+    {
+      "src": "/image/Home/04.jpg",
+      "alt": "Community Support"
+    },
+    {
+      "src": "/image/Home/05.jpg",
+      "alt": "Helping Hands"
+    },
+    {
+      "src": "/image/Home/07.jpg",
+      "alt": "Helping Hands"
+    }
   ],
   "sharedContent": {
     "title": "Empowering <span class='text-pink-400'>Cambodian</span> Girls",
@@ -23,42 +35,120 @@
   },
   "news": [
     {
+      "type": "story",
       "name": "Sat Marany",
-      "description": "Sat Marany, a 22-year-old from Banteay Meanchey Province, overcame significant challenges, including her parents working abroad since Grade 7. A recipient of the CATALYST Scholarship, she graduated with distinction from the Royal University of Phnom Penh in 2024, earning a Physics degree with a perfect GPA of 4.00 in her final year Currently, Marany works part-time at ISF International School and offers private tutoring, earning approximately $600 per month. She also volunteers at her university's Optoelectronics & Advanced Materials Laboratory and participated in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024 in Thailand, broadening her scientific knowledge and network.",
-      "image": "/image/News/02.jpg",
-      "link": "/success-story/0"
+      "title": "Sat Marany",
+      "program": "PHYSICS GRADUATE, ROYAL UNIVERSITY OF PHNOM PENH",
+      "avatar": "/image/News/01.jpg",
+      "images": [
+        "/image/News/07.jpg",
+        "/image/News/03.jpg",
+        "/image/News/04.jpg",
+        "/image/News/05.jpg",
+        "/image/News/06.jpg",
+        "/image/News/08.jpg"
+      ],
+      "fullStory": [
+        {
+          "title": "Early Life and Challenges",
+          "content": "Sat Marany, a 22-year-old from Banteay Meanchey Province, has shown remarkable resilience and determination throughout her academic journey. Since Grade 7, her parents have worked in Thailand, leaving her and her brother in the care of their grandparents."
+        },
+        {
+          "title": "Academic Achievements and Scholarship",
+          "content": "Marany became a recipient of the CATALYST Scholarship from Lotus Outreach Cambodia during her first year at university and remained in the program until graduation. In 2024, she graduated with distinction from the Royal University of Phnom Penh, earning a degree in Physics with a perfect GPA of 4.00 in her final year."
+        },
+        {
+          "title": "Current Employment and Volunteering",
+          "content": "Today, Marany works part-time at ISF International School and also offers private tutoring, earning approximately $600 per month. Despite her full schedule, she continues to volunteer at the Optoelectronics & Advanced Materials Laboratory at her university, demonstrating her passion for lifelong learning."
+        },
+        {
+          "title": "International Workshop Participation",
+          "content": "Her academic interests led her to participate in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024, held in Thailand from November 10–16, where she broadened her scientific knowledge and professional network."
+        },
+        {
+          "title": "Commitment to Education and Community",
+          "content": "Marany is deeply committed to education and community service. She regularly volunteers in activities that link science with social impact and serves as a mentor to younger students, sharing her life experiences to inspire and guide them. She is also deeply involved in her younger brother’s education, providing both financial and academic support. In addition, she contributes to her parents’ and grandparents’ living expenses."
+        },
+        {
+          "title": "Future Aspirations",
+          "content": "Marany’s long-term goal is to reunite her family in Cambodia. Motivated by this dream, she continues to focus on her personal development and is actively seeking scholarship opportunities to pursue a master’s degree in physics or a related science field abroad."
+        },
+        {
+          "title": "Gratitude and Acknowledgments",
+          "content": "She extends her heartfelt gratitude to the donors who have made it possible for underprivileged Cambodian girls to access higher education and transform their lives. She also gives special thanks to the dedicated staff of Lotus Outreach Cambodia, especially Ms. Raksmey and Ms. Pisey, for their unwavering support and guidance—both academically and personally. Their encouragement and belief in the students' potential have empowered Marany and many others to persevere and thrive, despite life's many challenges."
+        }
+      ]
     },
     {
-      "name": "Supporting 100 Children in Prey Nup",
-      "description": "On March 16, 2025, Lotus Outreach Cambodia, in collaboration with Let Us Create Futures and local authorities, successfully hosted its 6th Giving Back Event in Prey Nup District, Preah Sihanouk Province. This annual initiative, driven by the leadership of CATALYST students and alumni, is dedicated to fostering a culture of community service among young women. The event aimed to uplift children in need through the distribution of essential school materials, food, and hygiene products. It also empowered students to develop leadership, teamwork, and advocacy skills while creating a joyful and educational experience for the children.",
+      "type": "program",
+      "name": "Supporting 100 Children",
+      "title": "Supporting 100 Children in Prey Nup",
       "image": "/image/Program/giving1.jpg",
-      "link": "/givingBack"
+      "icon": "fas fa-gift",
+      "description": "A charity event organized by CATALYST students and alumni to support 100 underserved children in Prey Nup District with school materials and hygiene supplies.",
+      "fullDescription": "On March 16, 2025, Lotus Outreach Cambodia, in collaboration with Let Us Create Futures and local authorities, successfully hosted its 6th Giving Back Event in Prey Nup District, Preah Sihanouk Province. This annual initiative, driven by the leadership of CATALYST students and alumni, is dedicated to fostering a culture of community service among young women. The event aimed to uplift children in need through the distribution of essential school materials, food, and hygiene products. It also empowered students to develop leadership, teamwork, and advocacy skills while creating a joyful and educational experience for the children.",
+      "features": [
+        "Supported 100 children with school bags, notebooks, pens, pencils, erasers, rulers, whiteboards, milk, snacks, bottled water, and soap",
+        "Donated food supplies (noodles, canned fish, sauces, tea, sugar) and 100,000 riels to Prey Nup Pagoda monks",
+        "Contributed storybooks and second-hand clothes to Let Us Create Futures",
+        "Conducted hygiene education and fun learning activities for children",
+        "Raised a total of $1,256.96 for the event through generous donor support"
+      ],
+      "image1": "/image/Program/giving2.jpg",
+      "image2": "/image/Program/giving3.jpg",
+      "stats": [
+        {
+          "number": "$973.40",
+          "label": "Used for Educational & Hygiene Materials"
+        },
+        {
+          "number": "$319.56",
+          "label": "Carried Forward for Future Events"
+        },
+        {
+          "number": "100",
+          "label": "Children Benefited"
+        },
+        {
+          "number": "100,000 riels",
+          "label": "Cash Donated to Monks"
+        }
+      ]
     },
     {
+      "type": "event",
       "name": "Graduation",
-      "description": "Sat Marany, a 22-year-old from Banteay Meanchey Province, overcame significant challenges, including her parents working abroad since Grade 7. A recipient of the CATALYST Scholarship, she graduated with distinction from the Royal University of Phnom Penh in 2024, earning a Physics degree with a perfect GPA of 4.00 in her final year Currently, Marany works part-time at ISF International School and offers private tutoring, earning approximately $600 per month. She also volunteers at her university's Optoelectronics & Advanced Materials Laboratory and participated in the Asian Network School and Workshop on Complex Condensed Matter Systems 2024 in Thailand, broadening her scientific knowledge and network.",
-      "image": "/image/Home/07.jpg",
-      "link": "/education"
+      "title": "Lotus Outreach Cambodia Celebrates the Graduation of 38 CATALYST Students",
+      "content": "On the morning of September 22, 2024, Lotus Outreach Cambodia proudly hosted a Certificate Awarding Ceremony to honor the third cohort of 38 female university graduates. These students are part of the 226 young women who have completed their higher education journey through the CATALYST Project since its launch in 2012. The ceremony was graced by Mr. Glenn Fawcett, Executive Director of Lotus Outreach International, and brought together 130 attendees, including parents, guardians, and the graduates themselves, as well as Lotus Outreach Cambodia staff.\n\nIn his remarks, Mr. Glenn Fawcett warmly congratulated the students and shared an inspiring message: \"With affiliates in seven countries and strong partnerships with local NGOs in India, Cambodia, Vietnam, Guatemala, Brazil, and the United States, we are a global community that believes empowerment is at the heart of sustainable change. Educating a woman has a profound multiplying effect—not just for her, but for her family and community for generations to come. Women are powerful change agents and essential to Cambodia’s development as future leaders and role models.\" He further encouraged graduates to begin giving back in small ways now, rather than waiting until they are financially successful.\n\nMr. Fawcett also took the opportunity to thank Lotus Outreach Cambodia’s local partners—the Cambodian Women’s Crisis Centre (CWCC) and Cambodian Organization for Children and Development (COCD)—for their ongoing support and contributions to girls’ education and empowerment.\n\nDuring the event, two student representatives, Ms. Sdeoung Lisa and Ms. Sat Marany, reflected on their four-year journey with Lotus Outreach Cambodia. “Lotus Outreach Cambodia has become like a second family to us,” they shared. “They offered us unconditional love and support, expecting only that we study hard, develop skills, and secure jobs to improve our lives and serve society. Beyond academic support, we received soft skills training and were encouraged to give back by helping children in rural provinces—an experience that filled us with pride and purpose.”\n\nThe voices of families were also heard. Hoeun Ya, elder sister of graduate Hoeun Lina, shared a moving story: “After our parents passed away, our family struggled greatly. I asked Lina to quit school in 9th grade to help out, but she refused. She continued and was fortunate to receive a scholarship from Lotus Outreach Cambodia starting in Grade 11. This support has been the most valuable gift for our family—no one before Lina had the chance to reach university. She is now a role model for our nieces and nephews.”\n\nTo conclude the ceremony, Ms. Va VannakSerey Raksmey, Executive Director of Lotus Outreach Cambodia, led the graduates in expressing heartfelt gratitude to their parents and guardians for their sacrifices and unwavering belief in their daughters’ potential. The event concluded on a joyful note, with Mr. Glenn Fawcett, Ms. Va VannakSerey Raksmey, and Ms. Chea Pisey presenting letters of commendation to the 38 graduates, followed by a celebratory photo session to capture the pride and happiness of the day.",
+      "date": "2024-09-22",
+      "author": "Lotus Outreach Cambodia",
+      "category": "education",
+      "image": "/image/News/1.jpg",
+      "image1": [
+        "/image/News/new1_01.jpg",
+        "/image/News/new1_02.jpg",
+        "/image/News/new1_03.jpg",
+        "/image/News/new1_04.jpg"
+      ],
+      "location": "Nationwide, Cambodia"
     }
   ],
   "shareMoment": [
     {
-      "image": "/image/News/02.jpg"
-      
+      "image": "/image/Home/sm_05.jpg"
     },
     {
-      "image": "/image/Program/giving1.jpg"
-      
+      "image": "/image/Home/sm_02.jpg"
     },
     {
-      "image": "/image/Home/05.jpg"
-      
+      "image": "/image/Home/sm_03.jpg"
     },
     {
-      "image": "/image/News/02.jpg"
-      
+      "image": "/image/Home/sm_04.jpg"
+    },
+    {
+      "image": "/image/Home/sm_01.jpg"
     }
-    
   ],
   "subSectionIcons": [
     "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
