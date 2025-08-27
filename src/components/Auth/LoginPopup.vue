@@ -14,7 +14,7 @@
           Back
         </button>
         <h2 class="text-xl font-semibold text-gray-800">Login</h2>
-        <div class="w-12"></div> <!-- Spacer for centering -->
+        <div class="w-12"></div> 
       </div>
 
       <!-- Form section -->
@@ -73,7 +73,6 @@ const errorMessage = ref('');
 const isLoggedIn = inject('isLoggedIn');
 const router = useRouter();
 
-// Initialize from localStorage on mount
 if (localStorage.getItem('isLoggedIn') === 'true') {
   isLoggedIn.value = true;
   showPopup.value = false;
@@ -82,7 +81,6 @@ if (localStorage.getItem('isLoggedIn') === 'true') {
   }
 }
 
-// Watch route changes and localStorage
 watch(() => router.currentRoute.value.path, () => {
   const storedLogin = localStorage.getItem('isLoggedIn') === 'true';
   if (storedLogin && router.currentRoute.value.path === '/login') {
@@ -94,13 +92,11 @@ watch(() => router.currentRoute.value.path, () => {
   }
 });
 
-// Back button functionality
 const goBack = () => {
   showPopup.value = false;
   router.push('/');
 };
 
-// Verify username
 const verifyUsername = () => {
   if (!username.value.trim()) {
     errorMessage.value = 'Please enter a username';
@@ -118,7 +114,6 @@ const verifyUsername = () => {
   }
 };
 
-// Logout functionality
 const logout = () => {
   isLoggedIn.value = false;
   localStorage.setItem('isLoggedIn', 'false');
