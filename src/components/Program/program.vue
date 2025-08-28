@@ -33,7 +33,7 @@
                     </div>
                   </div>
                   <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-6">{{ program.description }}</p>
-                  <div class="space-y-4 mb-8">
+                  <div class="space-y-2 mb-6">
                     <div v-for="(skill, skillIndex) in program.skills" :key="skillIndex" class="flex items-center">
                       <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                         <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
