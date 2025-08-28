@@ -3,57 +3,25 @@
     {
       "title": "Graduation Ceremony",
       "images": [
-        {
-          "src": "/image/Gallery/G1.jpg"
-        },
-        {
-          "src": "/image/Gallery/G2.jpg"
-        },
-        {
-          "src": "/image/Gallery/G3.jpg"
-        },
-        {
-          "src": "/image/Gallery/G4.jpg"
-        },
-        {
-          "src": "/image/Gallery/G5.jpg"
-        },
-        {
-          "src": "/image/Gallery/G6.jpg"
-        },
-        {
-          "src": "/image/Gallery/G7.jpg"
-        },
-        {
-          "src": "/image/Gallery/G8.jpg"
-        },
-         {
-          "src": "/image/Gallery/G9.jpg"
-        },
-        {
-          "src": "/image/Gallery/G10.jpg"
-        },
-        {
-          "src": "/image/Gallery/G11.jpg"
-        },
-        {
-          "src": "/image/Gallery/G12.jpg"
-        },
-        {
-          "src": "/image/Gallery/G13.jpg"
-        },
-        {
-          "src": "/image/Gallery/G14.jpg"
-        },
-        {
-          "src": "/image/Gallery/G16.jpg"
-        },
-        {
-          "src": "/image/Gallery/G17.jpg"
-        },
-        {
-          "src": "/image/Gallery/G18.jpg"
-        }
+        {"src": "/image/Gallery/GraduationCeremory/GC1.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC2.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC4.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC7.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC9.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC10.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC3.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC8.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC11.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC12.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC13.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC14.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC15.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC16.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC17.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC18.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC19.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC5.jpg"},
+        {"src": "/image/Gallery/GraduationCeremory/GC6.jpg"}
 
       ]
     },
@@ -107,87 +75,61 @@
     {
       "title": "Study Visit",
       "images": [
-        {
-          "src": "/image/Gallery/G22.jpg"
-        },
-        {
-          "src": "/image/Gallery/G23.jpg"
-        },
-        {
-          "src": "/image/Gallery/G24.jpg"
-        },
-        {
-          "src": "/image/Gallery/G25.jpg"
-        },
-        {
-          "src": "/image/Gallery/G30.jpg"
-        },
-        {
-          "src": "/image/Gallery/G31.jpg"
-        },
-        {
-          "src": "/image/Gallery/G32.jpg"
-        }
+        {"src": "/image/Gallery/StudyVisit/S1.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S2.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S3.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S4.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S5.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S6.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S8.jpg"}
       ]
     },
     {
       "title": "Workshop / Training",
       "images": [
-        {
-          "src": "/image/Gallery/G22.jpg"
-        },
-        {
-          "src": "/image/Gallery/G23.jpg"
-          
-        },
-        {
-          "src": "/image/Gallery/G24.jpg"
-         
-        },
-        {
-          "src": "/image/Gallery/G25.jpg"
-          
-        },
-        {
-          "src": "/image/Gallery/G30.jpg"
-         
-        },
-        {
-          "src": "/image/Gallery/G31.jpg"
-          
-        },
-        {
-          "src": "/image/Gallery/G32.jpg"
-          
-        }
+        {"src": "/image/Gallery/Workshop/W1.jpg"},
+        {"src": "/image/Gallery/Workshop/W2.jpg"},
+        {"src": "/image/Gallery/Workshop/W3.jpg"},
+        {"src": "/image/Gallery/Workshop/W4.jpg"},
+        {"src": "/image/Gallery/Workshop/W5.jpg"},
+        {"src": "/image/Gallery/Workshop/W7.jpg"},
+        {"src": "/image/Gallery/Workshop/W8.jpg"},
+        {"src": "/image/Gallery/Workshop/W9.jpg"},
+        {"src": "/image/Gallery/Workshop/W10.jpg"},
+        {"src": "/image/Gallery/Workshop/W11.jpg"},
+        {"src": "/image/Gallery/Workshop/W12.jpg"},
+        {"src": "/image/Gallery/Workshop/W13.jpg"},
+        {"src": "/image/Gallery/Workshop/W14.jpg"},
+        {"src": "/image/Gallery/Workshop/W15.jpg"},
+        {"src": "/image/Gallery/Workshop/W16.jpg"},
+        {"src": "/image/Gallery/Workshop/W17.jpg"},
+        {"src": "/image/Gallery/Workshop/W18.jpg"},
+        {"src": "/image/Gallery/Workshop/W19.jpg"},
+        {"src": "/image/Gallery/Workshop/W20.jpg"},
+        {"src": "/image/Gallery/Workshop/W21.jpg"},
+        {"src": "/image/Gallery/Workshop/W22.jpg"},
+        {"src": "/image/Gallery/Workshop/W23.jpg"},
+         {"src": "/image/Gallery/Workshop/W6.jpg"}
       ]
     },
     {
       "title": "Other Activity",
       "images": [
-        {
-          "src": "/image/Gallery/G22.jpg"
-        },
-        {
-          "src": "/image/Gallery/G23.jpg"
-        },
-        {
-          "src": "/image/Gallery/G24.jpg"
-          
-        },
-        {
-          "src": "/image/Gallery/G25.jpg"
-          
-        },
-        {
-          "src": "/image/Gallery/G30.jpg"
-        },
-        {
-          "src": "/image/Gallery/G31.jpg"
-        },
-        {
-          "src": "/image/Gallery/G32.jpg"
-        }
+        {"src": "/image/Gallery/OtherActivity/O1.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O2.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O3.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O4.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O5.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O6.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O7.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O8.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O9.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O10.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O11.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O12.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O13.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O14.jpg"},
+        {"src": "/image/Gallery/OtherActivity/O15.jpg"}
       ]
     }
     

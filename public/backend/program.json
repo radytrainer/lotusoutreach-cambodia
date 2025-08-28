@@ -171,24 +171,6 @@
                 "Community engagement to ensure program sustainability",
                 "Follow-up support to track educational outcomes"
             ],
-            "stats": [
-                {
-                    "number": "2,500+",
-                    "label": "Bicycles Distributed"
-                },
-                {
-                    "number": "85%",
-                    "label": "School Attendance Increase"
-                },
-                {
-                    "number": "150+",
-                    "label": "Villages Reached"
-                },
-                {
-                    "number": "95%",
-                    "label": "Program Satisfaction"
-                }
-            ],
             "gallery": [
                 "/image/Program/pro1.jpg",
                 "/image/Program/Future.jpg"
@@ -206,24 +188,6 @@
                 "Academic mentoring and tutoring support",
                 "Life skills training and counseling",
                 "Career guidance and job placement assistance"
-            ],
-            "stats": [
-                {
-                    "number": "1,200+",
-                    "label": "Girls Supported"
-                },
-                {
-                    "number": "92%",
-                    "label": "Graduation Rate"
-                },
-                {
-                    "number": "78%",
-                    "label": "Continue to Higher Education"
-                },
-                {
-                    "number": "300+",
-                    "label": "Families Supported"
-                }
             ]
         },
         {
@@ -238,56 +202,6 @@
                 "Leadership workshops and public speaking training",
                 "Internship opportunities with partner organizations",
                 "Alumni network and ongoing career support"
-            ],
-            "stats": [
-                {
-                    "number": "450+",
-                    "label": "University Graduates"
-                },
-                {
-                    "number": "88%",
-                    "label": "Employment Rate"
-                },
-                {
-                    "number": "65%",
-                    "label": "Leadership Positions"
-                },
-                {
-                    "number": "25+",
-                    "label": "Partner Universities"
-                }
-            ]
-        },
-        {
-            "title": "PNC/V",
-            "image": "/image/Program/pnc.png",
-            "icon": "fas fa-laptop-code",
-            "description": "Providing high-quality IT education in a holistic residential environment for at-risk female youth in Cambodia and Vietnam.",
-            "fullDescription": "The Passerelles Numériques Cambodia/Vietnam program offers intensive, industry-relevant IT education to disadvantaged young women in a supportive residential setting. This comprehensive program combines technical training with personal development, preparing graduates for successful careers in the rapidly growing technology sector while fostering personal growth and leadership skills.",
-            "features": [
-                "Comprehensive IT curriculum covering programming, web development, and digital marketing",
-                "Residential program providing safe, supportive living environment",
-                "Industry partnerships for internships and job placement",
-                "English language training and soft skills development",
-                "Ongoing alumni support and career advancement opportunities"
-            ],
-            "stats": [
-                {
-                    "number": "800+",
-                    "label": "IT Graduates"
-                },
-                {
-                    "number": "94%",
-                    "label": "Job Placement Rate"
-                },
-                {
-                    "number": "$450",
-                    "label": "Average Starting Salary"
-                },
-                {
-                    "number": "50+",
-                    "label": "Partner Companies"
-                }
             ]
         }
     ],
@@ -304,24 +218,6 @@
                 "Community water management training",
                 "Regular maintenance and quality testing programs",
                 "Emergency repair services and spare parts provision"
-            ],
-            "stats": [
-                {
-                    "number": "180+",
-                    "label": "Wells Constructed"
-                },
-                {
-                    "number": "45,000+",
-                    "label": "People Served"
-                },
-                {
-                    "number": "120+",
-                    "label": "Villages Reached"
-                },
-                {
-                    "number": "98%",
-                    "label": "Wells Still Operational"
-                }
             ]
         },
         {
@@ -336,24 +232,6 @@
                 "Hygiene education programs for students and teachers",
                 "Water quality testing and monitoring",
                 "Community involvement in system oversight"
-            ],
-            "stats": [
-                {
-                    "number": "85+",
-                    "label": "Schools Equipped"
-                },
-                {
-                    "number": "12,000+",
-                    "label": "Students Served"
-                },
-                {
-                    "number": "40%",
-                    "label": "Reduction in Sick Days"
-                },
-                {
-                    "number": "15%",
-                    "label": "Attendance Increase"
-                }
             ]
         },
         {
@@ -368,24 +246,6 @@
                 "Family education on nutrition and child development",
                 "Community engagement and awareness programs",
                 "Graduation ceremonies and recognition events"
-            ],
-            "stats": [
-                {
-                    "number": "2,800+",
-                    "label": "Families Supported"
-                },
-                {
-                    "number": "3,500+",
-                    "label": "Girls Kept in School"
-                },
-                {
-                    "number": "420",
-                    "label": "Tons of Rice Distributed"
-                },
-                {
-                    "number": "89%",
-                    "label": "School Completion Rate"
-                }
             ]
         }
     ],
@@ -404,25 +264,7 @@
                 "Follow-up support to track educational outcomes"
             ],
             "image1": "/image/Program/slideshowT.jpg",
-            "image2": "/image/Program/slideshowT1.jpg",
-            "stats": [
-                {
-                    "number": "2,500+",
-                    "label": "Bicycles Distributed"
-                },
-                {
-                    "number": "85%",
-                    "label": "School Attendance Increase"
-                },
-                {
-                    "number": "150+",
-                    "label": "Villages Reached"
-                },
-                {
-                    "number": "95%",
-                    "label": "Program Satisfaction"
-                }
-            ]
+            "image2": "/image/Program/slideshowT1.jpg"
         },
         {
             "title": "Leadership practice opportunities",
@@ -438,25 +280,7 @@
                 "Follow-up support to track educational outcomes"
             ],
             "image1": "/image/Program/slideshowT2.jpg",
-            "image2": "/image/Program/slideshowT3.jpg",
-            "stats": [
-                {
-                    "number": "2,500+",
-                    "label": "Bicycles Distributed"
-                },
-                {
-                    "number": "85%",
-                    "label": "School Attendance Increase"
-                },
-                {
-                    "number": "150+",
-                    "label": "Villages Reached"
-                },
-                {
-                    "number": "95%",
-                    "label": "Program Satisfaction"
-                }
-            ]
+            "image2": "/image/Program/slideshowT3.jpg"
         },
         {
             "title": "Career and major selection workshops",
@@ -472,25 +296,7 @@
                 "Follow-up support to track educational outcomes"
             ],
             "image1": "/image/Program/slideshowT4.jpg",
-            "image2": "/image/Program/slideshowT5.jpg",
-            "stats": [
-                {
-                    "number": "2,500+",
-                    "label": "Bicycles Distributed"
-                },
-                {
-                    "number": "85%",
-                    "label": "School Attendance Increase"
-                },
-                {
-                    "number": "150+",
-                    "label": "Villages Reached"
-                },
-                {
-                    "number": "95%",
-                    "label": "Program Satisfaction"
-                }
-            ]
+            "image2": "/image/Program/slideshowT5.jpg"
         },
         {
             "title": "Job readiness and exposure visits",
@@ -506,25 +312,7 @@
                 "Follow-up support to track educational outcomes"
             ],
             "image1": "/image/Program/slideshowT6.jpg",
-            "image2": "/image/Program/slideshowT7.jpg",
-            "stats": [
-                {
-                    "number": "2,500+",
-                    "label": "Bicycles Distributed"
-                },
-                {
-                    "number": "85%",
-                    "label": "School Attendance Increase"
-                },
-                {
-                    "number": "150+",
-                    "label": "Villages Reached"
-                },
-                {
-                    "number": "95%",
-                    "label": "Program Satisfaction"
-                }
-            ]   
+            "image2": "/image/Program/slideshowT7.jpg" 
         }
     ],
     "givingPrograms": [
@@ -542,25 +330,7 @@
                 "Raised a total of $1,256.96 for the event through generous donor support"
             ],
             "image1": "/image/Program/giving2.jpg",
-            "image2": "/image/Program/giving3.jpg",
-            "stats": [
-                {
-                    "number": "$973.40",
-                    "label": "Used for Educational & Hygiene Materials"
-                },
-                {
-                    "number": "$319.56",
-                    "label": "Carried Forward for Future Events"
-                },
-                {
-                    "number": "100",
-                    "label": "Children Benefited"
-                },
-                {
-                    "number": "100,000 riels",
-                    "label": "Cash Donated to Monks"
-                }
-            ]
+            "image2": "/image/Program/giving3.jpg"
         }
     ]
 }

@@ -115,23 +115,6 @@
 
           <!-- Right Column -->
           <div class="space-y-8">
-            <!-- Stats -->
-            <section v-if="selectedProgram.stats" class="bg-gray-50 rounded-lg p-6">
-              <h3 class="text-xl font-poppins font-semibold text-gray-900 mb-4">Our Impact</h3>
-              <div class="space-y-4">
-                <div v-for="(stat, index) in selectedProgram.stats || []" :key="index" class="text-center">
-                  <div class="text-xl font-bold text-blue-600 mb-1">{{ stat.number }}</div>
-                  <div class="text-gray-600 text-sm">{{ stat.label }}</div>
-                </div>
-                <div
-                  v-if="!(selectedProgram.stats && selectedProgram.stats.length)"
-                  class="text-gray-500 text-sm"
-                >
-                  No impact statistics available.
-                </div>
-              </div>
-            </section>
-
             <!-- Support Section -->
             <section class="bg-gradient-to-r from-blue-600 to-pink-600 rounded-lg p-6 text-white">
               <h3 class="text-xl font-poppins font-semibold mb-3">Support This Program</h3>
@@ -139,7 +122,7 @@
               <div class="space-y-3">
                 <RouterLink to="/donate">
                   <button
-                    class="w-full bg-white text-blue-600 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200"
+                    class="w-full bg-white text-blue-600 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200​ mb-4"
                   >
                     Donate Now
                   </button>
