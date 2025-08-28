@@ -15,13 +15,13 @@
         </div>
 
         <!-- Education Section -->
-        <div id="education-section" class="mt-24">
+        <div id="education-section" class="md:mt-24">
           <div v-if="programs.filter(p => p.section === 'Education').length">
             <div v-for="(program, index) in programs.filter(p => p.section === 'Education')"
               :key="`education-${index}`">
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <!-- Content -->
-                <div class="p-8 md:p-10 lg:p-16">
+                <div class="p-8">
                   <div class="flex items-center mb-6">
                     <div
                       class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mr-4 shadow-md">
@@ -32,7 +32,7 @@
                       <div class="text-blue-600 font-semibold text-sm md:text-base">{{ program.program }}</div>
                     </div>
                   </div>
-                  <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4 w-[500px]">{{ program.description }}</p>
+                  <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4 md:w-[520px]">{{ program.description }}</p>
                   <div class="space-y-4 mb-5">
                     <div v-for="(skill, skillIndex) in program.skills" :key="skillIndex" class="flex items-center">
                       <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
