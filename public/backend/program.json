@@ -54,24 +54,16 @@
             ],
             "EduSections": [
                 {
-                    "title": "Bicycles and transportation support",
-                    "description": "Bicycles for rural girls to access school.",
-                    "icon": "M6 18h12l1-6H5l1 6zm2-10h8v2H8v-2z"
+                    "image": "/image/Program/train1.jpg"
                 },
                 {
-                    "title": "Rice support for students and families",
-                    "description": "Rice to support girls’ school attendance.",
-                    "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"
+                    "image": "/image/Program/train1.jpg"
                 },
                 {
-                    "title": "University and vocational support",
-                    "description": "Scholarships for women in IT, law.",
-                    "icon": "M4 6h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z"
+                    "image": "/image/Program/train1.jpg"
                 },
                 {
-                    "title": "Scholarships and school materials",
-                    "description": "Scholarships, supplies for girls’ education.",
-                    "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                    "image": "/image/Program/train1.jpg"
                 }
             ],
             "image": "/image/Program/train1.jpg",
