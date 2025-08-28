@@ -1,20 +1,15 @@
 <template>
   <div class="min-h-screen">
     <!-- Back Button -->
-    <button
-      @click="$emit('go-back')"
-      class="flex items-center text-blue-500 hover:text-blue-300 transition-colors duration-200 mb-2"
-    >
+    <button @click="$emit('go-back')"
+      class="flex items-center text-blue-500 hover:text-blue-300 transition-colors duration-200 mb-2">
       <i class="fas fa-arrow-left mr-2"></i>
       Back to Programs
     </button>
-
     <!-- Header Section -->
-    <div
-      class="relative bg-cover bg-center bg-no-repeat text-white py-20 md:h-screen h-[60vh]"
-      :style="{ backgroundImage: `url(${selectedProgram.image || 'https://via.placeholder.com/1200x600'})` }"
-    >
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    <div class="relative bg-cover bg-center bg-no-repeat text-white py-20 md:h-screen h-[60vh]"
+      :style="{ backgroundImage: `url(${selectedProgram.image || 'https://via.placeholder.com/1200x600'})` }">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-transparent"></div>
       <div class="container mx-auto px-4 max-w-7xl relative z-10">
         <div class="flex items-center">
           <div class="w-16 h-16 rounded-full bg-blue-200/20 flex items-center justify-center mr-6">
@@ -24,7 +19,7 @@
             <h1 class="text-2xl md:text-5xl font-poppins font-semibold mb-2">
               {{ selectedProgram.title || 'No Program Selected' }}
             </h1>
-            <p class="text-base md:text-lg text-white/90">
+            <p class="text-base md:text-lg text-white/90 w-[600px]">
               {{ selectedProgram.description || 'No description available' }}
             </p>
           </div>
@@ -50,18 +45,13 @@
             <section>
               <h3 class="text-xl font-poppins font-semibold text-gray-900 mb-4">Key Features</h3>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div
-                  v-for="(feature, index) in selectedProgram.features || []"
-                  :key="index"
-                  class="flex items-start p-3 bg-gray-50 rounded-md"
-                >
+                <div v-for="(feature, index) in selectedProgram.features || []" :key="index"
+                  class="flex items-start p-3 bg-gray-50 rounded-md">
                   <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
                   <span class="text-gray-700 text-sm">{{ feature }}</span>
                 </div>
-                <div
-                  v-if="!(selectedProgram.features && selectedProgram.features.length)"
-                  class="text-gray-500 text-sm"
-                >
+                <div v-if="!(selectedProgram.features && selectedProgram.features.length)"
+                  class="text-gray-500 text-sm">
                   No features available.
                 </div>
               </div>
@@ -70,20 +60,12 @@
             <!-- Additional Images -->
             <section v-if="selectedProgram.image1 || selectedProgram.image2">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <img
-                  v-if="selectedProgram.image1"
-                  :src="selectedProgram.image1"
-                  :alt="`${selectedProgram.title} Image 1`"
-                  class="w-full h-64 object-cover rounded-xl shadow-lg"
-                  @error="handleImageError"
-                />
-                <img
-                  v-if="selectedProgram.image2"
-                  :src="selectedProgram.image2"
-                  :alt="`${selectedProgram.title} Image 2`"
-                  class="w-full h-64 object-cover rounded-xl shadow-lg"
-                  @error="handleImageError"
-                />
+                <img v-if="selectedProgram.image1" :src="selectedProgram.image1"
+                  :alt="`${selectedProgram.title} Image 1`" class="w-full h-64 object-cover rounded-xl shadow-lg"
+                  @error="handleImageError" />
+                <img v-if="selectedProgram.image2" :src="selectedProgram.image2"
+                  :alt="`${selectedProgram.title} Image 2`" class="w-full h-64 object-cover rounded-xl shadow-lg"
+                  @error="handleImageError" />
               </div>
             </section>
 
@@ -91,22 +73,13 @@
             <section v-if="selectedProgram.gallery">
               <h3 class="text-xl font-poppins font-semibold text-gray-900 mb-4">Gallery</h3>
               <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div
-                  v-for="(img, index) in selectedProgram.gallery || []"
-                  :key="index"
-                  class="rounded Neurolinguistic Programming overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-                >
-                  <img
-                    :src="img"
-                    :alt="`${selectedProgram.title} ${index + 1}`"
+                <div v-for="(img, index) in selectedProgram.gallery || []" :key="index"
+                  class="rounded Neurolinguistic Programming overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <img :src="img" :alt="`${selectedProgram.title} ${index + 1}`"
                     class="w-full h-32 object-cover hover:scale-105 transition-transform duration-300"
-                    @error="handleImageError"
-                  />
+                    @error="handleImageError" />
                 </div>
-                <div
-                  v-if="!(selectedProgram.gallery && selectedProgram.gallery.length)"
-                  class="text-gray-500 text-sm"
-                >
+                <div v-if="!(selectedProgram.gallery && selectedProgram.gallery.length)" class="text-gray-500 text-sm">
                   No gallery images available.
                 </div>
               </div>
@@ -122,15 +95,13 @@
               <div class="space-y-3">
                 <RouterLink to="/donate">
                   <button
-                    class="w-full bg-white text-blue-600 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200​ mb-4"
-                  >
+                    class="w-full bg-white text-blue-600 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200​ mb-4">
                     Donate Now
                   </button>
                 </RouterLink>
                 <RouterLink to="/contact">
                   <button
-                    class="w-full border-2 border-white text-white py-2 rounded-md font-medium hover:bg-white hover:text-pink-600 transition-colors duration-200"
-                  >
+                    class="w-full border-2 border-white text-white py-2 rounded-md font-medium hover:bg-white hover:text-pink-600 transition-colors duration-200">
                     Learn More
                   </button>
                 </RouterLink>
