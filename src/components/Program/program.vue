@@ -62,72 +62,17 @@
                     </span>
                   </router-link>
                 </div>
-                <!-- Sub-sections -->
-  <div
-  class="p-4 sm:p-8 mt-12 bg-gradient-to-br from-blue-200 to-blue-400 rounded-3xl relative overflow-hidden h-auto lg:h-[570px]">
-  <!-- Animated background -->
-  <div class="absolute inset-0 opacity-20">
-    <div class="absolute top-4 left-4 w-16 h-16 border-pink-400  "></div>
-    <div class="absolute top-12 right-8 w-8 h-8  border-pink-400  "></div>
-    <div
-      class="absolute bottom-8 left-12 w-12 h-12  border-pink-400 ">
-    </div>
-  </div>
 
-  <!-- Grid layout -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 ">
-    <div v-for="(subSection, subIndex) in program.EduSections" :key="subIndex"
-      class="bg-white/95 rounded-2xl p-5 text-center shadow-lg hover:shadow-2xl transition-all duration-300 group">
-      
-      <!-- Icon -->
-      <div
-        class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 duration-300 shadow-lg">
-        <svg v-if="subSection.title.includes('-')" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0118 20H6a12.083 12.083 0 01-.16-9.422L12 14z" />
-        </svg>
-        <svg v-else-if="subSection.title.includes('--')" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z" />
-        </svg>
-        <svg v-else-if="subSection.title.includes('---')" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z" />
-        </svg>
-        <svg v-else-if="subSection.title.includes('----')" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.5 21a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm13 0a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zM5.5 17.5l4.5-7.5h4l4.5 7.5M10 10l-2.5 7.5M14 10l-2-4h3" />
-        </svg>
-        <svg v-else class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <!-- fallback generic icon -->
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-        </svg>
-      </div>
-
-      <!-- Title -->
-      <h5 class="font-bold text-gray-800 mb-2 transition-colors duration-300">
-        {{ subSection.title }}
-      </h5>
-
-      <!-- Description -->
-      <p class="text-gray-600 text-sm leading-relaxed">
-        {{ subSection.description }}
-      </p>
-
-      <!-- Divider -->
-      <div
-        class="w-12 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mx-auto mt-4 group-hover:w-16 transition-all duration-300">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
+                <!-- Image-right -->
+                <img src="/image/Program/train1.jpg" 
+                    alt="Descriptive text" 
+                    class="p-4 sm:p-8 mt-12 h-auto lg:h-[570px]"
+                />
 
               </div>
             </div>
           </div>
-          <div v-else class="text-center text-gray-600 py-8">
-            No Education programs available at this time.
-          </div>
+          
         </div>
 
         <!-- Care Section -->
