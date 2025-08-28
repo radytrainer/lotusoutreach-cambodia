@@ -34,6 +34,22 @@
                 {
                     "title": "Mentoring and academic follow-up",
                     "description": "Guidance and support for girls’ academic success."
+                },
+                {
+                    "title": "Bicycles and transportation support",
+                    "description": "Bicycles for rural girls to access school."
+                },
+                {
+                    "title": "Rice support for students and families",
+                    "description": "Rice to support girls’ school attendance."
+                },
+                {
+                    "title": "University and vocational support",
+                    "description": "Scholarships for women in IT, law."
+                },
+                {
+                    "title": "Scholarships and school materials",
+                    "description": "Scholarships, supplies for girls’ education."
                 }
             ],
             "EduSections": [
