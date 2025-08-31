@@ -64,7 +64,7 @@
                 </div>
                 <!-- Image -->
                 <div>
-                  <img src="/image/Program/train1.jpg" alt="A person training with a mentor"
+                  <img src="/image/Program/edu1.jpg" alt="A person training with a mentor"
                     class="w-full h-auto object-cover rounded-2xl" loading="lazy" />
                 </div>
               </div>
