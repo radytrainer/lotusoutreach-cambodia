@@ -73,18 +73,6 @@
       ]
     },
     {
-      "title": "Study Visit",
-      "images": [
-        {"src": "/image/Gallery/StudyVisit/S1.jpg"},
-        {"src": "/image/Gallery/StudyVisit/S2.jpg"},
-        {"src": "/image/Gallery/StudyVisit/S3.jpg"},
-        {"src": "/image/Gallery/StudyVisit/S4.jpg"},
-        {"src": "/image/Gallery/StudyVisit/S5.jpg"},
-        {"src": "/image/Gallery/StudyVisit/S6.jpg"},
-        {"src": "/image/Gallery/StudyVisit/S8.jpg"}
-      ]
-    },
-    {
       "title": "Workshop / Training",
       "images": [
         {"src": "/image/Gallery/Workshop/W1.jpg"},
@@ -129,7 +117,15 @@
         {"src": "/image/Gallery/OtherActivity/O12.jpg"},
         {"src": "/image/Gallery/OtherActivity/O13.jpg"},
         {"src": "/image/Gallery/OtherActivity/O14.jpg"},
-        {"src": "/image/Gallery/OtherActivity/O15.jpg"}
+        {"src": "/image/Gallery/OtherActivity/O15.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S1.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S2.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S3.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S4.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S5.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S6.jpg"},
+        {"src": "/image/Gallery/StudyVisit/S8.jpg"}
+
       ]
     }
     

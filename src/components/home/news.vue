@@ -4,10 +4,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 
-                   bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            News
-          </h2>
+          
           <p class="md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Comprehensive programs designed to transform lives and build
             stronger communities in Cambodia.
