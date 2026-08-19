@@ -44,7 +44,12 @@
         </div>
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6 dark:text-gray-300 dark:prose-invert">
           <h2 class="md:text-2xl text-xl font-semibold text-gray-900 mt-8 dark:text-white">Event Overview</h2>
-          <p class="md:text-justify text-base sm:text-lg md:text-xl lg:text-base">{{ activity.content }}</p>
+          
+          <!-- UPDATED HERE: Replaced <p> with formatted <div> -->
+          <div style="white-space: pre-wrap; word-break: break-word;" class="md:text-justify text-base sm:text-lg md:text-xl lg:text-base">
+            {{ activity.content }}
+          </div>
+
           <h2 class="md:text-2xl text-xl font-semibold text-gray-900 mt-8 dark:text-white">Visual Highlights</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div v-for="(img, index) in activity.image1" :key="index">
@@ -106,10 +111,12 @@ const formatDate = (dateString) => {
 };
 
 const calculateReadTime = (content) => {
-  if (!content) return 0;
+  if (!content) return 1;
   const wordsPerMinute = 200;
-  const wordCount = content.split(/\s+/).length;
-  return Math.ceil(wordCount / wordsPerMinute);
+  const plainText = content.replace(/<[^>]*>/g, ' ');
+  const cleanText = plainText.replace(/[·•\-_*]/g, ' ').trim();
+  const words = cleanText.split(/\s+/).filter((word) => word.length > 0);
+  return Math.max(1, Math.ceil(words.length / wordsPerMinute));
 };
 
 const getCategoryLabel = (category) => {
